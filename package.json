@@ -25,10 +25,10 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.25.0",
     "nuxt": "^2.15.8",
-    "vue": "^3.2.38",
+    "vue": "^2.7.9",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
-    "webpack": "^5.74.0"
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
