@@ -15,9 +15,9 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint --cache",
+    "*.{js,vue}": "eslint",
     "*.{css,scss,sass,html,vue}": "stylelint",
-    "*.**": "prettier --check --ignore-unknown"
+    "*.**": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@chakra-ui/nuxt": "^0.6.0",
@@ -25,6 +25,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.25.0",
     "nuxt": "^2.15.8",
+    "nuxt-webfontloader": "^1.1.0",
     "vue": "^2.7.9",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10",
@@ -41,8 +42,10 @@
     "eslint-plugin-vue": "^9.4.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "node-sass": "^7.0.1",
     "postcss-html": "^1.3.0",
     "prettier": "^2.5.1",
+    "sass-loader": "^10.1.0",
     "stylelint": "^14.11.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended-vue": "^1.1.0",

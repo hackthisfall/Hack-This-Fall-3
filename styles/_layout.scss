@@ -1,0 +1,31 @@
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+  margin: auto;
+  background-color: #fff;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+*:focus {
+  outline: none;
+}
