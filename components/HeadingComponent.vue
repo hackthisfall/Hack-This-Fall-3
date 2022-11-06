@@ -23,7 +23,7 @@ export default {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 250px;
+    font-size: 240px;
     line-height: 300px;
     color: rgba(255, 255, 255, 0.05);
   }
