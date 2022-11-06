@@ -1,13 +1,19 @@
 <template>
-  <CFlex w="calc(100% - 160px)" position="fixed" justify="space-between">
+  <CFlex
+    zIndex="100000"
+    w="calc(100% - 160px)"
+    position="fixed"
+    justify="space-between"
+  >
     <div class="logo"><img src="~/assets/logo.png" /></div>
     <div class="nav">
-      <a class="item">Home</a>
-      <a class="item">Schedule</a>
-      <a class="item">People</a>
+      <a class="item">About</a>
+      <a class="item">Tracks</a>
+      <a class="item">Sponsors</a>
+      <a class="item">FAQ</a>
+      <span class="divider"></span>
       <a class="item">Swags</a>
       <a class="item">Team</a>
-      <a class="item">Blog</a>
       <a
         id="mlh-trust-badge"
         style="
@@ -76,6 +82,13 @@ export default {
     /* identical to box height */
 
     letter-spacing: 0.03em;
+  }
+
+  .divider {
+    height: 30px;
+    border-radius: 2px;
+    background: #243149;
+    border: 1.5px solid #243149;
   }
 }
 </style>

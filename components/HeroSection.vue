@@ -24,6 +24,7 @@ export default {
 .container {
   display: flex;
   padding-top: 130px;
+  padding-bottom: 150px;
   justify-content: center;
   width: 100%;
   background: transparent;
