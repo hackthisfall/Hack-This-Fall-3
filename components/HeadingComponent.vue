@@ -18,7 +18,7 @@ export default {
 
   .back-text {
     position: absolute;
-    left: -3%;
+    left: -2.8%;
     top: 0px;
     font-family: 'Poppins';
     font-style: normal;
@@ -38,7 +38,7 @@ export default {
     color: #d04d29;
     position: absolute;
     left: 2.7%;
-    top: 27%;
+    top: 26%;
   }
 }
 </style>
