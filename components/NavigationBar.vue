@@ -1,19 +1,21 @@
 <template>
   <CFlex
+    bg="#050c19"
     zIndex="100000"
     w="calc(100% - 160px)"
+    pt="44px"
     position="fixed"
     justify="space-between"
   >
     <div class="logo"><img src="~/assets/logo.png" /></div>
     <div class="nav">
-      <a class="item">About</a>
-      <a class="item">Tracks</a>
-      <a class="item">Sponsors</a>
-      <a class="item">FAQ</a>
+      <a id="nav-link-about" href="/#about" class="item">About</a>
+      <a id="nav-link-tracks" href="/#tracks" class="item">Tracks</a>
+      <a id="nav-link-sponsors" href="/#sponsors" class="item">Sponsors</a>
+      <a id="nav-link-faq" href="/#faq" class="item">FAQ</a>
       <span class="divider"></span>
-      <a class="item">Swags</a>
-      <a class="item">Team</a>
+      <a id="nav-link-swags" class="item">Swags</a>
+      <a id="nav-link-team" class="item">Team</a>
       <a
         id="mlh-trust-badge"
         style="
@@ -79,9 +81,15 @@ export default {
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    /* identical to box height */
-
     letter-spacing: 0.03em;
+
+    &:hover {
+      color: #f46d24;
+    }
+  }
+
+  .active {
+    color: #f46d24 !important;
   }
 
   .divider {

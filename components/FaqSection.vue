@@ -1,21 +1,17 @@
 <template>
-  <div class="container">
+  <ContainerVue id="faq" name="faq">
     <HeadingVue front="Questions" back="FAQs" />
-  </div>
+  </ContainerVue>
 </template>
 <script>
 import HeadingVue from './HeadingComponent.vue'
+import ContainerVue from './Container.vue'
+
 export default {
   components: {
     HeadingVue,
+    ContainerVue,
   },
 }
 </script>
-<style lang="scss" scoped>
-.container {
-  width: 100%;
-  background: transparent;
-  min-height: 500px;
-  padding-bottom: 150px;
-}
-</style>
+<style lang="scss" scoped></style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="heading-container">
     <h1 class="back-text">{{ back }}</h1>
     <h1 class="front-text">{{ front }}</h1>
   </div>
@@ -10,11 +10,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.container {
+.heading-container {
   width: calc(100% - 170px);
   position: relative;
   overflow: hidden;
   margin-left: 10px;
+  height: 300px;
 
   .back-text {
     position: absolute;
@@ -38,7 +39,7 @@ export default {
     color: #d04d29;
     position: absolute;
     left: 2.7%;
-    top: 26%;
+    bottom: 23.5%;
   }
 }
 </style>

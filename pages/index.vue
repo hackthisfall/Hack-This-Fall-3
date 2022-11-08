@@ -61,12 +61,12 @@ export default {
   width: 100vw;
   min-height: 100vh;
   background: #050c19;
-  padding: 44px 80px 83px;
+  padding: 0.5px 80px 83px;
 
   .main-container {
     width: 100%;
     border-radius: 32px;
-    margin-top: 106px;
+    margin-top: 150px;
     min-height: 100vh;
     background-image: url('~/assets/background.png');
     background-repeat: no-repeat;

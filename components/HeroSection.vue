@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <ContainerVue id="hero" name="hero" class="hero">
     <div class="inner">
       <img class="hero-logo" src="~/assets/hero-logo.png" />
       <h2 class="tagline">Innovate For Good</h2>
@@ -9,25 +9,25 @@
         <CButton class="button">Join Discord</CButton>
       </CFlex>
     </div>
-  </div>
+  </ContainerVue>
 </template>
 <script>
 import { CFlex, CButton } from '@chakra-ui/vue'
+import ContainerVue from './Container.vue'
+
 export default {
   components: {
     CFlex,
     CButton,
+    ContainerVue,
   },
 }
 </script>
 <style lang="scss" scoped>
-.container {
+.hero {
   display: flex;
   padding-top: 130px;
-  padding-bottom: 150px;
   justify-content: center;
-  width: 100%;
-  background: transparent;
 
   .inner {
     display: flex;
