@@ -33,7 +33,7 @@ export default {
         ;['about', 'tracks', 'sponsors', 'faq'].forEach((e) => {
           document.getElementById(`nav-link-${e}`).classList.remove('active')
         })
-        if (this.name !== 'hero')
+        if (['about', 'tracks', 'sponsors', 'faq'].includes(this.name))
           document
             .getElementById(`nav-link-${this.name}`)
             .classList.add('active')

@@ -15,7 +15,7 @@
         >; where we are aiming to promote hackers and help them nurture their
         new ideas and prototypes in various domains.
       </p>
-      <img height="400px" src="~/assets/about.png" />
+      <img width="500px" src="~/assets/about.png" />
     </CFlex>
   </ContainerVue>
 </template>

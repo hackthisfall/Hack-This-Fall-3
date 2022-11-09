@@ -11,7 +11,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .heading-container {
-  width: calc(100% - 170px);
+  width: 100%;
   position: relative;
   overflow: hidden;
   margin-left: 10px;
