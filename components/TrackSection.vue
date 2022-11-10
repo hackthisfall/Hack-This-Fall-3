@@ -41,38 +41,38 @@ export default {
         {
           name: 'Blockchain & Crypto',
           icon: require('~/assets/tracks/blockchain.png'),
-          height: '120px',
+          height: '100px',
         },
         {
           name: 'Internet of Things',
           icon: require('~/assets/tracks/iot.png'),
-          height: '110px',
+          height: '90px',
         },
         {
           name: 'Augmented and Virtual Reality',
           icon: require('~/assets/tracks/ar.png'),
-          height: '120px',
+          height: '100px',
         },
         {
           name: 'AI & Machine Learning',
           icon: require('~/assets/tracks/ml.png'),
-          height: '110px',
+          height: '90px',
         },
         {
           name: 'Cloud & Devops',
           icon: require('~/assets/tracks/cloud.png'),
-          height: '70px',
+          height: '50px',
         },
         {
           name: 'Open Innovation',
           icon: require('~/assets/tracks/open.png'),
-          height: '100px',
+          height: '90px',
           span: '2',
         },
         {
           name: 'Security & Audits',
           icon: require('~/assets/tracks/security.png'),
-          height: '110px',
+          height: '90px',
         },
       ],
     }

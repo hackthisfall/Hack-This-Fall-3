@@ -1,9 +1,10 @@
 <template>
   <CFlex
-    bg="#050c19"
+    bg="linear-gradient(180deg, #050C19 53.65%, rgba(5, 12, 25, 0) 100%)"
     zIndex="100000"
     w="calc(100% - 160px)"
     pt="44px"
+    pb="40px"
     position="fixed"
     justify="space-between"
   >
