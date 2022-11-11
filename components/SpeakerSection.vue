@@ -109,6 +109,9 @@ export default {
 
     &:hover ~ .text {
       transform: translateY(10px);
+      -webkit-transform: translateY(10px);
+      -o-transform: translateY(10px);
+      -moz-transform: translateY(10px);
     }
   }
 
