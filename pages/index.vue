@@ -10,6 +10,7 @@
       <SponsorSectionVue />
       <NarrativeSectionVue />
       <FaqSectionVue />
+      <FooterSectionVue />
     </div>
   </div>
 </template>
@@ -24,6 +25,7 @@ import SpeakerSectionVue from '~/components/SpeakerSection.vue'
 import SponsorSectionVue from '~/components/SponsorSection.vue'
 import NarrativeSectionVue from '~/components/NarrativeSection.vue'
 import FaqSectionVue from '~/components/FaqSection.vue'
+import FooterSectionVue from '~/components/FooterSection.vue'
 
 export default {
   name: 'IndexPage',
@@ -37,6 +39,7 @@ export default {
     SponsorSectionVue,
     NarrativeSectionVue,
     FaqSectionVue,
+    FooterSectionVue,
     // CBox,
     // CButton,
     // CAvatarGroup,
