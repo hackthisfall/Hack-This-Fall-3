@@ -2,14 +2,14 @@
   <CFlex
     bg="linear-gradient(180deg, #050C19 53.65%, rgba(5, 12, 25, 0) 100%)"
     zIndex="100000"
-    w="calc(100% - 160px)"
-    pt="44px"
+    :w="{ base: 'calc(100% - 2rem)', sm: 'calc(100% - 160px)' }"
+    :pt="{ base: '2rem', sm: '44px' }"
     pb="40px"
     position="fixed"
     justify="space-between"
   >
     <div class="logo"><img src="~/assets/logo.png" /></div>
-    <div class="nav">
+    <div class="nav-desktop">
       <a id="nav-link-about" href="/#about" class="item">About</a>
       <a id="nav-link-tracks" href="/#tracks" class="item">Tracks</a>
       <a id="nav-link-sponsors" href="/#sponsors" class="item">Sponsors</a>
@@ -17,17 +17,15 @@
       <span class="divider"></span>
       <a id="nav-link-swags" class="item">Swags</a>
       <a id="nav-link-team" class="item">Team</a>
+
+      <img
+        width="100%"
+        src="~/assets/hamburger-menu.png"
+        @click="toggleNavbar"
+      />
+
       <a
         id="mlh-trust-badge"
-        style="
-          display: block;
-          max-width: 100px;
-          min-width: 60px;
-          position: fixed;
-          right: 25px;
-          top: 0;
-          z-index: 10000;
-        "
         href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2023-season&utm_content=white"
         target="_blank"
         ><img
@@ -45,6 +43,10 @@ export default {
   components: {
     CFlex,
   },
+  props: {
+    isNavbarOpen: Boolean,
+    toggleNavbar: Function,
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -61,9 +63,18 @@ export default {
   img {
     width: 100%;
   }
+
+  @include respond-below(mobile) {
+    padding: 0.625rem;
+    height: unset;
+
+    img {
+      width: 5rem;
+    }
+  }
 }
 
-.nav {
+.nav-desktop {
   display: flex;
   align-items: center;
   background: #0f1726;
@@ -89,6 +100,16 @@ export default {
     }
   }
 
+  #mlh-trust-badge {
+    display: block;
+    max-width: 100px;
+    min-width: 60px;
+    position: fixed;
+    right: 25px;
+    top: 0;
+    z-index: 10000;
+  }
+
   .active {
     color: #f46d24 !important;
   }
@@ -98,6 +119,24 @@ export default {
     border-radius: 2px;
     background: #243149;
     border: 1.5px solid #243149;
+  }
+
+  @include respond-below(mobile) {
+    padding-left: 1rem;
+    padding-right: 5rem;
+    .item {
+      display: none;
+    }
+
+    #mlh-trust-badge {
+      right: 0.75rem;
+      max-width: 3rem;
+      min-width: 3rem;
+    }
+
+    .divider {
+      display: none;
+    }
   }
 }
 </style>

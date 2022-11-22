@@ -1,8 +1,11 @@
 <template>
   <ContainerVue id="sponsors" name="sponsors">
     <HeadingVue front="Past Sponsors" back="SPONSORS" />
-    <CFlex mx="50px" justify="center">
-      <CGrid gap="50px" template-columns="repeat(6, 1fr)">
+    <CFlex :mx="{ base: '1rem', sm: '50px' }" justify="center">
+      <CGrid
+        :gap="{ base: '1rem', sm: '50px' }"
+        :template-columns="{ base: 'repeat(2, 1fr)', sm: 'repeat(6, 1fr)' }"
+      >
         <CGridItem
           v-for="(sponsor, index) in sponsors"
           :key="index"

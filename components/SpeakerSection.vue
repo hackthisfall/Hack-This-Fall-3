@@ -1,8 +1,11 @@
 <template>
   <ContainerVue id="speakers" name="speakers">
     <HeadingVue front="Past Speakers" back="SPEAKERS" />
-    <CFlex mx="50px">
-      <CGrid gap="50px" template-columns="repeat(4, 1fr)">
+    <CFlex :mx="{ base: '0rem', sm: '50px' }" justify="center">
+      <CGrid
+        :gap="{ base: '0.75rem', sm: '50px' }"
+        :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
+      >
         <CGridItem
           v-for="(speaker, index) in speakers"
           :key="index"

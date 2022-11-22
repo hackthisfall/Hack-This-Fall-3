@@ -1,7 +1,12 @@
 <template>
   <ContainerVue id="about" name="about">
     <HeadingVue front="About Us" back="ABOUT US" />
-    <CFlex align="center" px="50px" gap="100px">
+    <CFlex
+      align="center"
+      :px="{ base: '1rem', sm: '50px' }"
+      :gap="{ base: '1rem', sm: '100px' }"
+      :direction="{ base: 'column-reverse', sm: 'row' }"
+    >
       <p class="text">
         Hack This Fall began with a mindset of encouraging new hackers to build
         unique projects regardless of the tech or field. The only focus was to
@@ -42,5 +47,10 @@ export default {
   letter-spacing: 0.02em;
   padding-top: 35px;
   color: #ffffff;
+
+  @include respond-below(mobile) {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
 }
 </style>
