@@ -40,7 +40,9 @@
                   class="icon"
                   :background="!isExpanded ? '#f3f5f633' : '#FFF'"
                 >
-                  <CAccordionIcon :color="isExpanded ? '#050C19' : '#FFF'"
+                  <CAccordionIcon
+                    :color="isExpanded ? '#050C19' : '#FFF'"
+                    class="image"
                     ><svg
                       width="16"
                       height="10"
@@ -99,7 +101,9 @@
                   class="icon"
                   :background="!isExpanded ? '#f3f5f633' : '#FFF'"
                 >
-                  <CAccordionIcon :color="isExpanded ? '#050C19' : '#FFF'"
+                  <CAccordionIcon
+                    :color="isExpanded ? '#050C19' : '#FFF'"
+                    class="image"
                     ><svg
                       width="16"
                       height="10"
@@ -158,7 +162,9 @@
                   class="icon"
                   :background="!isExpanded ? '#f3f5f633' : '#FFF'"
                 >
-                  <CAccordionIcon :color="isExpanded ? '#050C19' : '#FFF'"
+                  <CAccordionIcon
+                    :color="isExpanded ? '#050C19' : '#FFF'"
+                    class="image"
                     ><svg
                       width="16"
                       height="10"
@@ -271,6 +277,15 @@ export default {
     .icon {
       border-radius: 50%;
       padding: 5px 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1.75rem;
+      width: 1.75rem;
+
+      .image {
+        position: absolute;
+      }
     }
 
     .number {
