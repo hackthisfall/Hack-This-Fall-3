@@ -1,8 +1,11 @@
 <template>
   <ContainerVue id="speakers" name="speakers">
     <HeadingVue front="Past Speakers" back="SPEAKERS" />
-    <CFlex mx="50px">
-      <CGrid gap="50px" template-columns="repeat(4, 1fr)">
+    <CFlex :mx="{ base: '0rem', sm: '50px' }" justify="center">
+      <CGrid
+        :gap="{ base: '0.75rem', sm: '3rem' }"
+        :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
+      >
         <CGridItem
           v-for="(speaker, index) in speakers"
           :key="index"
@@ -145,7 +148,7 @@ export default {
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 0.75rem;
       line-height: 19px;
       color: #fefaf4;
       margin-bottom: 30px;

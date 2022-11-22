@@ -27,6 +27,10 @@ export default {
     font-size: 240px;
     line-height: 300px;
     color: rgba(255, 255, 255, 0.05);
+
+    @include respond-below(mobile) {
+      font-size: 4.25rem;
+    }
   }
 
   .front-text {
@@ -40,6 +44,10 @@ export default {
     position: absolute;
     left: 2.7%;
     bottom: 23.5%;
+
+    @include respond-below(mobile) {
+      font-size: 1.5rem;
+    }
   }
 }
 </style>

@@ -1,8 +1,11 @@
 <template>
   <ContainerVue id="narrative" name="narrative">
     <HeadingVue front="Narratives" back="PREVIOUS" />
-    <CFlex mx="50px">
-      <CGrid gap="50px" template-columns="repeat(4, 1fr)">
+    <CFlex :mx="{ base: '0rem', sm: '50px' }" justify="center">
+      <CGrid
+        :gap="{ base: '1rem', sm: '50px' }"
+        :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
+      >
         <CGridItem
           v-for="(narrative, index) in narratives"
           :key="index"
@@ -142,7 +145,7 @@ export default {
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 1.25rem;
       line-height: 28px;
       color: #fefaf4;
       text-align: center;
@@ -152,7 +155,7 @@ export default {
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 0.7rem;
       line-height: 19px;
       text-align: center;
       color: #fefaf4;
