@@ -5,3 +5,10 @@ body {
   font-family: 'Poppins', sans-serif;
   max-width: 100vw;
 }
+
+.animate-ease {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}

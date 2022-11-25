@@ -10,8 +10,17 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <CButton class="button">Pre-register</CButton>
-        <CButton class="button">Join Discord</CButton>
+        <CButton class="button">
+          <img src="~/assets/icons/register.svg" alt="register" class="icon" />
+          <span> Pre-Register </span>
+        </CButton>
+        <CButton class="button"
+          ><img
+            src="~/assets/icons/discord.svg"
+            alt="discord"
+            class="icon"
+          /><span>Join Discord</span></CButton
+        >
       </CFlex>
     </div>
   </ContainerVue>
@@ -38,7 +47,7 @@ export default {
     display: flex;
     flex-direction: column;
     .hero-logo {
-      width: 650px;
+      width: 730px;
       margin-bottom: 30px;
 
       @include respond-below(mobile) {
@@ -90,9 +99,8 @@ export default {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      padding: 18px 55px;
-      gap: 12.41px;
-      height: 55px;
+      padding: 1.5rem 1rem;
+      // height: 55px;
       background: #d04d29;
       border: 2px solid #f46d24;
       box-shadow: 2px 2px 0px #f46d24;
@@ -100,10 +108,14 @@ export default {
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
-      font-size: 20px;
-      line-height: 37px;
-      text-align: center;
+      font-size: 1.25rem;
       color: white;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.75rem;
+      }
 
       @include respond-below(mobile) {
         max-width: 70vw;

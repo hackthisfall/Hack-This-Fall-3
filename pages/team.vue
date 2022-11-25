@@ -35,15 +35,9 @@
         </CFlex>
       </div>
       <div v-else>
-        <HeroSectionVue />
-        <AboutSectionVue />
-        <GlimpseSectionVue />
-        <TrackSectionVue />
-        <SpeakerSectionVue />
-        <SponsorSectionVue />
-        <NarrativeSectionVue />
-        <FaqSectionVue />
-        <FooterSectionVue />
+        <LatestTeamSection />
+        <PreviousTeamSection />
+        <FooterSection />
       </div>
     </div>
   </div>
@@ -52,29 +46,17 @@
 <script>
 import { CFlex } from '@chakra-ui/vue'
 import NavigationBar from '~/components/NavigationBar'
-import HeroSectionVue from '~/components/HeroSection'
-import AboutSectionVue from '~/components/AboutSection'
-import GlimpseSectionVue from '~/components/GlimpseSection'
-import TrackSectionVue from '~/components/TrackSection'
-import SpeakerSectionVue from '~/components/SpeakerSection'
-import SponsorSectionVue from '~/components/SponsorSection'
-import NarrativeSectionVue from '~/components/NarrativeSection'
-import FaqSectionVue from '~/components/FaqSection'
-import FooterSectionVue from '~/components/FooterSection'
+import LatestTeamSection from '~/components/LatestTeamSection'
+import PreviousTeamSection from '~/components/PreviousTeamSection'
+import FooterSection from '~/components/FooterSection.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     NavigationBar,
-    HeroSectionVue,
-    AboutSectionVue,
-    GlimpseSectionVue,
-    TrackSectionVue,
-    SpeakerSectionVue,
-    SponsorSectionVue,
-    NarrativeSectionVue,
-    FaqSectionVue,
-    FooterSectionVue,
+    LatestTeamSection,
+    PreviousTeamSection,
+    FooterSection,
     CFlex,
   },
   data() {

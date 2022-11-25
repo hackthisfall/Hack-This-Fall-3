@@ -1,11 +1,11 @@
 <template>
   <CFlex
+    id="navbar-container"
     bg="linear-gradient(180deg, #050C19 53.65%, rgba(5, 12, 25, 0) 100%)"
     zIndex="100000"
-    :w="{ base: 'calc(100% - 2rem)', sm: 'calc(100% - 160px)' }"
     :pt="{ base: '2rem', sm: '44px' }"
-    pb="40px"
-    position="fixed"
+    position="sticky"
+    top="0"
     justify="space-between"
   >
     <div class="logo"><img src="~/assets/logo.png" /></div>
@@ -15,8 +15,8 @@
       <a id="nav-link-sponsors" href="/#sponsors" class="item">Sponsors</a>
       <a id="nav-link-faq" href="/#faq" class="item">FAQ</a>
       <span class="divider"></span>
-      <a id="nav-link-swags" class="item">Swags</a>
-      <a id="nav-link-team" class="item">Team</a>
+      <!-- <a id="nav-link-swags" class="item">Swags</a> -->
+      <a id="nav-link-team" href="/team" class="item">Team</a>
 
       <img
         width="100%"

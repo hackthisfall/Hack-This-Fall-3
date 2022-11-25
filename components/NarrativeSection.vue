@@ -6,19 +6,17 @@
         :gap="{ base: '1rem', sm: '50px' }"
         :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
       >
-        <CGridItem
-          v-for="(narrative, index) in narratives"
-          :key="index"
-          class="narrative"
-        >
-          <div class="image">
-            <img class="narrator" :src="narrative.image" />
-            <img class="play" src="~/assets/play-icon.png" />
-          </div>
-          <div class="text">
-            <h2>{{ narrative.name }}</h2>
-            <p>{{ narrative.description }}</p>
-          </div>
+        <CGridItem v-for="(narrative, index) in narratives" :key="index">
+          <a :href="narrative.url" class="narrative animate-ease">
+            <div class="image animate-ease">
+              <img class="narrator" :src="narrative.image" />
+              <img class="play animate-ease" src="~/assets/play-icon.png" />
+            </div>
+            <div class="text">
+              <h2>{{ narrative.name }}</h2>
+              <p>{{ narrative.description }}</p>
+            </div>
+          </a>
         </CGridItem>
       </CGrid>
     </CFlex>
@@ -40,44 +38,52 @@ export default {
     return {
       narratives: [
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          name: 'Abel Mathew',
+          description: 'Speaker & Judge',
+          image: require('~/assets/speakers/facundo.jpg'),
+          url: 'https://www.youtube.com/watch?v=-qTyl6XexM4',
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          name: 'Ashwin Uppala',
+          description: 'Mentor',
+          image: require('~/assets/speakers/facundo.jpg'),
+          url: 'https://www.youtube.com/watch?v=SlQquXE1ymo',
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          name: 'Akanksha Bhasin',
+          description: 'Speaker',
+          image: require('~/assets/speakers/facundo.jpg'),
+          url: 'https://www.youtube.com/watch?v=bQFSG6AYdnc',
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          name: 'Vaishnavi Dwivedi',
+          description: 'Speaker',
+          image: require('~/assets/speakers/facundo.jpg'),
+          url: 'https://www.youtube.com/watch?v=UGAbOxu-PO8',
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          name: 'Prince Canuma',
+          description: 'Mentor',
+          image: require('~/assets/speakers/facundo.jpg'),
+          url: 'https://www.youtube.com/watch?v=591aJpAkN7M',
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          name: 'Gita Alekhya Paul',
+          description: 'Winner',
+          image: require('~/assets/narratives/alekhya.jpg'),
+          url: 'https://www.youtube.com/watch?v=wJsQ_1AWZhA',
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          name: 'Aditya Oberai',
+          description: 'Mentor',
+          image: require('~/assets/narratives/aditya.jpg'),
+          url: 'https://www.youtube.com/watch?v=PEQKT8iPxe4',
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          name: 'Praveen Kumar',
+          description: 'Mentor and Speaker',
+          image: require('~/assets/narratives/praveen.webp'),
+          url: 'https://www.youtube.com/watch?v=r1KZf2kWX0o',
         },
       ],
     }
@@ -98,10 +104,6 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 25px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 
   &:hover {
     background: linear-gradient(180deg, #0b3b52 3.72%, #0b121f 141.1%);

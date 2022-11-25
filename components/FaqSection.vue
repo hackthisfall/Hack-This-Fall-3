@@ -6,7 +6,7 @@
         gap="50px"
         :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' }"
       >
-        <CAccordion :display="{ base: 'unset', sm: 'none' }">
+        <CAccordion :display="{ base: 'unset', sm: 'unset' }">
           <CGridItem
             v-for="(faq, index) in faqs.slice(0, faqs.length)"
             :key="index"
@@ -22,6 +22,7 @@
               fontFamily="Poppins"
               allowToggle
               border="none"
+              class="accordion-header"
             >
               <CAccordionHeader
                 _focus="{boxShadow: 'none'}"
@@ -83,6 +84,7 @@
               fontFamily="Poppins"
               allowToggle
               border="none"
+              class="accordion-item"
             >
               <CAccordionHeader
                 _focus="{boxShadow: 'none'}"
@@ -92,6 +94,8 @@
                 color="#FFFFFF"
                 :borderTop="index !== 0 ? '2px solid #f3f5f633' : 'none'"
                 class="title"
+                aria-expanded="false"
+                @click="toggleItems(index, $event)"
               >
                 <span class="number">{{
                   `${index + 1}`.padStart(2, '0')
@@ -220,6 +224,7 @@ export default {
   },
   data() {
     return {
+      selectedIndex: undefined,
       faqs: [
         {
           title: 'Where can I watch?',
@@ -263,6 +268,39 @@ export default {
         },
       ],
     }
+  },
+  methods: {
+    toggleItems(indexToToggle, event) {
+      // console.log(event)
+      if (indexToToggle === this.selectedIndex) {
+        this.selectedIndex = undefined
+      } else if (this.selectedIndex === undefined) {
+        this.selectedIndex = indexToToggle
+      } else {
+        const clickEvent = new MouseEvent('click', {
+          view: window,
+          bubbles: true,
+          cancelable: false,
+        })
+
+        console.log(
+          `click kara ${indexToToggle} ko, already clicked tha ${this.selectedIndex}`
+        )
+
+        console.log(
+          document.getElementsByClassName('accordion-item')[this.selectedIndex]
+        )
+
+        document
+          .getElementsByClassName('accordion-item')
+          [this.selectedIndex].dispatchEvent(clickEvent)
+
+        // this.toggleItems(this.selectedIndex)
+        // toggle selectedIndex
+
+        this.selectedIndex = indexToToggle
+      }
+    },
   },
 }
 </script>

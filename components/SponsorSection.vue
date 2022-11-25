@@ -35,76 +35,199 @@ export default {
     return {
       sponsors: [
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://mlh.io/',
+          image: require('~/assets/sponsors/mlh.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.storyblok.com/',
+          image: require('~/assets/sponsors/storyblok.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://agoric.com/',
+          image: require('~/assets/sponsors/agoric.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.inspiritai.com/',
+          image: require('~/assets/sponsors/InspiritAI.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://wrx.gg/htf',
+          image: require('~/assets/sponsors/wazirx.png'),
+        },
+
+        {
+          url: 'https://filebase.com/?utm_source=website&utm_medium=sponsor&utm_campaign=hackthisfall',
+          image: require('~/assets/sponsors/filebase.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.courier.com/',
+          image: require('~/assets/sponsors/courier.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://atsign.com/',
+          image: require('~/assets/sponsors/atsign.webp'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://education.github.com/discount_requests/student_application?utm_source=2021-10-22-hackthisfall',
+          image: require('~/assets/sponsors/github.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://defhacks.co/',
+          image: require('~/assets/sponsors/defhacks.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.quicknode.com/',
+          image: require('~/assets/sponsors/quicknode.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.portis.io/',
+          image: require('~/assets/sponsors/portis.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://fold.money/',
+          image: require('~/assets/sponsors/fold.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://polygon.technology/',
+          image: require('~/assets/sponsors/polygon.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://tezos.com/',
+          image: require('~/assets/sponsors/tezos.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://xinfin.org/',
+          image: require('~/assets/sponsors/xdc.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.twilio.com/',
+          image: require('~/assets/sponsors/twilio.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://coil.com/',
+          image: require('~/assets/sponsors/coil.jpg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://registry.godaddy/',
+          image: require('~/assets/sponsors/godaddy.jpg'),
+          specialClass: 'godaddy',
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.linode.com/',
+          image: require('~/assets/sponsors/linode.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://symbl.ai/',
+          image: require('~/assets/sponsors/symbl.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.digitalocean.com/',
+          image: require('~/assets/sponsors/digitalocean.svg'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://sketch.com',
+          image: require('~/assets/sponsors/sketch.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://balsamiq.com/',
+          image: require('~/assets/sponsors/balsamiq.png'),
         },
         {
-          image: require('~/assets/sponsors/mlh.png'),
+          url: 'https://www.wolfram.com/',
+          image: require('~/assets/sponsors/wolfram.png'),
+        },
+        {
+          url: 'https://replit.com/',
+          image: require('~/assets/sponsors/replit.png'),
+        },
+        {
+          url: 'https://draftbit.com/',
+          image: require('~/assets/sponsors/draftbit.png'),
+        },
+        {
+          url: 'https://gen.xyz/',
+          image: require('~/assets/sponsors/xyz.svg'),
+        },
+        {
+          url: 'https://www.axure.com/',
+          image: require('~/assets/sponsors/axure.png'),
+        },
+        {
+          url: 'https://www.sashido.io/',
+          image: require('~/assets/sponsors/sashido.png'),
+        },
+        {
+          url: 'https://www.echoar.xyz/',
+          image: require('~/assets/sponsors/echoar.png'),
+        },
+        {
+          url: 'https://www.devhood.tech/',
+          image: require('~/assets/sponsors/devhood.png'),
+        },
+        {
+          url: 'https://codingblocks.com/',
+          image: require('~/assets/sponsors/cb.png'),
+        },
+        {
+          url: 'https://www.clerky.com/',
+          image: require('~/assets/sponsors/clerky.png'),
+        },
+        {
+          url: 'https://interwebs.host/',
+          image: require('~/assets/sponsors/iwh.png'),
+        },
+        {
+          url: 'https://1password.com/',
+          image: require('~/assets/sponsors/1p.png'),
+        },
+        {
+          url: 'https://rosenfeldmedia.com/',
+          image: require('~/assets/sponsors/rosenfeld.png'),
+        },
+        {
+          url: 'https://www.egghead.io/',
+          image: require('~/assets/sponsors/eh.png'),
+        },
+        {
+          url: 'https://www.taskade.com/',
+          image: require('~/assets/sponsors/taskade.png'),
+        },
+        {
+          url: 'https://www.framer.com/',
+          image: require('~/assets/sponsors/framer.png'),
+        },
+        {
+          url: 'https://www.voiceflow.com/',
+          image: require('~/assets/sponsors/voiceflow.png'),
+        },
+        {
+          url: 'http://joinglimpse.com/',
+          image: require('~/assets/sponsors/glimpse.png'),
+        },
+        {
+          url: 'https://progate.com/',
+          image: require('~/assets/sponsors/progate.png'),
+        },
+        // remaining except slido
+        {
+          url: 'https://devhero.shop/',
+          image: require('~/assets/sponsors/devhero.png'),
+        },
+        {
+          url: 'https://hackp.ac/mlh-stickermule-hackathons',
+          image: require('~/assets/sponsors/stickermule.png'),
+        },
+        {
+          url: 'https://dev.to/',
+          image: require('~/assets/sponsors/devto.png'),
+        },
+        {
+          url: 'https://streamyard.com/about',
+          image: require('~/assets/sponsors/streamyard.png'),
+        },
+        {
+          url: 'https://raahee.in/',
+          image: require('~/assets/sponsors/raahee.png'),
         },
       ],
     }

@@ -43,12 +43,14 @@
             :grid-column-gap="{ base: '2rem', sm: '1rem' }"
             :grid-row-gap="{ base: '1rem', sm: '1rem' }"
           >
-            <span class="icon"><img src="~/assets/icons/twitter.svg" /></span>
-            <span class="icon"><img src="~/assets/icons/discord.svg" /></span>
-            <span class="icon"><img src="~/assets/icons/insta.svg" /></span>
-            <span class="icon"><img src="~/assets/icons/youtube.svg" /></span>
-            <span class="icon"><img src="~/assets/icons/mail.svg" /></span>
-            <span class="icon"><img src="~/assets/icons/linkedin.svg" /></span>
+            <span class="icon"><img src="~/assets/socials/twitter.svg" /></span>
+            <span class="icon"><img src="~/assets/socials/discord.svg" /></span>
+            <span class="icon"><img src="~/assets/socials/insta.svg" /></span>
+            <span class="icon"><img src="~/assets/socials/youtube.svg" /></span>
+            <span class="icon"><img src="~/assets/socials/mail.svg" /></span>
+            <span class="icon"
+              ><img src="~/assets/socials/linkedin.svg"
+            /></span>
           </CGrid>
         </CFlex>
       </CFlex>

@@ -10,14 +10,15 @@
           v-for="(speaker, index) in speakers"
           :key="index"
           class="speaker"
-          borderRadius="30px"
         >
-          <div class="overlay"></div>
-          <img :src="speaker.image" width="100%" />
-          <div class="text">
-            <h2>{{ speaker.name }}</h2>
-            <p>{{ speaker.description }}</p>
-          </div>
+          <a :href="speaker.url" target="_blank">
+            <div class="overlay"></div>
+            <img :src="speaker.picture" width="100%" />
+            <div class="text">
+              <h2>{{ speaker.name }}</h2>
+              <p>{{ speaker.description }}</p>
+            </div>
+          </a>
         </CGridItem>
       </CGrid>
     </CFlex>
@@ -40,44 +41,52 @@ export default {
     return {
       speakers: [
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          description: 'Lead-Engineering, SAWO Labs',
+          name: 'Soumaya Ranjan',
+          url: 'https://www.linkedin.com/in/soumayaranjan/',
+          picture: require('~/assets/speakers/soumaya.jpeg'),
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          description: 'Curriculum Manager, InspiritAI',
+          name: 'Amanda Somvilay',
+          url: 'https://twitter.com/hackthisfall',
+          picture: require('~/assets/speakers/amanda.png'),
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          description: 'Developer Relations Engineer, Storyblok',
+          name: 'Facundo Giuliani',
+          url: 'https://twitter.com/facundozurdo',
+          picture: require('~/assets/speakers/facundo.jpg'),
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          description: 'Head of Developer Relations, Storyblok',
+          name: 'Samuel Snopko',
+          url: 'https://twitter.com/samuelsnopko',
+          picture: require('~/assets/speakers/samuel.jpg'),
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          description: 'Product Manager, Agoric',
+          name: 'Rowland Graus',
+          url: 'https://twitter.com/rowlandgraus',
+          picture: require('~/assets/speakers/rowland.jpeg'),
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          description: 'CEO, Agoric',
+          name: 'Dean Tribble',
+          url: 'https://twitter.com/deantribble',
+          picture: require('~/assets/speakers/dean.jpeg'),
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          description: 'Software Engineer, Agoric',
+          name: 'Kate Sills',
+          url: 'https://twitter.com/kate_sills',
+          picture: require('~/assets/speakers/kate.jpeg'),
         },
         {
-          name: 'Shambhavi Mishra',
-          description: 'well-rounded famous web publisher',
-          image: require('~/assets/speakers/shambhavi.png'),
+          description: 'COO, Filebase',
+          name: 'Zac Cohen',
+          url: 'https://www.linkedin.com/in/zaccohen427/',
+          picture: require('~/assets/speakers/zac.jpg'),
         },
       ],
     }
@@ -88,13 +97,13 @@ export default {
 .speaker {
   position: relative;
   overflow: hidden;
+  border-radius: 1.75rem;
 
   .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 2;
-    border-radius: 30px;
     background: linear-gradient(
       180deg,
       rgba(8, 16, 29, 0) 55.73%,
@@ -105,17 +114,6 @@ export default {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-
-    &:hover {
-      transform: translateY(30%);
-    }
-
-    &:hover ~ .text {
-      transform: translateY(10px);
-      -webkit-transform: translateY(10px);
-      -o-transform: translateY(10px);
-      -moz-transform: translateY(10px);
-    }
   }
 
   .text {
@@ -152,6 +150,19 @@ export default {
       line-height: 19px;
       color: #fefaf4;
       margin-bottom: 30px;
+    }
+  }
+
+  &:hover {
+    .overlay {
+      transform: translateY(30%);
+    }
+
+    .text {
+      transform: translateY(10px);
+      -webkit-transform: translateY(10px);
+      -o-transform: translateY(10px);
+      -moz-transform: translateY(10px);
     }
   }
 }
