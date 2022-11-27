@@ -111,8 +111,7 @@ export default {
   padding-top: 4rem;
 
   @include respond-below(mobile) {
-    margin-top: 2rem;
-    padding-top: 2rem;
+    padding-top: 4rem;
   }
 }
 
