@@ -1,10 +1,10 @@
 <template>
   <ContainerVue id="speakers" name="speakers">
     <HeadingVue front="Past Speakers" back="SPEAKERS" />
-    <CFlex :mx="{ base: '0rem', sm: '50px' }" justify="center">
+    <CFlex :mx="{ base: '0rem', sm: '50px' }" mt="5rem" justify="center">
       <CGrid
         :gap="{ base: '0.75rem', sm: '3rem' }"
-        :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
+        :template-columns="{ base: 'repeat(2, 1fr)', sm: 'repeat(5, 1fr)' }"
       >
         <CGridItem
           v-for="(speaker, index) in speakers"
@@ -41,34 +41,34 @@ export default {
     return {
       speakers: [
         {
-          description: 'Lead-Engineering, SAWO Labs',
-          name: 'Soumaya Ranjan',
-          url: 'https://www.linkedin.com/in/soumayaranjan/',
-          picture: require('~/assets/speakers/soumaya.jpeg'),
+          description: 'Founder, EddieHub',
+          name: 'Eddie Jaoude',
+          url: 'https://twitter.com/eddiejaoude/',
+          picture: require('~/assets/speakers/eddie.jpg'),
         },
         {
-          description: 'Curriculum Manager, InspiritAI',
-          name: 'Amanda Somvilay',
-          url: 'https://twitter.com/hackthisfall',
-          picture: require('~/assets/speakers/amanda.png'),
+          description: 'Software Engineer, Microsoft',
+          name: 'Khushboo Verma',
+          url: 'https://twitter.com/khushbooverma_',
+          picture: require('~/assets/speakers/khushboo.jpg'),
         },
         {
-          description: 'Developer Relations Engineer, Storyblok',
+          description: 'DevRel Engineer, Storyblok',
           name: 'Facundo Giuliani',
           url: 'https://twitter.com/facundozurdo',
           picture: require('~/assets/speakers/facundo.jpg'),
         },
         {
-          description: 'Head of Developer Relations, Storyblok',
-          name: 'Samuel Snopko',
-          url: 'https://twitter.com/samuelsnopko',
-          picture: require('~/assets/speakers/samuel.jpg'),
+          description: 'Senior Community Engineer, Gitpod',
+          name: 'Pauline Narvas',
+          url: 'https://twitter.com/paulienuh',
+          picture: require('~/assets/speakers/pauline.jpg'),
         },
         {
-          description: 'Product Manager, Agoric',
-          name: 'Rowland Graus',
-          url: 'https://twitter.com/rowlandgraus',
-          picture: require('~/assets/speakers/rowland.jpeg'),
+          description: 'Developer Relations Lead, Strapi',
+          name: 'Daniel Phiri',
+          url: 'https://twitter.com/malgamves',
+          picture: require('~/assets/speakers/daniel.jpg'),
         },
         {
           description: 'CEO, Agoric',
@@ -83,10 +83,22 @@ export default {
           picture: require('~/assets/speakers/kate.jpeg'),
         },
         {
-          description: 'COO, Filebase',
-          name: 'Zac Cohen',
-          url: 'https://www.linkedin.com/in/zaccohen427/',
-          picture: require('~/assets/speakers/zac.jpg'),
+          description: 'Chief Business Officer, Unschool',
+          name: 'Narayanan S',
+          url: 'https://www.linkedin.com/in/chalkmeout/',
+          picture: require('~/assets/speakers/narayanan.png'),
+        },
+        {
+          description: 'Engineer,Web DataWorks',
+          name: 'Nishu Goel',
+          url: 'https://twitter.com/TheNishuGoel',
+          picture: require('~/assets/speakers/nishu.png'),
+        },
+        {
+          description: 'Associate Solution Architect, Red Hat',
+          name: 'Gourav Sharma',
+          url: 'https://twitter.com/rhcasharma',
+          picture: require('~/assets/speakers/gourav.jpg'),
         },
       ],
     }
@@ -94,6 +106,16 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+#speakers {
+  margin-top: 4rem;
+  padding-top: 4rem;
+
+  @include respond-below(mobile) {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+}
+
 .speaker {
   position: relative;
   overflow: hidden;
@@ -106,8 +128,8 @@ export default {
     z-index: 2;
     background: linear-gradient(
       180deg,
-      rgba(8, 16, 29, 0) 55.73%,
-      rgba(8, 16, 29, 0.6) 64.58%,
+      rgba(8, 16, 29, 0) 67.73%,
+      rgba(8, 16, 29, 0.6) 76.58%,
       #08101d 100%
     );
     -webkit-transition: all 0.5s ease;
@@ -135,7 +157,7 @@ export default {
       font-family: 'Poppins';
       font-style: normal;
       font-weight: 700;
-      font-size: 20px;
+      font-size: 1rem;
       line-height: 28px;
       color: #fefaf4;
       bottom: 10px;
@@ -145,17 +167,18 @@ export default {
     p {
       font-family: 'Poppins';
       font-style: normal;
+      text-align: center;
       font-weight: 400;
-      font-size: 0.75rem;
+      font-size: 0.6rem;
       line-height: 19px;
       color: #fefaf4;
-      margin-bottom: 30px;
+      margin-bottom: 0.75rem;
     }
   }
 
   &:hover {
     .overlay {
-      transform: translateY(30%);
+      transform: translateY(35%);
     }
 
     .text {

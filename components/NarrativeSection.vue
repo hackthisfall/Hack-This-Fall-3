@@ -1,13 +1,17 @@
 <template>
   <ContainerVue id="narrative" name="narrative">
     <HeadingVue front="Narratives" back="PREVIOUS" />
-    <CFlex :mx="{ base: '0rem', sm: '50px' }" justify="center">
+    <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <CGrid
         :gap="{ base: '1rem', sm: '50px' }"
         :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
       >
         <CGridItem v-for="(narrative, index) in narratives" :key="index">
-          <a :href="narrative.url" class="narrative animate-ease">
+          <a
+            :href="narrative.url"
+            class="narrative animate-ease"
+            target="_blank"
+          >
             <div class="image animate-ease">
               <img class="narrator" :src="narrative.image" />
               <img class="play animate-ease" src="~/assets/play-icon.png" />
@@ -19,20 +23,20 @@
           </a>
         </CGridItem>
       </CGrid>
-    </CFlex>
+    </CBox>
   </ContainerVue>
 </template>
 <script>
-import { CFlex, CGrid, CGridItem } from '@chakra-ui/vue'
+import { CBox, CGrid, CGridItem } from '@chakra-ui/vue'
 import HeadingVue from './HeadingComponent.vue'
 import ContainerVue from './Container.vue'
 export default {
   components: {
     HeadingVue,
     ContainerVue,
-    CFlex,
     CGrid,
     CGridItem,
+    CBox,
   },
   data() {
     return {
@@ -40,31 +44,31 @@ export default {
         {
           name: 'Abel Mathew',
           description: 'Speaker & Judge',
-          image: require('~/assets/speakers/facundo.jpg'),
+          image: require('~/assets/narratives/abel.jpg'),
           url: 'https://www.youtube.com/watch?v=-qTyl6XexM4',
         },
         {
           name: 'Ashwin Uppala',
           description: 'Mentor',
-          image: require('~/assets/speakers/facundo.jpg'),
+          image: require('~/assets/narratives/ashwin.jpg'),
           url: 'https://www.youtube.com/watch?v=SlQquXE1ymo',
         },
         {
           name: 'Akanksha Bhasin',
           description: 'Speaker',
-          image: require('~/assets/speakers/facundo.jpg'),
+          image: require('~/assets/narratives/akanksha.jpeg'),
           url: 'https://www.youtube.com/watch?v=bQFSG6AYdnc',
         },
         {
           name: 'Vaishnavi Dwivedi',
           description: 'Speaker',
-          image: require('~/assets/speakers/facundo.jpg'),
+          image: require('~/assets/narratives/vaishnavi.jpg'),
           url: 'https://www.youtube.com/watch?v=UGAbOxu-PO8',
         },
         {
           name: 'Prince Canuma',
           description: 'Mentor',
-          image: require('~/assets/speakers/facundo.jpg'),
+          image: require('~/assets/narratives/prince.jpeg'),
           url: 'https://www.youtube.com/watch?v=591aJpAkN7M',
         },
         {
@@ -91,6 +95,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+#narrative {
+  margin-top: 4rem;
+  padding-top: 4rem;
+
+  @include respond-below(mobile) {
+    padding-top: 4rem;
+  }
+}
+
 .narrative {
   border-radius: 40px;
   background: linear-gradient(
@@ -104,6 +117,9 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 25px;
+  position: relative;
+  flex-basis: 1;
+  flex-grow: 1;
 
   &:hover {
     background: linear-gradient(180deg, #0b3b52 3.72%, #0b121f 141.1%);

@@ -6,6 +6,7 @@
       :px="{ base: '1rem', sm: '50px' }"
       :gap="{ base: '1rem', sm: '100px' }"
       :direction="{ base: 'column-reverse', sm: 'row' }"
+      mt="3rem"
     >
       <p class="text">
         Hack This Fall began with a mindset of encouraging new hackers to build
@@ -37,6 +38,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+#about {
+  margin-top: 4rem;
+  padding-top: 4rem;
+
+  @include respond-below(mobile) {
+    padding-top: 4rem;
+  }
+}
+
 .text {
   font-family: 'Poppins';
   font-style: normal;

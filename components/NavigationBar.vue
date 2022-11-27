@@ -8,15 +8,21 @@
     top="0"
     justify="space-between"
   >
-    <div class="logo"><img src="~/assets/logo.png" /></div>
+    <div class="logo">
+      <NuxtLink to="/"><img src="~/assets/logo.png" /></NuxtLink>
+    </div>
     <div class="nav-desktop">
-      <a id="nav-link-about" href="/#about" class="item">About</a>
-      <a id="nav-link-tracks" href="/#tracks" class="item">Tracks</a>
-      <a id="nav-link-sponsors" href="/#sponsors" class="item">Sponsors</a>
-      <a id="nav-link-faq" href="/#faq" class="item">FAQ</a>
+      <NuxtLink id="nav-link-about" to="/#about" class="item">About</NuxtLink>
+      <NuxtLink id="nav-link-tracks" to="/#tracks" class="item"
+        >Tracks</NuxtLink
+      >
+      <NuxtLink id="nav-link-sponsors" to="/#sponsors" class="item"
+        >Sponsors</NuxtLink
+      >
+      <NuxtLink id="nav-link-faq" to="/#faq" class="item">FAQ</NuxtLink>
       <span class="divider"></span>
       <!-- <a id="nav-link-swags" class="item">Swags</a> -->
-      <a id="nav-link-team" href="/team" class="item">Team</a>
+      <NuxtLink id="nav-link-team" to="/team" class="item">Team</NuxtLink>
 
       <img
         width="100%"

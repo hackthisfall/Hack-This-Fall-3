@@ -1,13 +1,14 @@
 <template>
   <ContainerVue id="s3-team" name="s3-team">
     <HeadingVue front="Previous Seasons" back="Team" />
-    <CFlex :mx="{ base: '0rem', sm: '50px' }" justify="center">
+    <CBox :mx="{ base: '0rem', sm: '50px' }">
       <CGrid
-        :gap="{ base: '1rem', sm: '50px' }"
+        :gap="{ base: '1rem', sm: '3rem' }"
         :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
+        :mt="{ base: '2rem', sm: '5rem' }"
       >
         <CGridItem v-for="(person, index) in people" :key="index">
-          <a :href="person.url" class="narrative animate-ease">
+          <a :href="person.url" class="narrative animate-ease" target="_blank">
             <div class="image animate-ease">
               <img class="narrator" :src="person.image" />
             </div>
@@ -17,19 +18,19 @@
           </a>
         </CGridItem>
       </CGrid>
-    </CFlex>
+    </CBox>
   </ContainerVue>
 </template>
 
 <script>
-import { CFlex, CGrid, CGridItem } from '@chakra-ui/vue'
+import { CBox, CGrid, CGridItem } from '@chakra-ui/vue'
 import HeadingVue from './HeadingComponent.vue'
 import ContainerVue from './Container.vue'
 export default {
   components: {
     HeadingVue,
     ContainerVue,
-    CFlex,
+    CBox,
     CGrid,
     CGridItem,
   },
@@ -37,39 +38,9 @@ export default {
     return {
       people: [
         {
-          name: 'Siddharth Dayalwal',
-          url: 'https://twitter.com/siddharth_hacks',
-          image: require('~/assets/team/siddharth.png'),
-        },
-        {
-          name: 'Sahil Sen',
-          url: 'https://www.linkedin.com/in/sahil-sen-528647ba/',
-          image: require('~/assets/team/sahilsen.webp'),
-        },
-        {
-          name: 'Paras Gupta',
-          url: 'https://www.linkedin.com/in/parasg1999/',
-          image: require('~/assets/team/paras.jpeg'),
-        },
-        {
           name: 'Ojasvi Khurana',
           url: 'https://www.linkedin.com/in/ojasvikhurana/',
           image: require('~/assets/team/ojasvi.jpeg'),
-        },
-        {
-          name: 'Apoorv Dwivedi',
-          url: 'https://www.linkedin.com/in/apoorvdwi',
-          image: require('~/assets/team/apoorv.jpg'),
-        },
-        {
-          name: 'Vaibhav Toshniwal',
-          url: 'https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/',
-          image: require('~/assets/team/vaibhav.jpeg'),
-        },
-        {
-          name: "Dennis D'mello",
-          url: 'https://www.linkedin.com/in/dendemello/',
-          image: require('~/assets/team/dennis.jpeg'),
         },
         {
           name: 'Sahil Bhatiya',
@@ -77,7 +48,7 @@ export default {
           image: require('~/assets/team/sahil.jpeg'),
         },
         {
-          name: 'Aaishika S Bhattacharya',
+          name: 'Aaishika',
           url: 'https://www.linkedin.com/in/aaishika/',
           image: require('~/assets/team/aaishika.png'),
         },
@@ -86,7 +57,6 @@ export default {
           url: 'https://www.linkedin.com/in/rishabhbansal97',
           image: require('~/assets/team/rishabh.jpeg'),
         },
-
         {
           name: 'Dhvanan Kotecha',
           url: 'https://www.linkedin.com/in/dkots111/',
@@ -101,11 +71,6 @@ export default {
           name: 'Abhishek Doshi',
           url: 'https://www.linkedin.com/in/abhishek-doshi-520983199/',
           image: require('~/assets/team/abhi.webp'),
-        },
-        {
-          name: 'Tushar',
-          url: 'https://www.linkedin.com/in/tushar-ba401a136/',
-          image: require('~/assets/team/tushar.webp'),
         },
         {
           name: 'Tirthak Patel',
@@ -139,6 +104,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+#s3-team {
+  margin-top: 4rem;
+}
+
 .narrative {
   border-radius: 40px;
   background: linear-gradient(

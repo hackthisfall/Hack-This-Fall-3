@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="footer">
     <CFlex
       :mx="{ base: '1rem', sm: '100px' }"
       :direction="{ base: 'column', sm: 'row' }"
@@ -8,7 +8,7 @@
       justify="space-between"
     >
       <CFlex class="logo">
-        <img src="~/assets/footer-logo.png" />
+        <img src="~/assets/logo.png" />
       </CFlex>
       <CFlex
         class="about"
@@ -17,10 +17,26 @@
         :align="{ base: 'center', sm: 'start' }"
       >
         <h2 class="heading">About</h2>
-        <p class="content">Season 1.0</p>
-        <p class="content">Season 2.0</p>
-        <p class="content">Know the Team</p>
-        <p class="content">Code of Conduct</p>
+        <a
+          href="https://s1.hackthisfall.tech"
+          class="content animate-ease"
+          target="_blank"
+          >Season 1.0</a
+        >
+        <a
+          href="https://s2.hackthisfall.tech"
+          class="content animate-ease"
+          target="_blank"
+          >Season 2.0</a
+        >
+        <NuxtLink to="/team" class="content animate-ease"
+          >Know the Team</NuxtLink
+        >
+        <a
+          href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+          class="content animate-ease"
+          >Code of Conduct</a
+        >
       </CFlex>
       <CFlex
         class="explore"
@@ -29,10 +45,12 @@
         :align="{ base: 'center', sm: 'start' }"
       >
         <h2 class="heading">Explore</h2>
-        <p class="content">Dev.to</p>
-        <p class="content">Swags</p>
-        <p class="content">Meetups</p>
-        <p class="content">Sponsor Us</p>
+        <a href="https://dev.to/hackthisfall" class="content animate-ease"
+          >Dev.to</a
+        >
+        <NuxtLink to="/" class="content animate-ease">Swags</NuxtLink>
+        <NuxtLink to="/" class="content animate-ease">Meetups</NuxtLink>
+        <NuxtLink to="/" class="content animate-ease">Sponsor Us</NuxtLink>
       </CFlex>
       <CFlex>
         <CFlex class="social">
@@ -43,14 +61,42 @@
             :grid-column-gap="{ base: '2rem', sm: '1rem' }"
             :grid-row-gap="{ base: '1rem', sm: '1rem' }"
           >
-            <span class="icon"><img src="~/assets/socials/twitter.svg" /></span>
-            <span class="icon"><img src="~/assets/socials/discord.svg" /></span>
-            <span class="icon"><img src="~/assets/socials/insta.svg" /></span>
-            <span class="icon"><img src="~/assets/socials/youtube.svg" /></span>
-            <span class="icon"><img src="~/assets/socials/mail.svg" /></span>
-            <span class="icon"
+            <a
+              href="https://twitter.com/hackthisfall/"
+              target="_blank"
+              class="icon animate-ease"
+              ><img src="~/assets/socials/twitter.svg"
+            /></a>
+            <a
+              href="https://discord.hackthisfall.tech/"
+              target="_blank"
+              class="icon animate-ease"
+              ><img src="~/assets/socials/discord.svg"
+            /></a>
+            <a
+              href="https://instagram.com/hackthisfall"
+              target="_blank"
+              class="icon animate-ease"
+              ><img src="~/assets/socials/insta.svg"
+            /></a>
+            <a
+              href="https://www.youtube.com/channel/UCpdsmUIkLpfopjURSYF1gaA"
+              target="_blank"
+              class="icon animate-ease"
+              ><img src="~/assets/socials/youtube.svg"
+            /></a>
+            <a
+              href="mailto:contact@hackthisfall.tech"
+              target="_blank"
+              class="icon animate-ease"
+              ><img src="~/assets/socials/mail.svg"
+            /></a>
+            <a
+              href="https://www.linkedin.com/company/hackthisfall/"
+              target="_blank"
+              class="icon animate-ease"
               ><img src="~/assets/socials/linkedin.svg"
-            /></span>
+            /></a>
           </CGrid>
         </CFlex>
       </CFlex>
@@ -72,6 +118,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#footer {
+  margin-top: 4rem;
+  padding-top: 4rem;
+
+  @include respond-below(mobile) {
+    padding-top: 4rem;
+  }
+}
+
 .footer {
   padding-bottom: 50px;
   .logo {
@@ -103,6 +158,11 @@ export default {
       margin-top: 1.5rem;
       line-height: 25px;
       color: #ffffff;
+
+      &:hover {
+        color: #d04d29;
+        font-weight: 500;
+      }
     }
 
     @include respond-below(mobile) {
@@ -130,6 +190,10 @@ export default {
         background: #0f1929;
         height: 3rem;
         width: 3rem;
+
+        &:hover {
+          background: #274655;
+        }
 
         img {
           height: 1.25rem;

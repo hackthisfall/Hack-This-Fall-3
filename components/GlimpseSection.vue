@@ -1,7 +1,7 @@
 <template>
   <ContainerVue id="glimpse" name="glimpse">
     <HeadingVue front="Previous Events" back="GLIMPSES" />
-    <CFlex mt="2rem" :mx="{ base: '1rem', sm: '3.125rem' }" justify="center">
+    <CFlex mt="5rem" :mx="{ base: '1rem', sm: '3.125rem' }" justify="center">
       <CGrid
         :template-columns="{ base: 'repeat(2, 1fr)', sm: 'repeat(5, 1fr)' }"
         :grid-column-gap="{ base: '0.5rem', sm: '1.25rem' }"
@@ -134,6 +134,15 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+#glimpse {
+  margin-top: 4rem;
+  padding-top: 4rem;
+
+  @include respond-below(mobile) {
+    padding-top: 4rem;
+  }
+}
+
 .number {
   font-weight: 700;
   line-height: 4rem;

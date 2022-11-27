@@ -14,8 +14,8 @@ export default {
   width: 100%;
   position: relative;
   overflow: hidden;
-  margin-left: 10px;
-  height: 300px;
+  height: 18.75rem;
+  margin-bottom: -5rem;
 
   .back-text {
     position: absolute;
@@ -27,10 +27,6 @@ export default {
     font-size: 240px;
     line-height: 300px;
     color: rgba(255, 255, 255, 0.05);
-
-    @include respond-below(mobile) {
-      font-size: 4.25rem;
-    }
   }
 
   .front-text {
@@ -44,8 +40,17 @@ export default {
     position: absolute;
     left: 2.7%;
     bottom: 23.5%;
+  }
 
-    @include respond-below(mobile) {
+  @include respond-below(mobile) {
+    height: 10rem;
+
+    .back-text {
+      font-size: 4.25rem;
+      top: -5.75rem;
+    }
+
+    .front-text {
       font-size: 1.5rem;
     }
   }

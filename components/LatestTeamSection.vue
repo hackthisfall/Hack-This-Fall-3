@@ -1,13 +1,17 @@
 <template>
   <ContainerVue id="s3-team" name="s3-team">
-    <HeadingVue front="Previous Seasons" back="Team" />
-    <CFlex :mx="{ base: '0rem', sm: '50px' }" justify="center">
+    <HeadingVue front="Season 3" back="Team" />
+    <CBox
+      :mx="{ base: '0rem', sm: '50px' }"
+      justify="center"
+      :mt="{ base: '2rem', sm: '5rem' }"
+    >
       <CGrid
-        :gap="{ base: '1rem', sm: '50px' }"
+        :gap="{ base: '1rem', sm: '3rem' }"
         :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
       >
         <CGridItem v-for="(person, index) in people" :key="index">
-          <a :href="person.url" class="narrative animate-ease">
+          <a :href="person.url" class="narrative animate-ease" target="_blank">
             <div class="image animate-ease">
               <img class="narrator" :src="person.image" />
             </div>
@@ -17,19 +21,19 @@
           </a>
         </CGridItem>
       </CGrid>
-    </CFlex>
+    </CBox>
   </ContainerVue>
 </template>
 
 <script>
-import { CFlex, CGrid, CGridItem } from '@chakra-ui/vue'
+import { CBox, CGrid, CGridItem } from '@chakra-ui/vue'
 import HeadingVue from './HeadingComponent.vue'
 import ContainerVue from './Container.vue'
 export default {
   components: {
     HeadingVue,
     ContainerVue,
-    CFlex,
+    CBox,
     CGrid,
     CGridItem,
   },
@@ -46,7 +50,6 @@ export default {
           url: 'https://www.linkedin.com/in/sahil-sen-528647ba/',
           image: require('~/assets/team/sahilsen.webp'),
         },
-
         {
           name: 'Vaibhav Toshniwal',
           url: 'https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/',
@@ -54,7 +57,7 @@ export default {
         },
         {
           name: 'Paras Gupta',
-          url: 'https://www.linkedin.com/in/parasg1999/',
+          url: 'https://twitter.com/parasg1999/',
           image: require('~/assets/team/paras.jpeg'),
         },
         {
@@ -69,7 +72,8 @@ export default {
         },
         {
           name: 'Bishwajeet Parhi',
-          url: '',
+          image: require('~/assets/team/biswa.jpg'),
+          url: 'https://twitter.com/biswa_20p',
         },
         {
           name: 'Tushar',
@@ -78,43 +82,48 @@ export default {
         },
         {
           name: 'Pooja Gera',
-          url: '',
+          url: 'https://twitter.com/poojagera0_0',
+          image: require('~/assets/team/pooja.jpg'),
         },
         {
           name: 'Priti Priya',
-          url: '',
+          url: 'https://twitter.com/pritisinghhhh',
+          image: require('~/assets/team/priti.jpeg'),
         },
         {
           name: 'Kriyanshi Shah',
-          url: '',
+          url: 'https://twitter.com/ShahKriyanshi',
+          image: require('~/assets/team/kriyanshi.jpg'),
         },
         {
           name: 'Disha Thakur',
-          url: '',
-        },
-        {
-          name: 'Unnati Chhabra',
-          url: '',
+          url: 'https://twitter.com/disha_designss',
+          image: require('~/assets/team/disha.jpeg'),
         },
         {
           name: 'Shitiz Aggarwal',
-          url: '',
+          url: 'https://twitter.com/Shitiz_Agg',
+          image: require('~/assets/team/shitiz.jpeg'),
         },
         {
           name: 'Aayush Sharma',
+          image: require('~/assets/team/aayush.jpeg'),
           url: 'https://twitter.com/SuperAayush14',
         },
         {
           name: 'Rohan Kambli',
-          url: '',
+          url: 'https://twitter.com/rohannrk',
+          image: require('~/assets/team/rohan.jpg'),
         },
         {
           name: 'Arjun Dhawan',
-          url: '',
+          url: 'https://www.linkedin.com/in/arjun-dhawan-2002',
+          image: require('~/assets/team/rohan.jpg'),
         },
         {
           name: 'Prathamesh Shanbhag',
-          url: '',
+          url: 'https://twitter.com/Prathamesh_117',
+          image: require('~/assets/team/prathamesh.jpg'),
         },
       ],
     }

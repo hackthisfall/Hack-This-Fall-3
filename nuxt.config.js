@@ -98,7 +98,7 @@ export default {
   ],
   webfontloader: {
     google: {
-      families: ['Poppins:400,600,700,800'],
+      families: ['Poppins:400,500,600,700,800'],
     },
   },
 

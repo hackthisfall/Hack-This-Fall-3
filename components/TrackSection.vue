@@ -1,7 +1,7 @@
 <template>
   <ContainerVue id="tracks" name="tracks">
     <HeadingVue front="Tracks" back="TRACKS" />
-    <CFlex :px="{ base: '1rem', sm: '50px' }" pt="20px" justify="center">
+    <CFlex :px="{ base: '1rem', sm: '50px' }" mt="4rem" justify="center">
       <CGrid
         :gap="{ base: '0.725rem', sm: '50px' }"
         :template-rows="{ base: 'repeat(4, 1fr)', sm: 'repeat(2, 1fr)' }"
@@ -111,6 +111,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#tracks {
+  margin-top: 4rem;
+  padding-top: 4rem;
+
+  @include respond-below(mobile) {
+    padding-top: 4rem;
+  }
+}
 .track {
   display: flex;
   flex-direction: column;

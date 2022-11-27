@@ -99,7 +99,7 @@ export default {
   width: 100vw;
   min-height: 100vh;
   background: #050c19;
-  padding: 0.5px 5rem 83px;
+  padding: 0.5px 5rem 2rem;
 
   @include respond-below(mobile) {
     padding-left: 1rem;
@@ -117,7 +117,7 @@ export default {
     background-size: cover;
 
     @include respond-below(mobile) {
-      margin-top: 7rem;
+      margin-top: 1rem;
     }
 
     .navbar-mobile {
