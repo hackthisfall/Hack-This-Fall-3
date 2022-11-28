@@ -112,7 +112,6 @@ export default {
     margin-top: 1rem;
     min-height: 85vh;
     background-image: url('~/assets/background.png');
-    background-position-x: -1rem;
     background-repeat: no-repeat;
     background-size: cover;
 
