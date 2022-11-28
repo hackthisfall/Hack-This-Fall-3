@@ -1,49 +1,51 @@
 <template>
-  <div class="outer-container">
-    <NavigationBar :toggleNavbar="toggleNavbar" />
-    <div class="main-container">
-      <div v-if="isNavbarOpen" class="navbar-mobile">
-        <CFlex direction="column" align="center">
-          <span
-            id="nav-link-about"
-            class="mobile-nav-item"
-            @click="goToLocation('/#about')"
-            >About</span
-          >
-          <span
-            id="nav-link-tracks"
-            class="mobile-nav-item"
-            @click="goToLocation('/#tracks')"
-            >Tracks</span
-          >
-          <span
-            id="nav-link-sponsors"
-            class="mobile-nav-item"
-            @click="goToLocation('/#sponsors')"
-            >Sponsors</span
-          >
-          <span
-            id="nav-link-faq"
-            class="mobile-nav-item"
-            @click="goToLocation('/#faq')"
-            >FAQ</span
-          >
-          <span class="divider"></span>
-          <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span>
-          <span id="nav-link-swags" class="mobile-nav-item">Swags</span>
-          <span id="nav-link-team" class="mobile-nav-item">Team</span>
-        </CFlex>
-      </div>
-      <div v-else>
-        <HeroSectionVue />
-        <AboutSectionVue />
-        <GlimpseSectionVue />
-        <TrackSectionVue />
-        <SpeakerSectionVue />
-        <SponsorSectionVue />
-        <NarrativeSectionVue />
-        <FaqSectionVue />
-        <FooterSectionVue />
+  <div class="center">
+    <div class="outer-container">
+      <NavigationBar :toggleNavbar="toggleNavbar" />
+      <div class="main-container">
+        <div v-if="isNavbarOpen" class="navbar-mobile">
+          <CFlex direction="column" align="center">
+            <span
+              id="nav-link-about"
+              class="mobile-nav-item"
+              @click="goToLocation('/#about')"
+              >About</span
+            >
+            <span
+              id="nav-link-tracks"
+              class="mobile-nav-item"
+              @click="goToLocation('/#tracks')"
+              >Tracks</span
+            >
+            <span
+              id="nav-link-sponsors"
+              class="mobile-nav-item"
+              @click="goToLocation('/#sponsors')"
+              >Sponsors</span
+            >
+            <span
+              id="nav-link-faq"
+              class="mobile-nav-item"
+              @click="goToLocation('/#faq')"
+              >FAQ</span
+            >
+            <span class="divider"></span>
+            <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span>
+            <span id="nav-link-swags" class="mobile-nav-item">Swags</span>
+            <span id="nav-link-team" class="mobile-nav-item">Team</span>
+          </CFlex>
+        </div>
+        <div v-else>
+          <HeroSectionVue />
+          <AboutSectionVue />
+          <GlimpseSectionVue />
+          <TrackSectionVue />
+          <SpeakerSectionVue />
+          <SponsorSectionVue />
+          <NarrativeSectionVue />
+          <FaqSectionVue />
+          <FooterSectionVue />
+        </div>
       </div>
     </div>
   </div>
@@ -95,11 +97,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .outer-container {
   width: 100vw;
   min-height: 100vh;
   background: #050c19;
   padding: 0.5px 5rem 2rem;
+  max-width: 1440px;
 
   @include respond-below(mobile) {
     padding-left: 1rem;

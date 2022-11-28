@@ -10,17 +10,25 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <CButton class="button">
-          <img src="~/assets/icons/register.svg" alt="register" class="icon" />
-          <span> Pre-Register </span>
-        </CButton>
-        <CButton class="button"
-          ><img
-            src="~/assets/icons/discord.svg"
-            alt="discord"
-            class="icon"
-          /><span>Join Discord</span></CButton
-        >
+        <a href="https://bit.ly/htf3-sponsor">
+          <CButton class="button animate-ease">
+            <img
+              src="~/assets/icons/register.svg"
+              alt="register"
+              class="icon"
+            />
+            <span> Pre-Register </span>
+          </CButton>
+        </a>
+        <a href="https://bit.ly/htf3-sponsor">
+          <CButton class="button animate-ease"
+            ><img
+              src="~/assets/icons/discord.svg"
+              alt="discord"
+              class="icon"
+            /><span>Join Discord</span></CButton
+          >
+        </a>
       </CFlex>
     </div>
   </ContainerVue>
@@ -110,6 +118,10 @@ export default {
       font-weight: 600;
       font-size: 1.25rem;
       color: white;
+
+      &:hover {
+        background: rgb(244, 109, 36);
+      }
 
       img {
         width: 2rem;

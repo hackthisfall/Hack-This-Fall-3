@@ -26,9 +26,11 @@
         </a>
       </CFlex>
 
-      <CButton class="button">
-        <span> Sponsor us! </span>
-      </CButton>
+      <a href="https://bit.ly/htf3-sponsor">
+        <CButton class="button animate-ease">
+          <span> Sponsor us! </span>
+        </CButton>
+      </a>
     </CFlex>
   </ContainerVue>
 </template>
@@ -333,6 +335,10 @@ export default {
   font-size: 1.25rem;
   color: white;
   margin-top: 4rem;
+
+  &:hover {
+    background: rgb(244, 109, 36);
+  }
 
   @include respond-below(mobile) {
     margin-top: 2rem;

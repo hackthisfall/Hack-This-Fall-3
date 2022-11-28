@@ -48,9 +48,15 @@
         <a href="https://dev.to/hackthisfall" class="content animate-ease"
           >Dev.to</a
         >
-        <NuxtLink to="/" class="content animate-ease">Swags</NuxtLink>
-        <NuxtLink to="/" class="content animate-ease">Meetups</NuxtLink>
-        <NuxtLink to="/" class="content animate-ease">Sponsor Us</NuxtLink>
+        <a href="https://blog.hackthisfall.tech" class="content animate-ease"
+          >Blogs</a
+        >
+        <a href="https://s2.hackthisfall.tech/swag" class="content animate-ease"
+          >Swags</a
+        >
+        <a href="https://bit.ly/htf3-sponsor" class="content animate-ease"
+          >Sponsor Us</a
+        >
       </CFlex>
       <CFlex>
         <CFlex class="social">
