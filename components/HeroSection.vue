@@ -10,7 +10,7 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a href="https://bit.ly/htf3-sponsor">
+        <a href="https://forms.gle/fGfkLgq1jgLNTNsm8">
           <CButton class="button animate-ease">
             <img
               src="~/assets/icons/register.svg"
@@ -20,7 +20,7 @@
             <span> Pre-Register </span>
           </CButton>
         </a>
-        <a href="https://bit.ly/htf3-sponsor">
+        <a href="https://discord.hackthisfall.tech">
           <CButton class="button animate-ease"
             ><img
               src="~/assets/icons/discord.svg"
