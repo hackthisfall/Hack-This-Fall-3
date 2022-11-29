@@ -123,7 +123,7 @@ export default {
         {
           name: 'Arjun Dhawan',
           url: 'https://www.linkedin.com/in/arjun-dhawan-2002',
-          image: require('~/assets/team/rohan.jpg'),
+          image: require('~/assets/team/arjun.jpg'),
         },
         {
           name: 'Prathamesh Shanbhag',
