@@ -119,7 +119,7 @@ export default {
   );
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   height: 100%;
   align-items: center;
   padding: 25px;

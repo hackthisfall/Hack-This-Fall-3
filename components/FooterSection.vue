@@ -14,7 +14,7 @@
         class="about"
         direction="column"
         justify="space-evenly"
-        :align="{ base: 'center', md: 'start' }"
+        :align="{ base: 'center', md: 'flex-start' }"
       >
         <h2 class="heading">About</h2>
         <a
@@ -43,7 +43,7 @@
         class="explore"
         direction="column"
         justify="space-evenly"
-        :align="{ base: 'center', md: 'start' }"
+        :align="{ base: 'center', md: 'flex-start' }"
       >
         <h2 class="heading">Explore</h2>
         <a

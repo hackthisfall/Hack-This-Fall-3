@@ -145,6 +145,7 @@ export default {
 
 img {
   max-width: 14vw;
+  width: 100%;
 
   @include respond-below(md) {
     max-width: 100%;
