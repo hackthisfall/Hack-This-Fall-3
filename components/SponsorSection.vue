@@ -12,7 +12,7 @@
         :row-gap="{ base: '1rem', sm: '1.75rem' }"
         :column-gap="{
           base: '1rem',
-          sm: '3.4rem',
+          sm: '2rem',
           lg: '2rem',
           xl: '2rem',
           '2xl': '3.4rem',
@@ -311,7 +311,7 @@ export default {
     }
   }
 
-  @include respond-below(xs) {
+  @include respond-below(sm) {
     height: 5rem;
     min-width: 8rem;
     padding: 0.5rem 0.75rem;

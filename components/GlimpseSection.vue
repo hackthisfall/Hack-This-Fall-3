@@ -4,8 +4,8 @@
     <CFlex mt="5rem" :mx="{ base: '1rem', sm: '3.125rem' }" justify="center">
       <CGrid
         :template-columns="{ base: 'repeat(2, 1fr)', lg: 'repeat(5, 1fr)' }"
-        :grid-column-gap="{ base: '0.5rem', lg: '1.25rem' }"
-        :grid-row-gap="{ base: '0.25rem', lg: '0.75rem' }"
+        :grid-column-gap="{ base: '0.5rem', xl: '1.25rem' }"
+        :grid-row-gap="{ base: '0.25rem', xl: '0.75rem' }"
       >
         <CGridItem
           display="flex"
@@ -143,10 +143,23 @@ export default {
   }
 }
 
+img {
+  max-width: 14vw;
+
+  @include respond-below(md) {
+    max-width: 100%;
+  }
+}
+
 .number {
   font-weight: 700;
   line-height: 4rem;
   font-size: 4rem;
+
+  @include respond-below(lg) {
+    font-size: 2.75rem;
+    // margin-top: -0.5rem;
+  }
 
   @include respond-below(md) {
     font-size: 5rem;
@@ -164,8 +177,12 @@ export default {
   line-height: 2rem;
   font-size: 2.25rem;
 
+  @include respond-below(lg) {
+    font-size: 1.5rem;
+  }
+
   @include respond-below(md) {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 1rem;
   }
 

@@ -109,7 +109,7 @@ export default {
   padding: 0.5px 5rem 2rem;
   max-width: 1440px;
 
-  @include respond-below(sm) {
+  @include respond-below(md) {
     padding-left: 2rem;
     padding-right: 2rem;
   }

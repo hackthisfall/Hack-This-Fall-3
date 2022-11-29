@@ -7,7 +7,7 @@
         :template-columns="{
           base: 'repeat(2, 1fr)',
           sm: 'repeat(2, 1fr)',
-          md: 'repeat(3, 1fr)',
+          lg: 'repeat(3, 1fr)',
           xl: 'repeat(4, 1fr)',
         }"
       >

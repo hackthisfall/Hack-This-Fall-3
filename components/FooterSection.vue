@@ -14,7 +14,7 @@
         class="about"
         direction="column"
         justify="space-evenly"
-        :align="{ base: 'center', sm: 'start' }"
+        :align="{ base: 'center', md: 'start' }"
       >
         <h2 class="heading">About</h2>
         <a
@@ -43,7 +43,7 @@
         class="explore"
         direction="column"
         justify="space-evenly"
-        :align="{ base: 'center', sm: 'start' }"
+        :align="{ base: 'center', md: 'start' }"
       >
         <h2 class="heading">Explore</h2>
         <a
@@ -105,7 +105,7 @@
               ><img src="~/assets/socials/youtube.svg"
             /></a>
             <a
-              href="mailto:contact@hackthisfall.tech"
+              href="mailto:hackthisfall@gmail.com"
               target="_blank"
               class="icon animate-ease"
               ><img src="~/assets/socials/mail.svg"
@@ -141,7 +141,7 @@ export default {
   margin-top: 4rem;
   padding-top: 4rem;
 
-  @include respond-below(xs) {
+  @include respond-below(sm) {
     padding-top: 4rem;
   }
 }
@@ -184,7 +184,7 @@ export default {
       }
     }
 
-    @include respond-below(xs) {
+    @include respond-below(sm) {
       margin-top: 3.25rem;
 
       .content {
@@ -221,7 +221,7 @@ export default {
       }
     }
 
-    @include respond-below(xs) {
+    @include respond-below(sm) {
       margin-top: 3.25rem;
 
       .grid {
@@ -250,7 +250,7 @@ export default {
   line-height: 25px;
   color: #777e91;
 
-  @include respond-below(xs) {
+  @include respond-below(sm) {
     font-size: 0.75rem;
     padding: 30px 1rem;
   }

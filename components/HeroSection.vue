@@ -3,7 +3,7 @@
     <div class="inner">
       <img class="hero-logo" src="~/assets/hero-logo.png" />
       <h2 class="tagline">Innovate For Good</h2>
-      <h3 class="date">3 - 5 February 2022</h3>
+      <h3 class="date">3 - 5 February 2023</h3>
       <CFlex
         justify="center"
         align="center"
@@ -58,7 +58,7 @@ export default {
       width: 730px;
       margin-bottom: 30px;
 
-      @include respond-below(sm) {
+      @include respond-below(md) {
         width: 78vw;
         margin-left: auto;
         margin-right: auto;
