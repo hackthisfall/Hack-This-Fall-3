@@ -4,12 +4,12 @@
     <CFlex mt="5rem" :mx="{ base: '1rem', sm: '3.125rem' }" justify="center">
       <CGrid
         column-gap="3rem"
-        :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)' }"
+        :template-columns="{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }"
         align-items="start"
       >
         <CGrid
           template-columns="repeat(1, 1fr)"
-          :display="{ base: 'unset', sm: 'none' }"
+          :display="{ base: 'unset', md: 'none' }"
         >
           <div
             v-for="(faq, index) in FAQs"
@@ -24,7 +24,9 @@
           >
             <div class="texts" @click="toggleFAQItem(faq)">
               <span class="heading">
-                <span class="number">0{{ index + 1 }}</span>
+                <span class="number"
+                  >{{ index + 1 >= 10 ? '' : 0 }}{{ index + 1 }}</span
+                >
                 <h4 class="title">
                   {{ faq.title }}
                 </h4>
@@ -50,7 +52,7 @@
         </CGrid>
         <CGrid
           template-columns="repeat(1, 1fr)"
-          :display="{ base: 'none', sm: 'unset' }"
+          :display="{ base: 'none', md: 'unset' }"
         >
           <div
             v-for="(faq, index) in FAQs.slice(0, FAQs.length / 2)"
@@ -91,7 +93,7 @@
         </CGrid>
         <CGrid
           template-columns="repeat(1, 1fr)"
-          :display="{ base: 'none', sm: 'unset' }"
+          :display="{ base: 'none', md: 'unset' }"
         >
           <div
             v-for="(faq, index) in FAQs.slice(-(FAQs.length / 2))"
@@ -234,7 +236,7 @@ export default {
   margin-top: 4rem;
   padding-top: 4rem;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding-top: 4rem;
   }
 }
@@ -277,10 +279,11 @@ export default {
         line-height: 120%;
         letter-spacing: 0.190942px;
         color: #ffffff80;
-        margin-right: 30px;
+        min-width: 3.75rem;
 
-        @include respond-below(mobile) {
+        @include respond-below(xs) {
           font-size: 1rem;
+          min-width: 2.5rem;
 
           .number {
             font-size: 1.1rem;
@@ -296,6 +299,10 @@ export default {
         font-weight: 600;
         font-size: 20px;
         line-height: 120%;
+
+        @include respond-below(xs) {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -354,26 +361,6 @@ export default {
   img {
   }
 
-  // .texts {
-  //   padding: 15px 15px 10px;
-  //   margin-left: 9px;
-  //   margin-right: 2px;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-content: flex-start;
-  //   cursor: pointer;
-  //   -moz-user-select: none;
-  //   -webkit-user-select: none;
-  //   -ms-user-select: none;
-  //   user-select: none;
-
-  //   .title {
-  //     color: rgba(233, 83, 34, 1);
-  //     font-size: 1.1rem;
-  //     font-weight: 300;
-  //   }
-  // }
-
   .answer {
     font-style: normal;
     font-weight: 400;
@@ -384,8 +371,8 @@ export default {
     text-align: justify;
     color: white;
 
-    @include respond-below(mobile) {
-      font-size: 1rem;
+    @include respond-below(xs) {
+      font-size: 0.9rem;
       margin-left: -0.1rem;
       padding-left: 0rem;
       padding-right: 0rem;

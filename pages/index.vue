@@ -109,7 +109,12 @@ export default {
   padding: 0.5px 5rem 2rem;
   max-width: 1440px;
 
-  @include respond-below(mobile) {
+  @include respond-below(sm) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include respond-below(xs) {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -124,7 +129,7 @@ export default {
     background-position-x: -1rem;
     background-size: cover;
 
-    @include respond-below(mobile) {
+    @include respond-below(xs) {
       margin-top: 1rem;
     }
 

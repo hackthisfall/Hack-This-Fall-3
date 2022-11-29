@@ -1,8 +1,8 @@
 <template>
   <div id="footer">
     <CFlex
-      :mx="{ base: '1rem', sm: '100px' }"
-      :direction="{ base: 'column', sm: 'row' }"
+      :mx="{ base: '1rem', md: '3rem', lg: '100px' }"
+      :direction="{ base: 'column', md: 'row' }"
       align="center"
       class="footer"
       justify="space-between"
@@ -141,7 +141,7 @@ export default {
   margin-top: 4rem;
   padding-top: 4rem;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding-top: 4rem;
   }
 }
@@ -184,7 +184,7 @@ export default {
       }
     }
 
-    @include respond-below(mobile) {
+    @include respond-below(xs) {
       margin-top: 3.25rem;
 
       .content {
@@ -221,7 +221,7 @@ export default {
       }
     }
 
-    @include respond-below(mobile) {
+    @include respond-below(xs) {
       margin-top: 3.25rem;
 
       .grid {
@@ -250,7 +250,7 @@ export default {
   line-height: 25px;
   color: #777e91;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     font-size: 0.75rem;
     padding: 30px 1rem;
   }

@@ -1,11 +1,19 @@
 <template>
   <ContainerVue id="s3-team" name="s3-team">
     <HeadingVue front="Previous Seasons" back="Team" />
-    <CBox :mx="{ base: '0rem', sm: '50px' }">
+    <CBox
+      :mx="{ base: '0rem', sm: '50px' }"
+      justify="center"
+      :mt="{ base: '2rem', sm: '5rem' }"
+    >
       <CGrid
         :gap="{ base: '1rem', sm: '3rem' }"
-        :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
-        :mt="{ base: '2rem', sm: '5rem' }"
+        :template-columns="{
+          base: 'repeat(2, 1fr)',
+          sm: 'repeat(2, 1fr)',
+          md: 'repeat(3, 1fr)',
+          xl: 'repeat(4, 1fr)',
+        }"
       >
         <CGridItem v-for="(person, index) in people" :key="index">
           <a :href="person.url" class="narrative animate-ease" target="_blank">
@@ -118,7 +126,8 @@ export default {
   );
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  height: 100%;
   align-items: center;
   padding: 25px;
 
@@ -145,7 +154,12 @@ export default {
   }
 
   .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     margin-top: 20px;
+
     h2 {
       font-family: 'Poppins';
       font-style: normal;
@@ -154,6 +168,26 @@ export default {
       line-height: 28px;
       color: #fefaf4;
       text-align: center;
+    }
+  }
+
+  @include respond-below(xs) {
+    padding: 1rem;
+    .image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .text {
+      h2 {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+
+      p {
+        font-size: 0.6rem;
+        line-height: 19px;
+      }
     }
   }
 }

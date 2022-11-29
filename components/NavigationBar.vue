@@ -65,13 +65,18 @@ export default {
     inset 1px 1px 1px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2px);
 
+  min-width: 8.25rem;
+
   border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     width: 6.25rem;
   }
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding: 0.625rem;
     height: unset;
 
@@ -132,7 +137,7 @@ export default {
     border: 1.5px solid #243149;
   }
 
-  @include respond-below(mobile) {
+  @include respond-below(md) {
     padding-left: 1rem;
     padding-right: 5rem;
     .item {

@@ -1,10 +1,15 @@
 <template>
   <ContainerVue id="speakers" name="speakers">
     <HeadingVue front="Past Speakers" back="SPEAKERS" />
-    <CFlex :mx="{ base: '0rem', sm: '50px' }" mt="5rem" justify="center">
+    <CFlex :mx="{ base: '0.5rem', sm: '50px' }" mt="5rem" justify="center">
       <CGrid
         :gap="{ base: '0.75rem', sm: '3rem' }"
-        :template-columns="{ base: 'repeat(2, 1fr)', sm: 'repeat(5, 1fr)' }"
+        :template-columns="{
+          base: 'repeat(2, 1fr)',
+          sm: 'repeat(3, 1fr)',
+          lg: 'repeat(4, 1fr)',
+          xl: 'repeat(5, 1fr)',
+        }"
       >
         <CGridItem
           v-for="(speaker, index) in speakers"
@@ -59,7 +64,7 @@ export default {
           picture: require('~/assets/speakers/facundo.jpg'),
         },
         {
-          description: 'Senior Community Engineer, Gitpod',
+          description: 'Head of Community, Gitpod',
           name: 'Pauline Narvas',
           url: 'https://twitter.com/paulienuh',
           picture: require('~/assets/speakers/pauline.jpg'),
@@ -77,7 +82,7 @@ export default {
           picture: require('~/assets/speakers/dean.jpeg'),
         },
         {
-          description: 'Engineer,Web DataWorks',
+          description: 'Engineer, Web DataWorks',
           name: 'Nishu Goel',
           url: 'https://twitter.com/TheNishuGoel',
           picture: require('~/assets/speakers/nishu.png'),
@@ -95,7 +100,7 @@ export default {
           picture: require('~/assets/speakers/kate.jpeg'),
         },
         {
-          description: 'Associate Solution Architect, Red Hat',
+          description: 'Solution Architect, Red Hat',
           name: 'Gourav Sharma',
           url: 'https://twitter.com/rhcasharma',
           picture: require('~/assets/speakers/gourav.jpg'),
@@ -110,7 +115,7 @@ export default {
   margin-top: 4rem;
   padding-top: 4rem;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding-top: 4rem;
   }
 }

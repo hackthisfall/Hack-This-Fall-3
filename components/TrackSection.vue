@@ -3,9 +3,9 @@
     <HeadingVue front="Tracks" back="TRACKS" />
     <CFlex :px="{ base: '1rem', sm: '50px' }" mt="4rem" justify="center">
       <CGrid
-        :gap="{ base: '0.725rem', sm: '50px' }"
-        :template-rows="{ base: 'repeat(4, 1fr)', sm: 'repeat(2, 1fr)' }"
-        :template-columns="{ base: 'repeat(2, 1fr)', sm: 'repeat(4, 1fr)' }"
+        :gap="{ base: '0.725rem', sm: '1.5rem', xl: '3.125rem' }"
+        :template-rows="{ base: 'repeat(4, 1fr)', lg: 'repeat(2, 1fr)' }"
+        :template-columns="{ base: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }"
       >
         <CGridItem
           v-for="(track, index) in tracks"
@@ -14,8 +14,8 @@
           :colSpan="track.span ? track.span : '1'"
           :px="{ base: '1rem', sm: '30px' }"
           :py="{ base: '1rem', sm: '30px' }"
-          :rowStart="{ base: track.mobileRow, sm: track.desktopRow }"
-          :colStart="{ base: track.mobileCol, sm: track.desktopCol }"
+          :rowStart="{ base: track.mobileRow, lg: track.desktopRow }"
+          :colStart="{ base: track.mobileCol, lg: track.desktopCol }"
         >
           <img width="50px" :src="track.icon" />
           <p v-html="track.name"></p>
@@ -115,7 +115,7 @@ export default {
   margin-top: 4rem;
   padding-top: 4rem;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding-top: 4rem;
   }
 }
@@ -147,7 +147,7 @@ export default {
     letter-spacing: 0.02em;
     color: #ffffff;
 
-    @include respond-below(mobile) {
+    @include respond-below(xs) {
       font-size: 1rem;
     }
   }

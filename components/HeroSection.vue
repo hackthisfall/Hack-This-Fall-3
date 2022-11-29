@@ -58,7 +58,7 @@ export default {
       width: 730px;
       margin-bottom: 30px;
 
-      @include respond-below(mobile) {
+      @include respond-below(sm) {
         width: 78vw;
         margin-left: auto;
         margin-right: auto;
@@ -77,7 +77,7 @@ export default {
       color: #ffffff;
       text-align: center;
 
-      @include respond-below(mobile) {
+      @include respond-below(sm) {
         font-size: 1.7rem;
         line-height: unset;
         margin-top: 1.5rem;
@@ -95,7 +95,7 @@ export default {
       text-align: center;
       margin-bottom: 30px;
 
-      @include respond-below(mobile) {
+      @include respond-below(xs) {
         font-size: 1.25rem;
         line-height: unset;
         margin-top: 0.25rem;
@@ -129,7 +129,7 @@ export default {
         margin-right: 0.75rem;
       }
 
-      @include respond-below(mobile) {
+      @include respond-below(xs) {
         max-width: 70vw;
       }
     }

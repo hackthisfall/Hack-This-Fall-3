@@ -10,8 +10,19 @@
     >
       <CGrid
         :row-gap="{ base: '1rem', sm: '1.75rem' }"
-        :column-gap="{ base: '1rem', sm: '3.4rem' }"
-        :grid-template-columns="{ base: 'repeat(2, 1fr)', sm: 'repeat(5,1fr)' }"
+        :column-gap="{
+          base: '1rem',
+          sm: '3.4rem',
+          lg: '2rem',
+          xl: '2rem',
+          '2xl': '3.4rem',
+        }"
+        :grid-template-columns="{
+          base: 'repeat(2, 1fr)',
+          sm: 'repeat(3,1fr)',
+          lg: 'repeat(4,1fr)',
+          xl: 'repeat(5,1fr)',
+        }"
         wrap="wrap"
       >
         <a
@@ -264,7 +275,7 @@ export default {
   margin-top: 4rem;
   padding-top: 4rem;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding-top: 4rem;
   }
 }
@@ -300,7 +311,7 @@ export default {
     }
   }
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     height: 5rem;
     min-width: 8rem;
     padding: 0.5rem 0.75rem;
@@ -341,7 +352,7 @@ export default {
     background: rgb(244, 109, 36);
   }
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     margin-top: 2rem;
     max-width: 70vw;
   }

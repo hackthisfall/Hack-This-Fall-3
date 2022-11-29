@@ -5,7 +5,7 @@
       align="center"
       :px="{ base: '1rem', sm: '50px' }"
       :gap="{ base: '1rem', sm: '100px' }"
-      :direction="{ base: 'column-reverse', sm: 'row' }"
+      :direction="{ base: 'column-reverse', lg: 'row' }"
       mt="3rem"
     >
       <p class="text">
@@ -42,7 +42,7 @@ export default {
   margin-top: 4rem;
   padding-top: 4rem;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding-top: 4rem;
   }
 }
@@ -58,7 +58,7 @@ export default {
   padding-top: 35px;
   color: #ffffff;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
@@ -68,7 +68,7 @@ img {
   width: 31rem;
   max-width: 50%;
 
-  @include respond-below(mobile) {
+  @include respond-below(md) {
     max-width: 70vw;
   }
 }

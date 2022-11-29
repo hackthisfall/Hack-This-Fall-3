@@ -83,7 +83,7 @@ export default {
   background: #050c19;
   padding: 0.5px 5rem 83px;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -98,7 +98,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
 
-    @include respond-below(mobile) {
+    @include respond-below(xs) {
       margin-top: 7rem;
     }
 

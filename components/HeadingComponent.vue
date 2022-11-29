@@ -42,7 +42,7 @@ export default {
     bottom: 23.5%;
   }
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     height: 10rem;
 
     .back-text {

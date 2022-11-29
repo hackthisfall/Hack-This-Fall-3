@@ -4,7 +4,12 @@
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <CGrid
         :gap="{ base: '1rem', sm: '50px' }"
-        :template-columns="{ base: 'repeat(1, 1fr)', sm: 'repeat(4, 1fr)' }"
+        :template-columns="{
+          base: 'repeat(2, 1fr)',
+          sm: 'repeat(2, 1fr)',
+          md: 'repeat(3, 1fr)',
+          xl: 'repeat(4, 1fr)',
+        }"
       >
         <CGridItem v-for="(narrative, index) in narratives" :key="index">
           <a
@@ -99,7 +104,7 @@ export default {
   margin-top: 4rem;
   padding-top: 4rem;
 
-  @include respond-below(mobile) {
+  @include respond-below(xs) {
     padding-top: 4rem;
   }
 }
@@ -114,7 +119,8 @@ export default {
   );
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
+  height: 100%;
   align-items: center;
   padding: 25px;
   position: relative;
@@ -158,6 +164,10 @@ export default {
   }
 
   .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
     margin-top: 20px;
     h2 {
       font-family: 'Poppins';
@@ -178,6 +188,32 @@ export default {
       text-align: center;
       color: #fefaf4;
       text-align: center;
+    }
+  }
+
+  @include respond-below(xs) {
+    padding: 1rem;
+    .image {
+      width: 100px;
+      height: 100px;
+
+      .play {
+        width: 30px;
+        height: 30px;
+        right: calc(50% - 15px);
+      }
+    }
+
+    .text {
+      h2 {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+
+      p {
+        font-size: 0.6rem;
+        line-height: 19px;
+      }
     }
   }
 }
