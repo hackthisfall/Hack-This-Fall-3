@@ -8,11 +8,11 @@
       align="center"
       direction="column"
     >
-      <CFlex
+      <CGrid
         :row-gap="{ base: '1rem', sm: '1.75rem' }"
         :column-gap="{ base: '1rem', sm: '3.4rem' }"
+        :grid-template-columns="{ base: 'repeat(2, 1fr)', sm: 'repeat(5,1fr)' }"
         wrap="wrap"
-        justify-content="start"
       >
         <a
           v-for="(sponsor, index) in sponsors"
@@ -24,7 +24,7 @@
         >
           <img :src="sponsor.image" />
         </a>
-      </CFlex>
+      </CGrid>
 
       <a href="https://bit.ly/htf3-sponsor">
         <CButton class="button animate-ease">
@@ -35,7 +35,7 @@
   </ContainerVue>
 </template>
 <script>
-import { CButton, CFlex } from '@chakra-ui/vue'
+import { CButton, CFlex, CGrid } from '@chakra-ui/vue'
 import HeadingVue from './HeadingComponent.vue'
 import ContainerVue from './Container.vue'
 
@@ -45,6 +45,7 @@ export default {
     ContainerVue,
     CFlex,
     CButton,
+    CGrid,
   },
   data() {
     return {

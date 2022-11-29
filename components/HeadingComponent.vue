@@ -16,7 +16,6 @@ export default {
   overflow: hidden;
   height: 18.75rem;
   margin-bottom: -5rem;
-  left: 10px;
 
   .back-text {
     position: absolute;
@@ -48,11 +47,11 @@ export default {
 
     .back-text {
       font-size: 4.25rem;
-      top: -5.75rem;
+      top: -5.6rem;
     }
 
     .front-text {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
 }

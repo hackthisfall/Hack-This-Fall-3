@@ -67,5 +67,9 @@ export default {
 img {
   width: 31rem;
   max-width: 50%;
+
+  @include respond-below(mobile) {
+    max-width: 70vw;
+  }
 }
 </style>
