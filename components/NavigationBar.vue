@@ -19,7 +19,7 @@
       <NuxtLink id="nav-link-sponsors" to="/#sponsors" class="item"
         >Sponsors</NuxtLink
       >
-      <NuxtLink id="nav-link-faq" to="/#faq" class="item">FAQ</NuxtLink>
+      <!-- <NuxtLink id="nav-link-faq" to="/#faq" class="item">FAQ</NuxtLink> -->
       <span class="divider"></span>
       <!-- <a id="nav-link-swags" class="item">Swags</a> -->
       <NuxtLink id="nav-link-team" to="/team" class="item">Team</NuxtLink>

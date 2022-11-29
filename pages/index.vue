@@ -23,16 +23,21 @@
               @click="goToLocation('/#sponsors')"
               >Sponsors</span
             >
-            <span
+            <!-- <span
               id="nav-link-faq"
               class="mobile-nav-item"
               @click="goToLocation('/#faq')"
               >FAQ</span
-            >
+            > -->
             <span class="divider"></span>
-            <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span>
-            <span id="nav-link-swags" class="mobile-nav-item">Swags</span>
-            <span id="nav-link-team" class="mobile-nav-item">Team</span>
+            <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
+            <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
+            <span
+              id="nav-link-team"
+              class="mobile-nav-item"
+              @click="goToLocation('/team')"
+              >Team</span
+            >
           </CFlex>
         </div>
         <div v-else>
@@ -43,7 +48,7 @@
           <SpeakerSectionVue />
           <SponsorSectionVue />
           <NarrativeSectionVue />
-          <FaqSectionVue />
+          <!-- <FaqSectionVue /> -->
           <FooterSectionVue />
         </div>
       </div>
@@ -61,7 +66,7 @@ import TrackSectionVue from '~/components/TrackSection'
 import SpeakerSectionVue from '~/components/SpeakerSection'
 import SponsorSectionVue from '~/components/SponsorSection'
 import NarrativeSectionVue from '~/components/NarrativeSection'
-import FaqSectionVue from '~/components/FaqSection'
+// import FaqSectionVue from '~/components/FaqSection'
 import FooterSectionVue from '~/components/FooterSection'
 
 export default {
@@ -75,7 +80,7 @@ export default {
     SpeakerSectionVue,
     SponsorSectionVue,
     NarrativeSectionVue,
-    FaqSectionVue,
+    // FaqSectionVue,
     FooterSectionVue,
     CFlex,
   },
