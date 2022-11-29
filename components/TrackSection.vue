@@ -10,7 +10,7 @@
         <CGridItem
           v-for="(track, index) in tracks"
           :key="index"
-          class="track"
+          class="track animate-ease"
           :colSpan="track.span ? track.span : '1'"
           :px="{ base: '1rem', sm: '30px' }"
           :py="{ base: '1rem', sm: '30px' }"
@@ -150,6 +150,10 @@ export default {
     @include respond-below(mobile) {
       font-size: 1rem;
     }
+  }
+
+  &:hover {
+    background: linear-gradient(180deg, #0b3b52 3.72%, #0b121f 141.1%);
   }
 }
 </style>

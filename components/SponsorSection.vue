@@ -10,9 +10,9 @@
     >
       <CFlex
         :row-gap="{ base: '1rem', sm: '1.75rem' }"
-        :column-gap="{ base: '1rem', sm: '3rem' }"
+        :column-gap="{ base: '1rem', sm: '3.4rem' }"
         wrap="wrap"
-        justify-content="space-evenly"
+        justify-content="start"
       >
         <a
           v-for="(sponsor, index) in sponsors"

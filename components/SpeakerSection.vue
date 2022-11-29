@@ -13,7 +13,7 @@
         >
           <a :href="speaker.url" target="_blank">
             <div class="overlay"></div>
-            <img :src="speaker.picture" width="100%" />
+            <img :src="speaker.picture" width="100%" height="auto" />
             <div class="text">
               <h2>{{ speaker.name }}</h2>
               <p>{{ speaker.description }}</p>
@@ -77,10 +77,10 @@ export default {
           picture: require('~/assets/speakers/dean.jpeg'),
         },
         {
-          description: 'Software Engineer, Agoric',
-          name: 'Kate Sills',
-          url: 'https://twitter.com/kate_sills',
-          picture: require('~/assets/speakers/kate.jpeg'),
+          description: 'Engineer,Web DataWorks',
+          name: 'Nishu Goel',
+          url: 'https://twitter.com/TheNishuGoel',
+          picture: require('~/assets/speakers/nishu.png'),
         },
         {
           description: 'Chief Business Officer, Unschool',
@@ -89,10 +89,10 @@ export default {
           picture: require('~/assets/speakers/narayanan.png'),
         },
         {
-          description: 'Engineer,Web DataWorks',
-          name: 'Nishu Goel',
-          url: 'https://twitter.com/TheNishuGoel',
-          picture: require('~/assets/speakers/nishu.png'),
+          description: 'Software Engineer, Agoric',
+          name: 'Kate Sills',
+          url: 'https://twitter.com/kate_sills',
+          picture: require('~/assets/speakers/kate.jpeg'),
         },
         {
           description: 'Associate Solution Architect, Red Hat',
@@ -137,6 +137,12 @@ export default {
     transition: all 0.5s ease;
   }
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .text {
     position: absolute;
     width: 100%;
@@ -171,7 +177,7 @@ export default {
       font-size: 0.6rem;
       line-height: 19px;
       color: #fefaf4;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
   }
 

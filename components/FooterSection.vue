@@ -35,6 +35,7 @@
         <a
           href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
           class="content animate-ease"
+          target="_blank"
           >Code of Conduct</a
         >
       </CFlex>
@@ -45,16 +46,28 @@
         :align="{ base: 'center', sm: 'start' }"
       >
         <h2 class="heading">Explore</h2>
-        <a href="https://dev.to/hackthisfall" class="content animate-ease"
+        <a
+          href="https://dev.to/hackthisfall"
+          class="content animate-ease"
+          target="_blank"
           >Dev.to</a
         >
-        <a href="https://blog.hackthisfall.tech" class="content animate-ease"
+        <a
+          href="https://blog.hackthisfall.tech"
+          class="content animate-ease"
+          target="_blank"
           >Blogs</a
         >
-        <a href="https://s2.hackthisfall.tech/swag" class="content animate-ease"
+        <a
+          href="https://s2.hackthisfall.tech/swag"
+          class="content animate-ease"
+          target="_blank"
           >Swags</a
         >
-        <a href="https://bit.ly/htf3-sponsor" class="content animate-ease"
+        <a
+          href="https://bit.ly/htf3-sponsor"
+          class="content animate-ease"
+          target="_blank"
           >Sponsor Us</a
         >
       </CFlex>

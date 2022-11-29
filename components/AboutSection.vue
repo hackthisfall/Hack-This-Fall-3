@@ -21,7 +21,7 @@
         >; where we are aiming to promote hackers and help them nurture their
         new ideas and prototypes in various domains.
       </p>
-      <img width="500px" src="~/assets/about.png" />
+      <img src="~/assets/about.png" />
     </CFlex>
   </ContainerVue>
 </template>
@@ -62,5 +62,10 @@ export default {
     font-size: 0.75rem;
     line-height: 1.125rem;
   }
+}
+
+img {
+  width: 31rem;
+  max-width: 50%;
 }
 </style>
