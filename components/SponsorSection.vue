@@ -158,7 +158,14 @@ export default {
           url: 'https://1password.com/',
           image: require('~/assets/sponsors/1p.svg'),
         },
-
+        {
+          url: 'https://hackp.ac/mlh-stickermule-hackathons',
+          image: require('~/assets/sponsors/stickermule.png'),
+        },
+        {
+          url: 'https://sketch.com',
+          image: require('~/assets/sponsors/sketch.png'),
+        },
         // {
         //   url: 'https://defhacks.co/',
         //   image: require('~/assets/sponsors/defhacks.png'),
@@ -180,11 +187,6 @@ export default {
         // {
         //   url: 'https://coil.com/',
         //   image: require('~/assets/sponsors/coil.jpg'),
-        // },
-
-        // {
-        //   url: 'https://sketch.com',
-        //   image: require('~/assets/sponsors/sketch.png'),
         // },
 
         // {
@@ -256,11 +258,6 @@ export default {
         //   url: 'https://devhero.shop/',
         //   image: require('~/assets/sponsors/devhero.png'),
         // },
-        // {
-        //   url: 'https://hackp.ac/mlh-stickermule-hackathons',
-        //   image: require('~/assets/sponsors/stickermule.png'),
-        // },
-
         // {
         //   url: 'https://streamyard.com/about',
         //   image: require('~/assets/sponsors/streamyard.png'),

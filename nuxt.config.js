@@ -60,7 +60,26 @@ export default {
         content: 'https://hackthisfall.tech/og-image.png',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon-dark.ico',
+        media: '(prefers-color-scheme:no-preference)',
+      },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon-light.ico',
+        media: '(prefers-color-scheme:light)',
+      },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon-dark.ico',
+        media: '(prefers-color-scheme:dark)',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
