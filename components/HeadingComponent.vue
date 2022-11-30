@@ -16,6 +16,7 @@ export default {
   overflow: hidden;
   height: 18.75rem;
   margin-bottom: -5rem;
+  left: 10px;
 
   .back-text {
     position: absolute;
