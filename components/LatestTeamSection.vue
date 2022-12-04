@@ -108,7 +108,7 @@ export default {
         {
           name: 'Shitiz Aggarwal',
           url: 'https://twitter.com/Shitiz_Agg',
-          image: require('~/assets/team/shitiz.jpeg'),
+          image: require('~/assets/team/shitiz.jpg'),
         },
         {
           name: 'Aayush Sharma',
