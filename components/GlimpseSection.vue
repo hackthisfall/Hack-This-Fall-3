@@ -84,7 +84,7 @@
         >
           <CFlex direction="column" justify="space-between">
             <CBox :pt="{ base: '0rem', lg: '0.5rem' }">
-              <div class="number projects">720+</div>
+              <div class="number projects">320+</div>
               <div class="category projects">Projects</div>
             </CBox>
             <img src="~/assets/glimpses/8.png"
