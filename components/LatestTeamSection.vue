@@ -96,6 +96,11 @@ export default {
           image: require('~/assets/team/priti.jpeg'),
         },
         {
+          name: 'Tirthak Patel',
+          url: 'https://www.linkedin.com/in/tirthakpatel/',
+          image: require('~/assets/team/tirthak.webp'),
+        },
+        {
           name: 'Kriyanshi Shah',
           url: 'https://twitter.com/ShahKriyanshi',
           image: require('~/assets/team/kriyanshi.jpg'),
@@ -126,12 +131,23 @@ export default {
           image: require('~/assets/team/arjun.jpg'),
         },
         {
-          name: 'Prathamesh Shanbhag',
-          url: 'https://twitter.com/Prathamesh_117',
-          image: require('~/assets/team/prathamesh.jpg'),
+          name: 'Vedant Kakde',
+          url: 'https://twitter.com/vedantstwt',
+          image: require('~/assets/team/vedant.png'),
         },
       ],
     }
+  },
+  mounted() {
+    this.people.sort((a, b) => {
+      if (a.name < b.name) {
+        return -1
+      }
+      if (a.name > b.name) {
+        return 1
+      }
+      return 0
+    })
   },
 }
 </script>
