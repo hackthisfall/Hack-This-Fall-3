@@ -3,7 +3,7 @@
     id="navbar-container"
     bg="linear-gradient(180deg, #050C19 53.65%, rgba(5, 12, 25, 0) 100%)"
     zIndex="100000"
-    :pt="{ base: '2rem', sm: '44px' }"
+    :pt="{ base: '2rem', sm: '32px' }"
     position="sticky"
     top="0"
     justify="space-between"

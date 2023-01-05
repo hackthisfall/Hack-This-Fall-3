@@ -4,6 +4,7 @@
       <img class="hero-logo" src="~/assets/hero-logo.png" />
       <h2 class="tagline">Innovate For Good</h2>
       <h3 class="date">3 - 5 February 2023</h3>
+      <h3 class="venue">Gandhinagar (GJ), India</h3>
       <CFlex
         justify="center"
         align="center"
@@ -55,7 +56,7 @@ export default {
     display: flex;
     flex-direction: column;
     .hero-logo {
-      width: 730px;
+      width: 500px;
       margin-bottom: 30px;
 
       @include respond-below(md) {
@@ -87,9 +88,25 @@ export default {
     .date {
       font-family: 'Poppins';
       font-style: normal;
-      font-weight: 700;
-      font-size: 28px;
+      font-weight: 500;
+      font-size: 24px;
       line-height: 42px;
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      text-align: center;
+
+      @include respond-below(xs) {
+        font-size: 1.25rem;
+        line-height: unset;
+        margin-top: 0.25rem;
+      }
+    }
+
+    .venue {
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
       letter-spacing: 0.03em;
       color: #ffffff;
       text-align: center;
