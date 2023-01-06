@@ -35,10 +35,10 @@
               tiers.category === 'Previous Sponsors' ? '5' : '3'
             },1fr)`,
             lg: `repeat(${
-              tiers.category === 'Previous Sponsors' ? '7' : '4'
+              tiers.category === 'Previous Sponsors' ? '6' : '4'
             },1fr)`,
             xl: `repeat(${
-              tiers.category === 'Previous Sponsors' ? '9' : '5'
+              tiers.category === 'Previous Sponsors' ? '8' : '5'
             },1fr)`,
           }"
           wrap="wrap"
@@ -423,6 +423,44 @@ export default {
       padding: 0.25rem 0.25rem;
       img {
         max-width: 7rem;
+      }
+    }
+  }
+
+  &.Platinum {
+    min-width: 24rem;
+
+    img {
+      max-width: 16rem;
+      max-height: 8rem;
+    }
+
+    @include respond-below(sm) {
+      min-width: 16rem;
+      padding: 0.5rem 0.75rem;
+
+      img {
+        max-width: 12rem;
+        max-height: 8rem;
+      }
+    }
+  }
+
+  &.Gold {
+    min-width: 16rem;
+
+    img {
+      max-width: 10.66rem;
+      max-height: 5.33rem;
+    }
+
+    @include respond-below(sm) {
+      min-width: 12rem;
+      padding: 0.5rem 0.75rem;
+
+      img {
+        max-width: 10rem;
+        max-height: 6rem;
       }
     }
   }
