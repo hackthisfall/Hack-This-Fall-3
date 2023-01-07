@@ -77,7 +77,7 @@ export default {
           desktopCol: '4',
         },
         {
-          name: 'Cloud & Devops',
+          name: 'Cloud & DevOps',
           icon: require('~/assets/tracks/cloud.png'),
           height: '50px',
           mobileRow: '1',
