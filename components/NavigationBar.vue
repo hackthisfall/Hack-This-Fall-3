@@ -16,9 +16,13 @@
       <NuxtLink id="nav-link-tracks" to="/#tracks" class="item"
         >Tracks</NuxtLink
       >
+      <NuxtLink id="nav-link-tracks" to="/#prizes" class="item"
+        >Prizes</NuxtLink
+      >
       <NuxtLink id="nav-link-sponsors" to="/#sponsors" class="item"
         >Sponsors</NuxtLink
       >
+      <NuxtLink id="nav-link-sponsors" to="/#faq" class="item">FAQs</NuxtLink>
       <!-- <NuxtLink id="nav-link-faq" to="/#faq" class="item">FAQ</NuxtLink> -->
       <span class="divider"></span>
       <!-- <a id="nav-link-swags" class="item">Swags</a> -->

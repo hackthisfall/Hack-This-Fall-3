@@ -119,7 +119,7 @@ export default {
     return {
       sponsors: [
         {
-          category: 'Platinum',
+          category: 'Platinium',
           sponsors: [
             {
               url: 'https://www.storyblok.com/',
@@ -437,7 +437,7 @@ export default {
       margin-top: 1.5rem;
     }
 
-    &.Platinum {
+    &.Platinium {
       color: #e2806d;
     }
 
@@ -513,7 +513,7 @@ export default {
     }
   }
 
-  &.Platinum {
+  &.Platinium {
     min-width: 24rem;
 
     img {
