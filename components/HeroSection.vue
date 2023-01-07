@@ -11,14 +11,14 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a href="https://forms.gle/fGfkLgq1jgLNTNsm8">
+        <a href="https://lu.ma/hackthisfall">
           <CButton class="button animate-ease">
             <img
               src="~/assets/icons/register.svg"
               alt="register"
               class="icon"
             />
-            <span> Pre-Register </span>
+            <span> Register Now</span>
           </CButton>
         </a>
         <a href="https://discord.hackthisfall.tech">

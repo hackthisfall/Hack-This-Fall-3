@@ -50,6 +50,10 @@
             </div>
           </CBox>
         </CFlex>
+        <span class="disclaimer">
+          // More prizes for the Top-3 teams are to be added above and
+          additional sponsored prizes will be announced soon....
+        </span>
       </CFlex>
     </section>
   </ContainerVue>
@@ -224,6 +228,9 @@ export default {
       .card-side.back {
         transform: rotateY(-180deg);
       }
+      &:hover .card-side.front {
+        background: linear-gradient(180deg, #0b3b52 3.72%, #0b121f 141.1%);
+      }
       //   &:hover .card-side.front {
       //     transform: rotateY(180deg);
       //   }
@@ -314,6 +321,13 @@ export default {
         }
       }
     }
+  }
+
+  .disclaimer {
+    margin-top: 2rem;
+    // align-self: flex-start;
+    color: white;
+    font-style: italic;
   }
 }
 </style>
