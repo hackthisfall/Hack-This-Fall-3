@@ -60,16 +60,51 @@
         </CGrid>
       </CFlex>
 
-      <a href="https://bit.ly/htf3-sponsor" class="sponsor-button">
+      <div :class="['tier-heading', 'space-up']">
+        <span> Partners</span>
+      </div>
+      <CGrid
+        :row-gap="{ base: '1rem', sm: '1.75rem' }"
+        :column-gap="{
+          base: '1rem',
+          sm: '2rem',
+          lg: '2rem',
+          xl: '2rem',
+          '2xl': '3.4rem',
+        }"
+        :grid-template-columns="{
+          base: `repeat(2, 1fr)`,
+          sm: `repeat(3,1fr)`,
+          lg: `repeat(3,1fr)`,
+          xl: `repeat(4,1fr)`,
+        }"
+        wrap="wrap"
+      >
+        <a
+          v-for="(sponsor, index) in partners"
+          :key="index"
+          :href="sponsor.url"
+          target="_blank"
+          :class="['partner animate-ease', sponsor.specialClass]"
+          borderRadius="30px"
+        >
+          <div :class="['image', sponsor.name]">
+            <img :src="sponsor.image" />
+          </div>
+          <span v-html="sponsor.text"></span>
+        </a>
+      </CGrid>
+
+      <!-- <a href="https://bit.ly/htf3-sponsor" class="sponsor-button">
         <CButton class="button animate-ease">
           <span> Sponsor us! </span>
         </CButton>
-      </a>
+      </a> -->
     </CFlex>
   </ContainerVue>
 </template>
 <script>
-import { CButton, CFlex, CGrid } from '@chakra-ui/vue'
+import { CFlex, CGrid } from '@chakra-ui/vue'
 import HeadingVue from './HeadingComponent.vue'
 import ContainerVue from './Container.vue'
 
@@ -78,7 +113,6 @@ export default {
     HeadingVue,
     ContainerVue,
     CFlex,
-    CButton,
     CGrid,
   },
   data() {
@@ -100,14 +134,31 @@ export default {
               url: 'https://bit.ly/htf3-sdp',
               image: require('~/assets/sponsors/github.svg'),
             },
+            {
+              url: 'https://apyhub.com/',
+              image: require('~/assets/sponsors/apyhub.svg'),
+            },
+          ],
+        },
+        {
+          category: 'Silver',
+          sponsors: [
+            {
+              url: 'https://deepfence.io/',
+              image: require('~/assets/sponsors/deepfence.svg'),
+            },
           ],
         },
         {
           category: 'Bronze',
           sponsors: [
             {
-              url: 'https://deepfence.io/',
-              image: require('~/assets/sponsors/deepfence.svg'),
+              url: 'https://www.digitalocean.com/',
+              image: require('~/assets/sponsors/digitalocean.svg'),
+            },
+            {
+              url: 'https://scrollme.today/',
+              image: require('~/assets/sponsors/scrollme.svg'),
             },
             {
               url: 'https://fossunited.org/',
@@ -115,214 +166,249 @@ export default {
             },
           ],
         },
+        // {
+        //   category: 'Previous Sponsors',
+        //   sponsors: [
+        //     {
+        //       url: 'https://mlh.io/',
+        //       image: require('~/assets/sponsors/mlh.svg'),
+        //     },
+        //     {
+        //       url: 'https://www.storyblok.com/',
+        //       image: require('~/assets/sponsors/storyblok.svg'),
+        //     },
+        //     {
+        //       url: 'https://education.github.com/discount_requests/student_application?utm_source=2021-10-22-hackthisfall',
+        //       image: require('~/assets/sponsors/github.svg'),
+        //     },
+        //     {
+        //       url: 'https://www.quicknode.com/',
+        //       image: require('~/assets/sponsors/quicknode.png'),
+        //     },
+        //     {
+        //       url: 'https://solana.com/',
+        //       image: require('~/assets/sponsors/solana.svg'),
+        //     },
+        //     {
+        //       url: 'https://www.twilio.com/',
+        //       image: require('~/assets/sponsors/twilio.png'),
+        //     },
+        //     {
+        //       url: 'https://polygon.technology/',
+        //       image: require('~/assets/sponsors/polygon.svg'),
+        //     },
+        //     {
+        //       url: 'https://www.digitalocean.com/',
+        //       image: require('~/assets/sponsors/digitalocean.svg'),
+        //     },
+        //     {
+        //       url: 'https://agoric.com/',
+        //       image: require('~/assets/sponsors/agoric.svg'),
+        //     },
+        //     {
+        //       url: 'https://symbl.ai/',
+        //       image: require('~/assets/sponsors/symbl.svg'),
+        //     },
+        //     {
+        //       url: 'https://wrx.gg/htf',
+        //       image: require('~/assets/sponsors/wazirx.png'),
+        //     },
+        //     {
+        //       url: 'https://atsign.com/',
+        //       image: require('~/assets/sponsors/atsign.svg'),
+        //     },
+        //     {
+        //       url: 'https://www.linode.com/',
+        //       image: require('~/assets/sponsors/linode.svg'),
+        //     },
+        //     {
+        //       url: 'https://balsamiq.com/',
+        //       image: require('~/assets/sponsors/balsamiq.svg'),
+        //     },
+        //     {
+        //       url: 'https://www.courier.com/',
+        //       image: require('~/assets/sponsors/courier.svg'),
+        //     },
+        //     {
+        //       url: 'https://registry.godaddy/',
+        //       image: require('~/assets/sponsors/godaddy.png'),
+        //       specialClass: 'godaddy',
+        //     },
+        //     {
+        //       url: 'https://tezos.com/',
+        //       image: require('~/assets/sponsors/tezos.svg'),
+        //     },
+        //     {
+        //       url: 'https://www.egghead.io/',
+        //       image: require('~/assets/sponsors/egghead.png'),
+        //     },
+        //     {
+        //       url: 'https://gen.xyz/',
+        //       image: require('~/assets/sponsors/xyz.svg'),
+        //     },
+        //     {
+        //       url: 'https://replit.com/',
+        //       image: require('~/assets/sponsors/replit.webp'),
+        //     },
+        //     {
+        //       url: 'https://filebase.com/?utm_source=website&utm_medium=sponsor&utm_campaign=hackthisfall',
+        //       image: require('~/assets/sponsors/filebase.svg'),
+        //     },
+        //     {
+        //       url: 'https://dev.to/',
+        //       image: require('~/assets/sponsors/devto.png'),
+        //     },
+        //     {
+        //       url: 'https://1password.com/',
+        //       image: require('~/assets/sponsors/1p.svg'),
+        //     },
+        //     {
+        //       url: 'https://hackp.ac/mlh-stickermule-hackathons',
+        //       image: require('~/assets/sponsors/stickermule.png'),
+        //     },
+        //     {
+        //       url: 'https://sketch.com',
+        //       image: require('~/assets/sponsors/sketch.png'),
+        //     },
+        //     // {
+        //     //   url: 'https://defhacks.co/',
+        //     //   image: require('~/assets/sponsors/defhacks.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://www.portis.io/',
+        //     //   image: require('~/assets/sponsors/portis.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://fold.money/',
+        //     //   image: require('~/assets/sponsors/fold.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://xinfin.org/',
+        //     //   image: require('~/assets/sponsors/xdc.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://coil.com/',
+        //     //   image: require('~/assets/sponsors/coil.jpg'),
+        //     // },
+
+        //     // {
+        //     //   url: 'https://www.wolfram.com/',
+        //     //   image: require('~/assets/sponsors/wolfram.png'),
+        //     // },
+
+        //     // {
+        //     //   url: 'https://draftbit.com/',
+        //     //   image: require('~/assets/sponsors/draftbit.png'),
+        //     // },
+
+        //     // {
+        //     //   url: 'https://www.axure.com/',
+        //     //   image: require('~/assets/sponsors/axure.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://www.sashido.io/',
+        //     //   image: require('~/assets/sponsors/sashido.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://www.echoar.xyz/',
+        //     //   image: require('~/assets/sponsors/echoar.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://www.devhood.tech/',
+        //     //   image: require('~/assets/sponsors/devhood.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://codingblocks.com/',
+        //     //   image: require('~/assets/sponsors/cb.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://www.clerky.com/',
+        //     //   image: require('~/assets/sponsors/clerky.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://interwebs.host/',
+        //     //   image: require('~/assets/sponsors/iwh.png'),
+        //     // },
+
+        //     // {
+        //     //   url: 'https://rosenfeldmedia.com/',
+        //     //   image: require('~/assets/sponsors/rosenfeld.png'),
+        //     // },
+
+        //     // {
+        //     //   url: 'https://www.taskade.com/',
+        //     //   image: require('~/assets/sponsors/taskade.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://www.framer.com/',
+        //     //   image: require('~/assets/sponsors/framer.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://www.voiceflow.com/',
+        //     //   image: require('~/assets/sponsors/voiceflow.png'),
+        //     // },
+        //     // {
+        //     //   url: 'http://joinglimpse.com/',
+        //     //   image: require('~/assets/sponsors/glimpse.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://progate.com/',
+        //     //   image: require('~/assets/sponsors/progate.png'),
+        //     // },
+        //     // // remaining except slido
+        //     // {
+        //     //   url: 'https://devhero.shop/',
+        //     //   image: require('~/assets/sponsors/devhero.png'),
+        //     // },
+        //     // {
+        //     //   url: 'https://streamyard.com/about',
+        //     //   image: require('~/assets/sponsors/streamyard.png'),
+        //     // },
+        //   ],
+        // },
+      ],
+      partners: [
         {
-          category: 'Professional Network Partner',
-          sponsors: [
-            {
-              url: 'https://peerlist.io/',
-              image: require('~/assets/sponsors/peerlist.png'),
-            },
-          ],
+          url: 'https://karnavatiuniversity.edu.in/',
+          image: require('~/assets/sponsors/karnavati.svg'),
+          text: 'Venue<br/>Partner',
+          name: 'karnavati',
         },
         {
-          category: 'Previous Sponsors',
-          sponsors: [
-            {
-              url: 'https://mlh.io/',
-              image: require('~/assets/sponsors/mlh.svg'),
-            },
-            {
-              url: 'https://www.storyblok.com/',
-              image: require('~/assets/sponsors/storyblok.svg'),
-            },
-            {
-              url: 'https://education.github.com/discount_requests/student_application?utm_source=2021-10-22-hackthisfall',
-              image: require('~/assets/sponsors/github.svg'),
-            },
-            {
-              url: 'https://www.quicknode.com/',
-              image: require('~/assets/sponsors/quicknode.png'),
-            },
-            {
-              url: 'https://solana.com/',
-              image: require('~/assets/sponsors/solana.svg'),
-            },
-            {
-              url: 'https://www.twilio.com/',
-              image: require('~/assets/sponsors/twilio.png'),
-            },
-            {
-              url: 'https://polygon.technology/',
-              image: require('~/assets/sponsors/polygon.svg'),
-            },
-            {
-              url: 'https://www.digitalocean.com/',
-              image: require('~/assets/sponsors/digitalocean.svg'),
-            },
-            {
-              url: 'https://agoric.com/',
-              image: require('~/assets/sponsors/agoric.svg'),
-            },
-            {
-              url: 'https://symbl.ai/',
-              image: require('~/assets/sponsors/symbl.svg'),
-            },
-            {
-              url: 'https://wrx.gg/htf',
-              image: require('~/assets/sponsors/wazirx.png'),
-            },
-            {
-              url: 'https://atsign.com/',
-              image: require('~/assets/sponsors/atsign.svg'),
-            },
-            {
-              url: 'https://www.linode.com/',
-              image: require('~/assets/sponsors/linode.svg'),
-            },
-            {
-              url: 'https://balsamiq.com/',
-              image: require('~/assets/sponsors/balsamiq.svg'),
-            },
-            {
-              url: 'https://www.courier.com/',
-              image: require('~/assets/sponsors/courier.svg'),
-            },
-            {
-              url: 'https://registry.godaddy/',
-              image: require('~/assets/sponsors/godaddy.png'),
-              specialClass: 'godaddy',
-            },
-            {
-              url: 'https://tezos.com/',
-              image: require('~/assets/sponsors/tezos.svg'),
-            },
-            {
-              url: 'https://www.egghead.io/',
-              image: require('~/assets/sponsors/egghead.png'),
-            },
-            {
-              url: 'https://gen.xyz/',
-              image: require('~/assets/sponsors/xyz.svg'),
-            },
-            {
-              url: 'https://replit.com/',
-              image: require('~/assets/sponsors/replit.webp'),
-            },
-            {
-              url: 'https://filebase.com/?utm_source=website&utm_medium=sponsor&utm_campaign=hackthisfall',
-              image: require('~/assets/sponsors/filebase.svg'),
-            },
-            {
-              url: 'https://dev.to/',
-              image: require('~/assets/sponsors/devto.png'),
-            },
-            {
-              url: 'https://1password.com/',
-              image: require('~/assets/sponsors/1p.svg'),
-            },
-            {
-              url: 'https://hackp.ac/mlh-stickermule-hackathons',
-              image: require('~/assets/sponsors/stickermule.png'),
-            },
-            {
-              url: 'https://sketch.com',
-              image: require('~/assets/sponsors/sketch.png'),
-            },
-            // {
-            //   url: 'https://defhacks.co/',
-            //   image: require('~/assets/sponsors/defhacks.png'),
-            // },
-            // {
-            //   url: 'https://www.portis.io/',
-            //   image: require('~/assets/sponsors/portis.png'),
-            // },
-            // {
-            //   url: 'https://fold.money/',
-            //   image: require('~/assets/sponsors/fold.png'),
-            // },
-            // {
-            //   url: 'https://xinfin.org/',
-            //   image: require('~/assets/sponsors/xdc.png'),
-            // },
-            // {
-            //   url: 'https://coil.com/',
-            //   image: require('~/assets/sponsors/coil.jpg'),
-            // },
-
-            // {
-            //   url: 'https://www.wolfram.com/',
-            //   image: require('~/assets/sponsors/wolfram.png'),
-            // },
-
-            // {
-            //   url: 'https://draftbit.com/',
-            //   image: require('~/assets/sponsors/draftbit.png'),
-            // },
-
-            // {
-            //   url: 'https://www.axure.com/',
-            //   image: require('~/assets/sponsors/axure.png'),
-            // },
-            // {
-            //   url: 'https://www.sashido.io/',
-            //   image: require('~/assets/sponsors/sashido.png'),
-            // },
-            // {
-            //   url: 'https://www.echoar.xyz/',
-            //   image: require('~/assets/sponsors/echoar.png'),
-            // },
-            // {
-            //   url: 'https://www.devhood.tech/',
-            //   image: require('~/assets/sponsors/devhood.png'),
-            // },
-            // {
-            //   url: 'https://codingblocks.com/',
-            //   image: require('~/assets/sponsors/cb.png'),
-            // },
-            // {
-            //   url: 'https://www.clerky.com/',
-            //   image: require('~/assets/sponsors/clerky.png'),
-            // },
-            // {
-            //   url: 'https://interwebs.host/',
-            //   image: require('~/assets/sponsors/iwh.png'),
-            // },
-
-            // {
-            //   url: 'https://rosenfeldmedia.com/',
-            //   image: require('~/assets/sponsors/rosenfeld.png'),
-            // },
-
-            // {
-            //   url: 'https://www.taskade.com/',
-            //   image: require('~/assets/sponsors/taskade.png'),
-            // },
-            // {
-            //   url: 'https://www.framer.com/',
-            //   image: require('~/assets/sponsors/framer.png'),
-            // },
-            // {
-            //   url: 'https://www.voiceflow.com/',
-            //   image: require('~/assets/sponsors/voiceflow.png'),
-            // },
-            // {
-            //   url: 'http://joinglimpse.com/',
-            //   image: require('~/assets/sponsors/glimpse.png'),
-            // },
-            // {
-            //   url: 'https://progate.com/',
-            //   image: require('~/assets/sponsors/progate.png'),
-            // },
-            // // remaining except slido
-            // {
-            //   url: 'https://devhero.shop/',
-            //   image: require('~/assets/sponsors/devhero.png'),
-            // },
-            // {
-            //   url: 'https://streamyard.com/about',
-            //   image: require('~/assets/sponsors/streamyard.png'),
-            // },
-          ],
+          url: 'https://karnavatiuniversity.edu.in/kiif/',
+          image: require('~/assets/sponsors/kiif.svg'),
+          text: 'Incubation</br>Partner',
+          name: 'kiif',
+        },
+        {
+          url: 'https://mlh.io/',
+          image: require('~/assets/sponsors/mlh.svg'),
+          text: 'Hackathon</br>Partner',
+          name: 'mlh',
+        },
+        {
+          url: 'https://peerlist.io/',
+          image: require('~/assets/sponsors/peerlist.png'),
+          text: 'Professional</br>Network Partner',
+          name: 'peerlist',
+        },
+        {
+          url: 'https://www.redbull.com/',
+          image: require('~/assets/sponsors/redbull.svg'),
+          text: 'Drinks</br>Partner',
+          name: 'redbull',
+        },
+        {
+          url: 'https://hackplus.io/',
+          image: require('~/assets/sponsors/hackplus.svg'),
+          text: 'Fiscal</br>Partner',
+          name: 'hackplus',
+        },
+        {
+          url: 'https://www.standoutstickers.com/',
+          image: require('~/assets/sponsors/standout-stickers.svg'),
+          text: 'Sticker</br>Partner',
+          name: 'standout-stickers',
         },
       ],
     }
@@ -455,11 +541,11 @@ export default {
     }
 
     @include respond-below(sm) {
-      min-width: 12rem;
+      min-width: 8rem;
       padding: 0.5rem 0.75rem;
 
       img {
-        max-width: 10rem;
+        max-width: 8rem;
         max-height: 6rem;
       }
     }
@@ -497,6 +583,87 @@ export default {
         img {
           max-width: 3.5rem;
         }
+      }
+    }
+  }
+}
+
+.partner {
+  background: linear-gradient(
+    180deg,
+    #142137 0%,
+    #0b121f 99.99%,
+    rgba(20, 33, 55, 0) 100%
+  );
+  height: 16rem;
+  min-width: 16rem;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #f46d24;
+  font-weight: 400;
+  font-family: 'Poppins';
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  justify-content: space-between;
+
+  span {
+    margin-top: 1rem;
+    justify-self: flex-end;
+  }
+
+  &:hover {
+    background: linear-gradient(180deg, #0b3b52 3.72%, #0b121f 141.1%);
+  }
+
+  .image {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      align-self: center;
+      justify-self: center;
+      width: auto;
+      height: auto;
+      max-width: 12rem;
+      max-height: 8rem;
+    }
+  }
+
+  @include respond-below(md) {
+    height: 12rem;
+    min-width: 12rem;
+    padding: 1rem 0.75rem;
+    font-size: 1.2rem;
+    line-height: 1.25rem;
+
+    .image {
+      img {
+        max-width: 9rem;
+        max-height: 4.5rem;
+      }
+    }
+  }
+
+  @include respond-below(sm) {
+    height: 8rem;
+    min-width: 8rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+
+    .image {
+      img {
+        max-width: 6rem;
+        max-height: 4rem;
       }
     }
   }
