@@ -18,17 +18,23 @@
               >Tracks</span
             >
             <span
+              id="nav-link-faq"
+              class="mobile-nav-item"
+              @click="goToLocation('/#prizes')"
+              >Prizes</span
+            >
+            <span
               id="nav-link-sponsors"
               class="mobile-nav-item"
               @click="goToLocation('/#sponsors')"
               >Sponsors</span
             >
-            <!-- <span
+            <span
               id="nav-link-faq"
               class="mobile-nav-item"
               @click="goToLocation('/#faq')"
-              >FAQ</span
-            > -->
+              >FAQs</span
+            >
             <span class="divider"></span>
             <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
             <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->

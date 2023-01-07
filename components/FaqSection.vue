@@ -12,21 +12,19 @@
           :display="{ base: 'unset', md: 'none' }"
         >
           <div
-            v-for="(faq, index) in FAQs"
+            v-for="(faq, index) in FAQsMobile"
             :key="index"
             :data-card-id="index"
             :class="[
               'card',
               faq.isOpen ? null : 'hidden',
               index === 0 ? 'curved-up' : null,
-              index === FAQs.length - 1 ? 'curved-down' : null,
+              index === FAQsMobile.length - 1 ? 'curved-down' : null,
             ]"
           >
-            <div class="texts" @click="toggleFAQItem(faq)">
+            <div class="texts" @click="toggleFAQMobileItem(faq)">
               <span class="heading">
-                <span class="number"
-                  >{{ index + 1 >= 10 ? '' : 0 }}{{ index + 1 }}</span
-                >
+                <span class="number">Q</span>
                 <h4 class="title">
                   {{ faq.title }}
                 </h4>
@@ -45,7 +43,7 @@
                 </svg>
               </div>
             </div>
-            <div class="answer">
+            <div class="answer mobile">
               <div v-html="faq.content"></div>
             </div>
           </div>
@@ -67,7 +65,7 @@
           >
             <div class="texts" @click="toggleFAQItem(faq)">
               <span class="heading">
-                <span class="number">0{{ index + 1 }}</span>
+                <span class="number">Q</span>
                 <h4 class="title">
                   {{ faq.title }}
                 </h4>
@@ -108,7 +106,7 @@
           >
             <div class="texts" @click="toggleFAQItem(faq)">
               <span class="heading">
-                <span class="number">0{{ index + 1 }}</span>
+                <span class="number">Q</span>
                 <h4 class="title">
                   {{ faq.title }}
                 </h4>
@@ -151,71 +149,177 @@ export default {
   data() {
     return {
       currentIndex: 0,
+      FAQsMobile: [
+        {
+          isOpen: false,
+          title: 'Can I participate remotely?',
+          content:
+            'Hack This Fall 3.0 is an in-person hackathon. So remote participation is not applicable.',
+        },
+        {
+          isOpen: false,
+          title: 'How much does it cost to participate?',
+          content:
+            'Nothing, participation in Hack This Fall 3.0 is absolutely FREE!!🎉 We’ll have meals, snacks, and beverages onsite at the hackathon, in addition to swags, prizes, fun mini-events and more.',
+        },
+        {
+          isOpen: false,
+          title: 'I am a beginner, can I participate?',
+          content:
+            'Absolutely. We will have mentors and resources available, along with several workshops targeted for beginners. Come learn and experience your first hackathon at Hack This Fall.',
+        },
+        {
+          isOpen: false,
+          title:
+            'What is the maximum team size? Can I participate as a Solo Hacker?',
+          content:
+            'We encourage you to make a team of minimum 2 and maximum 4 members. If you are a Solo Hacker and do not have a team, you can still register and we will help you find a team during the hackathon.',
+        },
+        {
+          isOpen: false,
+          title:
+            'At what time for the Hackathon should I arrive on 3rd Feb and depart on 5th Feb?',
+          content:
+            'You can arrive at the hackathon venue at 3 PM IST on 3rd Feb and can depart from the venue at 4 PM IST on 5th Feb.',
+        },
+        {
+          isOpen: false,
+          title: 'How can I reach the venue?',
+          content: `The nearest airport from the venue is <a style='color: rgba(233, 83, 34, 1);' href='https://goo.gl/maps/XUwPxbphBZrUwNJaA' rel='noopener noreferrer' target='_blank'>Ahmedabad Airport</a> and the nearest railway station from the venue is <a style='color: rgba(233, 83, 34, 1);' href='https://goo.gl/maps/d7St46fGYw4BoXSt5' rel='noopener noreferrer' target='_blank'>Gandhinagar Railway Station</a>. You will be able to get cab services from both the places to the venue. You can find more info on the venue guide <a style='color: rgba(233, 83, 34, 1);' href='https://bit.ly/htf3-venue-guide' rel='noopener noreferrer' target='_blank'>here</a>.`,
+        },
+        {
+          isOpen: false,
+          title: 'Will you support or reimburse our travel expenses?',
+          content:
+            'Since Hack This Fall 3.0 is a community-driven hackathon, unfortunately we will not be able to support you with travel.',
+        },
+        {
+          isOpen: false,
+          title: 'What are the sleeping arrangements?',
+          content:
+            'On both nights (3rd Feb & 4th Feb) we will have a supervised sleeping space for hackers to rest and sleep at the venue. We recommend bringing your own blanket if you need one.',
+        },
+        {
+          isOpen: false,
+          title:
+            'I am below 18 years of age, can I participate in the hackathon?',
+          content:
+            'Yes! You can participate in the hackathon but we would need written consent from your parent/guardian and you wouldn’t be allowed to leave the venue during the hackathon.',
+        },
+        {
+          isOpen: false,
+          title:
+            'My parent/guardian will be coming along with me. Can they stay at the venue?',
+          content:
+            "The answer is No. Arrangements like sleeping area, food, etc. are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 3rd Feb and can pick you on 5th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
+        },
+        {
+          isOpen: false,
+          title: 'What is the event Code of Conduct?',
+          content: `We want to ensure a positive experience for all participants. We will be following <a style='color: rgba(233, 83, 34, 1);' href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf' rel='noopener noreferrer' target='_blank'>MLH’s Code of Conduct</a>, we encourage you to read it.`,
+        },
+        {
+          isOpen: false,
+          title: 'I have more questions, how and where can I reach out?',
+          content:
+            "You can reach out to us on our <a style='color: rgba(233, 83, 34, 1);' href='https://discord.hackthisfall.tech/' rel='noopener noreferrer' target='_blank'>Discord Server</a> in <u><b>#🍁|ask-htf-team</b></u> or email us at <a style='color: rgba(233, 83, 34, 1);' href='mailto:hackthisfall@gmail.com' rel='noopener noreferrer' target='_blank'>hackthisfall@gmail.com</a>! We're always ready to answer all your questions.",
+        },
+      ],
       FAQs: [
         {
           isOpen: false,
-          title: 'What is a hackathon?',
+          title: 'Can I participate remotely?',
           content:
-            'Hackathons are an incredible way to bring your community together to learn new skills, build amazing projects, and share ideas.',
+            'Hack This Fall 3.0 is an in-person hackathon. So remote participation is not applicable.',
         },
         {
           isOpen: false,
-          title: 'Where and When is Hack This Fall?',
+          title: 'I am a beginner, can I participate?',
           content:
-            'Hack This Fall is a virtual 48-hours hackathon to be happening on 22nd to 24th October, 2021.',
+            'Absolutely. We will have mentors and resources available, along with several workshops targeted for beginners. Come learn and experience your first hackathon at Hack This Fall.',
+        },
+
+        {
+          isOpen: false,
+          title:
+            'At what time for the Hackathon should I arrive on 3rd Feb and depart on 5th Feb?',
+          content:
+            'You can arrive at the hackathon venue at 3 PM IST on 3rd Feb and can depart from the venue at 4 PM IST on 5th Feb.',
+        },
+
+        {
+          isOpen: false,
+          title: 'Will you support or reimburse our travel expenses?',
+          content:
+            'Since Hack This Fall 3.0 is a community-driven hackathon, unfortunately we will not be able to support you with travel.',
         },
         {
           isOpen: false,
-          title: 'Can I submit my previous project?',
+          title:
+            'I am below 18 years of age, can I participate in the hackathon?',
           content:
-            "We apologize, but all hackathon's projects should be developed during the event from scratch. We want honest conditions for all hackers. That's why all code should be done during the hackathon.",
+            'Yes! You can participate in the hackathon but we would need written consent from your parent/guardian and you wouldn’t be allowed to leave the venue during the hackathon.',
         },
         {
           isOpen: false,
-          title: 'Who can attend a hackathon?',
+          title: 'What is the event Code of Conduct?',
+          content: `We want to ensure a positive experience for all participants. We will be following <a style='color: rgba(233, 83, 34, 1);' href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf' rel='noopener noreferrer' target='_blank'>MLH’s Code of Conduct</a>, we encourage you to read it.`,
+        },
+
+        {
+          isOpen: false,
+          title: 'How much does it cost to participate?',
           content:
-            'Anyone who has an interest in technology can attend a hackathon to learn, build & share. You  should also be of age of 13 and above.',
+            'Nothing, participation in Hack This Fall 3.0 is absolutely FREE!!🎉 We’ll have meals, snacks, and beverages onsite at the hackathon, in addition to swags, prizes, fun mini-events and more.',
         },
         {
           isOpen: false,
-          title: 'Can beginners participate?',
+          title:
+            'What is the maximum team size? Can I participate as a Solo Hacker?',
           content:
-            'Absolutely. We will have plenty of mentors and resources available, along with several workshops targeted for beginners. Come learn and experience your first hackathon at Hack This Fall.',
+            'We encourage you to make a team of minimum 2 and maximum 4 members. If you are a Solo Hacker and do not have a team, you can still register and we will help you find a team during the hackathon.',
         },
         {
           isOpen: false,
-          title: 'Can we form teams?',
-          content:
-            "Most definitely! We believe in collaboration and encourage hackers to work in teams of up to minimum 2 and maximum 4 members. You may opt-in to team formation through our <a style='color: rgba(233, 83, 34, 1);' href='https://discord.hackthisfall.tech/' rel='noopener noreferrer' target='_blank'>Discord Server</a>. Every hacker must be a part of only one team and submit only one project.",
+          title: 'How can I reach the venue?',
+          content: `The nearest airport from the venue is <a style='color: rgba(233, 83, 34, 1);' href='https://goo.gl/maps/XUwPxbphBZrUwNJaA' rel='noopener noreferrer' target='_blank'>Ahmedabad Airport</a> and the nearest railway station from the venue is <a style='color: rgba(233, 83, 34, 1);' href='https://goo.gl/maps/d7St46fGYw4BoXSt5' rel='noopener noreferrer' target='_blank'>Gandhinagar Railway Station</a>. You will be able to get cab services from both the places to the venue. You can find more info on the venue guide <a style='color: rgba(233, 83, 34, 1);' href='https://bit.ly/htf3-venue-guide' rel='noopener noreferrer' target='_blank'>here</a>.`,
         },
         {
           isOpen: false,
-          title: 'Where do I need to submit my project?',
+          title: 'What are the sleeping arrangements?',
           content:
-            "First register on our <a style='color: rgba(233, 83, 34, 1);' href='https://hackthisfall.devpost.com/' rel='noopener noreferrer' target='_blank'>Devpost page</a>. Once the hackathon starts, you will be able to create the project there. To become eligible for prizes, you must submit your project before the deadline.",
+            'On both nights (3rd Feb & 4th Feb) we will have a supervised sleeping space for hackers to rest and sleep at the venue. We recommend bringing your own blanket if you need one.',
+        },
+
+        {
+          isOpen: false,
+          title:
+            'My parent/guardian will be coming along with me. Can they stay at the venue?',
+          content:
+            "The answer is No. Arrangements like sleeping area, food, etc. are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 3rd Feb and can pick you on 5th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
         },
         {
           isOpen: false,
-          title: 'Who keeps ownership of the projects?',
+          title: 'I have more questions, how and where can I reach out?',
           content:
-            'The hackers building the project will keep full ownership of the project as it is their intellectual property.',
-        },
-        {
-          isOpen: false,
-          title: 'What is the Code of Conduct?',
-          content:
-            "We want to ensure a positive experience for all participants. We will be following MLH’s Code of Conduct, we encourage you to read it <a style='color: rgba(233, 83, 34, 1);' href='https://static.mlh.io/docs/mlh-code-of-conduct.pdf' rel='noopener noreferrer' target='_blank'>here</a>.",
-        },
-        {
-          isOpen: false,
-          title: 'More Questions?',
-          content:
-            "Join our Hacker Community Discord Server <a style='color: rgba(233, 83, 34, 1);' href='https://discord.hackthisfall.tech/' rel='noopener noreferrer' target='_blank'>here</a>. Ask any other questions you have and connect with a larger community. Looking forward to welcoming you.",
+            "You can reach out to us on our <a style='color: rgba(233, 83, 34, 1);' href='https://discord.hackthisfall.tech/' rel='noopener noreferrer' target='_blank'>Discord Server</a> in <u><b>#🍁|ask-htf-team</b></u> or email us at <a style='color: rgba(233, 83, 34, 1);' href='mailto:hackthisfall@gmail.com' rel='noopener noreferrer' target='_blank'>hackthisfall@gmail.com</a>! We're always ready to answer all your questions.",
         },
       ],
     }
   },
   methods: {
+    toggleFAQMobileItem(faq) {
+      if (faq.isOpen) {
+        faq.isOpen = false
+      } else {
+        for (let index = 0; index < this.FAQsMobile.length; index++) {
+          const element = this.FAQsMobile[index]
+          element.isOpen = false
+        }
+
+        faq.isOpen = true
+      }
+    },
     toggleFAQItem(faq) {
       if (faq.isOpen) {
         faq.isOpen = false
@@ -358,13 +462,10 @@ export default {
     }
   }
 
-  img {
-  }
-
   .answer {
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 140%;
     padding-left: 3rem;
     padding-right: 3rem;
