@@ -405,7 +405,7 @@ export default {
           name: 'hackplus',
         },
         {
-          url: 'https://www.standoutstickers.com/',
+          url: 'http://hackp.ac/mlh-StandOutStickers-hackathons',
           image: require('~/assets/sponsors/standout-stickers.svg'),
           text: 'Sticker</br>Partner',
           name: 'standout-stickers',

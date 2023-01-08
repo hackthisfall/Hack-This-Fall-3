@@ -211,7 +211,7 @@ export default {
           title:
             'My parent/guardian will be coming along with me. Can they stay at the venue?',
           content:
-            "The answer is No. Arrangements like sleeping area, food, etc. are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 3rd Feb and can pick you on 5th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
+            "The answer is No. Arrangements like sleeping area, food, etc., are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 3rd Feb and can pick you on 5th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
         },
         {
           isOpen: false,
@@ -296,7 +296,7 @@ export default {
           title:
             'My parent/guardian will be coming along with me. Can they stay at the venue?',
           content:
-            "The answer is No. Arrangements like sleeping area, food, etc. are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 3rd Feb and can pick you on 5th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
+            "The answer is No. Arrangements like sleeping area, food, etc., are only for the attendees. We recommend you to find a stay option for them near the venue. They can drop you at the hackathon venue on 3rd Feb and can pick you on 5th Feb but can't stay at venue during the hackathon as we do not have any provision for them.",
         },
         {
           isOpen: false,
