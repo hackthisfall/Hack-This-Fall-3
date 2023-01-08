@@ -61,7 +61,7 @@
       </CFlex>
 
       <div :class="['tier-heading', 'space-up']">
-        <span> Partners</span>
+        <span>Featured Partners</span>
       </div>
       <CGrid
         :row-gap="{ base: '1rem', sm: '1.75rem' }"
@@ -163,6 +163,27 @@ export default {
             {
               url: 'https://fossunited.org/',
               image: require('~/assets/sponsors/foss.svg'),
+            },
+          ],
+        },
+        {
+          category: 'In-Kind Partners',
+          sponsors: [
+            {
+              url: 'https://www.wolfram.com/',
+              image: require('~/assets/sponsors/wolfram.png'),
+            },
+            {
+              url: 'https://www.taskade.com/',
+              image: require('~/assets/sponsors/taskade.png'),
+            },
+            {
+              url: 'https://artofproblemsolving.com/',
+              image: require('~/assets/sponsors/aops.png'),
+            },
+            {
+              url: 'https://nostarch.com/',
+              image: require('~/assets/sponsors/no-starch.png'),
             },
           ],
         },
@@ -292,11 +313,6 @@ export default {
         //     // },
 
         //     // {
-        //     //   url: 'https://www.wolfram.com/',
-        //     //   image: require('~/assets/sponsors/wolfram.png'),
-        //     // },
-
-        //     // {
         //     //   url: 'https://draftbit.com/',
         //     //   image: require('~/assets/sponsors/draftbit.png'),
         //     // },
@@ -333,11 +349,6 @@ export default {
         //     // {
         //     //   url: 'https://rosenfeldmedia.com/',
         //     //   image: require('~/assets/sponsors/rosenfeld.png'),
-        //     // },
-
-        //     // {
-        //     //   url: 'https://www.taskade.com/',
-        //     //   image: require('~/assets/sponsors/taskade.png'),
         //     // },
         //     // {
         //     //   url: 'https://www.framer.com/',
