@@ -174,6 +174,14 @@ export default {
               image: require('~/assets/sponsors/wolfram.png'),
             },
             {
+              url: 'https://www.echo3d.com/',
+              image: require('~/assets/sponsors/echoar.webp'),
+            },
+            {
+              url: 'https://www.axure.com/',
+              image: require('~/assets/sponsors/axure.svg'),
+            },
+            {
               url: 'https://www.taskade.com/',
               image: require('~/assets/sponsors/taskade.png'),
             },
@@ -316,18 +324,9 @@ export default {
         //     //   url: 'https://draftbit.com/',
         //     //   image: require('~/assets/sponsors/draftbit.png'),
         //     // },
-
-        //     // {
-        //     //   url: 'https://www.axure.com/',
-        //     //   image: require('~/assets/sponsors/axure.png'),
-        //     // },
         //     // {
         //     //   url: 'https://www.sashido.io/',
         //     //   image: require('~/assets/sponsors/sashido.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://www.echoar.xyz/',
-        //     //   image: require('~/assets/sponsors/echoar.png'),
         //     // },
         //     // {
         //     //   url: 'https://www.devhood.tech/',
