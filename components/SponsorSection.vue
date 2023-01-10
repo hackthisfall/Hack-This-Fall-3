@@ -144,6 +144,10 @@ export default {
           category: 'Silver',
           sponsors: [
             {
+              url: 'https://solana.com/',
+              image: require('~/assets/sponsors/solana.svg'),
+            },
+            {
               url: 'https://deepfence.io/',
               image: require('~/assets/sponsors/deepfence.svg'),
             },
@@ -152,6 +156,10 @@ export default {
         {
           category: 'Bronze',
           sponsors: [
+            {
+              url: 'https://www.postman.com/',
+              image: require('~/assets/sponsors/postman.svg'),
+            },
             {
               url: 'https://www.digitalocean.com/',
               image: require('~/assets/sponsors/digitalocean.svg'),
@@ -186,6 +194,10 @@ export default {
               image: require('~/assets/sponsors/taskade.png'),
             },
             {
+              url: 'https://gen.xyz/',
+              image: require('~/assets/sponsors/xyz.svg'),
+            },
+            {
               url: 'https://artofproblemsolving.com/',
               image: require('~/assets/sponsors/aops.png'),
             },
@@ -213,10 +225,6 @@ export default {
         //     {
         //       url: 'https://www.quicknode.com/',
         //       image: require('~/assets/sponsors/quicknode.png'),
-        //     },
-        //     {
-        //       url: 'https://solana.com/',
-        //       image: require('~/assets/sponsors/solana.svg'),
         //     },
         //     {
         //       url: 'https://www.twilio.com/',
