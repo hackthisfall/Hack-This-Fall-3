@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="s3-team" name="s3-team">
-    <HeadingVue front="Previous Seasons" back="Team" />
+    <HeadingVue front="Previous Seasons" back="TEAM" />
     <CBox
       :mx="{ base: '0rem', sm: '50px' }"
       justify="center"
