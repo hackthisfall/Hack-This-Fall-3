@@ -53,7 +53,7 @@
           </CFlex>
         </div>
         <div v-else>
-          <SwagSection />
+          <DigitalSwagSection />
           <FooterSectionVue />
         </div>
       </div>
@@ -64,13 +64,27 @@
 <script>
 import NavigationBar from '~/components/NavigationBar'
 import FooterSectionVue from '~/components/FooterSection'
-import SwagSection from '~/components/SwagSection'
+import DigitalSwagSection from '~/components/DigitalSwagSection'
 
 export default {
   components: {
     NavigationBar,
-    SwagSection,
+    DigitalSwagSection,
     FooterSectionVue,
+  },
+  data() {
+    return {
+      isNavbarOpen: false,
+    }
+  },
+  methods: {
+    goToLocation(location) {
+      this.isNavbarOpen = false
+      window.location.href = location
+    },
+    toggleNavbar() {
+      this.isNavbarOpen = !this.isNavbarOpen
+    },
   },
 }
 </script>

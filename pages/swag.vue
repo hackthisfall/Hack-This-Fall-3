@@ -5,13 +5,13 @@
       <div class="main-container">
         <div v-if="isNavbarOpen" class="navbar-mobile">
           <CFlex direction="column" align="center">
-            <span
+            <NuxtLink
               id="nav-link-about"
               class="mobile-nav-item"
               @click="goToLocation('/#about')"
-              >About</span
+              >About</NuxtLink
             >
-            <span
+            <!-- <span
               id="nav-link-tracks"
               class="mobile-nav-item"
               @click="goToLocation('/#tracks')"
@@ -22,8 +22,8 @@
               class="mobile-nav-item"
               @click="goToLocation('/#prizes')"
               >Prizes</span
-            >
-            <span
+            > -->
+            <!-- <span
               id="nav-link-sponsors"
               class="mobile-nav-item"
               @click="goToLocation('/#sponsors')"
@@ -34,21 +34,15 @@
               class="mobile-nav-item"
               @click="goToLocation('/#faq')"
               >FAQs</span
-            >
+            > -->
             <span class="divider"></span>
             <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
             <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
-            <span
-              id="nav-link-team"
-              class="mobile-nav-item"
-              @click="goToLocation('/')"
-              >Home</span
+            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/"
+              >Home</NuxtLink
             >
-            <span
-              id="nav-link-team"
-              class="mobile-nav-item"
-              @click="goToLocation('/team')"
-              >Team</span
+            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
+              >Team</NuxtLink
             >
           </CFlex>
         </div>
@@ -71,6 +65,20 @@ export default {
     NavigationBar,
     SwagSection,
     FooterSectionVue,
+  },
+  data() {
+    return {
+      isNavbarOpen: false,
+    }
+  },
+  methods: {
+    goToLocation(location) {
+      this.isNavbarOpen = false
+      window.location.href = location
+    },
+    toggleNavbar() {
+      this.isNavbarOpen = !this.isNavbarOpen
+    },
   },
 }
 </script>

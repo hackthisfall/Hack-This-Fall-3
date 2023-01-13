@@ -5,11 +5,8 @@
       <div class="main-container">
         <div v-if="isNavbarOpen" class="navbar-mobile">
           <CFlex direction="column" align="center">
-            <span
-              id="nav-link-about"
-              class="mobile-nav-item"
-              @click="goToLocation('/#about')"
-              >About</span
+            <NuxtLink id="nav-link-about" class="mobile-nav-item" to="/#about"
+              >About</NuxtLink
             >
             <span
               id="nav-link-tracks"

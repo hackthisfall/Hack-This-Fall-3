@@ -45,7 +45,7 @@
               <div
                 v-for="(task, index) in challenge.tasks"
                 :key="index"
-                class="col-10 col-md-5 col-lg-3 m-4 panel smooth-transition-1"
+                class="col-10 col-md-5 col-lg-3 m-2 m-sm-2 m-xl-4 panel smooth-transition-1"
               >
                 <div class="col-12 my-2 title">
                   {{ task.heading }}
@@ -228,7 +228,7 @@ export default {
 
 <style scoped src="~/styles/bootstrap.min.css"></style>
 
-<style lang="scss">
+<style lang="scss" scoped>
 a {
   color: rgba(233, 83, 34, 1);
   text-decoration: none;

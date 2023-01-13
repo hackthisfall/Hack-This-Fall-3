@@ -119,6 +119,10 @@ export default {
       }
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .button {
       display: flex;
       flex-direction: row;
