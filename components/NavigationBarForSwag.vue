@@ -12,20 +12,17 @@
       <NuxtLink to="/"><img src="~/assets/logo.png" /></NuxtLink>
     </div>
     <div class="nav-desktop">
-      <NuxtLink id="nav-link-about" to="/#about" class="item">About</NuxtLink>
-      <NuxtLink id="nav-link-tracks" to="/#tracks" class="item"
-        >Tracks</NuxtLink
+      <NuxtLink id="nav-link-about" to="/swag#challenges" class="item"
+        >Challenges</NuxtLink
       >
-      <NuxtLink id="nav-link-tracks" to="/#prizes" class="item"
-        >Prizes</NuxtLink
+      <NuxtLink id="nav-link-tracks" to="/swag#badge" class="item"
+        >Digital Badge</NuxtLink
       >
-      <NuxtLink id="nav-link-sponsors" to="/#sponsors" class="item"
-        >Sponsors</NuxtLink
+      <NuxtLink id="nav-link-tracks" to="/swag#digital-swag" class="item"
+        >Digital Swag</NuxtLink
       >
-      <NuxtLink id="nav-link-sponsors" to="/#faq" class="item">FAQs</NuxtLink>
       <span class="divider"></span>
-      <NuxtLink id="nav-link-team" to="/swag" class="item">Swag</NuxtLink>
-      <NuxtLink id="nav-link-team" to="/team" class="item">Team</NuxtLink>
+      <NuxtLink id="nav-link-team" to="/" class="item">Home</NuxtLink>
 
       <img
         width="100%"

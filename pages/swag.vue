@@ -1,53 +1,37 @@
 <template>
-  <div class="center">
+  <div id="challenges" class="center">
     <div class="outer-container">
       <NavigationBar :toggleNavbar="toggleNavbar" />
       <div class="main-container">
         <div v-if="isNavbarOpen" class="navbar-mobile">
           <CFlex direction="column" align="center">
-            <NuxtLink
+            <span
               id="nav-link-about"
               class="mobile-nav-item"
-              @click="goToLocation('/#about')"
-              >About</NuxtLink
-            >
-            <!-- <span
-              id="nav-link-tracks"
-              class="mobile-nav-item"
-              @click="goToLocation('/#tracks')"
-              >Tracks</span
+              @click="goToLocation('/swag#challenges')"
+              >Challenges</span
             >
             <span
-              id="nav-link-faq"
+              id="nav-link-about"
               class="mobile-nav-item"
-              @click="goToLocation('/#prizes')"
-              >Prizes</span
-            > -->
-            <!-- <span
-              id="nav-link-sponsors"
-              class="mobile-nav-item"
-              @click="goToLocation('/#sponsors')"
-              >Sponsors</span
+              @click="goToLocation('/swag#badge')"
+              >Digital Badge</span
             >
             <span
-              id="nav-link-faq"
+              id="nav-link-about"
               class="mobile-nav-item"
-              @click="goToLocation('/#faq')"
-              >FAQs</span
-            > -->
+              @click="goToLocation('/swag#digital-swag')"
+              >Digital Swag</span
+            >
             <span class="divider"></span>
-            <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
-            <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
             <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/"
               >Home</NuxtLink
-            >
-            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
-              >Team</NuxtLink
             >
           </CFlex>
         </div>
         <div v-else>
           <SwagSection />
+          <DigitalSwagSection />
           <FooterSectionVue />
         </div>
       </div>
@@ -56,14 +40,16 @@
 </template>
 
 <script>
-import NavigationBar from '~/components/NavigationBar'
+import NavigationBar from '~/components/NavigationBarForSwag'
 import FooterSectionVue from '~/components/FooterSection'
 import SwagSection from '~/components/SwagSection'
+import DigitalSwagSection from '~/components/DigitalSwagSection'
 
 export default {
   components: {
     NavigationBar,
     SwagSection,
+    DigitalSwagSection,
     FooterSectionVue,
   },
   data() {

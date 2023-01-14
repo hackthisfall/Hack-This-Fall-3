@@ -1,10 +1,10 @@
 <template>
-  <div id="swag">
+  <div id="badge">
     <section class="content-section">
       <HeadingVue front="Digital Swags" back="SWAGS" />
       <div class="contents">
         <Container name="swagDigital">
-          <div class="virtualBadge" id="badge">
+          <div class="virtualBadge">
             <div class="leftColumn">
               <div class="dummy">
                 <canvas id="myCanvas" width="1620" height="1620" />
@@ -22,9 +22,19 @@
                 <div style="margin-top: 1rem">
                   To get a personalised Hack This Fall Badge, just add your name
                   & upload your image. Download it and Share it on socials using
-                  <a style="color: #f46d24; font-weight: 700"> #HackThisFall </a
+                  <a
+                    style="color: #f46d24; font-weight: 700"
+                    href="https://twitter.com/hashtag/hackthisfall"
+                    target="blank"
+                  >
+                    #HackThisFall </a
                   >and tag
-                  <a style="color: #f46d24; font-weight: 700">@hackthisfall</a>
+                  <a
+                    style="color: #f46d24; font-weight: 700"
+                    href="https://twitter.com/hackthisfall"
+                    target="blank"
+                    >@hackthisfall</a
+                  >
                 </div>
                 <div
                   style="
@@ -57,24 +67,21 @@
                 accept="image/*"
                 style="display: none"
               />
-              <div class="cta-buttons">
+              <div class="cta-buttons" id="digital-swag">
                 <CButton @click="downloadImage" class="button">
                   <img src="~/assets/icons/download.svg" />
                   Download Badge
                 </CButton>
 
-                <CButton
-                  v-show="addedImage"
-                  @click="shareOnTwitter"
-                  class="button"
-                >
+                <!-- v-show="addedImage" -->
+                <CButton @click="shareOnTwitter" class="button">
                   <img src="~/assets/icons/share.svg" />
                   Share
                 </CButton>
 
                 <a
                   style="display: none"
-                  href="https://twitter.com/intent/tweet?text=Hey folks!👋%0A%0AExcited to share that I'm attending @hackthisfall 2.0🥳 %26 absolutely can't wait to learn, build %26 share with the community!🚀%0A%0AJoin me %26 register now: hackthisfall.devpost.com%0AGet a personal badge for yourself: hackthisfall.tech/swag%0A%0A%23HackThisFall %23InnovateForGood"
+                  href="https://twitter.com/intent/tweet?text=Hey folks! Super excited to share that I will be attending @hackthisfall 3.0, a 36 Hours in-person hackathon🥳%0A%0ACan't wait to %23InnovateForGood and meet the amazing community🧡%0A%0AGet a personal badge for yourself: hackthisfall.tech/swag 🚀 %23HackThisFall"
                   target="_blank"
                   rel="noopener noreferrer"
                   id="share-button"
@@ -341,8 +348,8 @@ a {
 .content-section {
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
   font-family: 'Poppins';
+  padding-top: 4rem;
 
   a {
     color: rgba(233, 83, 34, 1);
@@ -463,6 +470,7 @@ a {
 
       @include respond-below(xs) {
         margin-left: unset;
+        margin-right: unset;
       }
 
       h1 {
@@ -528,22 +536,23 @@ a {
           color: white;
           flex-grow: 1;
 
-          &:hover {
-            background: rgb(244, 109, 36);
-          }
-
           @include respond-below(xs) {
-            max-width: 70vw;
+            width: 70vw;
           }
         }
 
         @include respond-below(sm) {
           flex-direction: column;
           align-items: center;
+
+          #nameInput {
+            padding: 0.75rem 1rem;
+            width: 70vw;
+          }
+
           .button {
-            &:nth-of-type(2) {
-              margin-left: unset;
-            }
+            margin-top: 1rem;
+            margin-left: unset;
           }
         }
       }
@@ -558,7 +567,7 @@ a {
         }
 
         .button {
-          margin-bottom: 2rem;
+          margin-bottom: 1rem;
           display: flex;
           flex-direction: row;
           justify-content: center;
@@ -584,7 +593,7 @@ a {
           }
 
           @include respond-below(xs) {
-            max-width: 70vw;
+            width: 70vw;
           }
         }
 

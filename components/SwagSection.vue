@@ -1,5 +1,5 @@
 <template>
-  <div id="swag">
+  <div>
     <section class="content-section">
       <HeadingVue front="Swag Store" back="SWAGS" />
       <div class="contents mt-4">
