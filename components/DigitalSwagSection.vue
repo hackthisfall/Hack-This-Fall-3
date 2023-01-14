@@ -36,14 +36,7 @@
                     >@hackthisfall</a
                   >
                 </div>
-                <div
-                  style="
-                    font-size: 0.8rem;
-                    margin-top: 2rem;
-                    font-weight: 500;
-                    color: #d04d29;
-                  "
-                >
+                <div class="disclaimer">
                   * We respect your privacy and are not storing your pictures on
                   our servers.
                 </div>
@@ -62,19 +55,25 @@
               </div>
 
               <input
-                type="file"
                 id="imageInput"
+                type="file"
                 accept="image/*"
                 style="display: none"
               />
               <div class="cta-buttons" id="digital-swag">
-                <CButton @click="downloadImage" class="button">
+                <CButton
+                  :class="['button', !addedImage ? 'disabled' : null]"
+                  @click="downloadImage"
+                >
                   <img src="~/assets/icons/download.svg" />
                   Download Badge
                 </CButton>
 
                 <!-- v-show="addedImage" -->
-                <CButton @click="shareOnTwitter" class="button">
+                <CButton
+                  :class="['button', !addedImage ? 'disabled' : null]"
+                  @click="shareOnTwitter"
+                >
                   <img src="~/assets/icons/share.svg" />
                   Share
                 </CButton>
@@ -93,22 +92,22 @@
         </Container>
 
         <Container>
-          <div class="zoom section">
-            <h3>Zoom Backgrounds</h3>
-            <div class="grid">
-              <img src="~/assets/swags/zoom/1.jpg" />
-              <img src="~/assets/swags/zoom/2.jpg" />
-              <img src="~/assets/swags/zoom/3.jpg" />
-            </div>
-          </div>
-
           <div class="desktop section">
             <h3>Desktop Wallpapers</h3>
             <div class="grid">
-              <img src="~/assets/swags/desktop/1.jpg" />
-              <img src="~/assets/swags/desktop/2.jpg" />
-              <img src="~/assets/swags/desktop/3.jpg" />
+              <img src="~/assets/swags/desktop/1.png" />
+              <img src="~/assets/swags/desktop/2.png" />
+              <img src="~/assets/swags/desktop/3.png" />
               <img src="~/assets/swags/desktop/4.jpg" />
+            </div>
+          </div>
+
+          <div class="zoom section">
+            <h3>Zoom Backgrounds</h3>
+            <div class="grid">
+              <img src="~/assets/swags/zoom/1.png" />
+              <img src="~/assets/swags/zoom/2.png" />
+              <img src="~/assets/swags/zoom/3.png" />
             </div>
           </div>
 
@@ -117,9 +116,10 @@
             <div class="grid">
               <img src="~/assets/swags/mobile/1.jpg" />
               <img src="~/assets/swags/mobile/2.jpg" />
-              <img src="~/assets/swags/mobile/3.jpg" />
-              <img src="~/assets/swags/mobile/4.jpg" />
+              <img src="~/assets/swags/mobile/3.png" />
+              <img src="~/assets/swags/mobile/4.png" />
               <img src="~/assets/swags/mobile/5.jpg" />
+              <img src="~/assets/swags/mobile/6.jpg" />
             </div>
           </div>
 
@@ -153,9 +153,7 @@
 import { CButton } from '@chakra-ui/vue'
 import HeadingVue from '~/components/HeadingComponent'
 import Container from '~/components/Container'
-// import VueSlickCarousel from 'vue-slick-carousel'
-// import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-// import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
 export default {
   components: {
     HeadingVue,
@@ -283,6 +281,8 @@ export default {
       document.getElementById('imageInput').click()
     },
     downloadImage() {
+      if (!this.addedImage) return
+
       const image = document.getElementById('myCanvas').toDataURL('image/png')
       const link = document.createElement('a')
       link.download = 'htf-badge.png'
@@ -291,6 +291,8 @@ export default {
       link.remove()
     },
     shareOnTwitter() {
+      if (!this.addedImage) return
+
       document.getElementById('share-button').click()
     },
     // desktopWallpaper() {
@@ -482,6 +484,13 @@ a {
         font-size: 1.1rem;
         margin: 1rem 0;
         justify-content: center;
+
+        .disclaimer {
+          font-size: 0.8rem;
+          margin-top: 1.25rem;
+          font-weight: 500;
+          color: #d04d29;
+        }
       }
 
       h4 {
@@ -595,6 +604,13 @@ a {
           @include respond-below(xs) {
             width: 70vw;
           }
+
+          &.disabled {
+            opacity: 0.5;
+            background: #d04d29;
+            box-shadow: 2px 2px 0px #f46d24;
+            cursor: default;
+          }
         }
 
         @include respond-below(sm) {
@@ -619,7 +635,7 @@ a {
 
     .grid {
       img {
-        border-radius: 0.25rem;
+        border-radius: 0.75rem;
         filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.2));
 
         &:hover {
@@ -629,6 +645,7 @@ a {
   }
 
   .zoom {
+    margin-top: 3rem;
     .grid {
       margin-top: 1.5rem;
       display: grid;
@@ -645,7 +662,6 @@ a {
   }
 
   .desktop {
-    margin-top: 3rem;
     .grid {
       margin-top: 1.5rem;
       display: grid;
