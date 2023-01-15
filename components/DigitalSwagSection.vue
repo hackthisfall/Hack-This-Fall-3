@@ -2,19 +2,38 @@
   <div>
     <section class="content-section">
       <HeadingVue front="Digital Swags" back="SWAGS" />
-      <div class="about">
-        <p>
-          Everyone loves swags so that they can brag about them. We at Hack This
-          Fall love swags too. What if we tell you that you can earn cool swags
-          just by doing some interesting and fun challenges? Download our cool
-          digital swags and showcase
-        </p>
-        <a href="bit.ly/htf-digital-swags" target="blank" id="badge">
-          <CButton class="button animate-ease"><span>View All</span></CButton>
-        </a>
-      </div>
       <div class="contents">
         <Container name="swagDigital">
+          <div class="about">
+            <p>
+              Get yourself equipped with some amazing official Hack This Fall
+              Digital Swags, and flex those by owning them. We have a Digital
+              Badge where you can upload your photo and full name to make it
+              personalized. Get our cool Hack This Fall wallpapers for your
+              desktop computers and mobile phones. Don't forget to use the
+              zoom/meet wallpapers in your meetings.
+              <br />
+              <br />
+              Also, to have fun with your team and community members, we have an
+              Instagram Bingo for you, which you can share on your stories, tag
+              <a
+                data-v-777a3a82=""
+                target="_blank"
+                href="https://www.instagram.com/hackthisfall/"
+                >@hackthisfall</a
+              >, and nominate your friends for the same.
+            </p>
+            <a
+              href="https://bit.ly/htf-digital-swags"
+              target="blank"
+              id="badge"
+            >
+              <CButton class="button animate-ease"
+                ><span>View All</span></CButton
+              >
+            </a>
+          </div>
+
           <div class="virtualBadge">
             <div class="leftColumn">
               <div class="dummy">
@@ -873,7 +892,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 90%;
 
     p {
       padding: 2rem 2rem 0rem 2rem;
