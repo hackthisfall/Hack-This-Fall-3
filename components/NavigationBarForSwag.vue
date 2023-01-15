@@ -12,9 +12,9 @@
       <NuxtLink to="/"><img src="~/assets/logo.png" /></NuxtLink>
     </div>
     <div class="nav-desktop">
-      <NuxtLink id="nav-link-about" to="/swag#challenges" class="item"
+      <!-- <NuxtLink id="nav-link-about" to="/swag#challenges" class="item"
         >Challenges</NuxtLink
-      >
+      > -->
       <NuxtLink id="nav-link-tracks" to="/swag#badge" class="item"
         >Digital Badge</NuxtLink
       >

@@ -5,12 +5,12 @@
       <div class="main-container">
         <div v-if="isNavbarOpen" class="navbar-mobile">
           <CFlex direction="column" align="center">
-            <span
+            <!-- <span
               id="nav-link-about"
               class="mobile-nav-item"
               @click="goToLocation('/swag#challenges')"
               >Challenges</span
-            >
+            > -->
             <span
               id="nav-link-about"
               class="mobile-nav-item"

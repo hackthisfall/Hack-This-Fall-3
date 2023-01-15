@@ -177,6 +177,11 @@ export default {
       ctx.drawImage(defaultBadge, 0, 0, 1620, 1620)
       ctx.font = '700 4.5rem Poppins'
       ctx.fillStyle = 'white'
+      ctx.fillText(
+        this.name.trim() !== '' ? this.name : 'Your Name Here',
+        96,
+        1367
+      )
     }
 
     const badge = new Image()
