@@ -30,7 +30,7 @@
           </CFlex>
         </div>
         <div v-else>
-          <SwagSection />
+          <!-- <SwagSection /> -->
           <DigitalSwagSection />
           <FooterSectionVue />
         </div>
@@ -42,13 +42,13 @@
 <script>
 import NavigationBar from '~/components/NavigationBarForSwag'
 import FooterSectionVue from '~/components/FooterSection'
-import SwagSection from '~/components/SwagSection'
+// import SwagSection from '~/components/SwagSection'
 import DigitalSwagSection from '~/components/DigitalSwagSection'
 
 export default {
   components: {
     NavigationBar,
-    SwagSection,
+    // SwagSection,
     DigitalSwagSection,
     FooterSectionVue,
   },
