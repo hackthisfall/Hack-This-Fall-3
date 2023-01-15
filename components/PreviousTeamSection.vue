@@ -81,11 +81,6 @@ export default {
           image: require('~/assets/team/abhi.webp'),
         },
         {
-          name: 'Tirthak Patel',
-          url: 'https://www.linkedin.com/in/tirthakpatel/',
-          image: require('~/assets/team/tirthak.webp'),
-        },
-        {
           name: 'Perin Shah',
           url: 'https://www.linkedin.com/in/shahperin/',
           image: require('~/assets/team/perin.webp'),

@@ -48,7 +48,7 @@ export default {
         {
           name: 'Siddharth Dayalwal',
           url: 'https://twitter.com/siddharth_hacks',
-          image: require('~/assets/team/siddharth.png'),
+          image: require('~/assets/team/siddharth.jpg'),
         },
         {
           name: 'Sahil Sen',
@@ -124,11 +124,6 @@ export default {
           name: 'Rohan Kambli',
           url: 'https://twitter.com/rohannrk',
           image: require('~/assets/team/rohan.jpg'),
-        },
-        {
-          name: 'Arjun Dhawan',
-          url: 'https://www.linkedin.com/in/arjun-dhawan-2002',
-          image: require('~/assets/team/arjun.jpg'),
         },
         {
           name: 'Vedant Kakde',
