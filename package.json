@@ -24,6 +24,7 @@
     "@nuxtjs/emotion": "^0.1.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/style-resources": "^1.2.1",
+    "@vercel/analytics": "^0.1.8",
     "core-js": "^3.25.0",
     "dayjs": "^1.11.7",
     "nuxt": "^2.15.8",
