@@ -2,6 +2,17 @@
   <div id="badge">
     <section class="content-section">
       <HeadingVue front="Digital Swags" back="SWAGS" />
+      <div class="about">
+        <p>
+          Everyone loves swags so that they can brag about them. We at Hack This
+          Fall love swags too. What if we tell you that you can earn cool swags
+          just by doing some interesting and fun challenges? Download our cool
+          digital swags and showcase
+        </p>
+        <a href="bit.ly/htf-digital-swags" target="blank">
+          <CButton class="button animate-ease"><span>View All</span></CButton>
+        </a>
+      </div>
       <div class="contents">
         <Container name="swagDigital">
           <div class="virtualBadge">
@@ -95,53 +106,204 @@
           <div class="desktop section">
             <h3>Desktop Wallpapers</h3>
             <div class="grid">
-              <img src="~/assets/swags/desktop/1.png" />
-              <img src="~/assets/swags/desktop/2.png" />
-              <img src="~/assets/swags/desktop/3.png" />
-              <img src="~/assets/swags/desktop/4.jpg" />
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/desktop/1.png"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/desktop/2.png"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/desktop/3.png"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/desktop/4.jpg"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
             </div>
           </div>
 
           <div class="zoom section">
             <h3>Zoom Backgrounds</h3>
             <div class="grid">
-              <img src="~/assets/swags/zoom/1.png" />
-              <img src="~/assets/swags/zoom/2.png" />
-              <img src="~/assets/swags/zoom/3.png" />
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/zoom/1.png"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/zoom/2.png"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/zoom/3.png"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
             </div>
           </div>
 
           <div class="mobile section">
             <h3>Mobile Wallpapers</h3>
             <div class="grid">
-              <img src="~/assets/swags/mobile/1.jpg" />
-              <img src="~/assets/swags/mobile/2.jpg" />
-              <img src="~/assets/swags/mobile/3.png" />
-              <img src="~/assets/swags/mobile/4.png" />
-              <img src="~/assets/swags/mobile/5.jpg" />
-              <img src="~/assets/swags/mobile/6.jpg" />
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/mobile/1.jpg"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/mobile/2.jpg"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/mobile/3.png"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/mobile/4.png"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/mobile/5.jpg"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
+              >
+                <img
+                  class="smooth-transition"
+                  src="~/assets/swags/mobile/6.jpg"
+                />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
             </div>
           </div>
 
           <div class="mobile section">
             <h3>Instagram Bingo</h3>
             <div class="grid">
-              <img src="~/assets/swags/bingo.png" />
-            </div>
-          </div>
-
-          <div class="about">
-            <p>
-              Everyone loves swags so that they can brag about them. We at Hack
-              This Fall love swags too. What if we tell you that you can earn
-              cool swags just by doing some interesting and fun challenges?
-              Download our cool digital swags and showcase
-            </p>
-            <a href="https://discord.hackthisfall.tech">
-              <CButton class="button animate-ease"
-                ><span>View All</span></CButton
+              <a
+                class="image-overlay"
+                href="https://bit.ly/htf-digital-swags"
+                target="blank"
               >
-            </a>
+                <img class="smooth-transition" src="~/assets/swags/bingo.png" />
+                <div class="overlay smooth-transition">
+                  <img src="~/assets/icons/download.svg" />
+                </div>
+              </a>
+            </div>
           </div>
         </Container>
       </div>
@@ -192,7 +354,6 @@ export default {
 
     imgInput.addEventListener('change', (e) => {
       if (e.target.files[0]) {
-        console.log(e.target.files[0])
         this.imageFile = e.target.files[0]
         const reader = new FileReader()
         reader.readAsDataURL(this.imageFile)
@@ -278,6 +439,15 @@ export default {
             this.toggleImageAdded()
           }
         }
+      } else {
+        ctx.drawImage(defaultBadge, 0, 0, 1620, 1620)
+        ctx.font = '700 4.5rem Poppins'
+        ctx.fillStyle = 'white'
+        ctx.fillText(
+          this.name.trim() !== '' ? this.name : 'Your Name Here',
+          96,
+          1367
+        )
       }
     })
   },
@@ -300,38 +470,6 @@ export default {
 
       document.getElementById('share-button').click()
     },
-    // desktopWallpaper() {
-    //   const link = document.createElement('a')
-    //   link.target = '_blank'
-    //   link.href =
-    //     'https://drive.google.com/drive/folders/18fTSDdTyT54Qihy0kzdrww0NQbAm4UPJ?usp=sharing'
-    //   link.click()
-    //   link.remove()
-    // },
-    // instaBingo() {
-    //   const link = document.createElement('a')
-    //   link.target = '_blank'
-    //   link.href =
-    //     'https://drive.google.com/file/d/1gBKNDRGFlg88YU1zA4ErvRXCrG7kznvg/view?usp=sharing'
-    //   link.click()
-    //   link.remove()
-    // },
-    // mobileWallpaper() {
-    //   const link = document.createElement('a')
-    //   link.target = '_blank'
-    //   link.href =
-    //     'https://drive.google.com/drive/folders/1R5Ca9GbutusY7skY3OKWCGbNYJvbnOBD?usp=sharing'
-    //   link.click()
-    //   link.remove()
-    // },
-    // zoomBackground() {
-    //   const link = document.createElement('a')
-    //   link.target = '_blank'
-    //   link.href =
-    //     'https://drive.google.com/drive/folders/13vb62xb3fTv9W-U1Kk0Bg3emMTj2t5Gn?usp=sharing'
-    //   link.click()
-    //   link.remove()
-    // },
     toggleImageAdded() {
       this.addedImage = true
     },
@@ -366,20 +504,6 @@ a {
       text-decoration: underline;
       color: rgba(233, 83, 34, 1);
     }
-  }
-
-  .smooth-transition {
-    -webkit-transition: all 1.1s ease;
-    -moz-transition: all 1.1s ease;
-    -o-transition: all 1.1s ease;
-    transition: all 1.1s ease;
-  }
-
-  .smooth-transition-1 {
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
   }
 
   .font-size-18 {
@@ -639,11 +763,46 @@ a {
     }
 
     .grid {
-      img {
-        border-radius: 0.75rem;
-        filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.2));
+      .image-overlay {
+        position: relative;
+        cursor: pointer;
+        img {
+          border-radius: 0.75rem;
+          filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.2));
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          opacity: 0;
+          transition: 0.5s ease;
+          background-color: rgba(0, 0, 0, 0.6);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 4rem;
+            height: 4rem;
+          }
+
+          &.smooth-transition {
+            -webkit-transition: all 1.1s ease;
+            -moz-transition: all 1.1s ease;
+            -o-transition: all 1.1s ease;
+            transition: all 1.1s ease;
+          }
+        }
 
         &:hover {
+          .overlay {
+            opacity: 1;
+          }
         }
       }
     }
@@ -714,6 +873,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    width: 90%;
 
     p {
       padding: 2rem 2rem 0rem 2rem;

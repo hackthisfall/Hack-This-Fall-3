@@ -83,7 +83,7 @@ export default {
         {
           name: 'Tushar',
           url: 'https://www.linkedin.com/in/tushar-ba401a136/',
-          image: require('~/assets/team/tushar.webp'),
+          image: require('~/assets/team/tushar.jpg'),
         },
         {
           name: 'Pooja Gera',
