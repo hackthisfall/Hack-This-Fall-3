@@ -249,8 +249,6 @@ export default {
   font-size: 16px;
   line-height: 25px;
   color: #777e91;
-  max-width: 99%;
-  margin: auto;
 
   @include respond-below(sm) {
     font-size: 0.75rem;
