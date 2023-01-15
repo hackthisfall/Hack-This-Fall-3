@@ -1,5 +1,5 @@
 <template>
-  <div id="badge">
+  <div>
     <section class="content-section">
       <HeadingVue front="Digital Swags" back="SWAGS" />
       <div class="about">
@@ -9,7 +9,7 @@
           just by doing some interesting and fun challenges? Download our cool
           digital swags and showcase
         </p>
-        <a href="bit.ly/htf-digital-swags" target="blank">
+        <a href="bit.ly/htf-digital-swags" target="blank" id="badge">
           <CButton class="button animate-ease"><span>View All</span></CButton>
         </a>
       </div>
