@@ -59,7 +59,7 @@
           >Blogs</a
         >
         <a
-          href="https://s2.hackthisfall.tech/swag"
+          href="https://hackthisfall.tech/swag"
           class="content animate-ease"
           target="_blank"
           >Swags</a

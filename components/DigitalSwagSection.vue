@@ -16,10 +16,7 @@
               <br />
               Also, to have fun with your team and community members, we have an
               Instagram Bingo for you, which you can share on your stories, tag
-              <a
-                data-v-777a3a82=""
-                target="_blank"
-                href="https://www.instagram.com/hackthisfall/"
+              <a target="_blank" href="https://www.instagram.com/hackthisfall/"
                 >@hackthisfall</a
               >, and nominate your friends for the same.
             </p>
