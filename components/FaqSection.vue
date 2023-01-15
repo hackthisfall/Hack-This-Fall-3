@@ -459,6 +459,7 @@ export default {
     .answer {
       max-height: 0px;
       transition: max-height 0.3s ease, background-color 0s ease 0.3s;
+      opacity: 0.8;
     }
   }
 
@@ -471,6 +472,7 @@ export default {
     padding-right: 3rem;
     text-align: justify;
     color: white;
+    opacity: 0.8;
 
     @include respond-below(xs) {
       font-size: 0.9rem;

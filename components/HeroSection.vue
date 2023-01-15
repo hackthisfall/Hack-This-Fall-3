@@ -11,7 +11,7 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a href="https://lu.ma/hackthisfall">
+        <a href="https://lu.ma/hackthisfall" target="blank">
           <CButton class="button animate-ease">
             <img
               src="~/assets/icons/register.svg"
@@ -21,7 +21,7 @@
             <span> Register Now</span>
           </CButton>
         </a>
-        <a href="https://discord.hackthisfall.tech">
+        <a href="https://discord.hackthisfall.tech" target="blank">
           <CButton class="button animate-ease"
             ><img
               src="~/assets/icons/discord.svg"
