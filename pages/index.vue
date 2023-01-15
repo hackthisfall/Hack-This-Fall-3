@@ -137,8 +137,8 @@ export default {
     min-height: 85vh;
     background-image: url('~/assets/background.png');
     background-repeat: no-repeat;
-    // background-position-x: -1rem;
-    background-size: cover;
+    background-size: 100vw cover;
+    background-position-x: -1rem;
 
     @include respond-below(xs) {
       margin-top: 1rem;
