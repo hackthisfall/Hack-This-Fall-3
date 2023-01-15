@@ -1,12 +1,5 @@
 <template>
-  <div
-    v-waypoint="{
-      active: true,
-      callback: onWaypoint,
-      options: intersectionOptions,
-    }"
-    class="container"
-  >
+  <div class="container">
     <slot />
   </div>
 </template>
@@ -26,19 +19,18 @@ export default {
     }
   },
   methods: {
-    onWaypoint({ going }) {
-      if (!this.name) return
-
-      if (going === this.$waypointMap.GOING_IN) {
-        ;['about', 'tracks', 'sponsors', 'faq'].forEach((e) => {
-          document.getElementById(`nav-link-${e}`).classList.remove('active')
-        })
-        if (['about', 'tracks', 'sponsors', 'faq'].includes(this.name))
-          document
-            .getElementById(`nav-link-${this.name}`)
-            .classList.add('active')
-      }
-    },
+    // onWaypoint({ going }) {
+    //   if (!this.name) return
+    //   if (going === this.$waypointMap.GOING_IN) {
+    //     ;['about', 'tracks', 'sponsors', 'faq'].forEach((e) => {
+    //       document.getElementById(`nav-link-${e}`).classList.remove('active')
+    //     })
+    //     if (['about', 'tracks', 'sponsors', 'faq'].includes(this.name))
+    //       document
+    //         .getElementById(`nav-link-${this.name}`)
+    //         .classList.add('active')
+    //   }
+    // },
   },
 }
 </script>

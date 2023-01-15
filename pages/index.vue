@@ -36,13 +36,10 @@
               >FAQs</span
             >
             <span class="divider"></span>
-            <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
-            <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
-            <span
-              id="nav-link-team"
-              class="mobile-nav-item"
-              @click="goToLocation('/team')"
-              >Team</span
+            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
+              >Swags</NuxtLink
+            ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
+              >Team</NuxtLink
             >
           </CFlex>
         </div>

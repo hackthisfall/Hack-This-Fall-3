@@ -23,9 +23,8 @@
         >Sponsors</NuxtLink
       >
       <NuxtLink id="nav-link-sponsors" to="/#faq" class="item">FAQs</NuxtLink>
-      <!-- <NuxtLink id="nav-link-faq" to="/#faq" class="item">FAQ</NuxtLink> -->
       <span class="divider"></span>
-      <!-- <a id="nav-link-swags" class="item">Swags</a> -->
+      <NuxtLink id="nav-link-team" to="/swag" class="item">Swag</NuxtLink>
       <NuxtLink id="nav-link-team" to="/team" class="item">Team</NuxtLink>
 
       <img
