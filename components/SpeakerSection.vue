@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="speakers" name="speakers">
-    <HeadingVue front="Past Speakers" back="SPEAKERS" />
+    <HeadingVue front="Mentors" back="PEOPLE" />
     <CFlex :mx="{ base: '0.5rem', sm: '50px' }" mt="5rem" justify="center">
       <CGrid
         :gap="{ base: '0.75rem', sm: '3rem' }"
@@ -18,7 +18,7 @@
         >
           <a :href="speaker.url" target="_blank">
             <div class="overlay"></div>
-            <img :src="speaker.picture" width="100%" height="auto" />
+            <img :src="speaker.image" width="100%" height="auto" />
             <div class="text">
               <h2>{{ speaker.name }}</h2>
               <p>{{ speaker.description }}</p>
@@ -46,64 +46,82 @@ export default {
     return {
       speakers: [
         {
-          description: 'Founder, EddieHub',
-          name: 'Eddie Jaoude',
-          url: 'https://twitter.com/eddiejaoude/',
-          picture: require('~/assets/speakers/eddie.jpg'),
+          description: 'Technical Customer Success Manager, Edgio',
+          name: 'Rishi Raj Jain',
+          url: 'https://twitter.com/rishi_raj_jain_',
+          image: require('~/assets/mentors/rishi.jpeg'),
         },
         {
-          description: 'Software Engineer, Microsoft',
-          name: 'Khushboo Verma',
-          url: 'https://twitter.com/khushbooverma_',
-          picture: require('~/assets/speakers/khushboo.jpg'),
+          description: 'Full Stack Developer, Ironforge',
+          name: 'Dhiraj Chauhan',
+          url: 'https://twitter.com/cdhiraj40',
+          image: require('~/assets/mentors/dhiraj.jpeg'),
         },
         {
-          description: 'DevRel Engineer, Storyblok',
-          name: 'Facundo Giuliani',
-          url: 'https://twitter.com/facundozurdo',
-          picture: require('~/assets/speakers/facundo.jpg'),
+          description: 'Ambassador, Kubesimplify Community',
+          name: 'Avinesh Tripathi',
+          url: 'https://twitter.com/Avinesh__T',
+          image: require('~/assets/mentors/avinesh.jpeg'),
         },
         {
-          description: 'Head of Community, Gitpod',
-          name: 'Pauline Narvas',
-          url: 'https://twitter.com/paulienuh',
-          picture: require('~/assets/speakers/pauline.jpg'),
+          description: 'Software Engineer, Capgemini India',
+          name: 'Aryan Kaushik',
+          url: 'https://twitter.com/aryankaushik21',
+          image: require('~/assets/mentors/aryan.jpg'),
         },
         {
-          description: 'Developer Relations Lead, Strapi',
-          name: 'Daniel Phiri',
-          url: 'https://twitter.com/malgamves',
-          picture: require('~/assets/speakers/daniel.jpg'),
+          description: 'SDE, Posist',
+          name: 'Ghulam Yazdani',
+          url: 'https://twitter.com/iamyazreza',
+          image: require('~/assets/mentors/ghulam.jpeg'),
         },
         {
-          description: 'CEO, Agoric',
-          name: 'Dean Tribble',
-          url: 'https://twitter.com/deantribble',
-          picture: require('~/assets/speakers/dean.jpeg'),
+          description: 'Blockchain Protocol Engineer, Polygon',
+          name: 'Manav Darji',
+          url: 'https://twitter.com/manav24_',
+          image: require('~/assets/mentors/manav.jpg'),
         },
         {
-          description: 'Engineer, Web DataWorks',
-          name: 'Nishu Goel',
-          url: 'https://twitter.com/TheNishuGoel',
-          picture: require('~/assets/speakers/nishu.png'),
+          description: 'Developer Advocate, ChiselStrike',
+          name: 'Swastika Yadav',
+          url: 'https://twitter.com/swastika0015',
+          image: require('~/assets/mentors/swastika.png'),
         },
         {
-          description: 'Chief Business Officer, Unschool',
-          name: 'Narayanan S',
-          url: 'https://www.linkedin.com/in/chalkmeout/',
-          picture: require('~/assets/speakers/narayanan.png'),
+          description: 'Developer Advocate, 100ms',
+          name: 'Aditya Thakur',
+          url: 'https://twitter.com/adityathakurxd',
+          image: require('~/assets/mentors/aditya.jpg'),
         },
         {
-          description: 'Software Engineer, Agoric',
-          name: 'Kate Sills',
-          url: 'https://twitter.com/kate_sills',
-          picture: require('~/assets/speakers/kate.jpeg'),
+          description: 'Developer, TensorFlow User Group Mumbai',
+          name: 'Shubham Sah',
+          url: 'https://twitter.com/ishubhamsah',
+          image: require('~/assets/mentors/shubham.jpg'),
         },
         {
-          description: 'Solution Architect, Red Hat',
-          name: 'Gourav Sharma',
-          url: 'https://twitter.com/rhcasharma',
-          picture: require('~/assets/speakers/gourav.jpg'),
+          description: 'Lead DevRel India region, Showwcase',
+          name: 'Insha Ramin',
+          url: 'https://twitter.com/Insharamin',
+          image: require('~/assets/mentors/insha.jpg'),
+        },
+        {
+          description: 'Co-founder, Version Labs',
+          name: 'Daxeel Soni',
+          url: 'https://twitter.com/daxeelsoni',
+          image: require('~/assets/mentors/daxeel.jpg'),
+        },
+        {
+          description: 'CTO, Pedals Up',
+          name: 'Harsh Shah',
+          url: 'https://twitter.com/harshcrop',
+          image: require('~/assets/mentors/harsh.jpg'),
+        },
+        {
+          description: 'Jr. Staff AI Engineer, Detect Technologies',
+          name: 'Bhargav Patel',
+          url: 'https://www.linkedin.com/in/bhargav-p-patel/',
+          image: require('~/assets/mentors/bhargav.jpg'),
         },
       ],
     }
