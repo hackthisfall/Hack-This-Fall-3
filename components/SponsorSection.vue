@@ -28,20 +28,11 @@
             '2xl': '3.4rem',
           }"
           :grid-template-columns="{
-            base: `repeat(${
-              tiers.category === 'Previous Sponsors' ? '3' : '2'
-            }, 1fr)`,
-            sm: `repeat(${
-              tiers.category === 'Previous Sponsors' ? '5' : '3'
-            },1fr)`,
-            lg: `repeat(${
-              tiers.category === 'Previous Sponsors' ? '6' : '4'
-            },1fr)`,
-            xl: `repeat(${
-              tiers.category === 'Previous Sponsors' ? '8' : '5'
-            },1fr)`,
+            base: `repeat(2,1fr)`,
+            sm: `repeat(3,1fr)`,
+            lg: `repeat(4,1fr)`,
+            xl: `repeat(5,1fr)`,
           }"
-          wrap="wrap"
         >
           <a
             v-for="(sponsor, index) in tiers.sponsors"
@@ -95,11 +86,44 @@
         </a>
       </CGrid>
 
-      <!-- <a href="https://bit.ly/htf3-sponsor" class="sponsor-button">
+      <CFlex v-if="community" direction="column">
+        <div :class="['tier-heading', 'space-up']">
+          <span> Community Partners</span>
+        </div>
+        <CGrid
+          :row-gap="{ base: '1rem', sm: '1.75rem' }"
+          :column-gap="{
+            base: '1rem',
+            sm: '2rem',
+            lg: '2rem',
+            xl: '2rem',
+            '2xl': '3.4rem',
+          }"
+          :grid-template-columns="{
+            base: `repeat(2,1fr)`,
+            sm: `repeat(3,1fr)`,
+            lg: `repeat(4,1fr)`,
+            xl: `repeat(5,1fr)`,
+          }"
+        >
+          <a
+            v-for="(sponsor, index) in communityPartners"
+            :key="index"
+            :href="sponsor.url"
+            target="_blank"
+            :class="['sponsor animate-ease', sponsor.specialClass, 'Previous']"
+            borderRadius="30px"
+          >
+            <img :src="sponsor.image" />
+          </a>
+        </CGrid>
+      </CFlex>
+
+      <NuxtLink v-if="!community" to="/sponsors" class="sponsor-button">
         <CButton class="button animate-ease">
-          <span> Sponsor us! </span>
+          <span> View More! </span>
         </CButton>
-      </a> -->
+      </NuxtLink>
     </CFlex>
   </ContainerVue>
 </template>
@@ -115,6 +139,7 @@ export default {
     CFlex,
     CGrid,
   },
+  props: ['community'],
   data() {
     return {
       sponsors: [
@@ -207,183 +232,6 @@ export default {
             },
           ],
         },
-        // {
-        //   category: 'Previous Sponsors',
-        //   sponsors: [
-        //     {
-        //       url: 'https://mlh.io/',
-        //       image: require('~/assets/sponsors/mlh.svg'),
-        //     },
-        //     {
-        //       url: 'https://www.storyblok.com/',
-        //       image: require('~/assets/sponsors/storyblok.svg'),
-        //     },
-        //     {
-        //       url: 'https://education.github.com/discount_requests/student_application?utm_source=2021-10-22-hackthisfall',
-        //       image: require('~/assets/sponsors/github.svg'),
-        //     },
-        //     {
-        //       url: 'https://www.quicknode.com/',
-        //       image: require('~/assets/sponsors/quicknode.png'),
-        //     },
-        //     {
-        //       url: 'https://www.twilio.com/',
-        //       image: require('~/assets/sponsors/twilio.png'),
-        //     },
-        //     {
-        //       url: 'https://polygon.technology/',
-        //       image: require('~/assets/sponsors/polygon.svg'),
-        //     },
-        //     {
-        //       url: 'https://www.digitalocean.com/',
-        //       image: require('~/assets/sponsors/digitalocean.svg'),
-        //     },
-        //     {
-        //       url: 'https://agoric.com/',
-        //       image: require('~/assets/sponsors/agoric.svg'),
-        //     },
-        //     {
-        //       url: 'https://symbl.ai/',
-        //       image: require('~/assets/sponsors/symbl.svg'),
-        //     },
-        //     {
-        //       url: 'https://wrx.gg/htf',
-        //       image: require('~/assets/sponsors/wazirx.png'),
-        //     },
-        //     {
-        //       url: 'https://atsign.com/',
-        //       image: require('~/assets/sponsors/atsign.svg'),
-        //     },
-        //     {
-        //       url: 'https://www.linode.com/',
-        //       image: require('~/assets/sponsors/linode.svg'),
-        //     },
-        //     {
-        //       url: 'https://balsamiq.com/',
-        //       image: require('~/assets/sponsors/balsamiq.svg'),
-        //     },
-        //     {
-        //       url: 'https://www.courier.com/',
-        //       image: require('~/assets/sponsors/courier.svg'),
-        //     },
-        //     {
-        //       url: 'https://registry.godaddy/',
-        //       image: require('~/assets/sponsors/godaddy.png'),
-        //       specialClass: 'godaddy',
-        //     },
-        //     {
-        //       url: 'https://tezos.com/',
-        //       image: require('~/assets/sponsors/tezos.svg'),
-        //     },
-        //     {
-        //       url: 'https://www.egghead.io/',
-        //       image: require('~/assets/sponsors/egghead.png'),
-        //     },
-        //     {
-        //       url: 'https://gen.xyz/',
-        //       image: require('~/assets/sponsors/xyz.svg'),
-        //     },
-        //     {
-        //       url: 'https://replit.com/',
-        //       image: require('~/assets/sponsors/replit.webp'),
-        //     },
-        //     {
-        //       url: 'https://filebase.com/?utm_source=website&utm_medium=sponsor&utm_campaign=hackthisfall',
-        //       image: require('~/assets/sponsors/filebase.svg'),
-        //     },
-        //     {
-        //       url: 'https://dev.to/',
-        //       image: require('~/assets/sponsors/devto.png'),
-        //     },
-        //     {
-        //       url: 'https://1password.com/',
-        //       image: require('~/assets/sponsors/1p.svg'),
-        //     },
-        //     {
-        //       url: 'https://hackp.ac/mlh-stickermule-hackathons',
-        //       image: require('~/assets/sponsors/stickermule.png'),
-        //     },
-        //     {
-        //       url: 'https://sketch.com',
-        //       image: require('~/assets/sponsors/sketch.png'),
-        //     },
-        //     // {
-        //     //   url: 'https://defhacks.co/',
-        //     //   image: require('~/assets/sponsors/defhacks.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://www.portis.io/',
-        //     //   image: require('~/assets/sponsors/portis.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://fold.money/',
-        //     //   image: require('~/assets/sponsors/fold.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://xinfin.org/',
-        //     //   image: require('~/assets/sponsors/xdc.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://coil.com/',
-        //     //   image: require('~/assets/sponsors/coil.jpg'),
-        //     // },
-
-        //     // {
-        //     //   url: 'https://draftbit.com/',
-        //     //   image: require('~/assets/sponsors/draftbit.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://www.sashido.io/',
-        //     //   image: require('~/assets/sponsors/sashido.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://www.devhood.tech/',
-        //     //   image: require('~/assets/sponsors/devhood.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://codingblocks.com/',
-        //     //   image: require('~/assets/sponsors/cb.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://www.clerky.com/',
-        //     //   image: require('~/assets/sponsors/clerky.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://interwebs.host/',
-        //     //   image: require('~/assets/sponsors/iwh.png'),
-        //     // },
-
-        //     // {
-        //     //   url: 'https://rosenfeldmedia.com/',
-        //     //   image: require('~/assets/sponsors/rosenfeld.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://www.framer.com/',
-        //     //   image: require('~/assets/sponsors/framer.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://www.voiceflow.com/',
-        //     //   image: require('~/assets/sponsors/voiceflow.png'),
-        //     // },
-        //     // {
-        //     //   url: 'http://joinglimpse.com/',
-        //     //   image: require('~/assets/sponsors/glimpse.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://progate.com/',
-        //     //   image: require('~/assets/sponsors/progate.png'),
-        //     // },
-        //     // // remaining except slido
-        //     // {
-        //     //   url: 'https://devhero.shop/',
-        //     //   image: require('~/assets/sponsors/devhero.png'),
-        //     // },
-        //     // {
-        //     //   url: 'https://streamyard.com/about',
-        //     //   image: require('~/assets/sponsors/streamyard.png'),
-        //     // },
-        //   ],
-        // },
       ],
       partners: [
         {
@@ -427,6 +275,158 @@ export default {
           image: require('~/assets/sponsors/standout-stickers.svg'),
           text: 'Sticker</br>Partner',
           name: 'standout-stickers',
+        },
+      ],
+      communityPartners: [
+        {
+          image: require('~/assets/community/versiton.jpg'),
+        },
+        {
+          image: require('~/assets/community/bios.svg'),
+        },
+        {
+          image: require('~/assets/community/csg.png'),
+        },
+        {
+          image: require('~/assets/community/datacode.png'),
+        },
+        {
+          image: require('~/assets/community/rgpv.png'),
+        },
+        {
+          image: require('~/assets/community/codefamily.png'),
+        },
+        {
+          image: require('~/assets/community/nitr.png'),
+        },
+        {
+          image: require('~/assets/community/supercontri.png'),
+        },
+        {
+          image: require('~/assets/community/techbrewers.png'),
+        },
+        {
+          image: require('~/assets/community/codedu.png'),
+        },
+        {
+          image: require('~/assets/community/we-build-pune.png'),
+        },
+        {
+          image: require('~/assets/community/oreodroiders.png'),
+        },
+        {
+          image: require('~/assets/community/elevate.png'),
+        },
+        {
+          image: require('~/assets/community/codesapiens.png'),
+        },
+        {
+          image: require('~/assets/community/ppsavani.png'),
+        },
+        {
+          image: require('~/assets/community/hackerabad.png'),
+        },
+        {
+          image: require('~/assets/community/hack-for-code.png'),
+        },
+        {
+          image: require('~/assets/community/cc.png'),
+        },
+        {
+          image: require('~/assets/community/gdsc-jagdalpur.png'),
+        },
+        {
+          image: require('~/assets/community/swc.jpg'),
+        },
+        {
+          image: require('~/assets/community/devcode.png'),
+        },
+        {
+          image: require('~/assets/community/gs-siliguri.png'),
+        },
+        {
+          image: require('~/assets/community/hackcbs.png'),
+        },
+        {
+          image: require('~/assets/community/kotlin.png'),
+        },
+        {
+          image: require('~/assets/community/hack-bengal.png'),
+        },
+        {
+          image: require('~/assets/community/frontend.svg'),
+        },
+        {
+          image: require('~/assets/community/pypro.png'),
+        },
+        {
+          image: require('~/assets/community/devrelo.png'),
+        },
+        {
+          image: require('~/assets/community/newton.png'),
+        },
+        {
+          image: require('~/assets/community/brainseed.png'),
+        },
+        {
+          image: require('~/assets/community/oo.jpg'),
+        },
+        {
+          image: require('~/assets/community/abilify.png'),
+        },
+        {
+          image: require('~/assets/community/cocode.png'),
+        },
+        {
+          image: require('~/assets/community/devsintech.png'),
+        },
+        {
+          image: require('~/assets/community/punedev.png'),
+        },
+        {
+          image: require('~/assets/community/onestop.png'),
+        },
+        {
+          image: require('~/assets/community/tps.jpg'),
+        },
+        {
+          image: require('~/assets/community/eduhub.png'),
+        },
+        {
+          image: require('~/assets/community/founderstank.png'),
+        },
+        {
+          image: require('~/assets/community/keepup.jpg'),
+        },
+        {
+          image: require('~/assets/community/irlamigo.jpg'),
+        },
+        {
+          image: require('~/assets/community/everyday-design.svg'),
+        },
+        {
+          image: require('~/assets/community/devsdungeon.png'),
+        },
+        {
+          image: require('~/assets/community/codingvets.png'),
+        },
+        {
+          image: require('~/assets/community/gdsc-gandhinagar.png'),
+        },
+        {
+          image: require('~/assets/community/gdsc-vishwakarma.png'),
+        },
+        {
+          image: require('~/assets/community/gdsc-bit.png'),
+        },
+        {
+          image: require('~/assets/community/htm.png'),
+        },
+        {
+          image: require('~/assets/community/sudans.png'),
+        },
+        {
+          image: require('~/assets/community/product-hub.png'),
         },
       ],
     }
@@ -569,41 +569,41 @@ export default {
     }
   }
 
-  &.Previous {
-    min-width: 6rem;
-    padding: 0.5rem;
-    height: 50px;
+  // &.Previous {
+  //   min-width: 7rem;
+  //   padding: 0.5rem;
+  //   height: 50px;
 
-    img {
-      max-width: 4rem;
-      max-height: 2rem;
-    }
+  //   img {
+  //     max-width: 4rem;
+  //     max-height: 2rem;
+  //   }
 
-    &.godaddy {
-      padding: 0.5rem 0.25rem;
-      img {
-        max-width: 5rem;
-      }
-    }
+  //   &.godaddy {
+  //     padding: 0.5rem 0.25rem;
+  //     img {
+  //       max-width: 5rem;
+  //     }
+  //   }
 
-    @include respond-below(sm) {
-      height: 2.5rem;
-      min-width: 4rem;
-      padding: 0.25rem 0.375rem;
+  //   @include respond-below(sm) {
+  //     height: 2.5rem;
+  //     min-width: 4rem;
+  //     padding: 0.25rem 0.375rem;
 
-      img {
-        max-width: 3rem;
-        max-height: 1.5rem;
-      }
+  //     img {
+  //       max-width: 3rem;
+  //       max-height: 1.5rem;
+  //     }
 
-      &.godaddy {
-        padding: 0.125rem 0.125rem;
-        img {
-          max-width: 3.5rem;
-        }
-      }
-    }
-  }
+  //     &.godaddy {
+  //       padding: 0.125rem 0.125rem;
+  //       img {
+  //         max-width: 3.5rem;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 .partner {
