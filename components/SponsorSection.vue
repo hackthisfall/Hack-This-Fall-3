@@ -85,12 +85,18 @@
           <span v-html="sponsor.text"></span>
         </a>
       </CGrid>
+    </CFlex>
 
+    <HeadingVue front="Community Partners" back="" />
+    <CFlex
+      :mx="{ base: '1rem', sm: '50px' }"
+      justify="center"
+      align="start"
+      direction="column"
+    >
       <CFlex v-if="community" direction="column">
-        <div :class="['tier-heading', 'space-up']">
-          <span> Community Partners</span>
-        </div>
         <CGrid
+          mt="5rem"
           :row-gap="{ base: '1rem', sm: '1.75rem' }"
           :column-gap="{
             base: '1rem',
@@ -119,9 +125,9 @@
         </CGrid>
       </CFlex>
 
-      <NuxtLink v-if="!community" to="/sponsors" class="sponsor-button">
+      <NuxtLink v-if="!community" to="/partners" class="sponsor-button">
         <CButton class="button animate-ease">
-          <span> View More! </span>
+          <span> View More </span>
         </CButton>
       </NuxtLink>
     </CFlex>
@@ -158,6 +164,10 @@ export default {
             {
               url: 'https://bit.ly/htf3-sdp',
               image: require('~/assets/sponsors/github.svg'),
+            },
+            {
+              url: 'https://www.zeeve.io/',
+              image: require('~/assets/sponsors/zeeve.svg'),
             },
             {
               url: 'https://apyhub.com/',
@@ -279,153 +289,199 @@ export default {
       ],
       communityPartners: [
         {
+          url: 'https://chat.whatsapp.com/DfX9HCjEWDdGGzDDiTS7g1',
           image: require('~/assets/community/versiton.jpg'),
         },
         {
+          url: 'https://twitter.com/bios_twt',
           image: require('~/assets/community/bios.svg'),
         },
         {
+          url: 'https://www.linkedin.com/company/codesetgo',
           image: require('~/assets/community/csg.png'),
         },
         {
+          url: 'https://instagram.com/datacode.in',
           image: require('~/assets/community/datacode.png'),
         },
         {
+          url: 'https://instagram.com/gdsc_uitrgpv',
           image: require('~/assets/community/rgpv.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/codefamily1/',
           image: require('~/assets/community/codefamily.png'),
         },
         {
+          url: 'https://www.instagram.com/hacknitr/',
           image: require('~/assets/community/nitr.png'),
         },
         {
+          url: 'https://twitter.com/SuperContri_twt',
           image: require('~/assets/community/supercontri.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/club-techbrewers/',
           image: require('~/assets/community/techbrewers.png'),
         },
         {
+          url: 'https://join.codedu.tech',
           image: require('~/assets/community/codedu.png'),
         },
         {
+          url: 'https://www.instagram.com/webuildpune/',
           image: require('~/assets/community/we-build-pune.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/oreodroiders/',
           image: require('~/assets/community/oreodroiders.png'),
         },
         {
+          url: 'https://www.instagram.com/elevate_ldce/',
           image: require('~/assets/community/elevate.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/codesapeins',
           image: require('~/assets/community/codesapiens.png'),
         },
         {
+          url: 'https://instagram.com/gdscppsu',
           image: require('~/assets/community/ppsavani.png'),
         },
         {
+          url: 'https://twitter.com/hackerabad',
           image: require('~/assets/community/hackerabad.png'),
         },
         {
+          url: 'https://twitter.com/hackforcode',
           image: require('~/assets/community/hack-for-code.png'),
         },
         {
+          url: 'https://twitter.com/cerrituscoders/',
           image: require('~/assets/community/cc.png'),
         },
         {
+          url: 'https://www.instagram.com/gdsc.gecjdp/',
           image: require('~/assets/community/gdsc-jagdalpur.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/studentwelfareclub/',
           image: require('~/assets/community/swc.jpg'),
         },
         {
+          url: 'https://www.linkedin.com/company/dev-code-community/',
           image: require('~/assets/community/devcode.png'),
         },
         {
+          url: 'https://twitter.com/GSiliguri',
           image: require('~/assets/community/gs-siliguri.png'),
         },
         {
+          url: 'https://instagram.com/hackcbs',
           image: require('~/assets/community/hackcbs.png'),
         },
         {
+          url: 'https://www.twitter.com/kotlinlapaz',
           image: require('~/assets/community/kotlin.png'),
         },
         {
+          url: 'https://twitter.com/Hack4Bengal',
           image: require('~/assets/community/hack-bengal.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/thefrontendclub',
           image: require('~/assets/community/frontend.svg'),
         },
         {
+          url: 'https://linktr.ee/hackclubsal',
           image: require('~/assets/community/pypro.png'),
         },
         {
+          url: 'https://solo.to/devrelo',
           image: require('~/assets/community/devrelo.png'),
         },
         {
+          url: 'https://www.instagram.com/nsccbitd/',
           image: require('~/assets/community/newton.png'),
         },
         {
           image: require('~/assets/community/brainseed.png'),
+          url: 'https://linktr.ee/BrainSeed_Networks',
         },
         {
+          url: 'https://www.linkedin.com/company/optimistic-overviews/',
           image: require('~/assets/community/oo.jpg'),
         },
         {
+          url: 'https://abilify.tech/',
           image: require('~/assets/community/abilify.png'),
         },
         {
+          url: 'https://twitter.com/thecocode',
           image: require('~/assets/community/cocode.png'),
         },
         {
+          url: 'https://github.com/devs-in-tech',
           image: require('~/assets/community/devsintech.png'),
         },
         {
+          url: 'https://t.me/PuneDevClub',
           image: require('~/assets/community/punedev.png'),
         },
         {
+          url: 'https://allaboutprogramming.org/',
           image: require('~/assets/community/onestop.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/the-public-square-community',
           image: require('~/assets/community/tps.jpg'),
         },
         {
+          url: 'https://www.linkedin.com/company/eduhub-community/',
           image: require('~/assets/community/eduhub.png'),
         },
         {
+          url: 'http://founderstank.co/',
           image: require('~/assets/community/founderstank.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/trainings-internships',
           image: require('~/assets/community/keepup.jpg'),
         },
         {
+          url: 'https://twitter.com/IRL_amigo',
           image: require('~/assets/community/irlamigo.jpg'),
         },
         {
+          url: 'https://discord.gg/W8EaYskeCG',
           image: require('~/assets/community/everyday-design.svg'),
         },
         {
+          url: 'http://bit.ly/devs-dungeon-bio',
           image: require('~/assets/community/devsdungeon.png'),
         },
         {
+          url: 'https://twitter.com/codingvets',
           image: require('~/assets/community/codingvets.png'),
         },
         {
+          url: 'https://www.instagram.com/gdsc_gecg/',
           image: require('~/assets/community/gdsc-gandhinagar.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/google-dsc/',
           image: require('~/assets/community/gdsc-vishwakarma.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/gdsc-bitw',
           image: require('~/assets/community/gdsc-bit.png'),
         },
         {
+          url: 'https://www.linkedin.com/company/hackmountains/',
           image: require('~/assets/community/htm.png'),
         },
         {
-          image: require('~/assets/community/sudans.png'),
-        },
-        {
+          url: 'https://www.linkedin.com/company/hubproduct/',
           image: require('~/assets/community/product-hub.png'),
         },
       ],
@@ -506,13 +562,6 @@ export default {
     max-height: 4rem;
   }
 
-  &.godaddy {
-    padding: 1rem 0.5rem;
-    img {
-      max-width: 10rem;
-    }
-  }
-
   @include respond-below(sm) {
     height: 5rem;
     min-width: 8rem;
@@ -521,13 +570,6 @@ export default {
     img {
       max-width: 6rem;
       max-height: 3rem;
-    }
-
-    &.godaddy {
-      padding: 0.25rem 0.25rem;
-      img {
-        max-width: 7rem;
-      }
     }
   }
 
@@ -558,13 +600,24 @@ export default {
       max-height: 5.33rem;
     }
 
-    @include respond-below(sm) {
-      min-width: 8rem;
+    @include respond-below(md) {
+      min-width: 12rem;
       padding: 0.5rem 0.75rem;
 
       img {
         max-width: 8rem;
-        max-height: 6rem;
+        max-height: 4rem;
+      }
+    }
+
+    @include respond-below(sm) {
+      height: 5rem;
+      min-width: 8rem;
+      padding: 0.5rem 0.75rem;
+
+      img {
+        max-width: 6rem;
+        max-height: 3rem;
       }
     }
   }
@@ -579,13 +632,6 @@ export default {
   //     max-height: 2rem;
   //   }
 
-  //   &.godaddy {
-  //     padding: 0.5rem 0.25rem;
-  //     img {
-  //       max-width: 5rem;
-  //     }
-  //   }
-
   //   @include respond-below(sm) {
   //     height: 2.5rem;
   //     min-width: 4rem;
@@ -596,12 +642,6 @@ export default {
   //       max-height: 1.5rem;
   //     }
 
-  //     &.godaddy {
-  //       padding: 0.125rem 0.125rem;
-  //       img {
-  //         max-width: 3.5rem;
-  //       }
-  //     }
   //   }
   // }
 }
