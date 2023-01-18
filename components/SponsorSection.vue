@@ -87,14 +87,15 @@
       </CGrid>
     </CFlex>
 
-    <HeadingVue front="Community Partners" back="" />
+    <HeadingVue front="Community Partners" back="" v-if="community" />
     <CFlex
       :mx="{ base: '1rem', sm: '50px' }"
       justify="center"
       align="start"
       direction="column"
+      v-if="community"
     >
-      <CFlex v-if="community" direction="column">
+      <CFlex direction="column">
         <CGrid
           mt="5rem"
           :row-gap="{ base: '1rem', sm: '1.75rem' }"
@@ -186,18 +187,9 @@ export default {
               url: 'https://deepfence.io/',
               image: require('~/assets/sponsors/deepfence.svg'),
             },
-          ],
-        },
-        {
-          category: 'Bronze',
-          sponsors: [
             {
               url: 'https://www.postman.com/',
               image: require('~/assets/sponsors/postman.svg'),
-            },
-            {
-              url: 'https://www.digitalocean.com/',
-              image: require('~/assets/sponsors/digitalocean.svg'),
             },
             {
               url: 'https://scrollme.today/',
@@ -206,6 +198,31 @@ export default {
             {
               url: 'https://fossunited.org/',
               image: require('~/assets/sponsors/foss.svg'),
+            },
+          ],
+        },
+        {
+          category: 'Bronze',
+          sponsors: [
+            {
+              url: 'https://www.digitalocean.com/',
+              image: require('~/assets/sponsors/azure.png'),
+            },
+            {
+              url: 'https://www.digitalocean.com/',
+              image: require('~/assets/sponsors/twilio.png'),
+            },
+            {
+              url: 'https://www.digitalocean.com/',
+              image: require('~/assets/sponsors/appwrite.svg'),
+            },
+            {
+              url: 'https://www.digitalocean.com/',
+              image: require('~/assets/sponsors/digitalocean.svg'),
+            },
+            {
+              url: 'https://www.digitalocean.com/',
+              image: require('~/assets/sponsors/godaddy.svg'),
             },
           ],
         },
