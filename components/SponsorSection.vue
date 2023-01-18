@@ -93,9 +93,8 @@
       justify="center"
       align="start"
       direction="column"
-      v-if="community"
     >
-      <CFlex direction="column">
+      <CFlex direction="column" v-if="community">
         <CGrid
           mt="5rem"
           :row-gap="{ base: '1rem', sm: '1.75rem' }"
