@@ -35,11 +35,25 @@
             <CText mt="2rem" class="heading">Best Use of Storyblok</CText>
             <p class="description">
               Keychron K2 (Hot-swappable) Wireless Mechanical Keyboard (Version
-              2)
+              2) to each member of team
             </p>
           </a>
           <a
-            v-for="(prize, index) in htfPrizes"
+            v-for="(prize, index) in appyPrizes"
+            :key="index"
+            href="https://docs.google.com/document/d/e/2PACX-1vQXVL_JNRodzaBVvujzJafMf_1XEggKEAmMuFRg0T81lsUiE1dsQbP6JmgtWumaINg3p-hhAeb7RCgy/pub"
+            target="_blank"
+            class="inner"
+          >
+            <CFlex align="center">
+              <img src="~/assets/sponsors/apyhub.svg" /> <span>✕</span>
+              <img :src="prize.logo" />
+            </CFlex>
+            <CText mt="2rem" class="heading">{{ prize.name }}</CText>
+            <p class="description">{{ prize.description }}</p>
+          </a>
+          <a
+            v-for="(prize, index) in mlhPrizes"
             :key="index"
             href="https://hack.mlh.io/prizes"
             target="_blank"
@@ -51,6 +65,24 @@
             </CFlex>
             <CText mt="2rem" class="heading">{{ prize.name }}</CText>
             <p class="description">{{ prize.description }}</p>
+          </a>
+          <a href="https://blues.io/" target="_blank" class="inner">
+            <img src="~/assets/sponsors/blues.svg" />
+            <CText mt="2rem" class="heading"
+              >Best Hardware Hack using Blues</CText
+            >
+            <p class="description">
+              Every winning team member receives $50 Amazon gift card.
+            </p>
+          </a>
+          <a href="https://peerlist.io/" target="_blank" class="inner">
+            <img src="~/assets/sponsors/peerlist.png" />
+            <CText mt="2rem" class="heading"
+              >Top-3 Projects uploaded on Peerlist</CText
+            >
+            <p class="description">
+              Each winning team member receives a special Peerlist Swag package.
+            </p>
           </a>
         </CGrid>
       </CFlex>
@@ -71,7 +103,7 @@ export default {
   },
   data() {
     return {
-      htfPrizes: [
+      mlhPrizes: [
         {
           logo: require('~/assets/sponsors/twilio.png'),
           name: 'Most Creative Use of Twilio',
@@ -85,7 +117,8 @@ export default {
         {
           logo: require('~/assets/sponsors/appwrite.svg'),
           name: 'Best Use of Appwrite',
-          description: 'Fitbit Inspire 2 Tracker',
+          description:
+            'Every winning team member takes home Fitbit Inspire 2 Tracker',
         },
         {
           logo: require('~/assets/sponsors/azure-horiz.png'),
@@ -98,6 +131,26 @@ export default {
           name: 'Best Domain Name from GoDaddy Registry',
           description:
             'Hack from Home Kit - A wireless earbuds, blue light glasses, selfie ring light and a pouch for easy transport.',
+        },
+      ],
+      appyPrizes: [
+        {
+          logo: require('~/assets/medals/first.png'),
+          name: 'Best Project Built using ApyHub',
+          description:
+            '150 EURO worth Amazon Voucher to team, 5M Atoms, Exclusive ApyHub Hoodie to each member and additional perks.',
+        },
+        {
+          logo: require('~/assets/medals/second.png'),
+          name: 'Second Best Project Built using ApyHub',
+          description:
+            '100 EURO worth Amazon Voucher to team, 3M Atoms, Exclusive ApyHub T-Shirt to each member and additional perks.',
+        },
+        {
+          logo: require('~/assets/medals/third.png'),
+          name: 'Third Best Project Built using ApyHub',
+          description:
+            '50 EURO worth Amazon Voucher to team, 3M Atoms, Exclusive ApyHub T-Shirt to each member and additional perks.',
         },
       ],
     }

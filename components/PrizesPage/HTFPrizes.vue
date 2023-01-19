@@ -87,7 +87,7 @@
         </CGrid>
       </CFlex>
     </section>
-    <HeadingVue front="Sponsored Prizes" back="" />
+    <HeadingVue front="Sponsored Prizes" back="PRIZES" />
   </ContainerVue>
 </template>
 
