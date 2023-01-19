@@ -174,7 +174,7 @@ export default {
         letter-spacing: 0.02em;
         color: #ffffff;
         margin-top: 1rem;
-        opacity: 80%;
+        opacity: 0.8;
       }
     }
   }
