@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="prizes" name="prizes">
-    <HeadingVue front="Hackathon Prizes" back="PRIZES" />
+    <HeadingVue front="Hack This Fall Prizes" back="PRIZES" />
     <section class="content-section">
       <CFlex
         :mx="{ base: '1rem', sm: '50px' }"
@@ -50,24 +50,51 @@
             </div>
           </CBox>
         </CFlex>
-        <span class="disclaimer">
-          // More prizes for the Top-3 teams are to be added above and
-          additional sponsored prizes will be announced soon....
-        </span>
-        <NuxtLink to="/prizes" class="sponsor-button">
-          <CButton class="button animate-ease">
-            <span> View More </span>
-          </CButton>
-        </NuxtLink>
+      </CFlex>
+      <CFlex
+        :mx="{ base: '1.5rem', sm: '2rem' }"
+        justify="center"
+        align="center"
+        direction="column"
+        class="prizes-container"
+      >
+        <CGrid
+          mt="3rem"
+          :row-gap="{ base: '2rem', sm: '3rem' }"
+          :column-gap="{
+            base: '2rem',
+            sm: '3rem',
+            lg: '3rem',
+            xl: '3rem',
+            '2xl': '4rem',
+          }"
+          :grid-template-columns="{
+            base: `repeat(1,1fr)`,
+            sm: `repeat(1,1fr)`,
+            md: `repeat(2,1fr)`,
+            lg: `repeat(2,1fr)`,
+            xl: `repeat(2,1fr)`,
+          }"
+        >
+          <CGridItem
+            class="inner"
+            v-for="(prize, index) in htfPrizes"
+            :key="index"
+          >
+            <CText class="heading">{{ prize.name }}</CText>
+            <p class="description">{{ prize.description }}</p>
+          </CGridItem>
+        </CGrid>
       </CFlex>
     </section>
+    <HeadingVue front="Sponsored Prizes" back="" />
   </ContainerVue>
 </template>
 
 <script>
 import { CBox, CFlex } from '@chakra-ui/vue'
-import HeadingVue from './HeadingComponent.vue'
-import ContainerVue from './Container.vue'
+import HeadingVue from '../HeadingComponent.vue'
+import ContainerVue from '../Container.vue'
 
 export default {
   components: {
@@ -78,6 +105,16 @@ export default {
   },
   data() {
     return {
+      htfPrizes: [
+        {
+          name: '👭🏻 Best All Girls Team',
+          description: 'INR 10,000 to winning team and addional perks',
+        },
+        {
+          name: '🌟 Best Beginner Team',
+          description: 'INR 5,000 to winning team and addional perks',
+        },
+      ],
       prizes: [
         {
           name: '₹20k',
@@ -141,42 +178,48 @@ export default {
   padding-top: 4rem;
 }
 
-.button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  // height: 55px;
-  background: #d04d29;
-  border: 2px solid #f46d24;
-  box-shadow: 2px 2px 0px #f46d24;
-  border-radius: 12.4124px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 3rem;
-
-  &:hover {
-    background: rgb(244, 109, 36);
-  }
-
-  @include respond-below(xs) {
-    margin-top: 2rem;
-    max-width: 70vw;
-  }
-}
-
 .content-section {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
   margin-top: 1rem;
 
-  .sponsor-button {
-    align-self: center;
+  .prizes-container {
+    .inner {
+      background: linear-gradient(
+        180deg,
+        #142137 0%,
+        #0b121f 99.99%,
+        rgba(20, 33, 55, 0) 100%
+      );
+      border-radius: 14px;
+      padding: 2rem 3.2rem;
+
+      &:hover {
+        background: linear-gradient(180deg, #0b3b52 3.72%, #0b121f 141.1%);
+      }
+      .heading {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+      }
+
+      .description {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: justify;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        margin-top: 1rem;
+      }
+    }
   }
 
   .cards-grid {
@@ -242,7 +285,7 @@ export default {
       }
 
       .card-side {
-        width: 96%;
+        width: 100%;
         margin: auto;
         border-radius: 15px;
         transition: all 0.8s ease;
@@ -358,13 +401,6 @@ export default {
         }
       }
     }
-  }
-
-  .disclaimer {
-    margin-top: 2rem;
-    // align-self: flex-start;
-    color: white;
-    font-style: italic;
   }
 }
 </style>
