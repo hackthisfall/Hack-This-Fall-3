@@ -59,7 +59,7 @@
             target="_blank"
             class="inner"
           >
-            <CFlex align="center">
+            <CFlex wrap="wrap" align="center">
               <img :src="prize.logo" /> <span>✕</span>
               <img src="~/assets/sponsors/mlh.svg" />
             </CFlex>
@@ -215,6 +215,11 @@ export default {
         line-height: 32px;
         letter-spacing: 0.02em;
         color: #ffffff;
+
+        @include respond-below(sm) {
+          font-size: 24px;
+          line-height: 28px;
+        }
       }
 
       .description {
