@@ -170,7 +170,7 @@ export default {
               image: require('~/assets/sponsors/zeeve.svg'),
             },
             {
-              url: 'https://apyhub.com/',
+              url: 'https://apyhub.com/?utm_source=hackathon&utm_medium=event&utm_campaign=hackthisfall',
               image: require('~/assets/sponsors/apyhub.svg'),
             },
           ],
@@ -222,6 +222,10 @@ export default {
             {
               url: 'https://www.digitalocean.com/',
               image: require('~/assets/sponsors/godaddy.svg'),
+            },
+            {
+              url: 'https://blues.io/',
+              image: require('~/assets/sponsors/blues.svg'),
             },
           ],
         },
@@ -377,6 +381,10 @@ export default {
           image: require('~/assets/community/cc.png'),
         },
         {
+          url: 'https://bio.link/bytemakers',
+          image: require('~/assets/community/bytemakers.png'),
+        },
+        {
           url: 'https://www.instagram.com/gdsc.gecjdp/',
           image: require('~/assets/community/gdsc-jagdalpur.png'),
         },
@@ -426,7 +434,7 @@ export default {
         },
         {
           url: 'https://www.linkedin.com/company/optimistic-overviews/',
-          image: require('~/assets/community/oo.jpg'),
+          image: require('~/assets/community/oo.png'),
         },
         {
           url: 'https://abilify.tech/',
@@ -495,6 +503,10 @@ export default {
         {
           url: 'https://www.linkedin.com/company/hackmountains/',
           image: require('~/assets/community/htm.png'),
+        },
+        {
+          url: 'https://twitter.com/ocd_india',
+          image: require('~/assets/community/ocd.png'),
         },
         {
           url: 'https://www.linkedin.com/company/hubproduct/',
