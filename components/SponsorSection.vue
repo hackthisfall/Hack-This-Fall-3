@@ -28,10 +28,18 @@
             '2xl': '3.4rem',
           }"
           :grid-template-columns="{
-            base: `repeat(2,1fr)`,
-            sm: `repeat(3,1fr)`,
-            lg: `repeat(4,1fr)`,
-            xl: `repeat(5,1fr)`,
+            base: `repeat(${
+              tiers.category === sponsors[0].category ? '1' : '2'
+            }, 1fr)`,
+            sm: `repeat(${
+              tiers.category === sponsors[0].category ? '1' : '3'
+            },1fr)`,
+            lg: `repeat(${
+              tiers.category === 'Previous Sponsors' ? '6' : '4'
+            },1fr)`,
+            xl: `repeat(${
+              tiers.category === 'Previous Sponsors' ? '8' : '5'
+            },1fr)`,
           }"
         >
           <a
@@ -156,6 +164,10 @@ export default {
               url: 'https://www.storyblok.com/',
               image: require('~/assets/sponsors/storyblok.svg'),
             },
+            {
+              url: 'https://5ire.org/',
+              image: require('~/assets/sponsors/5ire.svg'),
+            },
           ],
         },
         {
@@ -178,10 +190,6 @@ export default {
         {
           category: 'Silver',
           sponsors: [
-            {
-              url: 'https://solana.com/',
-              image: require('~/assets/sponsors/solana.svg'),
-            },
             {
               url: 'https://deepfence.io/',
               image: require('~/assets/sponsors/deepfence.svg'),
@@ -602,7 +610,7 @@ export default {
   }
 
   &.Platinium {
-    min-width: 24rem;
+    min-width: 20rem;
 
     img {
       max-width: 16rem;
@@ -760,7 +768,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 1rem;
+  padding: 0.5rem 1rem;
   // height: 55px;
   background: #d04d29;
   border: 2px solid #f46d24;
