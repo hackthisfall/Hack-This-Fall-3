@@ -11,14 +11,9 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a href="https://lu.ma/hackthisfall" target="blank">
-          <CButton class="button animate-ease">
-            <img
-              src="~/assets/icons/register.svg"
-              alt="register"
-              class="icon"
-            />
-            <span> Register Now</span>
+        <a target="blank">
+          <CButton class="button disabled animate-ease">
+            <span> Registration Closed</span>
           </CButton>
         </a>
         <a href="https://discord.hackthisfall.tech" target="blank">
@@ -152,6 +147,13 @@ export default {
 
       @include respond-below(xs) {
         max-width: 70vw;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        background: #d04d29;
+        box-shadow: 2px 2px 0px #f46d24;
+        cursor: default;
       }
     }
   }
