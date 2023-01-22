@@ -36,8 +36,10 @@
               >FAQs</span
             >
             <span class="divider"></span>
-            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
-              >Swags</NuxtLink
+            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/schedule"
+              >Schedule</NuxtLink
+            ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
+              >Swag</NuxtLink
             ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
               >Team</NuxtLink
             >

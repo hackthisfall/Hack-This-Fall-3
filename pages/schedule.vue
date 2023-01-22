@@ -72,6 +72,20 @@ export default {
     SpeakerScheduleSection,
     FooterSectionVue,
   },
+  data() {
+    return {
+      isNavbarOpen: false,
+    }
+  },
+  methods: {
+    goToLocation(location) {
+      this.isNavbarOpen = false
+      window.location.href = location
+    },
+    toggleNavbar() {
+      this.isNavbarOpen = !this.isNavbarOpen
+    },
+  },
 }
 </script>
 
@@ -105,8 +119,8 @@ export default {
     min-height: 85vh;
     background-image: url('~/assets/background.png');
     background-repeat: no-repeat;
+    background-size: 100vw cover;
     background-position-x: -1rem;
-    background-size: cover;
 
     @include respond-below(xs) {
       margin-top: 1rem;

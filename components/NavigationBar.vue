@@ -24,6 +24,9 @@
       >
       <NuxtLink id="nav-link-sponsors" to="/#faq" class="item">FAQs</NuxtLink>
       <span class="divider"></span>
+      <NuxtLink id="nav-link-team" to="/schedule" class="item"
+        >Schedule</NuxtLink
+      >
       <NuxtLink id="nav-link-team" to="/swag" class="item">Swag</NuxtLink>
       <NuxtLink id="nav-link-team" to="/team" class="item">Team</NuxtLink>
 
@@ -140,7 +143,7 @@ export default {
     border: 1.5px solid #243149;
   }
 
-  @include respond-below(md) {
+  @include respond-below(lg) {
     padding-left: 1rem;
     padding-right: 5rem;
     .item {
