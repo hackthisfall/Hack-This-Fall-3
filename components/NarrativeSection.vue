@@ -91,7 +91,7 @@ export default {
         {
           name: 'Praveen Kumar',
           description: 'Mentor and Speaker',
-          image: require('~/assets/narratives/praveen.webp'),
+          image: require('~/assets/narratives/praveen.png'),
           url: 'https://www.youtube.com/watch?v=r1KZf2kWX0o',
         },
       ],
