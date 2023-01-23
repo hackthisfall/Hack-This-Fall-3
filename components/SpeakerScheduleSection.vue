@@ -81,14 +81,14 @@ export default {
       speakers: [
         {
           title: 'Web3 Infrastructure Automation with Zeeve',
-          name: 'Sankalp Sharma',
+          name: 'Ghan Vashishtha',
           location: '',
           sessionUrl: 'https://youtu.be/DnH5UrXV7kA',
           buttonText: 'WATCH NOW',
           date: '23 Jan 2023 19:00',
           endDate: '23 Jan 2023 20:00',
-          url: 'https://www.linkedin.com/in/sankalp-sharma-502008139',
-          picture: require('~/assets/speakers/sankalp.jpeg'),
+          url: 'https://www.linkedin.com/in/ghan-vashishtha',
+          picture: require('~/assets/speakers/ghan.jpeg'),
         },
         {
           title: 'Design Sense for Developers',
