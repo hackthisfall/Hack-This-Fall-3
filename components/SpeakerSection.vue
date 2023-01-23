@@ -94,12 +94,6 @@ export default {
           image: require('~/assets/mentors/aditya.jpg'),
         },
         {
-          description: 'Developer, TensorFlow User Group Mumbai',
-          name: 'Shubham Sah',
-          url: 'https://twitter.com/ishubhamsah',
-          image: require('~/assets/mentors/shubham.jpg'),
-        },
-        {
           description: 'Lead DevRel India region, Showwcase',
           name: 'Insha Ramin',
           url: 'https://twitter.com/Insharamin',
