@@ -39,6 +39,19 @@
             </p>
           </a>
           <a
+            href="https://docs.google.com/document/d/1wenNV-w_yiccCTopwBw9xA0hTz8ZhtaYuccYgcgFJR4/edit?usp=sharing"
+            target="_blank"
+            class="inner"
+          >
+            <img src="~/assets/sponsors/zeeve.svg" />
+            <CText mt="2rem" class="heading"
+              >Top-2 Projects Build with Zeeve.io</CText
+            >
+            <p class="description">
+              Each winning team member receives a special Zeeve Swag package.
+            </p>
+          </a>
+          <a
             v-for="(prize, index) in appyPrizes"
             :key="index"
             href="https://docs.google.com/document/d/e/2PACX-1vQXVL_JNRodzaBVvujzJafMf_1XEggKEAmMuFRg0T81lsUiE1dsQbP6JmgtWumaINg3p-hhAeb7RCgy/pub"
