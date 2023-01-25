@@ -178,11 +178,11 @@ export default {
               image: require('~/assets/sponsors/github.svg'),
             },
             {
-              url: 'https://www.zeeve.io/',
+              url: 'https://bit.ly/zeeve-htf3',
               image: require('~/assets/sponsors/zeeve.svg'),
             },
             {
-              url: 'https://apyhub.com/?utm_source=hackathon&utm_medium=event&utm_campaign=hackthisfall',
+              url: 'https://bit.ly/apyhub-htf3',
               image: require('~/assets/sponsors/apyhub.svg'),
             },
           ],
