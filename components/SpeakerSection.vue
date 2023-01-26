@@ -88,12 +88,6 @@ export default {
           image: require('~/assets/mentors/swastika.png'),
         },
         {
-          description: 'Developer Advocate, 100ms',
-          name: 'Aditya Thakur',
-          url: 'https://twitter.com/adityathakurxd',
-          image: require('~/assets/mentors/aditya.jpg'),
-        },
-        {
           description: 'Lead DevRel India region, Showwcase',
           name: 'Insha Ramin',
           url: 'https://twitter.com/Insharamin',
