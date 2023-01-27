@@ -105,12 +105,6 @@ export default {
           url: 'https://www.linkedin.com/in/bhargav-p-patel/',
           image: require('~/assets/mentors/bhargav.jpg'),
         },
-        {
-          name: 'Abhishek Mishra',
-          url: 'htttps://twitter.com/stalwartcoder',
-          description: 'Developer Advocate, Yugabyte',
-          image: require('~/assets/mentors/abhishek.jpeg'),
-        },
       ],
     }
   },
