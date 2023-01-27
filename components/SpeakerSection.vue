@@ -46,12 +46,6 @@ export default {
     return {
       speakers: [
         {
-          description: 'Technical Customer Success Manager, Edgio',
-          name: 'Rishi Raj Jain',
-          url: 'https://twitter.com/rishi_raj_jain_',
-          image: require('~/assets/mentors/rishi.jpeg'),
-        },
-        {
           description: 'Full Stack Developer, Ironforge',
           name: 'Dhiraj Chauhan',
           url: 'https://twitter.com/cdhiraj40',
