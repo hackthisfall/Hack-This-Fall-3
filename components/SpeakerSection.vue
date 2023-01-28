@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="speakers" name="speakers">
-    <HeadingVue front="Mentors" back="PEOPLE" />
+    <HeadingVue front="Speakers, Mentors and Judges" back="PEOPLE" />
     <CFlex :mx="{ base: '0.5rem', sm: '50px' }" mt="5rem" justify="center">
       <CGrid
         :gap="{ base: '0.75rem', sm: '3rem' }"
@@ -76,12 +76,6 @@ export default {
           image: require('~/assets/mentors/manav.jpg'),
         },
         {
-          description: 'Developer Advocate, ChiselStrike',
-          name: 'Swastika Yadav',
-          url: 'https://twitter.com/swastika0015',
-          image: require('~/assets/mentors/swastika.png'),
-        },
-        {
           description: 'Lead DevRel India region, Showwcase',
           name: 'Insha Ramin',
           url: 'https://twitter.com/Insharamin',
@@ -104,6 +98,60 @@ export default {
           name: 'Bhargav Patel',
           url: 'https://www.linkedin.com/in/bhargav-p-patel/',
           image: require('~/assets/mentors/bhargav.jpg'),
+        },
+        {
+          description: 'Co-founder, Zeeve',
+          name: 'Ghan Vashishtha',
+          url: 'https://www.linkedin.com/in/ghan-vashishtha',
+          image: require('~/assets/speakers/ghan.jpeg'),
+        },
+        {
+          description: 'Community Manager, Blues Wireless',
+          name: 'Ritvi Mishra',
+          url: 'https://twitter.com/frenzyritz13',
+          image: require('~/assets/speakers/ritvi.jpg'),
+        },
+        {
+          description: 'Director of Engineering, Cloudroit',
+          name: 'Praveen Kumar Purushothaman',
+          url: 'https://twitter.com/rhcasharma',
+          image: require('~/assets/narratives/praveen.png'),
+        },
+        {
+          description: 'Developer Advocate, Postman',
+          name: 'Ali Mustufa',
+          url: 'https://twitter.com/ialimustufa',
+          image: require('~/assets/speakers/ali.jpg'),
+        },
+        {
+          description: 'Developer Advocate, ApyHub',
+          name: 'Sohail Pathan',
+          url: 'https://twitter.com/iamspathan',
+          image: require('~/assets/speakers/sohail.jpg'),
+        },
+        {
+          description: 'GitHub Campus Expert',
+          name: 'Vraj Desai',
+          url: 'https://twitter.com/vrajdesai78',
+          image: require('~/assets/speakers/vraj.jpg'),
+        },
+        {
+          description: 'DevRel Engineer, Storyblok',
+          name: 'Dipankar Maikap',
+          url: 'https://twitter.com/maikap_dipankar',
+          image: require('~/assets/speakers/dipankar.jpeg'),
+        },
+        {
+          description: 'DevRel, Fuel Labs',
+          name: 'Vishwa Mehta',
+          url: 'https://twitter.com/VishwaMehta30',
+          image: require('~/assets/speakers/vishwa.jpeg'),
+        },
+        {
+          description: 'DevRel, DhiWise',
+          name: 'Shubhangi Gupta',
+          url: 'https://twitter.com/knowShubhangi',
+          image: require('~/assets/speakers/shubhangi.jpg'),
         },
       ],
     }
