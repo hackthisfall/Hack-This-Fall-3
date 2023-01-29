@@ -47,6 +47,7 @@
         <div v-else>
           <HTFPrizes />
           <SponsoredPrizes />
+          <FunPrizes />
           <FooterSection />
         </div>
       </div>
@@ -60,6 +61,7 @@ import NavigationBar from '~/components/NavigationBar'
 import HTFPrizes from '~/components/PrizesPage/HTFPrizes.vue'
 import SponsoredPrizes from '~/components/PrizesPage/SponsoredPrizes.vue'
 import FooterSection from '~/components/FooterSection.vue'
+import FunPrizes from '~/components/PrizesPage/FunPrizes.vue'
 
 export default {
   name: 'IndexPage',
@@ -69,6 +71,7 @@ export default {
     FooterSection,
     SponsoredPrizes,
     CFlex,
+    FunPrizes,
   },
   data() {
     return {
