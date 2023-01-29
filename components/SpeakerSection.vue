@@ -64,12 +64,6 @@ export default {
           image: require('~/assets/mentors/aryan.jpg'),
         },
         {
-          description: 'SDE, Posist',
-          name: 'Ghulam Yazdani',
-          url: 'https://twitter.com/iamyazreza',
-          image: require('~/assets/mentors/ghulam.jpeg'),
-        },
-        {
           description: 'Blockchain Protocol Engineer, Polygon',
           name: 'Manav Darji',
           url: 'https://twitter.com/manav24_',
