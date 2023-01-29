@@ -41,7 +41,7 @@
           <a href="" target="_blank" class="inner">
             <img src="~/assets/sponsors/5ire.svg" />
             <CText mt="2rem" class="heading"
-              >Top-10 Projects Build with 5ire Labs</CText
+              >Top-10 Projects Built using 5ire Labs</CText
             >
             <p class="description">
               INR 10,000 to the winning team and swag package
@@ -54,7 +54,7 @@
           >
             <img src="~/assets/sponsors/zeeve.svg" />
             <CText mt="2rem" class="heading"
-              >Top-2 Projects Build with Zeeve.io</CText
+              >Top-2 Projects Built using Zeeve.io</CText
             >
             <p class="description">
               Each winning team member receives a special Zeeve Swag package.
