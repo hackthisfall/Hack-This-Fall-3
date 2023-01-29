@@ -212,15 +212,15 @@ export default {
           category: 'Bronze',
           sponsors: [
             {
-              url: 'https://www.digitalocean.com/',
+              url: 'https://hackp.ac/microsoft',
               image: require('~/assets/sponsors/azure.png'),
             },
             {
-              url: 'https://www.digitalocean.com/',
+              url: 'https://hackp.ac/Twilio',
               image: require('~/assets/sponsors/twilio.png'),
             },
             {
-              url: 'https://www.digitalocean.com/',
+              url: 'https://hackp.ac/appwrite',
               image: require('~/assets/sponsors/appwrite.svg'),
             },
             {
@@ -228,7 +228,7 @@ export default {
               image: require('~/assets/sponsors/digitalocean.svg'),
             },
             {
-              url: 'https://www.digitalocean.com/',
+              url: 'https://hackp.ac/GoDaddyRegistry',
               image: require('~/assets/sponsors/godaddy.svg'),
             },
             {
