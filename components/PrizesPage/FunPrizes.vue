@@ -35,10 +35,9 @@
             <CText mt="2rem" class="heading">MyOctocat Challenge</CText>
             <p class="description">
               Draw an Octocat &amp; tweet it by tagging us
-              <a style="color: #d04d29; font-weight: 400">@hackthisfall</a>,
-              <a style="color: #d04d29; font-weight: 400">@GitHubEducation</a>
+              <a style="color: #d04d29; font-weight: 400">@hackthisfall</a>
               &amp;
-              <a style="color: #d04d29; font-weight: 400">@MLHacks</a>
+              <a style="color: #d04d29; font-weight: 400">@GitHubEducation</a>
               using hashtag
               <a style="color: #d04d29; font-weight: 400">#HackThisFall</a>
               &amp;
