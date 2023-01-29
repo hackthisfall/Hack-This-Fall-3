@@ -26,7 +26,7 @@
             xl: `repeat(2,1fr)`,
           }"
         >
-          <a
+          <!-- <a
             href="https://twitter.com/search?q=%23MyOctocat&src=typed_query&f=live"
             target="_blank"
             class="inner"
@@ -42,11 +42,9 @@
               <a style="color: #d04d29; font-weight: 400">#HackThisFall</a>
               &amp;
               <a style="color: #d04d29; font-weight: 400">#MyOctocat</a>
-              .The best octocat will receive
-              <span style="color: #d04d29; font-weight: 400">GitHub Swags</span>
-              as a prize 🐙
+              . Winner gets GitHub Swag Pack (Sticker box, GitHub Stickers, Puzzle).
             </p>
-          </a>
+          </a> -->
           <a
             href="https://twitter.com/search?q=%23HTFMeme&src=typed_query&f=live"
             target="_blank"
@@ -55,19 +53,16 @@
             <img src="~/assets/logo.png" />
             <CText mt="2rem" class="heading">Meme Challenge</CText>
             <p class="description">
-              Tweet them by tagging us
+              Tweet funny memes with
+              <span style="color: #d04d29; font-weight: 400">#HTFMeme</span> &
+              <span style="color: #d04d29; font-weight: 400"
+                >#HackThisFall</span
+              >
+              and tag
               <span style="color: #d04d29; font-weight: 400"
                 >@hackthisfall</span
               >
-              using hashtag
-              <span style="color: #d04d29; font-weight: 400">#HTFMeme</span>
-              &amp;
-              <span style="color: #d04d29; font-weight: 400">#HackThisFall</span
-              >. The best meme maker will receive a
-              <span style="color: #d04d29; font-weight: 400"
-                >GitHub Tshirt</span
-              >
-              as a prize 👕
+              and the winner earns a GitHub Tee as a prize 👕
             </p>
           </a>
           <a
@@ -78,15 +73,14 @@
             <img src="~/assets/logo.png" />
             <CText mt="2rem" class="heading">Mascot Contest</CText>
             <p class="description">
-              Tweet your design and tag us
-              <span style="color: #d04d29; font-weight: 400"
-                >@hackthisfall</span
-              >
-              using hashtag
-              <span style="color: #d04d29; font-weight: 400">#HTFMascot</span>
-              &amp;
+              Tweet creative mascots for Hack This Fall with
+              <span style="color: #d04d29; font-weight: 400">#HTFMascot</span> &
               <span style="color: #d04d29; font-weight: 400"
                 >#HackThisFall</span
+              >
+              and tag
+              <span style="color: #d04d29; font-weight: 400"
+                >@hackthisfall</span
               >
               and the winner earns a GitHub Octocat Figurine.
             </p>
