@@ -80,7 +80,7 @@ export default {
     return {
       prizes: [
         {
-          name: '₹20k',
+          name: '₹35k',
           image: require('~/assets/prizes/silver.svg'),
           details: '1st Runner-Up',
           class: 'Second',
@@ -88,7 +88,7 @@ export default {
             "<ul><li><span style='color: rgba(233, 83, 34, 1)'>INR 50,000</span> Prize to winning team</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 250</span> Amazon Gift Card from Quicknode.</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 250 </span>of free S3-compatible object storage credits with Filebase</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 449</span> of 1 year of Draftbit Pro</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 375</span> of In-Kind Wolfram Award</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 250</span> of Digital Ocean Credits</li><li>Hack This Fall <span style='color: rgba(233, 83, 34, 1)'>Swag Pack</span></li><li><span style='color: rgba(233, 83, 34, 1)'>Certificates</span> to members</li><li>Special Mention on <a style='color: rgba(233, 83, 34, 1)'  target='_blank' rel='noopener noreferrer' href='https://twitter.com/hackthisfall'>@hackthisfall</a> socials</li></ul>",
         },
         {
-          name: '₹30k',
+          name: '₹50k',
           image: require('~/assets/prizes/gold.svg'),
           details: 'Winner',
           class: 'Winner',
@@ -96,7 +96,7 @@ export default {
             "<ul><li><span style='color: rgba(233, 83, 34, 1)'>INR 35,000</span> Prize to winning team</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 100</span> Amazon Gift Card from Quicknode.</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 150 </span>of free S3-compatible object storage credits with Filebase</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 449</span> of 1 year of Draftbit Pro</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 375</span> of In-Kind Wolfram Award</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 125 </span>of Digital Ocean Credits</li><li>Hack This Fall <span style='color: rgba(233, 83, 34, 1)'>Swag Pack</span></li><li><span style='color: rgba(233, 83, 34, 1)'>Certificates</span> to members</li><li>Special Mention on <a style='color: rgba(233, 83, 34, 1)'  target='_blank' rel='noopener noreferrer' href='https://twitter.com/hackthisfall'>@hackthisfall</a> socials</li></ul>",
         },
         {
-          name: '₹10k',
+          name: '₹20k',
           image: require('~/assets/prizes/bronze.svg'),
           details: '2nd Runner-Up',
           class: 'Third',
@@ -106,7 +106,7 @@ export default {
       ],
       prizesMobile: [
         {
-          name: '₹30k',
+          name: '₹50k',
           image: require('~/assets/prizes/gold.svg'),
           details: 'Winner',
           class: 'Winner',
@@ -114,7 +114,7 @@ export default {
             "<ul><li><span style='color: rgba(233, 83, 34, 1)'>INR 35,000</span> Prize to winning team</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 100</span> Amazon Gift Card from Quicknode.</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 150 </span>of free S3-compatible object storage credits with Filebase</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 449</span> of 1 year of Draftbit Pro</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 375</span> of In-Kind Wolfram Award</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 125 </span>of Digital Ocean Credits</li><li>Hack This Fall <span style='color: rgba(233, 83, 34, 1)'>Swag Pack</span></li><li><span style='color: rgba(233, 83, 34, 1)'>Certificates</span> to members</li><li>Special Mention on <a style='color: rgba(233, 83, 34, 1)'  target='_blank' rel='noopener noreferrer' href='https://twitter.com/hackthisfall'>@hackthisfall</a> socials</li></ul>",
         },
         {
-          name: '₹20k',
+          name: '₹35k',
           image: require('~/assets/prizes/silver.svg'),
           details: '1st Runner-Up',
           class: 'Second',
@@ -122,7 +122,7 @@ export default {
             "<ul><li><span style='color: rgba(233, 83, 34, 1)'>INR 50,000</span> Prize to winning team</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 250</span> Amazon Gift Card from Quicknode.</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 250 </span>of free S3-compatible object storage credits with Filebase</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 449</span> of 1 year of Draftbit Pro</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 375</span> of In-Kind Wolfram Award</li><li><span style='color: rgba(233, 83, 34, 1)'>USD 250</span> of Digital Ocean Credits</li><li>Hack This Fall <span style='color: rgba(233, 83, 34, 1)'>Swag Pack</span></li><li><span style='color: rgba(233, 83, 34, 1)'>Certificates</span> to members</li><li>Special Mention on <a style='color: rgba(233, 83, 34, 1)'  target='_blank' rel='noopener noreferrer' href='https://twitter.com/hackthisfall'>@hackthisfall</a> socials</li></ul>",
         },
         {
-          name: '₹10k',
+          name: '₹20k',
           image: require('~/assets/prizes/bronze.svg'),
           details: '2nd Runner-Up',
           class: 'Third',
