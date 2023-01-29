@@ -1,5 +1,5 @@
 <template>
-  <ContainerVue id="sponsored-prizes" name="sponsored-prizes">
+  <ContainerVue id="fun-prizes" name="fun-prizes">
     <section class="content-section">
       <CFlex
         :mx="{ base: '1rem', sm: '50px' }"
@@ -27,101 +27,84 @@
           }"
         >
           <a
-            href="https://storyblok.notion.site/Best-Use-of-Storyblok-Track-Guidelines-50c60fc89ff043c8aa7feaff6b06938c"
+            href="https://twitter.com/search?q=%23MyOctocat&src=typed_query&f=live"
             target="_blank"
             class="inner"
           >
-            <img src="~/assets/sponsors/storyblok.svg" />
-            <CText mt="2rem" class="heading">Best Use of Storyblok</CText>
+            <img src="~/assets/sponsors/github.svg" />
+            <CText mt="2rem" class="heading">MyOctocat Challenge</CText>
             <p class="description">
-              Keychron K2 (Hot-swappable) Wireless Mechanical Keyboard (Version
-              2) to each member of team
-            </p>
-          </a>
-          <a href="" target="_blank" class="inner">
-            <img src="~/assets/sponsors/5ire.svg" />
-            <CText mt="2rem" class="heading"
-              >Top-10 Projects Build with 5ire Labs</CText
-            >
-            <p class="description">
-              INR 10,000 to the winning team and swag package
-            </p>
-          </a>
-          <a
-            href="https://docs.google.com/document/d/1wenNV-w_yiccCTopwBw9xA0hTz8ZhtaYuccYgcgFJR4/edit?usp=sharing"
-            target="_blank"
-            class="inner"
-          >
-            <img src="~/assets/sponsors/zeeve.svg" />
-            <CText mt="2rem" class="heading"
-              >Top-2 Projects Build with Zeeve.io</CText
-            >
-            <p class="description">
-              Each winning team member receives a special Zeeve Swag package.
+              Draw an Octocat &amp; tweet it by tagging us
+              <a style="color: #d04d29; font-weight: 400">@hackthisfall</a>,
+              <a style="color: #d04d29; font-weight: 400">@GitHubEducation</a>
+              &amp;
+              <a style="color: #d04d29; font-weight: 400">@MLHacks</a>
+              using hashtag
+              <a style="color: #d04d29; font-weight: 400">#HackThisFall</a>
+              &amp;
+              <a style="color: #d04d29; font-weight: 400">#MyOctocat</a>
+              .The best octocat will receive
+              <span style="color: #d04d29; font-weight: 400">GitHub Swags</span>
+              as a prize 🐙
             </p>
           </a>
           <a
-            v-for="(prize, index) in appyPrizes"
-            :key="index"
-            href="https://docs.google.com/document/d/e/2PACX-1vQXVL_JNRodzaBVvujzJafMf_1XEggKEAmMuFRg0T81lsUiE1dsQbP6JmgtWumaINg3p-hhAeb7RCgy/pub"
+            href="https://twitter.com/search?q=%23HTFMeme&src=typed_query&f=live"
             target="_blank"
             class="inner"
           >
-            <CFlex align="center">
-              <img src="~/assets/sponsors/apyhub.svg" /> <span>✕</span>
-              <img :src="prize.logo" />
-            </CFlex>
-            <CText mt="2rem" class="heading">{{ prize.name }}</CText>
-            <p class="description">{{ prize.description }}</p>
-          </a>
-          <a
-            v-for="(prize, index) in mlhPrizes"
-            :key="index"
-            href="https://hack.mlh.io/prizes"
-            target="_blank"
-            class="inner"
-          >
-            <CFlex wrap="wrap" align="center">
-              <img :src="prize.logo" /> <span>✕</span>
-              <img src="~/assets/sponsors/mlh.svg" />
-            </CFlex>
-            <CText mt="2rem" class="heading">{{ prize.name }}</CText>
-            <p class="description">{{ prize.description }}</p>
-          </a>
-          <a href="https://blues.io/" target="_blank" class="inner">
-            <img src="~/assets/sponsors/blues.svg" />
-            <CText mt="2rem" class="heading"
-              >Best Hardware Hack using Blues</CText
-            >
+            <img src="~/assets/logo.png" />
+            <CText mt="2rem" class="heading">Meme Challenge</CText>
             <p class="description">
-              Every winning team member receives $50 Amazon gift card.
+              Tweet them by tagging us
+              <span style="color: #d04d29; font-weight: 400"
+                >@hackthisfall</span
+              >
+              using hashtag
+              <span style="color: #d04d29; font-weight: 400">#HTFMeme</span>
+              &amp;
+              <span style="color: #d04d29; font-weight: 400">#HackThisFall</span
+              >. The best meme maker will receive a
+              <span style="color: #d04d29; font-weight: 400"
+                >GitHub Tshirt</span
+              >
+              as a prize 👕
             </p>
           </a>
-          <a href="https://peerlist.io/" target="_blank" class="inner">
-            <img src="~/assets/sponsors/peerlist.png" />
-            <CText mt="2rem" class="heading"
-              >Top-3 Projects uploaded on Peerlist</CText
-            >
+          <a
+            href="https://twitter.com/search?q=%23HTFMascot&src=typed_query&f=live"
+            target="_blank"
+            class="inner"
+          >
+            <img src="~/assets/logo.png" />
+            <CText mt="2rem" class="heading">Mascot Contest</CText>
             <p class="description">
-              Each winning team member receives a special Peerlist Swag package.
+              Tweet your design and tag us
+              <span style="color: #d04d29; font-weight: 400"
+                >@hackthisfall</span
+              >
+              using hashtag
+              <span style="color: #d04d29; font-weight: 400">#HTFMascot</span>
+              &amp;
+              <span style="color: #d04d29; font-weight: 400"
+                >#HackThisFall</span
+              >
+              and the winner earns a GitHub Octocat Figurine.
             </p>
           </a>
         </CGrid>
       </CFlex>
     </section>
-    <HeadingVue front="Fun Prizes" back="PRIZES" />
   </ContainerVue>
 </template>
 
 <script>
 import { CFlex, CGrid, CText } from '@chakra-ui/vue'
 import ContainerVue from '../Container.vue'
-import HeadingVue from '../HeadingComponent.vue'
 
 export default {
   components: {
     ContainerVue,
-    HeadingVue,
     CFlex,
     CGrid,
     CText,
