@@ -38,6 +38,15 @@
               2) to each member of team
             </p>
           </a>
+          <a href="" target="_blank" class="inner">
+            <img src="~/assets/sponsors/5ire.svg" />
+            <CText mt="2rem" class="heading"
+              >Top-10 Projects Build with 5ire Labs</CText
+            >
+            <p class="description">
+              INR 10,000 to the winning team and swag package
+            </p>
+          </a>
           <a
             href="https://docs.google.com/document/d/1wenNV-w_yiccCTopwBw9xA0hTz8ZhtaYuccYgcgFJR4/edit?usp=sharing"
             target="_blank"
