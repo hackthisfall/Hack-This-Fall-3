@@ -118,6 +118,12 @@ export default {
           image: require('~/assets/speakers/ali.jpg'),
         },
         {
+          description: 'Developer Advocate, Postman',
+          name: 'Aanchal Mishra',
+          url: 'https://twitter.com/Aanchalmishra__',
+          image: require('~/assets/speakers/aanchal.jpg'),
+        },
+        {
           description: 'Developer Advocate, ApyHub',
           name: 'Sohail Pathan',
           url: 'https://twitter.com/iamspathan',

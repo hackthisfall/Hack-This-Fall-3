@@ -120,7 +120,7 @@ export default {
     min-height: 85vh;
     background-image: url('~/assets/background.png');
     background-repeat: no-repeat;
-    background-size: 100vw cover;
+    background-size: 100vw 100%;
     background-position-x: -1rem;
 
     @include respond-below(xs) {

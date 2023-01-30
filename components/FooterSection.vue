@@ -121,7 +121,7 @@
       </CFlex>
     </CFlex>
     <CFlex class="attribution"
-      >Copyright © 2022 Hack This Fall. All rights reserved</CFlex
+      >Copyright © 2023 Hack This Fall. All rights reserved</CFlex
     >
   </div>
 </template>
