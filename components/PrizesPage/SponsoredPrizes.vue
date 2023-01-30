@@ -44,7 +44,9 @@
               >Top-10 Projects Built using 5ire Labs</CText
             >
             <p class="description">
-              INR 10,000 to the winning team and swag package
+              INR 10,000 and 5ire Labs Swag package to the winning team.
+              (Everyone who tries to build as part of this track also receives
+              5ire Labs Swag package)
             </p>
           </a>
           <a
