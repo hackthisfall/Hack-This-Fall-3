@@ -75,6 +75,49 @@
             <p class="description">{{ prize.description }}</p>
           </a>
           <a
+            href="https://docs.google.com/document/d/1BRl5uyZwwE1PdC9IeI9UEUkmQ4T-pgfTSv39dfzDnSk/edit?usp=sharing"
+            target="_blank"
+            class="inner"
+          >
+            <img src="~/assets/sponsors/postman.svg" />
+            <CText mt="2rem" class="heading">Best use of APIs</CText>
+            <p class="description">
+              The winning team member receives Postman Student Swag Kit that
+              includes a Premium Diary, Thermos with Temperature Display,
+              Sticker Sheet, Mobile Pop-up Holder, and Premium Pen.
+            </p>
+          </a>
+          <a
+            href="https://docs.google.com/document/d/1BRl5uyZwwE1PdC9IeI9UEUkmQ4T-pgfTSv39dfzDnSk/edit?usp=sharing"
+            target="_blank"
+            class="inner"
+          >
+            <img src="~/assets/sponsors/postman.svg" />
+            <CText mt="2rem" class="heading"
+              >Best Postman Public Workspace</CText
+            >
+            <p class="description">
+              The winning team member receives Postman Student Swag Kit that
+              includes a Premium Diary, Thermos with Temperature Display,
+              Sticker Sheet, Mobile Pop-up Holder, and Premium Pen.
+            </p>
+          </a>
+          <a
+            href="https://docs.google.com/document/d/1BRl5uyZwwE1PdC9IeI9UEUkmQ4T-pgfTSv39dfzDnSk/edit?usp=sharing"
+            target="_blank"
+            class="inner"
+          >
+            <img src="~/assets/sponsors/postman.svg" />
+            <CText mt="2rem" class="heading"
+              >Best use of Postman Visualizer</CText
+            >
+            <p class="description">
+              The winning team member receives Postman Student Swag Kit that
+              includes a Premium Diary, Thermos with Temperature Display,
+              Sticker Sheet, Mobile Pop-up Holder, and Premium Pen.
+            </p>
+          </a>
+          <a
             v-for="(prize, index) in mlhPrizes"
             :key="index"
             href="https://hack.mlh.io/prizes"
@@ -163,19 +206,19 @@ export default {
           logo: require('~/assets/medals/first.png'),
           name: 'Best Project Built using ApyHub',
           description:
-            '150 EURO worth Amazon Voucher to team, 5M Atoms, Exclusive ApyHub Hoodie to each member and additional perks.',
+            'The best project will win 150 EURO worth of Amazon Voucher to the team, 5M Atoms, an Exclusive ApyHub Hoodie for each member, and additional perks!',
         },
         {
           logo: require('~/assets/medals/second.png'),
           name: 'Second Best Project Built using ApyHub',
           description:
-            '100 EURO worth Amazon Voucher to team, 3M Atoms, Exclusive ApyHub T-Shirt to each member and additional perks.',
+            'The second-best project will win 100 EURO worth of Amazon Voucher to the team, 3M Atoms, an Exclusive ApyHub T-Shirt for each member, and additional perks!',
         },
         {
           logo: require('~/assets/medals/third.png'),
           name: 'Third Best Project Built using ApyHub',
           description:
-            '50 EURO worth Amazon Voucher to team, 3M Atoms, Exclusive ApyHub T-Shirt to each member and additional perks.',
+            'The third-best project will win 50 EURO worth of Amazon Voucher to the team, 3M Atoms, an Exclusive ApyHub Coffee Mug for each member, and additional perks!',
         },
       ],
     }
