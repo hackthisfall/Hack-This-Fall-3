@@ -53,6 +53,7 @@
           </CFlex>
         </div>
         <div v-else>
+          <ScheduleSection />
           <SpeakerScheduleSection />
           <FooterSectionVue />
         </div>
@@ -64,12 +65,14 @@
 <script>
 import NavigationBar from '~/components/NavigationBar'
 import FooterSectionVue from '~/components/FooterSection'
+import ScheduleSection from '~/components/ScheduleSection'
 import SpeakerScheduleSection from '~/components/SpeakerScheduleSection'
 
 export default {
   components: {
     NavigationBar,
     SpeakerScheduleSection,
+    ScheduleSection,
     FooterSectionVue,
   },
   data() {

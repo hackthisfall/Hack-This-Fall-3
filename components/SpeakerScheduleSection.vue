@@ -1,7 +1,7 @@
 <template>
   <Container id="schedule">
     <section class="content-section">
-      <HeadingVue front="Online Sessions" back="SCHEDULE" />
+      <HeadingVue front="Speaker Sessions" back="SCHEDULE" />
       <div class="contents">
         <div class="speakers-grid">
           <div
@@ -22,13 +22,19 @@
             </div>
             <div class="bottom">
               <a
-                v-if="speaker.buttonText"
+                v-if="speaker.sessionUrl"
                 target="_blank"
                 rel="noopener noreferrer"
-                :href="
-                  speaker.sessionUrl || 'https://www.youtube.com/c/HackThisFall'
-                "
+                :href="speaker.sessionUrl"
                 class="cta-button smooth-transition discord"
+              >
+                {{ speaker.buttonText }}
+              </a>
+              <a
+                v-else
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cta-button disabled smooth-transition discord"
               >
                 {{ speaker.buttonText }}
               </a>
@@ -134,6 +140,56 @@ export default {
           url: 'https://twitter.com/rhcasharma',
           picture: require('~/assets/narratives/praveen.png'),
         },
+        {
+          title: 'Build Awesome Web-Pages using Headless CMS',
+          location: '',
+          name: 'Dipankar Maikap',
+          buttonText: 'IN PERSON',
+          date: '03 Feb 2023 18:05',
+          endDate: '03 Feb 2023 18:45',
+          url: 'https://twitter.com/maikap_dipankar',
+          picture: require('~/assets/speakers/dipankar.jpeg'),
+        },
+        {
+          title: 'Getting started with 5ire',
+          location: '',
+          name: '5ire Chain',
+          buttonText: 'IN PERSON',
+          date: '03 Feb 2023 18:50',
+          endDate: '03 Feb 2023 19:30',
+          url: 'https://twitter.com/rhcasharma',
+          picture: require('~/assets/sponsors/5irec.svg'),
+        },
+        {
+          title: 'All about Git, GitHub & Open Source',
+          location: '',
+          name: 'Vraj Desai',
+          buttonText: 'IN PERSON',
+          date: '03 Feb 2023 23:00',
+          endDate: '03 Feb 2023 23:40',
+          url: 'https://twitter.com/vrajdesai78',
+          picture: require('~/assets/speakers/vraj.jpg'),
+        },
+        {
+          title: 'Build learner applications using ApyHub',
+          location: '',
+          name: 'Sohail Pathan',
+          buttonText: 'IN PERSON',
+          date: '04 Feb 2023 10:00',
+          endDate: '04 Feb 2023 10:40',
+          url: 'https://twitter.com/iamspathan',
+          picture: require('~/assets/speakers/sohail.jpg'),
+        },
+        {
+          title: 'APIs 101 using Postman',
+          location: '',
+          name: 'Ali Mustufa',
+          buttonText: 'IN PERSON',
+          date: '04 Feb 2023 11:00',
+          endDate: '04 Feb 2023 11:40',
+          url: 'https://twitter.com/ialimustufa',
+          picture: require('~/assets/speakers/ali.jpg'),
+        },
       ],
     }
   },
@@ -159,6 +215,10 @@ export default {
       if (startDate.isBefore(now) && endDate.isAfter(now)) {
         speaker.buttonText = 'Live Now'
         currentlyLive.push(speaker)
+      }
+
+      if (!speaker.sessionUrl) {
+        speaker.buttonText = 'In Person'
       }
     })
 
@@ -312,6 +372,13 @@ export default {
 
       @include respond-below(xs) {
         max-width: 70vw;
+      }
+
+      &.disabled {
+        opacity: 0.5;
+        background: #d04d29;
+        box-shadow: 2px 2px 0px #f46d24;
+        cursor: default;
       }
     }
   }
