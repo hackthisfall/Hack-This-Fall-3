@@ -171,7 +171,7 @@ export default {
           picture: require('~/assets/speakers/vraj.jpg'),
         },
         {
-          title: 'Build learner applications using ApyHub',
+          title: 'Build leaner applications using ApyHub',
           location: '',
           name: 'Sohail Pathan',
           buttonText: 'IN PERSON',
