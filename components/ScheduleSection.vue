@@ -287,6 +287,7 @@ export default {
 
   .contents {
     margin-top: 5rem;
+
     .allHeaders {
       @media (max-width: 465px) {
         margin-left: 0em;
@@ -310,8 +311,11 @@ export default {
         border-radius: 0.6rem;
 
         @include respond-below(xs) {
-          margin-left: 0rem;
-          width: 100%;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          max-width: 100%;
+          min-width: 80vw;
+          margin-top: 1rem;
           text-align: center;
         }
       }
@@ -319,6 +323,12 @@ export default {
       &.first {
         .headers {
           margin-left: 0rem;
+
+          @include respond-below(xs) {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-top: 0rem;
+          }
         }
       }
     }
@@ -359,7 +369,7 @@ export default {
         min-width: 8rem;
 
         @include respond-below(sm) {
-          padding: 2em 1em 2em 2.5em;
+          padding: 1.5em 1em 1.5em 1.5em;
         }
 
         .dot {
@@ -370,6 +380,10 @@ export default {
           min-height: 0.55rem;
           margin-left: -1.32rem;
           margin-top: 0.5rem;
+
+          @include respond-below(sm) {
+            margin-left: -1.8rem;
+          }
         }
 
         .time {

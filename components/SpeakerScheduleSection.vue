@@ -237,7 +237,7 @@ export default {
     padding: 5rem 4rem;
 
     @include respond-below(sm) {
-      padding: 1rem 1rem;
+      padding: 2rem 1rem;
     }
 
     .speakers-grid {
