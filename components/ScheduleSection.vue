@@ -109,7 +109,7 @@ export default {
             },
             {
               title: 'Dinner',
-              time: '21:00',
+              time: '21:30',
               durationInMins: '60',
               location: 'Canteen Area',
             },
@@ -150,7 +150,7 @@ export default {
             },
             {
               title: 'Breakfast',
-              time: '08:00',
+              time: '07:00',
               durationInMins: '60',
               location: 'Canteen Area',
             },
@@ -204,7 +204,7 @@ export default {
             },
             {
               title: 'Dinner',
-              time: '21:00',
+              time: '21:30',
               durationInMins: '60',
               location: 'Canteen Area',
             },
