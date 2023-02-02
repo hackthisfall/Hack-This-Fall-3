@@ -153,12 +153,12 @@ export default {
         {
           title: 'Getting started with 5ire',
           location: '',
-          name: '5ire Chain',
+          name: 'Aravind Makkam',
           buttonText: 'IN PERSON',
           date: '03 Feb 2023 18:50',
           endDate: '03 Feb 2023 19:30',
           url: 'https://twitter.com/rhcasharma',
-          picture: require('~/assets/sponsors/5irec.svg'),
+          picture: require('~/assets/speakers/aravind.jpeg'),
         },
         {
           title: 'All about Git, GitHub & Open Source',
