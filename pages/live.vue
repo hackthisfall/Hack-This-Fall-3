@@ -15,18 +15,26 @@
           <div class="schedule">
             <div class="now">
               <span class="heading">Happening now</span>
-              <span class="title">Welcome & Introduction Introduction</span>
-              <span class="person">Siddharth Dayalwal</span>
+              <span class="title">{{ schedule[currentEventIndex].title }}</span>
+              <span class="person">{{
+                schedule[currentEventIndex].location
+              }}</span>
             </div>
             <hr />
             <div class="next">
               <span class="heading">Upcoming Next</span>
               <div class="details">
                 <div class="left">
-                  <span class="title">Introduction to Git &amp; GitHub</span>
-                  <span class="person">Aayush Sharma</span>
+                  <span class="title">{{
+                    schedule[currentEventIndex + 1].title
+                  }}</span>
+                  <span class="person">{{
+                    schedule[currentEventIndex + 1].location
+                  }}</span>
                 </div>
-                <div class="right">23:00</div>
+                <div class="right">
+                  {{ schedule[currentEventIndex + 1].time.substring(12) }}
+                </div>
               </div>
             </div>
           </div>
@@ -57,14 +65,204 @@ export default {
       hackathonBegins: '2023-02-03T20:00:00',
       spotify:
         'https://parasg1999-spotify.vercel.app/api/spotify?background_color=000&border_color=fff',
+
+      currentEventIndex: 0,
+      schedule: [
+        {
+          title: 'Check-In & Welcome Kit',
+          time: '03 Feb 2023 15:00',
+          durationInMins: '90',
+          location: 'Reception Area',
+        },
+        {
+          title: 'Light Snacks & Ice Breaker',
+          time: '03 Feb 2023 16:00',
+          durationInMins: '60',
+          location: 'Canteen Area',
+        },
+        {
+          title: 'Opening Ceremony Welcome',
+          time: '03 Feb 2023 17:30',
+          durationInMins: '30',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Storyblok Workshop',
+          time: '03 Feb 2023 18:05',
+          durationInMins: '40',
+          location: 'Dipankar Maikap',
+        },
+        {
+          title: '5ire Workshop',
+          time: '03 Feb 2023 18:50',
+          durationInMins: '40',
+          location: 'Aravind Makkam',
+        },
+        {
+          title: 'Hacking Begins',
+          time: '03 Feb 2023 20:00',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Dinner',
+          time: '03 Feb 2023 21:30',
+          durationInMins: '60',
+          location: 'Canteen Area',
+        },
+        {
+          title: 'GitHub Workshop',
+          time: '03 Feb 2023 23:00',
+          durationInMins: '40',
+          location: 'Vraj Desai',
+        },
+        {
+          title: 'Mentoring Round (Ideation)',
+          time: '04 Feb 2023 00:00',
+          durationInMins: '60',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Midnight Snacks',
+          time: '04 Feb 2023 01:30',
+          durationInMins: '30',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Karaoke Mini Event',
+          time: '04 Feb 2023 02:30',
+          durationInMins: '60',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Morning Drill',
+          time: '04 Feb 2023 06:00',
+          durationInMins: '15',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Breakfast',
+          time: '04 Feb 2023 07:00',
+          durationInMins: '60',
+          location: 'Canteen Area',
+        },
+        {
+          title: 'ApyHub Workshop',
+          time: '04 Feb 2023 10:00',
+          durationInMins: '40',
+          location: 'Sohail Pathan',
+        },
+        {
+          title: 'Postman Workshop',
+          time: '04 Feb 2023 11:00',
+          durationInMins: '40',
+          location: 'Ali Mustafa',
+        },
+        {
+          title: 'Mentoring Round (Implementation)',
+          time: '04 Feb 2023 12:00',
+          durationInMins: '60',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Lunch',
+          time: '04 Feb 2023 13:30',
+          durationInMins: '60',
+          location: 'Canteen Area',
+        },
+        {
+          title: 'MLH Mini-Event',
+          time: '04 Feb 2023 15:00',
+          durationInMins: '40',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Light Snacks',
+          time: '04 Feb 2023 16:00',
+          durationInMins: '60',
+          location: 'Canteen Area',
+        },
+        {
+          title: 'Snyk Cybersecurity Challenge',
+          time: '04 Feb 2023 18:00',
+          durationInMins: '40',
+          location: 'Major League Hacking',
+        },
+        {
+          title: 'Red Bull Mini-Event',
+          time: '04 Feb 2023 19:00',
+          durationInMins: '60',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Dinner',
+          time: '04 Feb 2023 21:30',
+          durationInMins: '60',
+          location: 'Canteen Area',
+        },
+        {
+          title: 'Mentoring Round (Final)',
+          time: '04 Feb 2023 23:00',
+          durationInMins: '60',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Midnight Snacks',
+          time: '05 Feb 2023 01:30',
+          durationInMins: '30',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Soft Submission',
+          time: '05 Feb 2023 06:30',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Hacking Ends / Hard Deadline',
+          time: '05 Feb 2023 08:00',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Breakfast',
+          time: '05 Feb 2023 08:00',
+          durationInMins: '60',
+          location: 'Canteen Area',
+        },
+        {
+          title: 'Judging Begins',
+          time: '05 Feb 2023 10:00',
+          durationInMins: '180',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Lunch',
+          time: '05 Feb 2023 13:00',
+          durationInMins: '60',
+          location: 'Canteen Area',
+        },
+        {
+          title: 'Closing Ceremony',
+          time: '05 Feb 2023 14:30',
+          durationInMins: '30',
+          location: 'Hacking Area',
+        },
+        {
+          title: 'Photography & Good Byes',
+          time: '05 Feb 2023 15:00',
+          durationInMins: '30',
+          location: 'Hacking Area',
+        },
+      ],
     }
   },
   mounted() {
     this.setTimer()
+    this.setNextEvent()
 
     setInterval(this.setTimer, 1000)
 
     setInterval(this.updateSpotify, 10000)
+
+    setInterval(this.setNextEvent, 1000)
   },
   methods: {
     setTimer() {
@@ -87,6 +285,21 @@ export default {
       spotifyPlaying.src = `${this.spotify}&random=${Math.floor(
         Date.now() / 1000
       )}`
+    },
+    setNextEvent() {
+      const now = dayjs().add(1, 'days')
+
+      for (let i = 0; i < this.schedule.length; i++) {
+        const event = this.schedule[i]
+        const startTime = dayjs(event.time, 'D MMM YYYY HH:mm')
+
+        if (startTime.isBefore(now)) {
+          this.currentEventIndex = Math.min(
+            Math.max(0, i),
+            this.schedule.length - 2
+          )
+        } else break
+      }
     },
   },
 }
@@ -204,6 +417,7 @@ export default {
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
 
             .left {
               display: flex;
