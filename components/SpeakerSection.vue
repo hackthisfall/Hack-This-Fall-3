@@ -159,6 +159,12 @@ export default {
           url: 'https://www.5ire.org',
           image: require('~/assets/speakers/aravind.jpeg'),
         },
+        {
+          description: 'Developer Program Manager, Superteam x Solana',
+          name: 'Rishabh Bansal',
+          url: 'https://twitter.com/rishabhbansal97',
+          image: require('~/assets/speakers/rishabh.jpeg'),
+        },
       ],
     }
   },
