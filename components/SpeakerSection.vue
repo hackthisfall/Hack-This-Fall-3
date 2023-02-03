@@ -153,6 +153,30 @@ export default {
           url: 'https://twitter.com/knowShubhangi',
           image: require('~/assets/speakers/shubhangi.jpg'),
         },
+        {
+          description: 'Technical Analyst and Consultant, 5ire',
+          name: 'Aravind Makkam',
+          url: 'https://www.5ire.org',
+          image: require('~/assets/speakers/aravind.jpeg'),
+        },
+        {
+          description: 'Developer Program Manager, Superteam x Solana',
+          name: 'Rishabh Bansal',
+          url: 'https://twitter.com/rishabhbansal97',
+          image: require('~/assets/speakers/rishabh.jpeg'),
+        },
+        {
+          description: 'Engineering, 5ire',
+          name: 'Shubham Gupta',
+          url: 'https://www.5ire.org',
+          image: require('~/assets/speakers/shubham.jpeg'),
+        },
+        {
+          description: 'Engineering, 5ire',
+          name: 'Viswateja Yetukuri',
+          url: 'https://www.5ire.org',
+          image: require('~/assets/speakers/viswateja.jpeg'),
+        },
       ],
     }
   },
@@ -241,7 +265,7 @@ export default {
       font-size: 0.6rem;
       line-height: 19px;
       color: #fefaf4;
-      margin-bottom: 0.5rem;
+      margin: 0 0.2rem 0.5rem;
     }
   }
 
