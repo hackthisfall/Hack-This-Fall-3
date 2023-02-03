@@ -156,7 +156,7 @@ export default {
         {
           description: 'Technical Analyst and Consultant, 5ire',
           name: 'Aravind Makkam',
-          url: '#',
+          url: 'https://www.5ire.org',
           image: require('~/assets/speakers/aravind.jpeg'),
         },
       ],
