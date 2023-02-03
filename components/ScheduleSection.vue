@@ -197,12 +197,6 @@ export default {
               location: 'Hacking Area',
             },
             {
-              title: 'Red Bull Mini-Event',
-              time: '19:00',
-              durationInMins: '60',
-              location: 'Hacking Area',
-            },
-            {
               title: 'Dinner',
               time: '21:30',
               durationInMins: '60',

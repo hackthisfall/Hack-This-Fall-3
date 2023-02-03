@@ -297,12 +297,6 @@ export default {
           name: 'peerlist',
         },
         {
-          url: 'https://www.redbull.com/',
-          image: require('~/assets/sponsors/redbull.svg'),
-          text: 'Drinks</br>Partner',
-          name: 'redbull',
-        },
-        {
           url: 'https://hackplus.io/',
           image: require('~/assets/sponsors/hackplus.svg'),
           text: 'Fiscal</br>Partner',

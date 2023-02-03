@@ -188,12 +188,6 @@ export default {
           location: 'Major League Hacking',
         },
         {
-          title: 'Red Bull Mini-Event',
-          time: '04 Feb 2023 19:00',
-          durationInMins: '60',
-          location: 'Hacking Area',
-        },
-        {
           title: 'Dinner',
           time: '04 Feb 2023 21:30',
           durationInMins: '60',
