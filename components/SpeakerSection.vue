@@ -107,7 +107,7 @@ export default {
         },
         {
           description: 'Director of Engineering, Cloudroit',
-          name: 'Praveen Kumar Purushothaman',
+          name: 'Praveen Kumar',
           url: 'https://twitter.com/rhcasharma',
           image: require('~/assets/narratives/praveen.png'),
         },
