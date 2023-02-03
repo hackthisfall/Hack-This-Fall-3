@@ -153,6 +153,12 @@ export default {
           url: 'https://twitter.com/knowShubhangi',
           image: require('~/assets/speakers/shubhangi.jpg'),
         },
+        {
+          description: 'Technical Analyst and Consultant, 5ire',
+          name: 'Aravind Makkam',
+          url: '#',
+          image: require('~/assets/speakers/aravind.jpeg'),
+        },
       ],
     }
   },
