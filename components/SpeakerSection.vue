@@ -165,6 +165,18 @@ export default {
           url: 'https://twitter.com/rishabhbansal97',
           image: require('~/assets/speakers/rishabh.jpeg'),
         },
+        {
+          description: 'Engineering, 5ire',
+          name: 'Shubham Gupta',
+          url: 'https://www.5ire.org',
+          image: require('~/assets/speakers/shubham.jpeg'),
+        },
+        {
+          description: 'Engineering, 5ire',
+          name: 'Viswateja Yetukuri',
+          url: 'https://www.5ire.org',
+          image: require('~/assets/speakers/viswateja.jpeg'),
+        },
       ],
     }
   },
