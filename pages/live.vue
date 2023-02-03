@@ -281,7 +281,7 @@ export default {
       )}`
     },
     setNextEvent() {
-      const now = dayjs().add(1, 'days')
+      const now = dayjs()
 
       for (let i = 0; i < this.schedule.length; i++) {
         const event = this.schedule[i]
