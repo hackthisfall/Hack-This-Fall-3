@@ -253,7 +253,7 @@ export default {
       font-size: 0.6rem;
       line-height: 19px;
       color: #fefaf4;
-      margin-bottom: 0.5rem;
+      margin: 0 0.2rem 0.5rem;
     }
   }
 
