@@ -38,7 +38,7 @@
               2) to each member of team
             </p>
           </a>
-          <a href="" target="_blank" class="inner">
+          <a href="https://bit.ly/5ire-track" target="_blank" class="inner">
             <img src="~/assets/sponsors/5ire.svg" />
             <CText mt="2rem" class="heading"
               >Top-10 Projects Built using 5ire Labs</CText
