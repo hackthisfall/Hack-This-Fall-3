@@ -188,7 +188,7 @@ export default {
               title: 'Light Snacks',
               time: '18:00',
               durationInMins: '60',
-              location: 'Canteen Area',
+              location: 'Lawn Area',
             },
             {
               title: 'Snyk Cybersecurity Challenge',
