@@ -177,13 +177,13 @@ export default {
         },
         {
           title: 'Light Snacks',
-          time: '04 Feb 2023 16:00',
+          time: '04 Feb 2023 18:00',
           durationInMins: '60',
           location: 'Canteen Area',
         },
         {
           title: 'Snyk Cybersecurity Challenge',
-          time: '04 Feb 2023 18:00',
+          time: '04 Feb 2023 20:30',
           durationInMins: '40',
           location: 'Major League Hacking',
         },
