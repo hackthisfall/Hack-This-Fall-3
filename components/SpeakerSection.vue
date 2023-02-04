@@ -166,13 +166,13 @@ export default {
           image: require('~/assets/speakers/rishabh.jpeg'),
         },
         {
-          description: 'Engineering, 5ire',
+          description: 'Technical Lead, 5ire',
           name: 'Shubham Gupta',
           url: 'https://www.5ire.org',
           image: require('~/assets/speakers/shubham.jpeg'),
         },
         {
-          description: 'Engineering, 5ire',
+          description: 'Solidity Developer, 5ire',
           name: 'Viswateja Yetukuri',
           url: 'https://www.5ire.org',
           image: require('~/assets/speakers/viswateja.jpeg'),
