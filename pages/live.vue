@@ -179,7 +179,7 @@ export default {
           title: 'Light Snacks',
           time: '04 Feb 2023 18:00',
           durationInMins: '60',
-          location: 'Canteen Area',
+          location: 'Lawn Area',
         },
         {
           title: 'Snyk Cybersecurity Challenge',
