@@ -4,7 +4,7 @@
       <div class="main-container">
         <div class="top">
           <div class="timer">
-            <span class="text">Hacking ends in</span>
+            <span class="text" v-if="!isEnded">Hacking ends in</span>
             <span class="countdown">{{ timer }}</span>
           </div>
           <div class="spotify">
@@ -61,6 +61,7 @@ export default {
   data() {
     return {
       timer: '36h 00m 00s',
+      isEnded: false,
       hackathonEnds: '2023-02-05T08:00:00',
       hackathonBegins: '2023-02-03T20:00:00',
       spotify:
@@ -262,6 +263,12 @@ export default {
     setTimer() {
       const now = dayjs()
       const hackathonEnds = dayjs(this.hackathonEnds)
+
+      if (now.isAfter(hackathonEnds)) {
+        this.timer = 'Hacking ended!'
+        this.isEnded = true
+        return
+      }
 
       const hackingEndsInHours = hackathonEnds.diff(now, 'hour')
       const hackingEndsInMinutes =
