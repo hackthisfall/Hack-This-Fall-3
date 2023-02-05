@@ -262,12 +262,16 @@ export default {
   methods: {
     setTimer() {
       const now = dayjs()
-      const hackathonEnds = dayjs(this.hackathonEnds)
+      let hackathonEnds = dayjs(this.hackathonEnds)
 
       if (now.isAfter(hackathonEnds)) {
-        this.timer = 'Hacking ended!'
-        this.isEnded = true
-        return
+        hackathonEnds = dayjs('2023-02-05T08:10:00')
+
+        if (now.isAfter(hackathonEnds)) {
+          this.timer = 'Hacking ended!'
+          this.isEnded = true
+          return
+        }
       }
 
       const hackingEndsInHours = hackathonEnds.diff(now, 'hour')
