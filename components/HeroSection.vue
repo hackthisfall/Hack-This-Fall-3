@@ -11,9 +11,13 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a target="blank">
-          <CButton class="button disabled animate-ease">
-            <span> Registration Closed</span>
+        <a
+          target="blank"
+          href="https://hackthisfall.devpost.com/project-gallery"
+        >
+          <CButton class="button animate-ease">
+            <img src="~/assets/icons/devpost.svg" alt="register" class="icon" />
+            <span> Project Gallery</span>
           </CButton>
         </a>
         <a href="https://discord.hackthisfall.tech" target="blank">
