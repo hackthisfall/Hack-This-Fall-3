@@ -10,16 +10,14 @@
     >
       <p class="text">
         Hack This Fall began with a mindset of encouraging new hackers to build
-        unique projects regardless of the tech or field. The only focus was to
-        create something meaningful and enjoy the process of building, while
-        also solving the shared struggles of our surroundings.
+        unique projects regardless of the tech or field; the only focus was to
+        create something meaningful and enjoy building while also solving the
+        shared struggles of our surroundings.
         <br /><br />
-        For this season, we are breaking the virtual barrier and will be hosting
-        a
-        <span style="font-weight: 600; color: #f46d24"
-          >36 Hours In-person Hackathon</span
-        >; where we are aiming to promote hackers and help them nurture their
-        new ideas and prototypes in various domains.
+        The community encourages Inclusion and Diversity at its core and has
+        various events and happenings around the same as well to keep hackers
+        engaged in a meaningful way. All in all, we want hackers to not just
+        participate but experience a hackathon in a true sense.
       </p>
       <img src="~/assets/about.png" />
     </CFlex>

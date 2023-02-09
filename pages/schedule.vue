@@ -11,18 +11,7 @@
               @click="goToLocation('/#about')"
               >About</span
             >
-            <span
-              id="nav-link-tracks"
-              class="mobile-nav-item"
-              @click="goToLocation('/#tracks')"
-              >Tracks</span
-            >
-            <span
-              id="nav-link-faq"
-              class="mobile-nav-item"
-              @click="goToLocation('/#prizes')"
-              >Prizes</span
-            >
+
             <span
               id="nav-link-sponsors"
               class="mobile-nav-item"

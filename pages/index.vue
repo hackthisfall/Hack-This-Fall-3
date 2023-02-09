@@ -11,18 +11,7 @@
               @click="goToLocation('/#about')"
               >About</span
             >
-            <span
-              id="nav-link-tracks"
-              class="mobile-nav-item"
-              @click="goToLocation('/#tracks')"
-              >Tracks</span
-            >
-            <span
-              id="nav-link-faq"
-              class="mobile-nav-item"
-              @click="goToLocation('/#prizes')"
-              >Prizes</span
-            >
+
             <span
               id="nav-link-sponsors"
               class="mobile-nav-item"
@@ -49,8 +38,6 @@
           <HeroSectionVue />
           <AboutSectionVue />
           <GlimpseSectionVue />
-          <TrackSectionVue />
-          <PrizesSectionVue />
           <SpeakerSectionVue />
           <SponsorSectionVue :community="false" />
           <NarrativeSectionVue />
@@ -68,8 +55,6 @@ import NavigationBar from '~/components/NavigationBar'
 import HeroSectionVue from '~/components/HeroSection'
 import AboutSectionVue from '~/components/AboutSection'
 import GlimpseSectionVue from '~/components/GlimpseSection'
-import TrackSectionVue from '~/components/TrackSection'
-import PrizesSectionVue from '~/components/PrizesSection.vue'
 import SpeakerSectionVue from '~/components/SpeakerSection'
 import SponsorSectionVue from '~/components/SponsorSection'
 import NarrativeSectionVue from '~/components/NarrativeSection'
@@ -83,8 +68,6 @@ export default {
     HeroSectionVue,
     AboutSectionVue,
     GlimpseSectionVue,
-    TrackSectionVue,
-    PrizesSectionVue,
     SpeakerSectionVue,
     SponsorSectionVue,
     NarrativeSectionVue,

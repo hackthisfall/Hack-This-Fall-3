@@ -13,12 +13,6 @@
     </div>
     <div class="nav-desktop">
       <NuxtLink id="nav-link-about" to="/#about" class="item">About</NuxtLink>
-      <NuxtLink id="nav-link-tracks" to="/#tracks" class="item"
-        >Tracks</NuxtLink
-      >
-      <NuxtLink id="nav-link-tracks" to="/#prizes" class="item"
-        >Prizes</NuxtLink
-      >
       <NuxtLink id="nav-link-sponsors" to="/#sponsors" class="item"
         >Sponsors</NuxtLink
       >
