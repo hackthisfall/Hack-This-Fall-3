@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="sponsors" name="sponsors">
-    <HeadingVue front="Past Sponsors" back="SPONSORS" />
+    <HeadingVue front="Previous Sponsors" back="SPONSORS" />
     <CFlex
       :mx="{ base: '1rem', sm: '50px' }"
       mt="5rem"

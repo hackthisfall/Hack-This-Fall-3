@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="speakers" name="speakers">
-    <HeadingVue front="Speakers, Mentors and Judges" back="PEOPLE" />
+    <HeadingVue front="Previous Speakers" back="PEOPLE" />
     <CFlex :mx="{ base: '0.5rem', sm: '50px' }" mt="5rem" justify="center">
       <CGrid
         :gap="{ base: '0.75rem', sm: '3rem' }"
