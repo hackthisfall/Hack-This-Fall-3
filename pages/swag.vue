@@ -5,18 +5,6 @@
       <div class="main-container">
         <div v-if="isNavbarOpen" class="navbar-mobile">
           <CFlex direction="column" align="center">
-            <!-- <span
-              id="nav-link-about"
-              class="mobile-nav-item"
-              @click="goToLocation('/swag#challenges')"
-              >Challenges</span
-            > -->
-            <span
-              id="nav-link-about"
-              class="mobile-nav-item"
-              @click="goToLocation('/swag#badge')"
-              >Digital Badge</span
-            >
             <span
               id="nav-link-about"
               class="mobile-nav-item"
@@ -26,6 +14,8 @@
             <span class="divider"></span>
             <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/"
               >Home</NuxtLink
+            ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
+              >Team</NuxtLink
             >
           </CFlex>
         </div>
@@ -42,13 +32,11 @@
 <script>
 import NavigationBar from '~/components/NavigationBarForSwag'
 import FooterSectionVue from '~/components/FooterSection'
-// import SwagSection from '~/components/SwagSection'
 import DigitalSwagSection from '~/components/DigitalSwagSection'
 
 export default {
   components: {
     NavigationBar,
-    // SwagSection,
     DigitalSwagSection,
     FooterSectionVue,
   },

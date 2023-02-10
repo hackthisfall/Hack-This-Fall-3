@@ -342,128 +342,128 @@ export default {
       imageFile: undefined,
     }
   },
-  mounted() {
-    const canvas = document.getElementById('myCanvas')
-    const ctx = canvas.getContext('2d')
-    const defaultBadge = new Image()
-    defaultBadge.src = '/default-badge.png'
+  // mounted() {
+  //   const canvas = document.getElementById('myCanvas')
+  //   const ctx = canvas.getContext('2d')
+  //   const defaultBadge = new Image()
+  //   defaultBadge.src = '/default-badge.png'
 
-    defaultBadge.onload = function () {
-      ctx.drawImage(defaultBadge, 0, 0, 1620, 1620)
-      ctx.font = '700 4.5rem Poppins'
-      ctx.fillStyle = 'white'
-      ctx.fillText(
-        this.name.trim() !== '' ? this.name : 'Your Name Here',
-        96,
-        1367
-      )
-    }
+  //   defaultBadge.onload = function () {
+  //     ctx.drawImage(defaultBadge, 0, 0, 1620, 1620)
+  //     ctx.font = '700 4.5rem Poppins'
+  //     ctx.fillStyle = 'white'
+  //     ctx.fillText(
+  //       this.name.trim() !== '' ? this.name : 'Your Name Here',
+  //       96,
+  //       1367
+  //     )
+  //   }
 
-    const badge = new Image()
-    badge.src = '/badge.png'
+  //   const badge = new Image()
+  //   badge.src = '/badge.png'
 
-    const imgInput = document.getElementById('imageInput')
-    const nameInput = document.getElementById('nameInput')
+  //   const imgInput = document.getElementById('imageInput')
+  //   const nameInput = document.getElementById('nameInput')
 
-    imgInput.addEventListener('change', (e) => {
-      if (e.target.files[0]) {
-        this.imageFile = e.target.files[0]
-        const reader = new FileReader()
-        reader.readAsDataURL(this.imageFile)
+  //   imgInput.addEventListener('change', (e) => {
+  //     if (e.target.files[0]) {
+  //       this.imageFile = e.target.files[0]
+  //       const reader = new FileReader()
+  //       reader.readAsDataURL(this.imageFile)
 
-        reader.onloadend = (e) => {
-          const myImage = new Image()
-          myImage.src = e.target.result
-          myImage.onload = (ev) => {
-            ctx.clearRect(0, 0, 1620, 1620)
-            const inputWidth = myImage.naturalWidth
-            const inputHeight = myImage.naturalHeight
-            const smallerSide = Math.min(inputWidth, inputHeight)
-            let startX = 0
-            let startY = 0
+  //       reader.onloadend = (e) => {
+  //         const myImage = new Image()
+  //         myImage.src = e.target.result
+  //         myImage.onload = (ev) => {
+  //           ctx.clearRect(0, 0, 1620, 1620)
+  //           const inputWidth = myImage.naturalWidth
+  //           const inputHeight = myImage.naturalHeight
+  //           const smallerSide = Math.min(inputWidth, inputHeight)
+  //           let startX = 0
+  //           let startY = 0
 
-            if (inputWidth < inputHeight) {
-              startY = (inputHeight - inputWidth) / 2
-            } else if (inputWidth > inputHeight) {
-              startX = (inputWidth - inputHeight) / 2
-            }
+  //           if (inputWidth < inputHeight) {
+  //             startY = (inputHeight - inputWidth) / 2
+  //           } else if (inputWidth > inputHeight) {
+  //             startX = (inputWidth - inputHeight) / 2
+  //           }
 
-            ctx.drawImage(
-              myImage,
-              startX,
-              startY,
-              smallerSide,
-              smallerSide,
-              0,
-              0,
-              1620,
-              1620
-            )
-            ctx.drawImage(badge, 0, 0, 1620, 1620)
-            ctx.font = '700 4.5rem Poppins'
-            ctx.fillStyle = 'white'
-            ctx.fillText(
-              this.name.trim() !== '' ? this.name : 'John Doe',
-              96,
-              1367
-            )
-            this.toggleImageAdded()
-          }
-        }
-      }
-    })
+  //           ctx.drawImage(
+  //             myImage,
+  //             startX,
+  //             startY,
+  //             smallerSide,
+  //             smallerSide,
+  //             0,
+  //             0,
+  //             1620,
+  //             1620
+  //           )
+  //           ctx.drawImage(badge, 0, 0, 1620, 1620)
+  //           ctx.font = '700 4.5rem Poppins'
+  //           ctx.fillStyle = 'white'
+  //           ctx.fillText(
+  //             this.name.trim() !== '' ? this.name : 'John Doe',
+  //             96,
+  //             1367
+  //           )
+  //           this.toggleImageAdded()
+  //         }
+  //       }
+  //     }
+  //   })
 
-    nameInput.addEventListener('change', (e) => {
-      if (this.imageFile) {
-        const reader = new FileReader()
-        reader.readAsDataURL(this.imageFile)
-        reader.onloadend = (e) => {
-          const myImage = new Image()
-          myImage.src = e.target.result
-          myImage.onload = (ev) => {
-            ctx.clearRect(0, 0, 1620, 1620)
-            const inputWidth = myImage.naturalWidth
-            const inputHeight = myImage.naturalHeight
-            const smallerSide = Math.min(inputWidth, inputHeight)
-            let startX = 0
-            let startY = 0
+  //   nameInput.addEventListener('change', (e) => {
+  //     if (this.imageFile) {
+  //       const reader = new FileReader()
+  //       reader.readAsDataURL(this.imageFile)
+  //       reader.onloadend = (e) => {
+  //         const myImage = new Image()
+  //         myImage.src = e.target.result
+  //         myImage.onload = (ev) => {
+  //           ctx.clearRect(0, 0, 1620, 1620)
+  //           const inputWidth = myImage.naturalWidth
+  //           const inputHeight = myImage.naturalHeight
+  //           const smallerSide = Math.min(inputWidth, inputHeight)
+  //           let startX = 0
+  //           let startY = 0
 
-            if (inputWidth < inputHeight) {
-              startY = (inputHeight - inputWidth) / 2
-            } else if (inputWidth > inputHeight) {
-              startX = (inputWidth - inputHeight) / 2
-            }
+  //           if (inputWidth < inputHeight) {
+  //             startY = (inputHeight - inputWidth) / 2
+  //           } else if (inputWidth > inputHeight) {
+  //             startX = (inputWidth - inputHeight) / 2
+  //           }
 
-            ctx.drawImage(
-              myImage,
-              startX,
-              startY,
-              smallerSide,
-              smallerSide,
-              0,
-              0,
-              1620,
-              1620
-            )
-            ctx.drawImage(badge, 0, 0, 1620, 1620)
-            ctx.font = '700 4.5rem Poppins'
-            ctx.fillStyle = 'white'
-            ctx.fillText(this.name, 96, 1367)
-            this.toggleImageAdded()
-          }
-        }
-      } else {
-        ctx.drawImage(defaultBadge, 0, 0, 1620, 1620)
-        ctx.font = '700 4.5rem Poppins'
-        ctx.fillStyle = 'white'
-        ctx.fillText(
-          this.name.trim() !== '' ? this.name : 'Your Name Here',
-          96,
-          1367
-        )
-      }
-    })
-  },
+  //           ctx.drawImage(
+  //             myImage,
+  //             startX,
+  //             startY,
+  //             smallerSide,
+  //             smallerSide,
+  //             0,
+  //             0,
+  //             1620,
+  //             1620
+  //           )
+  //           ctx.drawImage(badge, 0, 0, 1620, 1620)
+  //           ctx.font = '700 4.5rem Poppins'
+  //           ctx.fillStyle = 'white'
+  //           ctx.fillText(this.name, 96, 1367)
+  //           this.toggleImageAdded()
+  //         }
+  //       }
+  //     } else {
+  //       ctx.drawImage(defaultBadge, 0, 0, 1620, 1620)
+  //       ctx.font = '700 4.5rem Poppins'
+  //       ctx.fillStyle = 'white'
+  //       ctx.fillText(
+  //         this.name.trim() !== '' ? this.name : 'Your Name Here',
+  //         96,
+  //         1367
+  //       )
+  //     }
+  //   })
+  // },
   methods: {
     uploadImage() {
       document.getElementById('imageInput').click()

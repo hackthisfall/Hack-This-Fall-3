@@ -39,7 +39,7 @@
 
 <script>
 import { CFlex } from '@chakra-ui/vue'
-import NavigationBar from '~/components/NavigationBar'
+import NavigationBar from '~/components/NavigationBarForTeam'
 import LatestTeamSection from '~/components/LatestTeamSection'
 import PreviousTeamSection from '~/components/PreviousTeamSection'
 import FooterSection from '~/components/FooterSection.vue'
