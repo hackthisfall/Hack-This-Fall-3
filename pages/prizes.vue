@@ -18,12 +18,7 @@
               @click="goToLocation('/#sponsors')"
               >Sponsors</span
             >
-            <span
-              id="nav-link-faq"
-              class="mobile-nav-item"
-              @click="goToLocation('/#faq')"
-              >FAQs</span
-            >
+
             <span class="divider"></span>
             <span
               id="nav-link-team"

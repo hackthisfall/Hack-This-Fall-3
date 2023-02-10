@@ -16,11 +16,7 @@
       <NuxtLink id="nav-link-sponsors" to="/#sponsors" class="item"
         >Sponsors</NuxtLink
       >
-      <NuxtLink id="nav-link-sponsors" to="/#faq" class="item">FAQs</NuxtLink>
       <span class="divider"></span>
-      <NuxtLink id="nav-link-team" to="/schedule" class="item"
-        >Schedule</NuxtLink
-      >
       <NuxtLink id="nav-link-team" to="/swag" class="item">Swag</NuxtLink>
       <NuxtLink id="nav-link-team" to="/team" class="item">Team</NuxtLink>
 

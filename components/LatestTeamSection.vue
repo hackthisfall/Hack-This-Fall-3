@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="s3-team" name="s3-team">
-    <HeadingVue front="Season 3" back="TEAM" />
+    <HeadingVue front="Hack This Fall" back="TEAM" />
     <CBox
       :mx="{ base: '0rem', sm: '50px' }"
       justify="center"
@@ -56,9 +56,9 @@ export default {
           image: require('~/assets/team/sahilsen.webp'),
         },
         {
-          name: 'Vaibhav Toshniwal',
-          url: 'https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/',
-          image: require('~/assets/team/vaibhav.jpeg'),
+          name: "Dennis D'mello",
+          url: 'https://www.linkedin.com/in/dendemello/',
+          image: require('~/assets/team/dennis.jpeg'),
         },
         {
           name: 'Paras Gupta',
@@ -66,83 +66,12 @@ export default {
           image: require('~/assets/team/paras.jpeg'),
         },
         {
-          name: "Dennis D'mello",
-          url: 'https://www.linkedin.com/in/dendemello/',
-          image: require('~/assets/team/dennis.jpeg'),
-        },
-        {
-          name: 'Apoorv Dwivedi',
-          url: 'https://www.linkedin.com/in/apoorvdwi',
-          image: require('~/assets/team/apoorv.jpg'),
-        },
-        {
-          name: 'Bishwajeet Parhi',
-          image: require('~/assets/team/biswa.jpg'),
-          url: 'https://twitter.com/biswa_20p',
-        },
-        {
-          name: 'Tushar',
-          url: 'https://www.linkedin.com/in/tushar-ba401a136/',
-          image: require('~/assets/team/tushar.jpg'),
-        },
-        {
-          name: 'Pooja Gera',
-          url: 'https://twitter.com/poojagera0_0',
-          image: require('~/assets/team/pooja.jpg'),
-        },
-        {
-          name: 'Priti Priya',
-          url: 'https://twitter.com/pritisinghhhh',
-          image: require('~/assets/team/priti.jpeg'),
-        },
-        {
-          name: 'Tirthak Patel',
-          url: 'https://www.linkedin.com/in/tirthakpatel/',
-          image: require('~/assets/team/tirthak.webp'),
-        },
-        {
-          name: 'Kriyanshi Shah',
-          url: 'https://twitter.com/ShahKriyanshi',
-          image: require('~/assets/team/kriyanshi.jpg'),
-        },
-        {
-          name: 'Disha Thakur',
-          url: 'https://twitter.com/disha_designss',
-          image: require('~/assets/team/disha.jpeg'),
-        },
-        {
-          name: 'Shitiz Aggarwal',
-          url: 'https://twitter.com/Shitiz_Agg',
-          image: require('~/assets/team/shitiz.jpg'),
-        },
-        {
-          name: 'Aayush Sharma',
-          image: require('~/assets/team/aayush.jpeg'),
-          url: 'https://twitter.com/SuperAayush14',
-        },
-        {
-          name: 'Rohan Kambli',
-          url: 'https://twitter.com/rohannrk',
-          image: require('~/assets/team/rohan.jpg'),
-        },
-        {
-          name: 'Vedant Kakde',
-          url: 'https://twitter.com/vedantstwt',
-          image: require('~/assets/team/vedant.png'),
+          name: 'Vaibhav Toshniwal',
+          url: 'https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/',
+          image: require('~/assets/team/vaibhav.jpeg'),
         },
       ],
     }
-  },
-  mounted() {
-    this.people.sort((a, b) => {
-      if (a.name < b.name) {
-        return -1
-      }
-      if (a.name > b.name) {
-        return 1
-      }
-      return 0
-    })
   },
 }
 </script>

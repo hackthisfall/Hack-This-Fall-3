@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="sponsors" name="sponsors">
-    <HeadingVue front="Season 3 Sponsors" back="SPONSORS" />
+    <HeadingVue front="Past Sponsors" back="SPONSORS" />
     <CFlex
       :mx="{ base: '1rem', sm: '50px' }"
       mt="5rem"
@@ -58,86 +58,6 @@
           </a>
         </CGrid>
       </CFlex>
-
-      <div :class="['tier-heading', 'space-up']">
-        <span>Featured Partners</span>
-      </div>
-      <CGrid
-        :row-gap="{ base: '1rem', sm: '1.75rem' }"
-        :column-gap="{
-          base: '1rem',
-          sm: '2rem',
-          lg: '2rem',
-          xl: '2rem',
-          '2xl': '3.4rem',
-        }"
-        :grid-template-columns="{
-          base: `repeat(2, 1fr)`,
-          sm: `repeat(3,1fr)`,
-          lg: `repeat(3,1fr)`,
-          xl: `repeat(4,1fr)`,
-        }"
-        wrap="wrap"
-      >
-        <a
-          v-for="(sponsor, index) in partners"
-          :key="index"
-          :href="sponsor.url"
-          target="_blank"
-          :class="['partner animate-ease', sponsor.specialClass]"
-          borderRadius="30px"
-        >
-          <div :class="['image', sponsor.name]">
-            <img :src="sponsor.image" />
-          </div>
-          <span v-html="sponsor.text"></span>
-        </a>
-      </CGrid>
-    </CFlex>
-
-    <HeadingVue front="Community Partners" back="" v-if="community" />
-    <CFlex
-      :mx="{ base: '1rem', sm: '50px' }"
-      justify="center"
-      align="start"
-      direction="column"
-    >
-      <CFlex direction="column" v-if="community">
-        <CGrid
-          mt="5rem"
-          :row-gap="{ base: '1rem', sm: '1.75rem' }"
-          :column-gap="{
-            base: '1rem',
-            sm: '2rem',
-            lg: '2rem',
-            xl: '2rem',
-            '2xl': '3.4rem',
-          }"
-          :grid-template-columns="{
-            base: `repeat(2,1fr)`,
-            sm: `repeat(3,1fr)`,
-            lg: `repeat(4,1fr)`,
-            xl: `repeat(5,1fr)`,
-          }"
-        >
-          <a
-            v-for="(sponsor, index) in communityPartners"
-            :key="index"
-            :href="sponsor.url"
-            target="_blank"
-            :class="['sponsor animate-ease', sponsor.specialClass, 'Previous']"
-            borderRadius="30px"
-          >
-            <img :src="sponsor.image" />
-          </a>
-        </CGrid>
-      </CFlex>
-
-      <NuxtLink v-if="!community" to="/partners" class="sponsor-button">
-        <CButton class="button animate-ease">
-          <span> View More </span>
-        </CButton>
-      </NuxtLink>
     </CFlex>
   </ContainerVue>
 </template>
@@ -158,7 +78,6 @@ export default {
     return {
       sponsors: [
         {
-          category: 'Platinium',
           sponsors: [
             {
               url: 'https://www.storyblok.com/',
@@ -168,14 +87,25 @@ export default {
               url: 'https://5ire.org/',
               image: require('~/assets/sponsors/5ire.svg'),
             },
-          ],
-        },
-        {
-          category: 'Gold',
-          sponsors: [
+            {
+              url: 'https://mlh.io/',
+              image: require('~/assets/sponsors/mlh.svg'),
+            },
             {
               url: 'https://bit.ly/htf3-sdp',
               image: require('~/assets/sponsors/github.svg'),
+            },
+            {
+              url: 'https://www.quicknode.com/',
+              image: require('~/assets/sponsors/quicknode.png'),
+            },
+            {
+              url: 'https://www.solana.com/',
+              image: require('~/assets/sponsors/solana.svg'),
+            },
+            {
+              url: 'https://hackp.ac/Twilio',
+              image: require('~/assets/sponsors/twilio.png'),
             },
             {
               url: 'https://bit.ly/zeeve-htf3',
@@ -185,68 +115,85 @@ export default {
               url: 'https://bit.ly/apyhub-htf3',
               image: require('~/assets/sponsors/apyhub.svg'),
             },
-          ],
-        },
-        {
-          category: 'Silver',
-          sponsors: [
             {
-              url: 'https://deepfence.io/',
-              image: require('~/assets/sponsors/deepfence.svg'),
+              url: 'https://nhost.io/',
+              image: require('~/assets/sponsors/nhost.svg'),
             },
             {
-              url: 'https://www.postman.com/',
-              image: require('~/assets/sponsors/postman.svg'),
-            },
-            {
-              url: 'https://scrollme.today/',
-              image: require('~/assets/sponsors/scrollme.svg'),
-            },
-            {
-              url: 'https://fossunited.org/',
-              image: require('~/assets/sponsors/foss.svg'),
-            },
-          ],
-        },
-        {
-          category: 'Bronze',
-          sponsors: [
-            {
-              url: 'https://hackp.ac/microsoft',
-              image: require('~/assets/sponsors/azure.png'),
-            },
-            {
-              url: 'https://hackp.ac/Twilio',
-              image: require('~/assets/sponsors/twilio.png'),
-            },
-            {
-              url: 'https://hackp.ac/appwrite',
-              image: require('~/assets/sponsors/appwrite.svg'),
+              url: 'https://polygon.technology/',
+              image: require('~/assets/sponsors/polygon.svg'),
             },
             {
               url: 'https://www.digitalocean.com/',
               image: require('~/assets/sponsors/digitalocean.svg'),
             },
             {
-              url: 'https://hackp.ac/GoDaddyRegistry',
-              image: require('~/assets/sponsors/godaddy.svg'),
+              url: 'https://www.postman.com/',
+              image: require('~/assets/sponsors/postman.svg'),
             },
             {
-              url: 'https://blues.io/',
-              image: require('~/assets/sponsors/blues.svg'),
+              url: 'https://wazirx.com/',
+              image: require('~/assets/sponsors/wazirx.png'),
             },
-          ],
-        },
-        {
-          category: 'In-Kind Partners',
-          sponsors: [
             {
-              url: 'https://www.wolfram.com/',
-              image: require('~/assets/sponsors/wolfram.png'),
+              url: 'https://hackp.ac/microsoft',
+              image: require('~/assets/sponsors/azure.png'),
+            },
+            {
+              url: 'https://hackp.ac/appwrite',
+              image: require('~/assets/sponsors/appwrite.svg'),
+            },
+            {
+              url: 'https://agoric.com/',
+              image: require('~/assets/sponsors/agoric.svg'),
+            },
+            {
+              url: 'https://peerlist.io/',
+              image: require('~/assets/sponsors/peerlist.png'),
+            },
+            {
+              url: 'https://symbl.ai/',
+              image: require('~/assets/sponsors/symbl.svg'),
+            },
+            {
+              url: 'https://www.courier.com/',
+              image: require('~/assets/sponsors/courier.svg'),
+            },
+            {
+              url: 'https://www.linode.com/',
+              image: require('~/assets/sponsors/linode.svg'),
+            },
+            {
+              url: 'https://balsamiq.com/',
+              image: require('~/assets/sponsors/balsamiq.svg'),
+            },
+            {
+              url: 'https://tezos.com/',
+              image: require('~/assets/sponsors/tezos.svg'),
+            },
+            {
+              url: 'https://deepfence.io/',
+              image: require('~/assets/sponsors/deepfence.svg'),
+            },
+            {
+              url: 'https://gen.xyz/',
+              image: require('~/assets/sponsors/xyz.svg'),
+            },
+            {
+              url: 'https://replit.com/',
+              image: require('~/assets/sponsors/replit.webp'),
+            },
+            {
+              url: 'https://filebase.com/',
+              image: require('~/assets/sponsors/filebase.svg'),
             },
             {
               url: 'https://www.echo3d.com/',
               image: require('~/assets/sponsors/echoar.webp'),
+            },
+            {
+              url: 'https://www.wolfram.com/',
+              image: require('~/assets/sponsors/wolfram.png'),
             },
             {
               url: 'https://www.axure.com/',
@@ -257,45 +204,25 @@ export default {
               image: require('~/assets/sponsors/taskade.png'),
             },
             {
-              url: 'https://gen.xyz/',
-              image: require('~/assets/sponsors/xyz.svg'),
+              url: 'https://hackp.ac/GoDaddyRegistry',
+              image: require('~/assets/sponsors/godaddy.svg'),
             },
             {
-              url: 'https://artofproblemsolving.com/',
-              image: require('~/assets/sponsors/aops.png'),
+              url: 'https://blues.io/',
+              image: require('~/assets/sponsors/blues.svg'),
             },
             {
-              url: 'https://nostarch.com/',
-              image: require('~/assets/sponsors/no-starch.png'),
+              url: 'https://fossunited.org/',
+              image: require('~/assets/sponsors/foss.svg'),
+            },
+            {
+              url: '#',
+              image: require('~/assets/sponsors/more.svg'),
             },
           ],
         },
       ],
       partners: [
-        {
-          url: 'https://karnavatiuniversity.edu.in/',
-          image: require('~/assets/sponsors/karnavati.svg'),
-          text: 'Venue<br/>Partner',
-          name: 'karnavati',
-        },
-        {
-          url: 'https://karnavatiuniversity.edu.in/kiif/',
-          image: require('~/assets/sponsors/kiif.svg'),
-          text: 'Incubation</br>Partner',
-          name: 'kiif',
-        },
-        {
-          url: 'https://mlh.io/',
-          image: require('~/assets/sponsors/mlh.svg'),
-          text: 'Hackathon</br>Partner',
-          name: 'mlh',
-        },
-        {
-          url: 'https://peerlist.io/',
-          image: require('~/assets/sponsors/peerlist.png'),
-          text: 'Professional</br>Network Partner',
-          name: 'peerlist',
-        },
         {
           url: 'https://hackplus.io/',
           image: require('~/assets/sponsors/hackplus.svg'),
@@ -307,212 +234,6 @@ export default {
           image: require('~/assets/sponsors/standout-stickers.svg'),
           text: 'Sticker</br>Partner',
           name: 'standout-stickers',
-        },
-      ],
-      communityPartners: [
-        {
-          url: 'https://chat.whatsapp.com/DfX9HCjEWDdGGzDDiTS7g1',
-          image: require('~/assets/community/versiton.jpg'),
-        },
-        {
-          url: 'https://twitter.com/bios_twt',
-          image: require('~/assets/community/bios.svg'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/codesetgo',
-          image: require('~/assets/community/csg.png'),
-        },
-        {
-          url: 'https://instagram.com/datacode.in',
-          image: require('~/assets/community/datacode.png'),
-        },
-        {
-          url: 'https://instagram.com/gdsc_uitrgpv',
-          image: require('~/assets/community/rgpv.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/codefamily1/',
-          image: require('~/assets/community/codefamily.png'),
-        },
-        {
-          url: 'https://www.instagram.com/hacknitr/',
-          image: require('~/assets/community/nitr.png'),
-        },
-        {
-          url: 'https://twitter.com/SuperContri_twt',
-          image: require('~/assets/community/supercontri.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/club-techbrewers/',
-          image: require('~/assets/community/techbrewers.png'),
-        },
-        {
-          url: 'https://join.codedu.tech',
-          image: require('~/assets/community/codedu.png'),
-        },
-        {
-          url: 'https://www.instagram.com/webuildpune/',
-          image: require('~/assets/community/we-build-pune.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/oreodroiders/',
-          image: require('~/assets/community/oreodroiders.png'),
-        },
-        {
-          url: 'https://www.instagram.com/elevate_ldce/',
-          image: require('~/assets/community/elevate.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/codesapeins',
-          image: require('~/assets/community/codesapiens.png'),
-        },
-        {
-          url: 'https://instagram.com/gdscppsu',
-          image: require('~/assets/community/ppsavani.png'),
-        },
-        {
-          url: 'https://twitter.com/hackerabad',
-          image: require('~/assets/community/hackerabad.png'),
-        },
-        {
-          url: 'https://twitter.com/hackforcode',
-          image: require('~/assets/community/hack-for-code.png'),
-        },
-        {
-          url: 'https://twitter.com/cerrituscoders/',
-          image: require('~/assets/community/cc.png'),
-        },
-        {
-          url: 'https://bio.link/bytemakers',
-          image: require('~/assets/community/bytemakers.png'),
-        },
-        {
-          url: 'https://www.instagram.com/gdsc.gecjdp/',
-          image: require('~/assets/community/gdsc-jagdalpur.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/studentwelfareclub/',
-          image: require('~/assets/community/swc.jpg'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/dev-code-community/',
-          image: require('~/assets/community/devcode.png'),
-        },
-        {
-          url: 'https://twitter.com/GSiliguri',
-          image: require('~/assets/community/gs-siliguri.png'),
-        },
-        {
-          url: 'https://instagram.com/hackcbs',
-          image: require('~/assets/community/hackcbs.png'),
-        },
-        {
-          url: 'https://www.twitter.com/kotlinlapaz',
-          image: require('~/assets/community/kotlin.png'),
-        },
-        {
-          url: 'https://twitter.com/Hack4Bengal',
-          image: require('~/assets/community/hack-bengal.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/thefrontendclub',
-          image: require('~/assets/community/frontend.svg'),
-        },
-        {
-          url: 'https://linktr.ee/hackclubsal',
-          image: require('~/assets/community/pypro.png'),
-        },
-        {
-          url: 'https://solo.to/devrelo',
-          image: require('~/assets/community/devrelo.png'),
-        },
-        {
-          url: 'https://www.instagram.com/nsccbitd/',
-          image: require('~/assets/community/newton.png'),
-        },
-        {
-          image: require('~/assets/community/brainseed.png'),
-          url: 'https://linktr.ee/BrainSeed_Networks',
-        },
-        {
-          url: 'https://www.linkedin.com/company/optimistic-overviews/',
-          image: require('~/assets/community/oo.png'),
-        },
-        {
-          url: 'https://abilify.tech/',
-          image: require('~/assets/community/abilify.png'),
-        },
-        {
-          url: 'https://twitter.com/thecocode',
-          image: require('~/assets/community/cocode.png'),
-        },
-        {
-          url: 'https://github.com/devs-in-tech',
-          image: require('~/assets/community/devsintech.png'),
-        },
-        {
-          url: 'https://t.me/PuneDevClub',
-          image: require('~/assets/community/punedev.png'),
-        },
-        {
-          url: 'https://allaboutprogramming.org/',
-          image: require('~/assets/community/onestop.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/the-public-square-community',
-          image: require('~/assets/community/tps.jpg'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/eduhub-community/',
-          image: require('~/assets/community/eduhub.png'),
-        },
-        {
-          url: 'http://founderstank.co/',
-          image: require('~/assets/community/founderstank.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/trainings-internships',
-          image: require('~/assets/community/keepup.jpg'),
-        },
-        {
-          url: 'https://twitter.com/IRL_amigo',
-          image: require('~/assets/community/irlamigo.jpg'),
-        },
-        {
-          url: 'https://discord.gg/W8EaYskeCG',
-          image: require('~/assets/community/everyday-design.svg'),
-        },
-        {
-          url: 'http://bit.ly/devs-dungeon-bio',
-          image: require('~/assets/community/devsdungeon.png'),
-        },
-        {
-          url: 'https://twitter.com/codingvets',
-          image: require('~/assets/community/codingvets.png'),
-        },
-        {
-          url: 'https://www.instagram.com/gdsc_gecg/',
-          image: require('~/assets/community/gdsc-gandhinagar.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/google-dsc/',
-          image: require('~/assets/community/gdsc-vishwakarma.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/gdsc-bitw',
-          image: require('~/assets/community/gdsc-bit.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/hackmountains/',
-          image: require('~/assets/community/htm.png'),
-        },
-        {
-          url: 'https://twitter.com/ocd_india',
-          image: require('~/assets/community/ocd.png'),
-        },
-        {
-          url: 'https://www.linkedin.com/company/hubproduct/',
-          image: require('~/assets/community/product-hub.png'),
         },
       ],
     }

@@ -52,16 +52,16 @@ export default {
           image: require('~/assets/speakers/ali.jpg'),
         },
         {
+          description: 'Software Engineer, Appwrite',
+          name: 'Khushboo Verma',
+          url: 'https://twitter.com/khushbooverma_',
+          image: require('~/assets/speakers/khushboo.jpg'),
+        },
+        {
           description: 'Developer Advocate, ApyHub',
           name: 'Sohail Pathan',
           url: 'https://twitter.com/iamspathan',
           image: require('~/assets/speakers/sohail.jpg'),
-        },
-        {
-          description: 'Technical Analyst and Consultant, 5ire',
-          name: 'Aravind Makkam',
-          url: 'https://www.5ire.org',
-          image: require('~/assets/speakers/aravind.jpeg'),
         },
         {
           description: 'Engineer, Web DataWorks',
@@ -70,10 +70,10 @@ export default {
           image: require('~/assets/speakers/nishu.png'),
         },
         {
-          description: 'Developer Relations Lead, Strapi',
-          name: 'Daniel Phiri',
-          url: 'https://twitter.com/malgamves',
-          image: require('~/assets/speakers/daniel.jpg'),
+          description: 'Technical Analyst and Consultant, 5ire',
+          name: 'Aravind Makkam',
+          url: 'https://www.5ire.org',
+          image: require('~/assets/speakers/aravind.jpeg'),
         },
         {
           description: 'DevRel Engineer, Storyblok',
@@ -82,22 +82,16 @@ export default {
           image: require('~/assets/speakers/facundo.jpg'),
         },
         {
-          description: 'Founder, EddieHub',
-          name: 'Eddie Jaoude',
-          url: 'https://twitter.com/eddiejaoude/',
-          image: require('~/assets/speakers/eddie.jpg'),
-        },
-        {
-          description: 'Software Engineer, Appwrite',
-          name: 'Khushboo Verma',
-          url: 'https://twitter.com/khushbooverma_',
-          image: require('~/assets/speakers/khushboo.jpg'),
-        },
-        {
           description: 'Head of Community, Gitpod',
           name: 'Pauline Narvas',
           url: 'https://twitter.com/paulienuh',
           image: require('~/assets/speakers/pauline.jpg'),
+        },
+        {
+          description: 'Founder, EddieHub',
+          name: 'Eddie Jaoude',
+          url: 'https://twitter.com/eddiejaoude/',
+          image: require('~/assets/speakers/eddie.jpg'),
         },
         {
           description: 'Software Engineer, Google',
@@ -105,20 +99,26 @@ export default {
           url: 'https://twitter.com/sashrikakaur',
           image: require('~/assets/speakers/sashrika.jpg'),
         },
+        {
+          description: 'Developer Relations Lead, Strapi',
+          name: 'Daniel Phiri',
+          url: 'https://twitter.com/malgamves',
+          image: require('~/assets/speakers/daniel.jpg'),
+        },
       ],
     }
   },
-  mounted() {
-    this.speakers.sort((a, b) => {
-      if (a.name < b.name) {
-        return -1
-      }
-      if (a.name > b.name) {
-        return 1
-      }
-      return 0
-    })
-  },
+  // mounted() {
+  //   this.speakers.sort((a, b) => {
+  //     if (a.name < b.name) {
+  //       return -1
+  //     }
+  //     if (a.name > b.name) {
+  //       return 1
+  //     }
+  //     return 0
+  //   })
+  // },
 }
 </script>
 <style lang="scss" scoped>

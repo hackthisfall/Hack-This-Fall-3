@@ -18,16 +18,9 @@
               @click="goToLocation('/#sponsors')"
               >Sponsors</span
             >
-            <span
-              id="nav-link-faq"
-              class="mobile-nav-item"
-              @click="goToLocation('/#faq')"
-              >FAQs</span
-            >
+
             <span class="divider"></span>
-            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/schedule"
-              >Schedule</NuxtLink
-            ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
+            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
               >Swag</NuxtLink
             ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
               >Team</NuxtLink
@@ -41,7 +34,6 @@
           <SpeakerSectionVue />
           <SponsorSectionVue :community="false" />
           <NarrativeSectionVue />
-          <FaqSectionVue />
           <FooterSectionVue />
         </div>
       </div>
@@ -58,7 +50,6 @@ import GlimpseSectionVue from '~/components/GlimpseSection'
 import SpeakerSectionVue from '~/components/SpeakerSection'
 import SponsorSectionVue from '~/components/SponsorSection'
 import NarrativeSectionVue from '~/components/NarrativeSection'
-import FaqSectionVue from '~/components/FaqSection'
 import FooterSectionVue from '~/components/FooterSection'
 
 export default {
@@ -71,7 +62,6 @@ export default {
     SpeakerSectionVue,
     SponsorSectionVue,
     NarrativeSectionVue,
-    FaqSectionVue,
     FooterSectionVue,
     CFlex,
   },

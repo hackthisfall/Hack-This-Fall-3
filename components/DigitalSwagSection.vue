@@ -7,11 +7,9 @@
           <div class="about">
             <p>
               Get yourself equipped with some amazing official Hack This Fall
-              Digital Swags, and flex those by owning them. We have a Digital
-              Badge where you can upload your photo and full name to make it
-              personalized. Get our cool Hack This Fall wallpapers for your
-              desktop computers and mobile phones. Don't forget to use the
-              zoom/meet wallpapers in your meetings.
+              Digital Swags, and flex those by owning them. Get our cool Hack
+              This Fall wallpapers for your desktop computers and mobile phones.
+              Don't forget to use the zoom/meet wallpapers in your meetings.
               <br />
               <br />
               Also, to have fun with your team and community members, we have an
@@ -31,7 +29,7 @@
             </a>
           </div>
 
-          <div class="virtualBadge">
+          <!-- <div class="virtualBadge">
             <div class="leftColumn">
               <div class="dummy">
                 <canvas id="myCanvas" width="1620" height="1620" />
@@ -96,7 +94,6 @@
                   Download Badge
                 </CButton>
 
-                <!-- v-show="addedImage" -->
                 <CButton
                   :class="['button', !addedImage ? 'disabled' : null]"
                   @click="shareOnTwitter"
@@ -115,7 +112,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </Container>
 
         <Container>
