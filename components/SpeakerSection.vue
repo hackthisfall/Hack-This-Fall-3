@@ -46,82 +46,10 @@ export default {
     return {
       speakers: [
         {
-          description: 'Full Stack Developer, Ironforge',
-          name: 'Dhiraj Chauhan',
-          url: 'https://twitter.com/cdhiraj40',
-          image: require('~/assets/mentors/dhiraj.jpeg'),
-        },
-        {
-          description: 'Ambassador, Kubesimplify Community',
-          name: 'Avinesh Tripathi',
-          url: 'https://twitter.com/Avinesh__T',
-          image: require('~/assets/mentors/avinesh.jpeg'),
-        },
-        {
-          description: 'Software Engineer, Capgemini India',
-          name: 'Aryan Kaushik',
-          url: 'https://twitter.com/aryankaushik21',
-          image: require('~/assets/mentors/aryan.jpg'),
-        },
-        {
-          description: 'Blockchain Protocol Engineer, Polygon',
-          name: 'Manav Darji',
-          url: 'https://twitter.com/manav24_',
-          image: require('~/assets/mentors/manav.jpg'),
-        },
-        {
-          description: 'Lead DevRel India region, Showwcase',
-          name: 'Insha Ramin',
-          url: 'https://twitter.com/Insharamin',
-          image: require('~/assets/mentors/insha.jpg'),
-        },
-        {
-          description: 'Co-founder, Version Labs',
-          name: 'Daxeel Soni',
-          url: 'https://twitter.com/daxeelsoni',
-          image: require('~/assets/mentors/daxeel.jpg'),
-        },
-        {
-          description: 'CTO, Pedals Up',
-          name: 'Harsh Shah',
-          url: 'https://twitter.com/harshcrop',
-          image: require('~/assets/mentors/harsh.jpg'),
-        },
-        {
-          description: 'Jr. Staff AI Engineer, Detect Technologies',
-          name: 'Bhargav Patel',
-          url: 'https://www.linkedin.com/in/bhargav-p-patel/',
-          image: require('~/assets/mentors/bhargav.jpg'),
-        },
-        {
-          description: 'Co-founder, Zeeve',
-          name: 'Ghan Vashishtha',
-          url: 'https://www.linkedin.com/in/ghan-vashishtha',
-          image: require('~/assets/speakers/ghan.jpeg'),
-        },
-        {
-          description: 'Community Manager, Blues Wireless',
-          name: 'Ritvi Mishra',
-          url: 'https://twitter.com/frenzyritz13',
-          image: require('~/assets/speakers/ritvi.jpg'),
-        },
-        {
-          description: 'Director of Engineering, Cloudroit',
-          name: 'Praveen Kumar',
-          url: 'https://twitter.com/rhcasharma',
-          image: require('~/assets/narratives/praveen.png'),
-        },
-        {
           description: 'Developer Advocate, Postman',
           name: 'Ali Mustufa',
           url: 'https://twitter.com/ialimustufa',
           image: require('~/assets/speakers/ali.jpg'),
-        },
-        {
-          description: 'Developer Advocate, Postman',
-          name: 'Aanchal Mishra',
-          url: 'https://twitter.com/Aanchalmishra__',
-          image: require('~/assets/speakers/aanchal.jpg'),
         },
         {
           description: 'Developer Advocate, ApyHub',
@@ -130,52 +58,52 @@ export default {
           image: require('~/assets/speakers/sohail.jpg'),
         },
         {
-          description: 'GitHub Campus Expert',
-          name: 'Vraj Desai',
-          url: 'https://twitter.com/vrajdesai78',
-          image: require('~/assets/speakers/vraj.jpg'),
-        },
-        {
-          description: 'DevRel Engineer, Storyblok',
-          name: 'Dipankar Maikap',
-          url: 'https://twitter.com/maikap_dipankar',
-          image: require('~/assets/speakers/dipankar.jpeg'),
-        },
-        {
-          description: 'DevRel, Fuel Labs',
-          name: 'Vishwa Mehta',
-          url: 'https://twitter.com/VishwaMehta30',
-          image: require('~/assets/speakers/vishwa.jpeg'),
-        },
-        {
-          description: 'DevRel, DhiWise',
-          name: 'Shubhangi Gupta',
-          url: 'https://twitter.com/knowShubhangi',
-          image: require('~/assets/speakers/shubhangi.jpg'),
-        },
-        {
           description: 'Technical Analyst and Consultant, 5ire',
           name: 'Aravind Makkam',
           url: 'https://www.5ire.org',
           image: require('~/assets/speakers/aravind.jpeg'),
         },
         {
-          description: 'Developer Program Manager, Superteam x Solana',
-          name: 'Rishabh Bansal',
-          url: 'https://twitter.com/rishabhbansal97',
-          image: require('~/assets/speakers/rishabh.jpeg'),
+          description: 'Engineer, Web DataWorks',
+          name: 'Nishu Goel',
+          url: 'https://twitter.com/TheNishuGoel',
+          picture: require('~/assets/speakers/nishu.png'),
         },
         {
-          description: 'Technical Lead, 5ire',
-          name: 'Shubham Gupta',
-          url: 'https://www.5ire.org',
-          image: require('~/assets/speakers/shubham.jpeg'),
+          description: 'Developer Relations Lead, Strapi',
+          name: 'Daniel Phiri',
+          url: 'https://twitter.com/malgamves',
+          picture: require('~/assets/speakers/daniel.jpg'),
         },
         {
-          description: 'Solidity Developer, 5ire',
-          name: 'Viswateja Yetukuri',
-          url: 'https://www.5ire.org',
-          image: require('~/assets/speakers/viswateja.jpeg'),
+          description: 'DevRel Engineer, Storyblok',
+          name: 'Facundo Giuliani',
+          url: 'https://twitter.com/facundozurdo',
+          picture: require('~/assets/speakers/facundo.jpg'),
+        },
+        {
+          description: 'Founder, EddieHub',
+          name: 'Eddie Jaoude',
+          url: 'https://twitter.com/eddiejaoude/',
+          picture: require('~/assets/speakers/eddie.jpg'),
+        },
+        {
+          description: 'Software Engineer, Appwrite',
+          name: 'Khushboo Verma',
+          url: 'https://twitter.com/khushbooverma_',
+          picture: require('~/assets/speakers/khushboo.jpg'),
+        },
+        {
+          description: 'Head of Community, Gitpod',
+          name: 'Pauline Narvas',
+          url: 'https://twitter.com/paulienuh',
+          picture: require('~/assets/speakers/pauline.jpg'),
+        },
+        {
+          description: 'Software Engineer, Google',
+          name: 'Sashrika Kaur',
+          url: 'https://twitter.com/sashrikakaur',
+          picture: require('~/assets/speakers/sashrika.jpg'),
         },
       ],
     }
@@ -265,7 +193,7 @@ export default {
       font-size: 0.6rem;
       line-height: 19px;
       color: #fefaf4;
-      margin: 0 0.2rem 0.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
