@@ -241,6 +241,7 @@ export default {
 .attribution {
   align-items: center;
   justify-content: center;
+  text-align: center;
   padding: 30px;
   border-top: 3px solid #23262f;
   font-family: 'Poppins';
