@@ -2,7 +2,7 @@
   <ContainerVue id="sponsors" name="sponsors">
     <HeadingVue front="Previous Sponsors" back="SPONSORS" />
     <CFlex
-      :mx="{ base: '1rem', sm: '50px' }"
+      :mx="{ base: '0.5rem', sm: '50px' }"
       mt="5rem"
       justify="center"
       align="start"
@@ -28,18 +28,10 @@
             '2xl': '3.4rem',
           }"
           :grid-template-columns="{
-            base: `repeat(${
-              tiers.category === sponsors[0].category ? '1' : '2'
-            }, 1fr)`,
-            sm: `repeat(${
-              tiers.category === sponsors[0].category ? '1' : '3'
-            },1fr)`,
-            lg: `repeat(${
-              tiers.category === 'Previous Sponsors' ? '6' : '4'
-            },1fr)`,
-            xl: `repeat(${
-              tiers.category === 'Previous Sponsors' ? '8' : '5'
-            },1fr)`,
+            base: `repeat(2, 1fr)`,
+            sm: `repeat(3,1fr)`,
+            lg: `repeat(4,1fr)`,
+            xl: `repeat(5,1fr)`,
           }"
         >
           <a
@@ -47,14 +39,10 @@
             :key="index"
             :href="sponsor.url"
             target="_blank"
-            :class="[
-              'sponsor animate-ease',
-              sponsor.specialClass,
-              tiers.category,
-            ]"
+            :class="['sponsor animate-ease', sponsor.specialClass]"
             borderRadius="30px"
           >
-            <img :src="sponsor.image" :class="[tiers.category]" />
+            <img :src="sponsor.image" />
           </a>
         </CGrid>
       </CFlex>
