@@ -125,7 +125,7 @@ export default {
 
   @include respond-below(lg) {
     padding-left: 1rem;
-    padding-right: 5rem;
+    padding-right: 1rem;
     .item {
       display: none;
     }
