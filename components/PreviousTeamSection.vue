@@ -51,11 +51,6 @@ export default {
           image: require('~/assets/team/ojasvi.jpeg'),
         },
         {
-          name: 'Sahil Bhatiya',
-          url: 'https://www.linkedin.com/in/sahil-bhatiya-73790719a/',
-          image: require('~/assets/team/sahil.jpeg'),
-        },
-        {
           name: 'Aaishika',
           url: 'https://www.linkedin.com/in/aaishika/',
           image: require('~/assets/team/aaishika.png'),
@@ -89,12 +84,6 @@ export default {
           name: 'Sagar Parmar',
           url: 'https://www.linkedin.com/in/sagarparmar881/',
           image: require('~/assets/team/sagar.jpeg'),
-        },
-
-        {
-          name: 'Apoorv Dwivedi',
-          url: 'https://www.linkedin.com/in/apoorvdwi',
-          image: require('~/assets/team/apoorv.jpg'),
         },
         {
           name: 'Bishwajeet Parhi',
@@ -132,19 +121,9 @@ export default {
           image: require('~/assets/team/disha.jpeg'),
         },
         {
-          name: 'Shitiz Aggarwal',
-          url: 'https://twitter.com/Shitiz_Agg',
-          image: require('~/assets/team/shitiz.jpg'),
-        },
-        {
           name: 'Aayush Sharma',
           image: require('~/assets/team/aayush.jpeg'),
           url: 'https://twitter.com/SuperAayush14',
-        },
-        {
-          name: 'Rohan Kambli',
-          url: 'https://twitter.com/rohannrk',
-          image: require('~/assets/team/rohan.jpg'),
         },
         {
           name: 'Vedant Kakde',

@@ -70,6 +70,26 @@ export default {
           url: 'https://www.linkedin.com/in/vaibhav-vinay-toshniwal-252ba8187/',
           image: require('~/assets/team/vaibhav.jpeg'),
         },
+        {
+          name: 'Apoorv Dwivedi',
+          url: 'https://www.linkedin.com/in/apoorvdwi',
+          image: require('~/assets/team/apoorv.jpg'),
+        },
+        {
+          name: 'Shitiz Aggarwal',
+          url: 'https://twitter.com/Shitiz_Agg',
+          image: require('~/assets/team/shitiz.jpg'),
+        },
+        {
+          name: 'Rohan Kambli',
+          url: 'https://twitter.com/rohannrk',
+          image: require('~/assets/team/rohan.jpg'),
+        },
+        {
+          name: 'Sahil Bhatiya',
+          url: 'https://www.linkedin.com/in/sahil-bhatiya-73790719a/',
+          image: require('~/assets/team/sahil.jpeg'),
+        },
       ],
     }
   },
