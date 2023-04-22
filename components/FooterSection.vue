@@ -29,8 +29,11 @@
           target="_blank"
           >Season 2.0</a
         >
-        <NuxtLink to="/team" class="content animate-ease"
-          >Know the Team</NuxtLink
+        <a
+          target="_blank"
+          to="https://hackthisfall.tech/team"
+          class="content animate-ease"
+          >Know the Team</a
         >
         <a
           href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
