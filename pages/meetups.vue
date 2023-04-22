@@ -5,36 +5,31 @@
       <div class="main-container">
         <div v-if="isNavbarOpen" class="navbar-mobile">
           <CFlex direction="column" align="center">
-            <span
-              id="nav-link-about"
-              class="mobile-nav-item"
-              @click="goToLocation('/#about')"
-              >About</span
+            <NuxtLink id="nav-link-about" class="mobile-nav-item" to="/#about"
+              >About</NuxtLink
             >
 
             <span
               id="nav-link-sponsors"
               class="mobile-nav-item"
-              @click="goToLocation('https://bit.ly/htf3-sponsor')"
-              >Sponsors Us</span
+              @click="goToLocation('/#sponsors')"
+              >Sponsors</span
             >
 
             <span class="divider"></span>
-            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
-              >Swag</NuxtLink
-            ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
-              >Team</NuxtLink
+            <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
+            <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
+            <span
+              id="nav-link-team"
+              class="mobile-nav-item"
+              @click="goToLocation('/team')"
+              >Team</span
             >
           </CFlex>
         </div>
         <div v-else>
-          <HeroSectionVue />
-          <AboutSectionVue />
-          <GlimpseSectionVue />
-          <SpeakerSectionVue />
-          <SponsorSectionVue :community="false" />
-          <NarrativeSectionVue />
-          <FooterSectionVue />
+          <MeetupsSection />
+          <FooterSection />
         </div>
       </div>
     </div>
@@ -43,26 +38,16 @@
 
 <script>
 import { CFlex } from '@chakra-ui/vue'
-import NavigationBar from '~/components/NavigationBar'
-import HeroSectionVue from '~/components/HeroSection'
-import AboutSectionVue from '~/components/AboutSection'
-import GlimpseSectionVue from '~/components/GlimpseSection'
-import SpeakerSectionVue from '~/components/SpeakerSection'
-import SponsorSectionVue from '~/components/SponsorSection'
-import NarrativeSectionVue from '~/components/NarrativeSection'
-import FooterSectionVue from '~/components/FooterSection'
+import NavigationBar from '~/components/NavigationBarForTeam'
+import MeetupsSection from '~/components/MeetupsSection.vue'
+import FooterSection from '~/components/FooterSection.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     NavigationBar,
-    HeroSectionVue,
-    AboutSectionVue,
-    GlimpseSectionVue,
-    SpeakerSectionVue,
-    SponsorSectionVue,
-    NarrativeSectionVue,
-    FooterSectionVue,
+    MeetupsSection,
+    FooterSection,
     CFlex,
   },
   data() {

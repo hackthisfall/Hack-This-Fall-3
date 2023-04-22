@@ -13,10 +13,15 @@
     </div>
     <div class="nav-desktop">
       <NuxtLink id="nav-link-about" to="/#about" class="item">About</NuxtLink>
-      <NuxtLink id="nav-link-sponsors" to="/#sponsors" class="item"
-        >Sponsors</NuxtLink
+      <a
+        id="nav-link-sponsors"
+        target="_blank"
+        href="https://bit.ly/htf3-sponsor"
+        class="item"
+        >Sponsor Us</a
       >
       <span class="divider"></span>
+      <NuxtLink id="nav-link-team" to="/meetups" class="item">Meetups</NuxtLink>
       <NuxtLink id="nav-link-team" to="/swag" class="item">Swag</NuxtLink>
       <NuxtLink id="nav-link-team" to="/team" class="item">Team</NuxtLink>
 
