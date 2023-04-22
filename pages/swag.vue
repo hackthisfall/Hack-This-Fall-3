@@ -49,6 +49,11 @@ export default {
       isNavbarOpen: false,
     }
   },
+  head() {
+    return {
+      title: 'Hack This Fall | Swag',
+    }
+  },
   methods: {
     goToLocation(location) {
       this.isNavbarOpen = false
