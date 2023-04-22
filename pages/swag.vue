@@ -14,7 +14,11 @@
             <span class="divider"></span>
             <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/"
               >Home</NuxtLink
-            ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
+            >
+            <NuxtLink id="nav-link-team" to="/meetups" class="mobile-nav-item"
+              >Meetups</NuxtLink
+            >
+            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
               >Team</NuxtLink
             >
           </CFlex>

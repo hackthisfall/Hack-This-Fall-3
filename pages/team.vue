@@ -12,13 +12,16 @@
             <span
               id="nav-link-sponsors"
               class="mobile-nav-item"
-              @click="goToLocation('/#sponsors')"
-              >Sponsors</span
+              @click="goToLocation('https://bit.ly/htf3-sponsor')"
+              >Sponsors Us</span
             >
 
             <span class="divider"></span>
             <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
             <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
+            <NuxtLink id="nav-link-team" to="/meetups" class="mobile-nav-item"
+              >Meetups</NuxtLink
+            >
             <span
               id="nav-link-team"
               class="mobile-nav-item"

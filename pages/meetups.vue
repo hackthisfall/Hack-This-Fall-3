@@ -12,8 +12,8 @@
             <span
               id="nav-link-sponsors"
               class="mobile-nav-item"
-              @click="goToLocation('/#sponsors')"
-              >Sponsors</span
+              @click="goToLocation('https://bit.ly/htf3-sponsor')"
+              >Sponsors Us</span
             >
 
             <span class="divider"></span>
@@ -24,6 +24,9 @@
               class="mobile-nav-item"
               @click="goToLocation('/team')"
               >Team</span
+            >
+            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
+              >Swag</NuxtLink
             >
           </CFlex>
         </div>
@@ -38,7 +41,7 @@
 
 <script>
 import { CFlex } from '@chakra-ui/vue'
-import NavigationBar from '~/components/NavigationBarForTeam'
+import NavigationBar from '~/components/NavigationBarForMeetups'
 import MeetupsSection from '~/components/MeetupsSection.vue'
 import FooterSection from '~/components/FooterSection.vue'
 
