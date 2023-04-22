@@ -20,9 +20,9 @@
             >
 
             <span class="divider"></span>
-            <NuxtLink id="nav-link-team" to="/meetups" class="mobile-nav-item"
+            <!-- <NuxtLink id="nav-link-team" to="/meetups" class="mobile-nav-item"
               >Meetups</NuxtLink
-            >
+            > -->
             <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
               >Swag</NuxtLink
             ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
