@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="meetup" name="meetup">
-    <HeadingVue front="In-Person City Meetup Series" back="YEAR 2023" />
+    <HeadingVue front="In-Person City Meetups" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <div class="about">
         <p class="details">
@@ -19,6 +19,9 @@
           What are you waiting for? Register Now 🚀
         </p>
       </div>
+      <div class="tier-heading">
+        <span>2023 Series</span>
+      </div>
       <div class="cards-grid">
         <div v-for="(event, index) in events2023" :key="index" class="card">
           <div class="card-side new smooth-transition">
@@ -26,47 +29,39 @@
             <div class="texts">
               <h4 class="eventName" v-html="event.name"></h4>
               <p class="event">
-                Date: {{ event.date }} <br />
-                Time: {{ event.time }} <br />
+                <!-- Date: TBD <br />
+                Time: {{ event.time }} <br /> -->
+                Details to be announced soon
               </p>
               <!-- <a :href="event.url" target="_blank"> -->
-              <p
+              <!-- <p
                 :class="[
                   'venue smooth-transition',
                   event.active ? 'highlight' : null,
                 ]"
               >
                 Venue: {{ event.venue }}
-              </p>
+              </p> -->
               <!-- </a> -->
             </div>
           </div>
         </div>
       </div>
     </CBox>
-    <HeadingVue front="In-Person City Meetup Series" back="YEAR 2022" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
+      <div :class="['tier-heading', 'space-up']">
+        <span>2022 Series</span>
+      </div>
       <div class="cards-grid">
         <div v-for="(event, index) in events2022" :key="index" class="card">
           <div class="card-side old smooth-transition">
-            <img :src="event.image" alt="cityImage" />
-            <div class="texts">
-              <h4 class="eventName" v-html="event.name"></h4>
-              <p class="event">
-                Date: {{ event.date }} <br />
-                Time: {{ event.time }} <br />
-              </p>
-              <a :href="event.url" target="_blank">
-                <p
-                  :class="[
-                    'venue smooth-transition',
-                    event.active ? 'highlight' : null,
-                  ]"
-                >
-                  Venue: {{ event.venue }}
-                </p>
-              </a>
-            </div>
+            <a :href="event.url" target="_blank">
+              <img :src="event.image" alt="cityImage" />
+              <div class="texts">
+                <h4 class="eventName" v-html="event.name"></h4>
+                <p class="event">{{ event.date }} <br /></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -168,7 +163,7 @@ export default {
           venue: 'Cowocoli, Jaipur',
           date: '4th April 2022',
           time: '6:00 PM to 8:00 PM',
-          url: 'https://g.page/Cowocoli-Coworkingspace?share',
+          url: 'https://drive.google.com/drive/folders/1P2E2Lb6RW0Na76ZKYebPRM1PUN4JAusX?usp=share_link',
           active: true,
         },
         {
@@ -178,7 +173,7 @@ export default {
           date: '16th April 2022',
           time: '4:00 PM to 9:00 PM',
           active: true,
-          url: 'https://goo.gl/maps/D7VU6guZ8eBu3rJy5',
+          url: 'https://drive.google.com/drive/folders/1rQ7ZQtLFIUIUNWaksauSCRM7XvUL0ZWa?usp=share_link',
         },
         {
           name: 'Pune City Meetup',
@@ -187,7 +182,7 @@ export default {
           date: '17th April 2022',
           time: '11:30 AM to 4:30 PM',
           active: true,
-          url: 'https://goo.gl/maps/TjJ4piny2MhNd9a5A',
+          url: 'https://drive.google.com/drive/folders/1gJOiX9OLccHV3YQawVaeG0IzdeVqkuav?usp=share_link',
         },
         {
           name: 'Delhi City Meetup',
@@ -196,7 +191,7 @@ export default {
           date: '28th May 2022',
           time: '11:00 AM to 5:00 PM',
           active: true,
-          url: 'https://goo.gl/maps/MtiVc153cHp7R7Bw6',
+          url: 'https://drive.google.com/drive/folders/1t_mObhmVSYUW2LXHzOOKqgp1Me5DG4GC?usp=share_link',
         },
         {
           name: 'Bengaluru City Meetup',
@@ -205,7 +200,7 @@ export default {
           date: '11th June 2022',
           time: '11:00 AM to 5:00 PM',
           active: true,
-          url: 'https://goo.gl/maps/AV6NrfPcqwW6rct27',
+          url: 'https://drive.google.com/drive/folders/1SBALPjhUwXEzejJrINVIQcFX_rZfz74V?usp=share_link',
         },
         {
           name: 'Ahmedabad City Meetup',
@@ -214,7 +209,7 @@ export default {
           date: '30th July 2022',
           time: '3:00 PM to 8:00 PM',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
+          url: '',
         },
       ],
     }
@@ -228,6 +223,20 @@ export default {
 
   @include respond-below(xs) {
     padding-top: 4rem;
+  }
+}
+
+.tier-heading {
+  font-family: 'Poppins';
+  color: #d04d29;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  align-items: center;
+
+  &.space-up {
+    margin-top: 1.5rem;
   }
 }
 
@@ -281,7 +290,7 @@ export default {
   }
 
   .card {
-    min-height: 25rem;
+    min-height: 20rem;
     display: flex;
     align-items: center;
     justify-content: center;
