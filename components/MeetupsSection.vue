@@ -72,19 +72,106 @@
           </div>
         </div>
       </div>
+      <div :class="['tier-heading', 'space-up', 'white']">
+        <span>Previous Sponsors</span>
+      </div>
+      <CFlex v-for="(tiers, index) in sponsors" :key="index" direction="column">
+        <div
+          :class="[
+            'tier-heading',
+            index === 0 ? null : 'space-up',
+            tiers.category,
+          ]"
+        >
+          <span> {{ tiers.category }}</span>
+        </div>
+        <CGrid
+          :row-gap="{ base: '1rem', sm: '1.75rem' }"
+          :column-gap="{
+            base: '1rem',
+            sm: '2rem',
+            lg: '2rem',
+            xl: '2rem',
+            '2xl': '3.4rem',
+          }"
+          :grid-template-columns="{
+            base: `repeat(2, 1fr)`,
+            sm: `repeat(3,1fr)`,
+            lg: `repeat(4,1fr)`,
+            xl: `repeat(5,1fr)`,
+          }"
+        >
+          <a
+            v-for="(sponsor, index) in tiers.sponsors"
+            :key="index"
+            :href="sponsor.url"
+            target="_blank"
+            :class="['sponsor animate-ease', sponsor.specialClass]"
+            borderRadius="30px"
+          >
+            <img :src="sponsor.image" />
+          </a>
+        </CGrid>
+      </CFlex>
+
+      <div :class="['tier-heading', 'space-up', 'white']">
+        <span>Previous Venue Partners</span>
+      </div>
+      <CFlex
+        v-for="(tiers, index) in venuePartner"
+        :key="index"
+        direction="column"
+      >
+        <div
+          :class="[
+            'tier-heading',
+            index === 0 ? null : 'space-up',
+            tiers.category,
+          ]"
+        >
+          <span> {{ tiers.category }}</span>
+        </div>
+        <CGrid
+          :row-gap="{ base: '1rem', sm: '1.75rem' }"
+          :column-gap="{
+            base: '1rem',
+            sm: '2rem',
+            lg: '2rem',
+            xl: '2rem',
+            '2xl': '3.4rem',
+          }"
+          :grid-template-columns="{
+            base: `repeat(2, 1fr)`,
+            sm: `repeat(3,1fr)`,
+            lg: `repeat(4,1fr)`,
+            xl: `repeat(5,1fr)`,
+          }"
+        >
+          <a
+            v-for="(venue, index) in tiers.venuePartner"
+            :key="index"
+            :href="venue.url"
+            target="_blank"
+            :class="['sponsor animate-ease', venue.specialClass]"
+            borderRadius="30px"
+          >
+            <img :src="venue.image" />
+          </a>
+        </CGrid>
+      </CFlex>
     </CBox>
   </ContainerVue>
 </template>
 <script>
-import { CBox } from '@chakra-ui/vue'
+import { CBox, CFlex, CGrid } from '@chakra-ui/vue'
 import HeadingVue from './HeadingComponent.vue'
 import ContainerVue from './Container.vue'
 export default {
   components: {
     HeadingVue,
     ContainerVue,
-    // CGrid,
-    // CGridItem,
+    CFlex,
+    CGrid,
     CBox,
   },
   data() {
@@ -219,6 +306,63 @@ export default {
           url: 'https://twitter.com/search?q=%23HTFAhmedabad&src=typed_query&f=top',
         },
       ],
+      sponsors: [
+        {
+          sponsors: [
+            {
+              url: 'https://education.github.com/discount_requests/student_application?utm_source=2022-04-2022-06-HackThisFallCityMeetups',
+              image: require('~/assets/sponsors/github.svg'),
+            },
+            {
+              url: 'https://atsign.com/',
+              image: require('~/assets/sponsors/atsign.svg'),
+            },
+            {
+              url: 'https://www.esamudaay.com/',
+              image: require('~/assets/sponsors/eSamudaay.png'),
+            },
+            {
+              url: 'https://symbl.ai/',
+              image: require('~/assets/sponsors/symbl.svg'),
+            },
+            {
+              url: 'https://hack2skill.com/',
+              image: require('~/assets/sponsors/hack2skill.png'),
+            },
+            {
+              url: 'https://www.communitycoldcoffee.com/',
+              image: require('~/assets/sponsors/C3Universe.png'),
+            },
+            {
+              url: 'https://hackclub.com/',
+              image: require('~/assets/sponsors/hackclub.png'),
+            },
+          ],
+        },
+      ],
+      venuePartner: [
+        {
+          venuePartner: [
+            {
+              url: 'https://www.devx.work/',
+              image:
+                'https://assets.devx.work/images/press-room/devx-logo-white.svg',
+            },
+            {
+              url: 'https://www.91springboard.com/',
+              image: require('~/assets/Meetup/Venue/springboard.svg'),
+            },
+            {
+              url: 'https://redbrickoffices.com/',
+              image: require('~/assets/Meetup/Venue/red-brick-logo.svg'),
+            },
+            {
+              url: 'https://www.thecircle.work/',
+              image: require('~/assets/Meetup/Venue/the-circle-work.png'),
+            },
+          ],
+        },
+      ],
     }
   },
 }
@@ -233,6 +377,42 @@ export default {
   }
 }
 
+.sponsor {
+  background: linear-gradient(
+    180deg,
+    #142137 0%,
+    #0b121f 99.99%,
+    rgba(20, 33, 55, 0) 100%
+  );
+  height: 100px;
+  min-width: 12rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background: linear-gradient(180deg, #0b3b52 3.72%, #0b121f 141.1%);
+  }
+
+  img {
+    max-width: 8rem;
+    max-height: 4rem;
+  }
+
+  @include respond-below(sm) {
+    height: 5rem;
+    min-width: 8rem;
+    padding: 0.5rem 0.75rem;
+
+    img {
+      max-width: 6rem;
+      max-height: 3rem;
+    }
+  }
+}
+
 .tier-heading {
   font-family: 'Poppins';
   color: #d04d29;
@@ -244,6 +424,10 @@ export default {
 
   &.space-up {
     margin-top: 1.5rem;
+  }
+
+  &.white {
+    color: #fff !important;
   }
 }
 
