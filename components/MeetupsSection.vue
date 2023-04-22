@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="meetup" name="meetup">
-    <HeadingVue front="In-Person City Meetups" back="MEETUPS" />
+    <HeadingVue front="2023 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <div class="about">
         <p class="details">
@@ -25,9 +25,6 @@
           on us and you know we don't limit ourselves there!🤩 <br /><br />
           What are you waiting for? Register Now! 🚀
         </p>
-      </div>
-      <div class="tier-heading">
-        <span>2023 Series</span>
       </div>
       <div class="cards-grid">
         <div v-for="(event, index) in events2023" :key="index" class="card">
@@ -55,10 +52,8 @@
         </div>
       </div>
     </CBox>
+    <HeadingVue front="2022 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
-      <div :class="['tier-heading', 'space-up']">
-        <span>2022 Series</span>
-      </div>
       <div class="cards-grid">
         <div v-for="(event, index) in events2022" :key="index" class="card">
           <div class="card-side old smooth-transition">
@@ -72,7 +67,7 @@
           </div>
         </div>
       </div>
-      <div :class="['tier-heading', 'space-up', 'white']">
+      <div :class="['tier-heading', 'space-up']">
         <span>Previous Sponsors</span>
       </div>
       <CFlex v-for="(tiers, index) in sponsors" :key="index" direction="column">
@@ -114,7 +109,7 @@
         </CGrid>
       </CFlex>
 
-      <div :class="['tier-heading', 'space-up', 'white']">
+      <div :class="['tier-heading', 'space-up']">
         <span>Previous Venue Partners</span>
       </div>
       <CFlex
@@ -424,10 +419,6 @@ export default {
 
   &.space-up {
     margin-top: 1.5rem;
-  }
-
-  &.white {
-    color: #fff !important;
   }
 }
 
