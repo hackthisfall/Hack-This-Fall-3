@@ -4,19 +4,26 @@
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <div class="about">
         <p class="details">
-          A hackathon community that started online is now breaking the virtual
-          barrier and aims to help connect the folks with others from the region
-          to create more <span style="color: #d74f4b">Opportunities</span> &
-          <span style="color: #d74f4b">Collaboration</span>!💥 <br /><br />
-          Hack This Fall is excited to host its first
-          <span style="color: #d74f4b">6 Meetups</span> in your city. Get
-          yourselves hyped to experience our community culture and join us in
-          any of the cities listed below!👇 <br /><br />
-          It is going to be completely free of cost, you just need to register
-          for the meetup. <span style="color: #d74f4b">Free Food</span> and
-          <span style="color: #d74f4b">Cool Swags</span> are on us and you know
-          we don't limit ourselves there!🤩 <br /><br />
-          What are you waiting for? Register Now 🚀
+          After a successful series of City Meetups in 2022, Hack This Fall
+          became the
+          <span style="color: #d04d29; font-weight: 600"
+            >First-Ever Hacker Community</span
+          >
+          to host such events across India. The idea is to bring community
+          members together by breaking the virtual barrier. We aim to help
+          connect folks with each other from the region to create more
+          opportunities & collaboration!💥<br /><br />
+          Hack This Fall is super excited in announcing yet another series of
+          Meetups and this time, in
+          <span style="color: #d04d29; font-weight: 600">8 New Cities</span>.
+          Get hyped to experience our community culture and join us in any of
+          the cities listed below!👇 <br /><br />
+          It is going to be completely free of cost, all you need to do is,
+          register for the meet-up and wait for the invitation.
+          <span style="color: #d04d29; font-weight: 600">Free Food</span> and
+          <span style="color: #d04d29; font-weight: 600">Cool Swags</span> are
+          on us and you know we don't limit ourselves there!🤩 <br /><br />
+          What are you waiting for? Register Now! 🚀
         </p>
       </div>
       <div class="tier-heading">
@@ -256,8 +263,9 @@ export default {
   p {
     color: #fdf7df;
     padding: 2rem;
+    text-align: justify;
     // margin: 1rem 1rem 2rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     @include respond-below(md) {
       padding-top: 20px;
