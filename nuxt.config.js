@@ -19,6 +19,7 @@ export default {
           'Hack This Fall is one of the most thriving hacker communities. It encourages beginner hackers to build unique projects regardless of the tech or field; the only focus is to create something meaningful and enjoy building while also solving the shared struggles of our surroundings.',
       },
       {
+        hid: 'apple-mobile-web-app-title',
         property: 'apple-mobile-web-app-title',
         content: 'Hack This Fall',
       },
@@ -31,10 +32,12 @@ export default {
         content: 'website',
       },
       {
+        hid: 'og:title',
         property: 'og:title',
         content: 'Hack This Fall',
       },
       {
+        hid: 'og:description',
         property: 'og:description',
         content:
           'Hack This Fall is one of the most thriving hacker communities. It encourages beginner hackers to build unique projects regardless of the tech or field; the only focus is to create something meaningful and enjoy building while also solving the shared struggles of our surroundings.',
@@ -52,6 +55,7 @@ export default {
         content: '@hackthisfall',
       },
       {
+        hid: 'twitter:title',
         name: 'twitter:title',
         content: 'Hack This Fall',
       },

@@ -61,6 +61,35 @@ export default {
   head() {
     return {
       title: 'Hack This Fall | Meetups',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Hack This Fall is hosting an In-Person Meetup series in 8 different cities across India which includes Indore, Raipur, Nagpur, Chandigarh, Guwahati, Kolkata, Chennai, and Hyderabad. What are you waiting for, register and join us now!',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Hack This Fall is hosting an In-Person Meetup series in 8 different cities across India which includes Indore, Raipur, Nagpur, Chandigarh, Guwahati, Kolkata, Chennai, and Hyderabad. What are you waiting for, register and join us now!',
+        },
+        {
+          hid: 'apple-mobile-web-app-title',
+          property: 'apple-mobile-web-app-title',
+          content: 'Hack This Fall | Meetups',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Hack This Fall | Meetups',
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Hack This Fall | Meetups',
+        },
+      ],
     }
   },
   methods: {
