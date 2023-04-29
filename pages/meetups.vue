@@ -61,6 +61,17 @@ export default {
   head() {
     return {
       title: 'Hack This Fall | Meetups',
+      meta: [
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://hackthisfall.tech/meetups-2023.png',
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://hackthisfall.tech/meetups-2023.png',
+        },
+      ],
     }
   },
   methods: {

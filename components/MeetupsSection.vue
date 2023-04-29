@@ -26,6 +26,14 @@
           What are you waiting for? Register Now! 🚀
         </p>
       </div>
+
+      <div style="display: flex; justify-content: center">
+        <a target="blank" href="https://lu.ma/u/usr-hFH0w3PqHm9uHQh">
+          <CButton class="button animate-ease">
+            <span> Register for Upcoming Meetup</span>
+          </CButton>
+        </a>
+      </div>
       <div class="cards-grid">
         <div v-for="(event, index) in events2023" :key="index" class="card">
           <div class="card-side new smooth-transition">
@@ -37,16 +45,16 @@
                 Time: {{ event.time }} <br /> -->
                 Details to be announced soon
               </p>
-              <!-- <a :href="event.url" target="_blank"> -->
-              <!-- <p
-                :class="[
-                  'venue smooth-transition',
-                  event.active ? 'highlight' : null,
-                ]"
-              >
-                Venue: {{ event.venue }}
-              </p> -->
-              <!-- </a> -->
+              <!-- <a :href="event.url" target="_blank">
+                <p
+                  :class="[
+                    'venue smooth-transition',
+                    event.active ? 'highlight' : null,
+                  ]"
+                >
+                  Venue: {{ event.venue }}
+                </p>
+              </a> -->
             </div>
           </div>
         </div>
@@ -369,6 +377,8 @@ export default {
 
   @include respond-below(xs) {
     padding-top: 4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
 
@@ -445,6 +455,49 @@ export default {
     @include respond-below(md) {
       padding-top: 20px;
     }
+  }
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  background: #d04d29;
+  border: 2px solid #f46d24;
+  box-shadow: 2px 2px 0px #f46d24;
+  border-radius: 12.4124px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: white;
+
+  @include respond-below(xs) {
+    font-size: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  &:hover {
+    background: rgb(244, 109, 36);
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.75rem;
+  }
+
+  @include respond-below(xs) {
+    max-width: 70vw;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+    background: #d04d29;
+    box-shadow: 2px 2px 0px #f46d24;
+    cursor: default;
   }
 }
 
@@ -536,7 +589,7 @@ export default {
       text-align: center;
 
       .highlight {
-        background: #d8504b;
+        background: #050c19;
         border-radius: 5px;
         color: white;
         padding: 4px 0;

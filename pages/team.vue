@@ -19,9 +19,9 @@
             <span class="divider"></span>
             <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
             <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
-            <!-- <NuxtLink id="nav-link-team" to="/meetups" class="mobile-nav-item"
+            <NuxtLink id="nav-link-team" to="/meetups" class="mobile-nav-item"
               >Meetups</NuxtLink
-            > -->
+            >
             <span
               id="nav-link-team"
               class="mobile-nav-item"
