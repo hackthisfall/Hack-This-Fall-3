@@ -22,15 +22,16 @@
           register for the meet-up and wait for the invitation.
           <span style="color: #d04d29; font-weight: 600">Free Food</span> and
           <span style="color: #d04d29; font-weight: 600">Cool Swags</span> are
-          on us and you know we don't limit ourselves there!🤩 <br /><br />
-          What are you waiting for? Register Now! 🚀
+          on us and you know we don't limit ourselves there!🤩
+          <!-- <br /><br /> -->
+          <!-- What are you waiting for? Register Now! 🚀 -->
         </p>
       </div>
 
       <div style="display: flex; justify-content: center">
-        <a target="blank" href="https://lu.ma/u/usr-hFH0w3PqHm9uHQh">
+        <a href="#">
           <CButton class="button animate-ease">
-            <span> Register for Upcoming Meetup</span>
+            <span> Registration Starting Soon</span>
           </CButton>
         </a>
       </div>
