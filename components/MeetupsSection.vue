@@ -60,6 +60,97 @@
           </div>
         </div>
       </div>
+      <div :class="['tier-heading', 'space-up']">
+        <span>Sponsors</span>
+      </div>
+      <CFlex
+        v-for="(tiers, index) in sponsors2023"
+        :key="index"
+        direction="column"
+      >
+        <div
+          :class="[
+            'tier-heading',
+            index === 0 ? null : 'space-up',
+            tiers.category,
+          ]"
+        >
+          <span> {{ tiers.category }}</span>
+        </div>
+        <CGrid
+          :row-gap="{ base: '1rem', sm: '1.75rem' }"
+          :column-gap="{
+            base: '1rem',
+            sm: '2rem',
+            lg: '2rem',
+            xl: '2rem',
+            '2xl': '3.4rem',
+          }"
+          :grid-template-columns="{
+            base: `repeat(2, 1fr)`,
+            sm: `repeat(3,1fr)`,
+            lg: `repeat(4,1fr)`,
+            xl: `repeat(5,1fr)`,
+          }"
+        >
+          <a
+            v-for="(sponsor, index) in tiers.sponsors"
+            :key="index"
+            :href="sponsor.url"
+            target="_blank"
+            :class="['sponsor animate-ease', sponsor.specialClass]"
+            borderRadius="30px"
+          >
+            <img :src="sponsor.image" />
+          </a>
+        </CGrid>
+      </CFlex>
+
+      <!-- <div :class="['tier-heading', 'space-up']">
+        <span>Venue Partners</span>
+      </div>
+      <CFlex
+        v-for="(tiers, index) in venuePartner2023"
+        :key="index"
+        direction="column"
+      >
+        <div
+          :class="[
+            'tier-heading',
+            index === 0 ? null : 'space-up',
+            tiers.category,
+          ]"
+        >
+          <span> {{ tiers.category }}</span>
+        </div>
+        <CGrid
+          :row-gap="{ base: '1rem', sm: '1.75rem' }"
+          :column-gap="{
+            base: '1rem',
+            sm: '2rem',
+            lg: '2rem',
+            xl: '2rem',
+            '2xl': '3.4rem',
+          }"
+          :grid-template-columns="{
+            base: `repeat(2, 1fr)`,
+            sm: `repeat(3,1fr)`,
+            lg: `repeat(4,1fr)`,
+            xl: `repeat(5,1fr)`,
+          }"
+        >
+          <a
+            v-for="(venue, index) in tiers.venuePartner"
+            :key="index"
+            :href="venue.url"
+            target="_blank"
+            :class="['sponsor animate-ease', venue.specialClass]"
+            borderRadius="30px"
+          >
+            <img :src="venue.image" />
+          </a>
+        </CGrid>
+      </CFlex> -->
     </CBox>
     <HeadingVue front="2022 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
@@ -79,7 +170,11 @@
       <div :class="['tier-heading', 'space-up']">
         <span>Previous Sponsors</span>
       </div>
-      <CFlex v-for="(tiers, index) in sponsors" :key="index" direction="column">
+      <CFlex
+        v-for="(tiers, index) in sponsors2022"
+        :key="index"
+        direction="column"
+      >
         <div
           :class="[
             'tier-heading',
@@ -122,7 +217,7 @@
         <span>Previous Venue Partners</span>
       </div>
       <CFlex
-        v-for="(tiers, index) in venuePartner"
+        v-for="(tiers, index) in venuePartner2022"
         :key="index"
         direction="column"
       >
@@ -310,7 +405,52 @@ export default {
           url: 'https://twitter.com/search?q=%23HTFAhmedabad&src=typed_query&f=top',
         },
       ],
-      sponsors: [
+      sponsors2023: [
+        {
+          sponsors: [
+            {
+              url: 'https://education.github.com/benefits?utm_source=2023-06-2023-07-HackThisFallCityMeetups2023',
+              image: require('~/assets/sponsors/github.svg'),
+            },
+            // {
+            //   url: 'https://www.getunleash.io/',
+            //   image: require('~/assets/sponsors/atsign.svg'),
+            // },
+            {
+              url: 'https://5ire.org/',
+              image: require('~/assets/sponsors/5ire.svg'),
+            },
+            {
+              url: 'https://www.storyblok.com/',
+              image: require('~/assets/sponsors/storyblok.svg'),
+            },
+          ],
+        },
+      ],
+      venuePartner2023: [
+        {
+          venuePartner: [
+            {
+              url: 'https://www.devx.work/',
+              image:
+                'https://assets.devx.work/images/press-room/devx-logo-white.svg',
+            },
+            {
+              url: 'https://www.91springboard.com/',
+              image: require('~/assets/Meetup/Venue/springboard.svg'),
+            },
+            {
+              url: 'https://redbrickoffices.com/',
+              image: require('~/assets/Meetup/Venue/red-brick-logo.svg'),
+            },
+            {
+              url: 'https://www.thecircle.work/',
+              image: require('~/assets/Meetup/Venue/the-circle-work.png'),
+            },
+          ],
+        },
+      ],
+      sponsors2022: [
         {
           sponsors: [
             {
@@ -344,7 +484,7 @@ export default {
           ],
         },
       ],
-      venuePartner: [
+      venuePartner2022: [
         {
           venuePartner: [
             {
