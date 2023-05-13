@@ -429,10 +429,10 @@ export default {
               url: 'https://education.github.com/benefits?utm_source=2023-06-2023-07-HackThisFallCityMeetups2023',
               image: require('~/assets/sponsors/github.svg'),
             },
-            // {
-            //   url: 'https://www.getunleash.io/',
-            //   image: require('~/assets/sponsors/atsign.svg'),
-            // },
+            {
+              url: 'https://www.getunleash.io/',
+              image: require('~/assets/sponsors/unleash.svg'),
+            },
             {
               url: 'https://5ire.org/',
               image: require('~/assets/sponsors/5ire.svg'),
