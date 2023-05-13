@@ -28,13 +28,30 @@
         </p>
       </div>
 
-      <div style="display: flex; justify-content: center">
+      <!-- <div style="display: flex; justify-content: center">
         <a href="#">
           <CButton class="button animate-ease">
             <span> Registration Starting Soon</span>
           </CButton>
         </a>
-      </div>
+      </div> -->
+      <CFlex
+        justify="center"
+        align="center"
+        :gap="{ base: '1.2rem', sm: '30px' }"
+        :direction="{ base: 'column', sm: 'row' }"
+      >
+        <a href="#">
+          <CButton class="button animate-ease">
+            <span> Registration Starting Soon</span>
+          </CButton>
+        </a>
+        <a href="https://lu.ma/htfms23-cp" target="blank">
+          <CButton class="button animate-ease"
+            ><span>Become Community Partner</span></CButton
+          >
+        </a>
+      </CFlex>
       <div class="cards-grid">
         <div v-for="(event, index) in events2023" :key="index" class="card">
           <div class="card-side new smooth-transition">
@@ -42,8 +59,8 @@
             <div class="texts">
               <h4 class="eventName" v-html="event.name"></h4>
               <p class="event">
-                <!-- Date: TBD <br />
-                Time: {{ event.time }} <br /> -->
+                Date: {{ event.date }} <br />
+                <!--  Time: {{ event.time }} <br /> -->
                 Details to be announced soon
               </p>
               <!-- <a :href="event.url" target="_blank">
@@ -616,7 +633,7 @@ export default {
   color: white;
 
   @include respond-below(xs) {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 1.5rem 1rem;
   }
 
