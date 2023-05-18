@@ -297,7 +297,7 @@ export default {
           name: 'Indore City Meetup',
           image: require('~/assets/Meetup/2023/indore.png'),
           venue: 'TBD',
-          date: '3rd June 2023',
+          date: '4th June 2023',
           time: 'TBD',
           url: 'https://g.page/Cowocoli-Coworkingspace?share',
           active: true,
