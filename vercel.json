@@ -3,6 +3,10 @@
     {
       "source": "/prospectus",
       "destination": "/Hack%20This%20Fall%203.0%20Sponsorship%20Prospectus.pdf"
+    },
+    {
+      "source": "/hacktoberfest",
+      "destination": "https://hack-this-fall-2021.vercel.app/hacktoberfest"
     }
   ]
 }
