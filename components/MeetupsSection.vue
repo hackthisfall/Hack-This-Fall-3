@@ -41,9 +41,9 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a href="#">
+        <a href="https://lu.ma/u/usr-hFH0w3PqHm9uHQh" target="_blank">
           <CButton class="button animate-ease">
-            <span> Registration Starting Soon</span>
+            <span> Click Here To Register</span>
           </CButton>
         </a>
         <a href="https://lu.ma/htfms23-cp" target="blank">
@@ -59,9 +59,18 @@
             <div class="texts">
               <h4 class="eventName" v-html="event.name"></h4>
               <p class="event">
-                Date: {{ event.date }} <br />
-                <!--  Time: {{ event.time }} <br /> -->
-                Details to be announced soon
+                {{ event.date }} <br />
+                <span
+                  :class="[
+                    event.status !== 'Registrations are live'
+                      ? null
+                      : 'htf-orange',
+                  ]"
+                >
+                  {{ event.status }}
+                </span>
+                <br />
+                <!-- Details to be announced soon -->
               </p>
               <!-- <a :href="event.url" target="_blank">
                 <p
@@ -301,6 +310,7 @@ export default {
           time: 'TBD',
           url: 'https://g.page/Cowocoli-Coworkingspace?share',
           active: true,
+          status: 'Registrations are live',
         },
         {
           name: 'Raipur City Meetup',
@@ -310,6 +320,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/D7VU6guZ8eBu3rJy5',
+          status: 'Details to be announced soon',
         },
         {
           name: 'Nagpur City Meetup',
@@ -319,6 +330,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/TjJ4piny2MhNd9a5A',
+          status: 'Details to be announced soon',
         },
         {
           name: 'Chandigarh City Meetup',
@@ -328,6 +340,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/MtiVc153cHp7R7Bw6',
+          status: 'Details to be announced soon',
         },
         {
           name: 'Guwahati City Meetup',
@@ -337,6 +350,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/AV6NrfPcqwW6rct27',
+          status: 'Details to be announced soon',
         },
         {
           name: 'Kolkata City Meetup',
@@ -346,6 +360,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
+          status: 'Details to be announced soon',
         },
         {
           name: 'Chennai City Meetup',
@@ -355,6 +370,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
+          status: 'Details to be announced soon',
         },
         {
           name: 'Hyderabad City Meetup',
@@ -364,6 +380,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
+          status: 'Details to be announced soon',
         },
       ],
       events2022: [
@@ -538,6 +555,10 @@ export default {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+}
+
+.htf-orange {
+  color: #d04d29;
 }
 
 .sponsor {
