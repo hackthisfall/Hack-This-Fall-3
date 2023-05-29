@@ -132,7 +132,7 @@
         </CGrid>
       </CFlex>
 
-      <!-- <div :class="['tier-heading', 'space-up']">
+      <div :class="['tier-heading', 'space-up']">
         <span>Venue Partners</span>
       </div>
       <CFlex
@@ -176,7 +176,7 @@
             <img :src="venue.image" />
           </a>
         </CGrid>
-      </CFlex> -->
+      </CFlex>
     </CBox>
     <HeadingVue front="2022 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
@@ -465,21 +465,8 @@ export default {
         {
           venuePartner: [
             {
-              url: 'https://www.devx.work/',
-              image:
-                'https://assets.devx.work/images/press-room/devx-logo-white.svg',
-            },
-            {
-              url: 'https://www.91springboard.com/',
-              image: require('~/assets/Meetup/Venue/springboard.svg'),
-            },
-            {
-              url: 'https://redbrickoffices.com/',
-              image: require('~/assets/Meetup/Venue/red-brick-logo.svg'),
-            },
-            {
-              url: 'https://www.thecircle.work/',
-              image: require('~/assets/Meetup/Venue/the-circle-work.png'),
+              url: 'https://siya.tech/',
+              image: require('~/assets/Meetup/Venue/siya.svg'),
             },
           ],
         },
