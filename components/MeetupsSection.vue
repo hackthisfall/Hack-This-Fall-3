@@ -310,7 +310,7 @@ export default {
           time: 'TBD',
           url: 'https://g.page/Cowocoli-Coworkingspace?share',
           active: true,
-          status: 'Registrations are live',
+          status: 'Registrations are closed',
         },
         {
           name: 'Raipur City Meetup',
@@ -320,7 +320,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/D7VU6guZ8eBu3rJy5',
-          status: 'Details to be announced soon',
+          status: 'Registrations are live',
         },
         {
           name: 'Nagpur City Meetup',
