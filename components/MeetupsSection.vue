@@ -330,7 +330,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/TjJ4piny2MhNd9a5A',
-          status: 'Details to be announced soon',
+          status: 'Registrations are live',
         },
         {
           name: 'Chandigarh City Meetup',
