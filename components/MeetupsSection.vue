@@ -356,7 +356,7 @@ export default {
           name: 'Kolkata City Meetup',
           image: require('~/assets/Meetup/2023/kolkata.png'),
           venue: 'TBD',
-          date: '1st July 2023',
+          date: '2nd July 2023',
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
