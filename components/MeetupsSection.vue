@@ -346,7 +346,7 @@ export default {
           name: 'Guwahati City Meetup',
           image: require('~/assets/Meetup/2023/guwahati.png'),
           venue: 'TBD',
-          date: '25th June 2023',
+          date: '24th June 2023',
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/AV6NrfPcqwW6rct27',
