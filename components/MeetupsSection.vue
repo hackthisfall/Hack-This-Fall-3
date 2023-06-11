@@ -320,7 +320,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/D7VU6guZ8eBu3rJy5',
-          status: 'Registrations are live',
+          status: 'Registrations are closed',
         },
         {
           name: 'Nagpur City Meetup',
@@ -330,7 +330,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/TjJ4piny2MhNd9a5A',
-          status: 'Registrations are live',
+          status: 'Registrations are closed',
         },
         {
           name: 'Chandigarh City Meetup',
