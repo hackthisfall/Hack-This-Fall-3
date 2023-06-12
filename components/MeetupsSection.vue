@@ -336,7 +336,7 @@ export default {
           name: 'Chandigarh City Meetup',
           image: require('~/assets/Meetup/2023/chandigarh.png'),
           venue: 'TBD',
-          date: '17th June 2023',
+          date: '18th June 2023',
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/MtiVc153cHp7R7Bw6',
