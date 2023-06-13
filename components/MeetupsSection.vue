@@ -340,7 +340,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/MtiVc153cHp7R7Bw6',
-          status: 'Details to be announced soon',
+          status: 'Registrations are live',
         },
         {
           name: 'Guwahati City Meetup',
