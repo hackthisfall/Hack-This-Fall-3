@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/prospectus",
-      "destination": "/Hack%20This%20Fall%203.0%20Sponsorship%20Prospectus.pdf"
+      "destination": "/Hack%20This%20Fall%204.0%20Sponsorship%20Prospectus.pdf"
     }
   ]
 }
