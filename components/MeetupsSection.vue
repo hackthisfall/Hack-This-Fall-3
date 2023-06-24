@@ -343,16 +343,6 @@ export default {
           status: 'Registrations are live',
         },
         {
-          name: 'Guwahati City Meetup',
-          image: require('~/assets/Meetup/2023/guwahati.png'),
-          venue: 'TBD',
-          date: '24th June 2023',
-          time: 'TBD',
-          active: true,
-          url: 'https://goo.gl/maps/AV6NrfPcqwW6rct27',
-          status: 'Details to be announced soon',
-        },
-        {
           name: 'Kolkata City Meetup',
           image: require('~/assets/Meetup/2023/kolkata.png'),
           venue: 'TBD',
