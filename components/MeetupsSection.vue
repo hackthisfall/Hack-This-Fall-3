@@ -340,7 +340,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/MtiVc153cHp7R7Bw6',
-          status: 'Registrations are live',
+          status: 'Registrations are closed',
         },
         {
           name: 'Kolkata City Meetup',
@@ -350,7 +350,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Details to be announced soon',
+          status: 'Registrations are live',
         },
         {
           name: 'Chennai City Meetup',
