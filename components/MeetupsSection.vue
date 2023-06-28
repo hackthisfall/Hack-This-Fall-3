@@ -370,7 +370,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Details to be announced soon',
+          status: 'Registrations are live',
         },
       ],
       events2022: [
