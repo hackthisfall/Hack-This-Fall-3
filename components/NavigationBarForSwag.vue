@@ -31,6 +31,16 @@
         class="hamburger-menu"
         @click="toggleNavbar"
       />
+
+      <a
+        id="mlh-trust-badge"
+        href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
+        target="_blank"
+        ><img
+          src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
+          alt="Major League Hacking 2023 Hackathon Season"
+          style="width: 131px"
+      /></a>
     </div>
   </CFlex>
 </template>
@@ -86,8 +96,8 @@ export default {
   backdrop-filter: blur(2px);
   border-radius: 11px;
   column-gap: 49px;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 39px;
+  padding-right: 178px;
 
   .item {
     color: white;
@@ -130,7 +140,7 @@ export default {
 
   @include respond-below(lg) {
     padding-left: 1rem;
-    padding-right: 1rem;
+    padding-right: 5rem;
     .item {
       display: none;
     }
