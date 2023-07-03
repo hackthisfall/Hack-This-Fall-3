@@ -350,7 +350,7 @@ export default {
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations are live',
+          status: 'Registrations are closed',
         },
         {
           name: 'Chennai City Meetup',
