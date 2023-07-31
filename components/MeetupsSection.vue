@@ -177,6 +177,52 @@
           </a>
         </CGrid>
       </CFlex>
+
+      <div :class="['tier-heading', 'space-up']">
+        <span>Ecosystem Partners</span>
+      </div>
+      <CFlex
+        v-for="(tiers, index) in ecosystemPartner2023"
+        :key="index"
+        direction="column"
+      >
+        <div
+          :class="[
+            'tier-heading',
+            index === 0 ? null : 'space-up',
+            tiers.category,
+          ]"
+        >
+          <span> {{ tiers.category }}</span>
+        </div>
+        <CGrid
+          :row-gap="{ base: '1rem', sm: '1.75rem' }"
+          :column-gap="{
+            base: '1rem',
+            sm: '2rem',
+            lg: '2rem',
+            xl: '2rem',
+            '2xl': '3.4rem',
+          }"
+          :grid-template-columns="{
+            base: `repeat(2, 1fr)`,
+            sm: `repeat(3,1fr)`,
+            lg: `repeat(4,1fr)`,
+            xl: `repeat(5,1fr)`,
+          }"
+        >
+          <a
+            v-for="(venue, index) in tiers.ecosystemPartner"
+            :key="index"
+            :href="venue.url"
+            target="_blank"
+            :class="['sponsor animate-ease', venue.specialClass]"
+            borderRadius="30px"
+          >
+            <img :src="venue.image" />
+          </a>
+        </CGrid>
+      </CFlex>
     </CBox>
     <HeadingVue front="2022 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
@@ -467,6 +513,20 @@ export default {
             {
               url: 'https://siya.tech/',
               image: require('~/assets/Meetup/Venue/siya.svg'),
+            },
+            {
+              url: 'https://www.thecircle.work/',
+              image: require('~/assets/Meetup/Venue/the-circle-work.png'),
+            },
+          ],
+        },
+      ],
+      ecosystemPartner2023: [
+        {
+          ecosystemPartner: [
+            {
+              url: 'https://www.thecirclefc.com/',
+              image: require('~/assets/Meetup/Ecosystem/circle.png'),
             },
           ],
         },
