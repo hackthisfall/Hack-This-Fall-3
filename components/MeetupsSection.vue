@@ -526,7 +526,7 @@ export default {
           ecosystemPartner: [
             {
               url: 'https://www.thecirclefc.com/',
-              image: require('~/assets/Meetup/Venue/the-circle-foundation.png'),
+              image: require('~/assets/Meetup/Ecosystem/circle.png'),
             },
           ],
         },
