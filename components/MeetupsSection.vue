@@ -422,7 +422,7 @@ export default {
           name: 'Gurugram City Meetup',
           image: require('~/assets/Meetup/2023/gurugram.png'),
           venue: 'TBD',
-          date: '5th August 2023',
+          date: '26th August 2023',
           time: 'TBD',
           active: true,
           url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
