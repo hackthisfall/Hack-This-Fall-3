@@ -85,11 +85,6 @@ export default {
           url: 'https://twitter.com/rohannrk',
           image: require('~/assets/team/rohan.jpg'),
         },
-        {
-          name: 'Sahil Bhatiya',
-          url: 'https://www.linkedin.com/in/sahil-bhatiya-73790719a/',
-          image: require('~/assets/team/sahil.jpeg'),
-        },
       ],
     }
   },
