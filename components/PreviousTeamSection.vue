@@ -130,6 +130,11 @@ export default {
           url: 'https://twitter.com/vedantstwt',
           image: require('~/assets/team/vedant.png'),
         },
+        {
+          name: 'Sahil Bhatiya',
+          url: 'https://www.linkedin.com/in/sahil-bhatiya-73790719a/',
+          image: require('~/assets/team/sahil.jpeg'),
+        },
       ],
     }
   },
