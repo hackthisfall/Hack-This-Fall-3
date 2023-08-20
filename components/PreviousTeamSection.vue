@@ -101,19 +101,9 @@ export default {
           image: require('~/assets/team/pooja.jpg'),
         },
         {
-          name: 'Priti Priya',
-          url: 'https://twitter.com/pritisinghhhh',
-          image: require('~/assets/team/priti.jpeg'),
-        },
-        {
           name: 'Tirthak Patel',
           url: 'https://www.linkedin.com/in/tirthakpatel/',
           image: require('~/assets/team/tirthak.webp'),
-        },
-        {
-          name: 'Kriyanshi Shah',
-          url: 'https://twitter.com/ShahKriyanshi',
-          image: require('~/assets/team/kriyanshi.jpg'),
         },
         {
           name: 'Disha Thakur',
@@ -124,11 +114,6 @@ export default {
           name: 'Aayush Sharma',
           image: require('~/assets/team/aayush.jpeg'),
           url: 'https://twitter.com/SuperAayush14',
-        },
-        {
-          name: 'Vedant Kakde',
-          url: 'https://twitter.com/vedantstwt',
-          image: require('~/assets/team/vedant.png'),
         },
         {
           name: 'Sahil Bhatiya',

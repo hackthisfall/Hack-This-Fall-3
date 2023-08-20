@@ -46,10 +46,10 @@ export default {
     return {
       speakers: [
         {
-          description: 'Developer Advocate, Postman',
-          name: 'Ali Mustufa',
-          url: 'https://twitter.com/ialimustufa',
-          image: require('~/assets/speakers/ali.jpg'),
+          description: 'Co-Founder, Quiknode',
+          name: 'Dmitry Shklovsky',
+          url: 'https://twitter.com/dimidj',
+          image: require('~/assets/speakers/dmitry.jpeg'),
         },
         {
           description: 'Software Engineer, Appwrite',
