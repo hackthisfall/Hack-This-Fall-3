@@ -1,7 +1,6 @@
 <template>
   <ContainerVue id="meetup" name="meetup">
-    <HeadingVue front="2023 City Meetup Series" back="MEETUPS" />
-    <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
+    <CBox :mx="{ base: '0rem', sm: '50px' }">
       <div class="about">
         <p class="details">
           After a successful series of City Meetups in 2022 and 2023, Hack This
@@ -28,25 +27,28 @@
           <span>See you in 2024</span>
         </CButton>
         <!-- <a href="https://lu.ma/htfms23-cp" target="blank">
-          <CButton class="button animate-ease"
-            ><span>Become Community Partner</span></CButton
-          >
-        </a> -->
+        <CButton class="button animate-ease"
+        ><span>Become Community Partner</span></CButton
+        >
+      </a> -->
       </CFlex>
-      <div class="cards-grid">
-        <div v-for="(event, index) in events2023" :key="index" class="card">
-          <div class="card-side new smooth-transition">
-            <a :href="event.url" target="_blank">
-              <img :src="event.image" alt="cityImage" />
-              <div class="texts">
-                <h4 class="eventName" v-html="event.name"></h4>
-                <p class="event">{{ event.date }} <br /></p>
-              </div>
-            </a>
+      <HeadingVue front="2023 City Meetup Series" back="MEETUPS" />
+      <CBox mt="5rem">
+        <div class="cards-grid">
+          <div v-for="(event, index) in events2023" :key="index" class="card">
+            <div class="card-side new smooth-transition">
+              <a :href="event.url" target="_blank">
+                <img :src="event.image" alt="cityImage" />
+                <div class="texts">
+                  <h4 class="eventName" v-html="event.name"></h4>
+                  <p class="event">{{ event.date }} <br /></p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div :class="['tier-heading', 'space-up']">
+      </CBox>
+      <!-- <div :class="['tier-heading', 'space-up']">
         <span>Sponsors</span>
       </div>
       <CFlex
@@ -182,7 +184,7 @@
             <img :src="venue.image" />
           </a>
         </CGrid>
-      </CFlex>
+      </CFlex> -->
     </CBox>
     <HeadingVue front="2022 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
@@ -203,7 +205,7 @@
         <span>Previous Sponsors</span>
       </div>
       <CFlex
-        v-for="(tiers, index) in sponsors2022"
+        v-for="(tiers, index) in [...sponsors2023, ...sponsors2022]"
         :key="index"
         direction="column"
       >
@@ -249,7 +251,7 @@
         <span>Previous Venue Partners</span>
       </div>
       <CFlex
-        v-for="(tiers, index) in venuePartner2022"
+        v-for="(tiers, index) in [...venuePartner2023, ...venuePartner2022]"
         :key="index"
         direction="column"
       >
@@ -487,10 +489,6 @@ export default {
         {
           sponsors: [
             {
-              url: 'https://education.github.com/discount_requests/student_application?utm_source=2022-04-2022-06-HackThisFallCityMeetups',
-              image: require('~/assets/sponsors/github.svg'),
-            },
-            {
               url: 'https://atsign.com/',
               image: require('~/assets/sponsors/atsign.svg'),
             },
@@ -533,10 +531,6 @@ export default {
               url: 'https://redbrickoffices.com/',
               image: require('~/assets/Meetup/Venue/red-brick-logo.svg'),
             },
-            {
-              url: 'https://www.thecircle.work/',
-              image: require('~/assets/Meetup/Venue/the-circle-work.png'),
-            },
           ],
         },
       ],
@@ -547,7 +541,7 @@ export default {
 <style lang="scss" scoped>
 #meetup {
   margin-top: 4rem;
-  padding-top: 4rem;
+  padding-top: 1rem;
 
   @include respond-below(xs) {
     padding-top: 4rem;
