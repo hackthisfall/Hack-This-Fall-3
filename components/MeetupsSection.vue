@@ -4,8 +4,8 @@
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <div class="about">
         <p class="details">
-          After a successful series of City Meetups in 2022, Hack This Fall
-          became the
+          After a successful series of City Meetups in 2022 and 2023, Hack This
+          Fall became the
           <span style="color: #d04d29; font-weight: 600"
             >First-Ever Hacker Community</span
           >
@@ -13,76 +13,36 @@
           members together by breaking the virtual barrier. We aim to help
           connect folks with each other from the region to create more
           opportunities & collaboration!💥<br /><br />
-          Hack This Fall is super excited in announcing yet another series of
-          Meetups and this time, in
-          <span style="color: #d04d29; font-weight: 600">8 New Cities</span>.
-          Get hyped to experience our community culture and join us in any of
-          the cities listed below!👇 <br /><br />
-          It is going to be completely free of cost, all you need to do is,
-          register for the meet-up and wait for the invitation.
-          <span style="color: #d04d29; font-weight: 600">Free Food</span> and
-          <span style="color: #d04d29; font-weight: 600">Cool Swags</span> are
-          on us and you know we don't limit ourselves there!🤩
-          <!-- <br /><br /> -->
-          <!-- What are you waiting for? Register Now! 🚀 -->
+          Stay tuned as we announce our next series for 2024 soon. Follow us on
+          our social media to never miss an update. Be ready to experience our
+          community culture and join us in any of the future meetups!✨
         </p>
       </div>
-
-      <!-- <div style="display: flex; justify-content: center">
-        <a href="#">
-          <CButton class="button animate-ease">
-            <span> Registration Starting Soon</span>
-          </CButton>
-        </a>
-      </div> -->
       <CFlex
         justify="center"
         align="center"
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a href="https://lu.ma/u/usr-hFH0w3PqHm9uHQh" target="_blank">
-          <CButton class="button animate-ease">
-            <span> Click Here To Register</span>
-          </CButton>
-        </a>
-        <a href="https://lu.ma/htfms23-cp" target="blank">
+        <CButton class="button animate-ease">
+          <span>See you in 2024</span>
+        </CButton>
+        <!-- <a href="https://lu.ma/htfms23-cp" target="blank">
           <CButton class="button animate-ease"
             ><span>Become Community Partner</span></CButton
           >
-        </a>
+        </a> -->
       </CFlex>
       <div class="cards-grid">
         <div v-for="(event, index) in events2023" :key="index" class="card">
           <div class="card-side new smooth-transition">
-            <img :src="event.image" alt="cityImage" />
-            <div class="texts">
-              <h4 class="eventName" v-html="event.name"></h4>
-              <p class="event">
-                {{ event.date }} <br />
-                <span
-                  :class="[
-                    event.status !== 'Registrations are live'
-                      ? null
-                      : 'htf-orange',
-                  ]"
-                >
-                  {{ event.status }}
-                </span>
-                <br />
-                <!-- Details to be announced soon -->
-              </p>
-              <!-- <a :href="event.url" target="_blank">
-                <p
-                  :class="[
-                    'venue smooth-transition',
-                    event.active ? 'highlight' : null,
-                  ]"
-                >
-                  Venue: {{ event.venue }}
-                </p>
-              </a> -->
-            </div>
+            <a :href="event.url" target="_blank">
+              <img :src="event.image" alt="cityImage" />
+              <div class="texts">
+                <h4 class="eventName" v-html="event.name"></h4>
+                <p class="event">{{ event.date }} <br /></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -354,9 +314,8 @@ export default {
           venue: 'TBD',
           date: '4th June 2023',
           time: 'TBD',
-          url: 'https://g.page/Cowocoli-Coworkingspace?share',
+          url: 'https://twitter.com/search?q=%23HTFIndore&src=typed_query&f=top',
           active: true,
-          status: 'Registrations are closed',
         },
         {
           name: 'Raipur City Meetup',
@@ -365,8 +324,7 @@ export default {
           date: '10th June 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/D7VU6guZ8eBu3rJy5',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFRaipur&src=typed_query&f=top',
         },
         {
           name: 'Nagpur City Meetup',
@@ -375,8 +333,7 @@ export default {
           date: '11th June 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/TjJ4piny2MhNd9a5A',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFNagpur&src=typed_query&f=top',
         },
         {
           name: 'Chandigarh City Meetup',
@@ -385,8 +342,7 @@ export default {
           date: '18th June 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/MtiVc153cHp7R7Bw6',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFChandigarh&src=typed_query&f=top',
         },
         {
           name: 'Kolkata City Meetup',
@@ -395,8 +351,7 @@ export default {
           date: '2nd July 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFKolkata&src=typed_query&f=top',
         },
         {
           name: 'Chennai City Meetup',
@@ -405,8 +360,7 @@ export default {
           date: '8th July 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFChennai&src=typed_query&f=top',
         },
         {
           name: 'Hyderabad City Meetup',
@@ -415,8 +369,7 @@ export default {
           date: '15th July 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFHyderabad&src=typed_query&f=top',
         },
         {
           name: 'Gurugram City Meetup',
@@ -425,8 +378,7 @@ export default {
           date: '26th August 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations starting soon',
+          url: 'https://twitter.com/search?q=%23HTFGurugram&src=typed_query&f=top',
         },
       ],
       events2022: [
