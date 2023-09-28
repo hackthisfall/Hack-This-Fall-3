@@ -32,23 +32,24 @@
         >
       </a> -->
       </CFlex>
-      <HeadingVue front="2023 City Meetup Series" back="MEETUPS" />
-      <CBox mt="5rem">
-        <div class="cards-grid">
-          <div v-for="(event, index) in events2023" :key="index" class="card">
-            <div class="card-side new smooth-transition">
-              <a :href="event.url" target="_blank">
-                <img :src="event.image" alt="cityImage" />
-                <div class="texts">
-                  <h4 class="eventName" v-html="event.name"></h4>
-                  <p class="event">{{ event.date }} <br /></p>
-                </div>
-              </a>
-            </div>
+    </CBox>
+    <HeadingVue front="2023 City Meetup Series" back="MEETUPS" />
+    <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
+      <div class="cards-grid">
+        <div v-for="(event, index) in events2023" :key="index" class="card">
+          <div class="card-side new smooth-transition">
+            <a :href="event.url" target="_blank">
+              <img :src="event.image" alt="cityImage" />
+              <div class="texts">
+                <h4 class="eventName" v-html="event.name"></h4>
+                <p class="event">{{ event.date }} <br /></p>
+              </div>
+            </a>
           </div>
         </div>
-      </CBox>
-      <!-- <div :class="['tier-heading', 'space-up']">
+      </div>
+    </CBox>
+    <!-- <div :class="['tier-heading', 'space-up']">
         <span>Sponsors</span>
       </div>
       <CFlex
@@ -185,7 +186,7 @@
           </a>
         </CGrid>
       </CFlex> -->
-    </CBox>
+
     <HeadingVue front="2022 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <div class="cards-grid">
