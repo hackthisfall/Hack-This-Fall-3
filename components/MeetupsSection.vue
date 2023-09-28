@@ -17,7 +17,7 @@
           community culture and join us in any of the future meetups!✨
         </p>
       </div>
-      <CFlex
+      <!-- <CFlex
         justify="center"
         align="center"
         :gap="{ base: '1.2rem', sm: '30px' }"
@@ -26,12 +26,12 @@
         <CButton class="button animate-ease">
           <span>See you in 2024</span>
         </CButton>
-        <!-- <a href="https://lu.ma/htfms23-cp" target="blank">
+        <a href="https://lu.ma/htfms23-cp" target="blank">
         <CButton class="button animate-ease"
         ><span>Become Community Partner</span></CButton
         >
-      </a> -->
-      </CFlex>
+      </a>
+      </CFlex> -->
     </CBox>
     <HeadingVue front="2023 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
@@ -205,20 +205,7 @@
       <div :class="['tier-heading', 'space-up']">
         <span>Previous Sponsors</span>
       </div>
-      <CFlex
-        v-for="(tiers, index) in [...sponsors2023, ...sponsors2022]"
-        :key="index"
-        direction="column"
-      >
-        <div
-          :class="[
-            'tier-heading',
-            index === 0 ? null : 'space-up',
-            tiers.category,
-          ]"
-        >
-          <span> {{ tiers.category }}</span>
-        </div>
+      <CFlex :key="index" direction="column">
         <CGrid
           :row-gap="{ base: '1rem', sm: '1.75rem' }"
           :column-gap="{
@@ -236,7 +223,7 @@
           }"
         >
           <a
-            v-for="(sponsor, index) in tiers.sponsors"
+            v-for="(sponsor, index) in [...sponsors2023, ...sponsors2022]"
             :key="index"
             :href="sponsor.url"
             target="_blank"
@@ -251,20 +238,7 @@
       <div :class="['tier-heading', 'space-up']">
         <span>Previous Venue Partners</span>
       </div>
-      <CFlex
-        v-for="(tiers, index) in [...venuePartner2023, ...venuePartner2022]"
-        :key="index"
-        direction="column"
-      >
-        <div
-          :class="[
-            'tier-heading',
-            index === 0 ? null : 'space-up',
-            tiers.category,
-          ]"
-        >
-          <span> {{ tiers.category }}</span>
-        </div>
+      <CFlex :key="index" direction="column">
         <CGrid
           :row-gap="{ base: '1rem', sm: '1.75rem' }"
           :column-gap="{
@@ -282,7 +256,7 @@
           }"
         >
           <a
-            v-for="(venue, index) in tiers.venuePartner"
+            v-for="(venue, index) in [...venuePartner2023, ...venuePartner2022]"
             :key="index"
             :href="venue.url"
             target="_blank"
@@ -442,38 +416,30 @@ export default {
       ],
       sponsors2023: [
         {
-          sponsors: [
-            {
-              url: 'https://education.github.com/benefits?utm_source=2023-06-2023-07-HackThisFallCityMeetups2023',
-              image: require('~/assets/sponsors/github.svg'),
-            },
-            {
-              url: 'https://www.getunleash.io/',
-              image: require('~/assets/sponsors/unleash.svg'),
-            },
-            {
-              url: 'https://5ire.org/',
-              image: require('~/assets/sponsors/5ire.svg'),
-            },
-            {
-              url: 'https://www.storyblok.com/',
-              image: require('~/assets/sponsors/storyblok.svg'),
-            },
-          ],
+          url: 'https://education.github.com/benefits?utm_source=2023-06-2023-07-HackThisFallCityMeetups2023',
+          image: require('~/assets/sponsors/github.svg'),
+        },
+        {
+          url: 'https://www.getunleash.io/',
+          image: require('~/assets/sponsors/unleash.svg'),
+        },
+        {
+          url: 'https://5ire.org/',
+          image: require('~/assets/sponsors/5ire.svg'),
+        },
+        {
+          url: 'https://www.storyblok.com/',
+          image: require('~/assets/sponsors/storyblok.svg'),
         },
       ],
       venuePartner2023: [
         {
-          venuePartner: [
-            {
-              url: 'https://siya.tech/',
-              image: require('~/assets/Meetup/Venue/siya.svg'),
-            },
-            {
-              url: 'https://www.thecircle.work/',
-              image: require('~/assets/Meetup/Venue/the-circle-work.png'),
-            },
-          ],
+          url: 'https://siya.tech/',
+          image: require('~/assets/Meetup/Venue/siya.svg'),
+        },
+        {
+          url: 'https://www.thecircle.work/',
+          image: require('~/assets/Meetup/Venue/the-circle-work.png'),
         },
       ],
       ecosystemPartner2023: [
@@ -488,51 +454,43 @@ export default {
       ],
       sponsors2022: [
         {
-          sponsors: [
-            {
-              url: 'https://atsign.com/',
-              image: require('~/assets/sponsors/atsign.svg'),
-            },
-            {
-              url: 'https://www.esamudaay.com/',
-              image: require('~/assets/sponsors/eSamudaay.png'),
-            },
-            {
-              url: 'https://symbl.ai/',
-              image: require('~/assets/sponsors/symbl.svg'),
-            },
-            {
-              url: 'https://hack2skill.com/',
-              image: require('~/assets/sponsors/hack2skill.png'),
-            },
-            {
-              url: 'https://www.communitycoldcoffee.com/',
-              image: require('~/assets/sponsors/C3Universe.png'),
-            },
-            {
-              url: 'https://hackclub.com/',
-              image: require('~/assets/sponsors/hackclub.png'),
-            },
-          ],
+          url: 'https://atsign.com/',
+          image: require('~/assets/sponsors/atsign.svg'),
+        },
+        {
+          url: 'https://www.esamudaay.com/',
+          image: require('~/assets/sponsors/eSamudaay.png'),
+        },
+        {
+          url: 'https://symbl.ai/',
+          image: require('~/assets/sponsors/symbl.svg'),
+        },
+        {
+          url: 'https://hack2skill.com/',
+          image: require('~/assets/sponsors/hack2skill.png'),
+        },
+        {
+          url: 'https://www.communitycoldcoffee.com/',
+          image: require('~/assets/sponsors/C3Universe.png'),
+        },
+        {
+          url: 'https://hackclub.com/',
+          image: require('~/assets/sponsors/hackclub.png'),
         },
       ],
       venuePartner2022: [
         {
-          venuePartner: [
-            {
-              url: 'https://www.devx.work/',
-              image:
-                'https://assets.devx.work/images/press-room/devx-logo-white.svg',
-            },
-            {
-              url: 'https://www.91springboard.com/',
-              image: require('~/assets/Meetup/Venue/springboard.svg'),
-            },
-            {
-              url: 'https://redbrickoffices.com/',
-              image: require('~/assets/Meetup/Venue/red-brick-logo.svg'),
-            },
-          ],
+          url: 'https://www.devx.work/',
+          image:
+            'https://assets.devx.work/images/press-room/devx-logo-white.svg',
+        },
+        {
+          url: 'https://www.91springboard.com/',
+          image: require('~/assets/Meetup/Venue/springboard.svg'),
+        },
+        {
+          url: 'https://redbrickoffices.com/',
+          image: require('~/assets/Meetup/Venue/red-brick-logo.svg'),
         },
       ],
     }
