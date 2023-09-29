@@ -17,25 +17,19 @@
             >
 
             <span class="divider"></span>
-            <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
-            <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
-            <NuxtLink
-              id="nav-link-team"
-              to="/hacktoberfest"
-              class="mobile-nav-item"
-              >Hacktoberfest</NuxtLink
-            >
             <span
               id="nav-link-team"
               class="mobile-nav-item"
               @click="goToLocation('/team')"
               >Team</span
             >
+            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
+              >Swag</NuxtLink
+            >
           </CFlex>
         </div>
         <div v-else>
-          <LatestTeamSection />
-          <PreviousTeamSection />
+          <HacktoberfestSection />
           <FooterSection />
         </div>
       </div>
@@ -45,17 +39,15 @@
 
 <script>
 import { CFlex } from '@chakra-ui/vue'
-import NavigationBar from '~/components/NavigationBarForTeam'
-import LatestTeamSection from '~/components/LatestTeamSection'
-import PreviousTeamSection from '~/components/PreviousTeamSection'
+import NavigationBar from '~/components/NavigationBarForMeetups'
+import HacktoberfestSection from '~/components/HacktoberfestSection.vue'
 import FooterSection from '~/components/FooterSection.vue'
 
 export default {
   name: 'IndexPage',
   components: {
     NavigationBar,
-    LatestTeamSection,
-    PreviousTeamSection,
+    HacktoberfestSection,
     FooterSection,
     CFlex,
   },
@@ -66,7 +58,36 @@ export default {
   },
   head() {
     return {
-      title: 'Hack This Fall | Team',
+      title: 'Hack This Fall | Meetups',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            'Hack This Fall is hosting an In-Person Meetup series in 8 different cities across India which includes Indore, Raipur, Nagpur, Chandigarh, Guwahati, Kolkata, Chennai, and Hyderabad. What are you waiting for, register and join us now!',
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content:
+            'Hack This Fall is hosting an In-Person Meetup series in 8 different cities across India which includes Indore, Raipur, Nagpur, Chandigarh, Guwahati, Kolkata, Chennai, and Hyderabad. What are you waiting for, register and join us now!',
+        },
+        {
+          hid: 'apple-mobile-web-app-title',
+          property: 'apple-mobile-web-app-title',
+          content: 'Hack This Fall | Meetups',
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Hack This Fall | Meetups',
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'Hack This Fall | Meetups',
+        },
+      ],
     }
   },
   methods: {
@@ -111,8 +132,8 @@ export default {
     min-height: 85vh;
     background-image: url('~/assets/background.png');
     background-repeat: no-repeat;
-    background-size: 100vw 100%;
-    background-position-x: -1rem;
+    background-size: cover;
+    background-position-x: -2px;
 
     @include respond-below(xs) {
       margin-top: 1rem;

@@ -22,7 +22,9 @@
       >
       <span class="divider"></span>
       <NuxtLink id="nav-link-team" to="/" class="item">Home</NuxtLink>
-      <NuxtLink id="nav-link-team" to="/meetups" class="item">Meetups</NuxtLink>
+      <NuxtLink id="nav-link-team" to="/hacktoberfest" class="item"
+        >Hacktoberfest</NuxtLink
+      >
       <NuxtLink id="nav-link-team" to="/swag" class="item">Swag</NuxtLink>
 
       <img
