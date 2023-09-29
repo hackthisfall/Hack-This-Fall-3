@@ -38,15 +38,15 @@ export default {
         {
           name: 'Hacktoberfest Virtual Edition',
           image: require('~/assets/Hacktoberfest/2023.png'),
-          venue: 'Vadodara, Gujarat',
           date: '15th October 2023',
+          venue: 'YouTube & Discord',
           active: true,
           url: 'https://lu.ma/HTFxHacktoberfest23xVirtual',
         },
         {
           name: 'Hacktoberfest In-person Edition',
           image: require('~/assets/Hacktoberfest/2023.png'),
-          venue: 'YouTube & Discord',
+          venue: 'Vadodara, Gujarat',
           date: '28th October 2023',
           url: 'https://events.mlh.io/events/10181-hacktoberfest-2023-by-hack-this-fall',
           active: true,
@@ -153,18 +153,18 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5 rem 1rem;
   background: #efedef;
   border: 2px solid #d7d5d7;
   box-shadow: 2px 2px 0px #d7d5d7;
-  width: 100%;
+  width: 70%;
   border-radius: 12.4124px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
   font-size: 1.1rem;
   color: #0e0912;
-  margin-top: 1rem;
+  margin: 1rem auto 0;
 
   @include respond-below(xs) {
     font-size: 0.9rem;
