@@ -58,34 +58,34 @@ export default {
   },
   head() {
     return {
-      title: 'Hack This Fall | Meetups',
+      title: 'Hack This Fall | Hacktoberfest',
       meta: [
         {
           hid: 'description',
           name: 'description',
           content:
-            'Hack This Fall is hosting an In-Person Meetup series in 8 different cities across India which includes Indore, Raipur, Nagpur, Chandigarh, Guwahati, Kolkata, Chennai, and Hyderabad. What are you waiting for, register and join us now!',
+            'Hack This Fall is organizing a Hybrid Hacktoberfest event the community can join to learn, explore, and contribute towards Open Source right from their home or in person!',
         },
         {
           hid: 'og:description',
           property: 'og:description',
           content:
-            'Hack This Fall is hosting an In-Person Meetup series in 8 different cities across India which includes Indore, Raipur, Nagpur, Chandigarh, Guwahati, Kolkata, Chennai, and Hyderabad. What are you waiting for, register and join us now!',
+            'Hack This Fall is organizing a Hybrid Hacktoberfest event the community can join to learn, explore, and contribute towards Open Source right from their home or in person!',
         },
         {
           hid: 'apple-mobile-web-app-title',
           property: 'apple-mobile-web-app-title',
-          content: 'Hack This Fall | Meetups',
+          content: 'Hack This Fall | Hacktoberfest',
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: 'Hack This Fall | Meetups',
+          content: 'Hack This Fall | Hacktoberfest',
         },
         {
           hid: 'twitter:title',
           name: 'twitter:title',
-          content: 'Hack This Fall | Meetups',
+          content: 'Hack This Fall | Hacktoberfest',
         },
       ],
     }
