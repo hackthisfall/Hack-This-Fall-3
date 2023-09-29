@@ -153,7 +153,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0.5 rem 1rem;
+  padding: 0.5rem 1rem;
   background: #efedef;
   border: 2px solid #d7d5d7;
   box-shadow: 2px 2px 0px #d7d5d7;
