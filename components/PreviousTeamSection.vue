@@ -86,11 +86,6 @@ export default {
           image: require('~/assets/team/sagar.jpeg'),
         },
         {
-          name: 'Bishwajeet Parhi',
-          image: require('~/assets/team/biswa.jpg'),
-          url: 'https://twitter.com/biswa_20p',
-        },
-        {
           name: 'Tushar',
           url: 'https://www.linkedin.com/in/tushar-ba401a136/',
           image: require('~/assets/team/tushar.jpg'),

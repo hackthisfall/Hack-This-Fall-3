@@ -1,11 +1,10 @@
 <template>
   <ContainerVue id="meetup" name="meetup">
-    <HeadingVue front="2023 City Meetup Series" back="MEETUPS" />
-    <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
+    <CBox :mx="{ base: '0rem', sm: '50px' }">
       <div class="about">
         <p class="details">
-          After a successful series of City Meetups in 2022, Hack This Fall
-          became the
+          After a successful series of City Meetups in 2022 and 2023, Hack This
+          Fall became the
           <span style="color: #d04d29; font-weight: 600"
             >First-Ever Hacker Community</span
           >
@@ -13,80 +12,44 @@
           members together by breaking the virtual barrier. We aim to help
           connect folks with each other from the region to create more
           opportunities & collaboration!💥<br /><br />
-          Hack This Fall is super excited in announcing yet another series of
-          Meetups and this time, in
-          <span style="color: #d04d29; font-weight: 600">8 New Cities</span>.
-          Get hyped to experience our community culture and join us in any of
-          the cities listed below!👇 <br /><br />
-          It is going to be completely free of cost, all you need to do is,
-          register for the meet-up and wait for the invitation.
-          <span style="color: #d04d29; font-weight: 600">Free Food</span> and
-          <span style="color: #d04d29; font-weight: 600">Cool Swags</span> are
-          on us and you know we don't limit ourselves there!🤩
-          <!-- <br /><br /> -->
-          <!-- What are you waiting for? Register Now! 🚀 -->
+          Stay tuned as we announce our next series for 2024 soon. Follow us on
+          our social media to never miss an update. Be ready to experience our
+          community culture and join us in any of the future meetups!✨
         </p>
       </div>
-
-      <!-- <div style="display: flex; justify-content: center">
-        <a href="#">
-          <CButton class="button animate-ease">
-            <span> Registration Starting Soon</span>
-          </CButton>
-        </a>
-      </div> -->
-      <CFlex
+      <!-- <CFlex
         justify="center"
         align="center"
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a href="https://lu.ma/u/usr-hFH0w3PqHm9uHQh" target="_blank">
-          <CButton class="button animate-ease">
-            <span> Click Here To Register</span>
-          </CButton>
-        </a>
+        <CButton class="button animate-ease">
+          <span>See you in 2024</span>
+        </CButton>
         <a href="https://lu.ma/htfms23-cp" target="blank">
-          <CButton class="button animate-ease"
-            ><span>Become Community Partner</span></CButton
-          >
-        </a>
-      </CFlex>
+        <CButton class="button animate-ease"
+        ><span>Become Community Partner</span></CButton
+        >
+      </a>
+      </CFlex> -->
+    </CBox>
+    <HeadingVue front="2023 City Meetup Series" back="MEETUPS" />
+    <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <div class="cards-grid">
         <div v-for="(event, index) in events2023" :key="index" class="card">
           <div class="card-side new smooth-transition">
-            <img :src="event.image" alt="cityImage" />
-            <div class="texts">
-              <h4 class="eventName" v-html="event.name"></h4>
-              <p class="event">
-                {{ event.date }} <br />
-                <span
-                  :class="[
-                    event.status !== 'Registrations are live'
-                      ? null
-                      : 'htf-orange',
-                  ]"
-                >
-                  {{ event.status }}
-                </span>
-                <br />
-                <!-- Details to be announced soon -->
-              </p>
-              <!-- <a :href="event.url" target="_blank">
-                <p
-                  :class="[
-                    'venue smooth-transition',
-                    event.active ? 'highlight' : null,
-                  ]"
-                >
-                  Venue: {{ event.venue }}
-                </p>
-              </a> -->
-            </div>
+            <a :href="event.url" target="_blank">
+              <img :src="event.image" alt="cityImage" />
+              <div class="texts">
+                <h4 class="eventName" v-html="event.name"></h4>
+                <p class="event">{{ event.date }} <br /></p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-      <div :class="['tier-heading', 'space-up']">
+    </CBox>
+    <!-- <div :class="['tier-heading', 'space-up']">
         <span>Sponsors</span>
       </div>
       <CFlex
@@ -222,8 +185,8 @@
             <img :src="venue.image" />
           </a>
         </CGrid>
-      </CFlex>
-    </CBox>
+      </CFlex> -->
+
     <HeadingVue front="2022 City Meetup Series" back="MEETUPS" />
     <CBox :mx="{ base: '0rem', sm: '50px' }" mt="5rem">
       <div class="cards-grid">
@@ -242,20 +205,7 @@
       <div :class="['tier-heading', 'space-up']">
         <span>Previous Sponsors</span>
       </div>
-      <CFlex
-        v-for="(tiers, index) in sponsors2022"
-        :key="index"
-        direction="column"
-      >
-        <div
-          :class="[
-            'tier-heading',
-            index === 0 ? null : 'space-up',
-            tiers.category,
-          ]"
-        >
-          <span> {{ tiers.category }}</span>
-        </div>
+      <CFlex :key="index" direction="column">
         <CGrid
           :row-gap="{ base: '1rem', sm: '1.75rem' }"
           :column-gap="{
@@ -273,7 +223,7 @@
           }"
         >
           <a
-            v-for="(sponsor, index) in tiers.sponsors"
+            v-for="(sponsor, index) in [...sponsors2023, ...sponsors2022]"
             :key="index"
             :href="sponsor.url"
             target="_blank"
@@ -288,20 +238,7 @@
       <div :class="['tier-heading', 'space-up']">
         <span>Previous Venue Partners</span>
       </div>
-      <CFlex
-        v-for="(tiers, index) in venuePartner2022"
-        :key="index"
-        direction="column"
-      >
-        <div
-          :class="[
-            'tier-heading',
-            index === 0 ? null : 'space-up',
-            tiers.category,
-          ]"
-        >
-          <span> {{ tiers.category }}</span>
-        </div>
+      <CFlex :key="index" direction="column">
         <CGrid
           :row-gap="{ base: '1rem', sm: '1.75rem' }"
           :column-gap="{
@@ -319,7 +256,7 @@
           }"
         >
           <a
-            v-for="(venue, index) in tiers.venuePartner"
+            v-for="(venue, index) in [...venuePartner2023, ...venuePartner2022]"
             :key="index"
             :href="venue.url"
             target="_blank"
@@ -354,9 +291,8 @@ export default {
           venue: 'TBD',
           date: '4th June 2023',
           time: 'TBD',
-          url: 'https://g.page/Cowocoli-Coworkingspace?share',
+          url: 'https://twitter.com/search?q=%23HTFIndore&src=typed_query&f=top',
           active: true,
-          status: 'Registrations are closed',
         },
         {
           name: 'Raipur City Meetup',
@@ -365,8 +301,7 @@ export default {
           date: '10th June 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/D7VU6guZ8eBu3rJy5',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFRaipur&src=typed_query&f=top',
         },
         {
           name: 'Nagpur City Meetup',
@@ -375,8 +310,7 @@ export default {
           date: '11th June 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/TjJ4piny2MhNd9a5A',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFNagpur&src=typed_query&f=top',
         },
         {
           name: 'Chandigarh City Meetup',
@@ -385,8 +319,7 @@ export default {
           date: '18th June 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/MtiVc153cHp7R7Bw6',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFChandigarh&src=typed_query&f=top',
         },
         {
           name: 'Kolkata City Meetup',
@@ -395,8 +328,7 @@ export default {
           date: '2nd July 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFKolkata&src=typed_query&f=top',
         },
         {
           name: 'Chennai City Meetup',
@@ -405,8 +337,7 @@ export default {
           date: '8th July 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFChennai&src=typed_query&f=top',
         },
         {
           name: 'Hyderabad City Meetup',
@@ -415,8 +346,7 @@ export default {
           date: '15th July 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations are closed',
+          url: 'https://twitter.com/search?q=%23HTFHyderabad&src=typed_query&f=top',
         },
         {
           name: 'Gurugram City Meetup',
@@ -425,8 +355,7 @@ export default {
           date: '26th August 2023',
           time: 'TBD',
           active: true,
-          url: 'https://goo.gl/maps/PWhjTUtRPBqWQSNr6',
-          status: 'Registrations starting soon',
+          url: 'https://twitter.com/search?q=%23HTFGurugram&src=typed_query&f=top',
         },
       ],
       events2022: [
@@ -487,38 +416,30 @@ export default {
       ],
       sponsors2023: [
         {
-          sponsors: [
-            {
-              url: 'https://education.github.com/benefits?utm_source=2023-06-2023-07-HackThisFallCityMeetups2023',
-              image: require('~/assets/sponsors/github.svg'),
-            },
-            {
-              url: 'https://www.getunleash.io/',
-              image: require('~/assets/sponsors/unleash.svg'),
-            },
-            {
-              url: 'https://5ire.org/',
-              image: require('~/assets/sponsors/5ire.svg'),
-            },
-            {
-              url: 'https://www.storyblok.com/',
-              image: require('~/assets/sponsors/storyblok.svg'),
-            },
-          ],
+          url: 'https://education.github.com/benefits?utm_source=2023-06-2023-07-HackThisFallCityMeetups2023',
+          image: require('~/assets/sponsors/github.svg'),
+        },
+        {
+          url: 'https://www.getunleash.io/',
+          image: require('~/assets/sponsors/unleash.svg'),
+        },
+        {
+          url: 'https://5ire.org/',
+          image: require('~/assets/sponsors/5ire.svg'),
+        },
+        {
+          url: 'https://www.storyblok.com/',
+          image: require('~/assets/sponsors/storyblok.svg'),
         },
       ],
       venuePartner2023: [
         {
-          venuePartner: [
-            {
-              url: 'https://siya.tech/',
-              image: require('~/assets/Meetup/Venue/siya.svg'),
-            },
-            {
-              url: 'https://www.thecircle.work/',
-              image: require('~/assets/Meetup/Venue/the-circle-work.png'),
-            },
-          ],
+          url: 'https://siya.tech/',
+          image: require('~/assets/Meetup/Venue/siya.svg'),
+        },
+        {
+          url: 'https://www.thecircle.work/',
+          image: require('~/assets/Meetup/Venue/the-circle-work.png'),
         },
       ],
       ecosystemPartner2023: [
@@ -533,59 +454,43 @@ export default {
       ],
       sponsors2022: [
         {
-          sponsors: [
-            {
-              url: 'https://education.github.com/discount_requests/student_application?utm_source=2022-04-2022-06-HackThisFallCityMeetups',
-              image: require('~/assets/sponsors/github.svg'),
-            },
-            {
-              url: 'https://atsign.com/',
-              image: require('~/assets/sponsors/atsign.svg'),
-            },
-            {
-              url: 'https://www.esamudaay.com/',
-              image: require('~/assets/sponsors/eSamudaay.png'),
-            },
-            {
-              url: 'https://symbl.ai/',
-              image: require('~/assets/sponsors/symbl.svg'),
-            },
-            {
-              url: 'https://hack2skill.com/',
-              image: require('~/assets/sponsors/hack2skill.png'),
-            },
-            {
-              url: 'https://www.communitycoldcoffee.com/',
-              image: require('~/assets/sponsors/C3Universe.png'),
-            },
-            {
-              url: 'https://hackclub.com/',
-              image: require('~/assets/sponsors/hackclub.png'),
-            },
-          ],
+          url: 'https://atsign.com/',
+          image: require('~/assets/sponsors/atsign.svg'),
+        },
+        {
+          url: 'https://www.esamudaay.com/',
+          image: require('~/assets/sponsors/eSamudaay.png'),
+        },
+        {
+          url: 'https://symbl.ai/',
+          image: require('~/assets/sponsors/symbl.svg'),
+        },
+        {
+          url: 'https://hack2skill.com/',
+          image: require('~/assets/sponsors/hack2skill.png'),
+        },
+        {
+          url: 'https://www.communitycoldcoffee.com/',
+          image: require('~/assets/sponsors/C3Universe.png'),
+        },
+        {
+          url: 'https://hackclub.com/',
+          image: require('~/assets/sponsors/hackclub.png'),
         },
       ],
       venuePartner2022: [
         {
-          venuePartner: [
-            {
-              url: 'https://www.devx.work/',
-              image:
-                'https://assets.devx.work/images/press-room/devx-logo-white.svg',
-            },
-            {
-              url: 'https://www.91springboard.com/',
-              image: require('~/assets/Meetup/Venue/springboard.svg'),
-            },
-            {
-              url: 'https://redbrickoffices.com/',
-              image: require('~/assets/Meetup/Venue/red-brick-logo.svg'),
-            },
-            {
-              url: 'https://www.thecircle.work/',
-              image: require('~/assets/Meetup/Venue/the-circle-work.png'),
-            },
-          ],
+          url: 'https://www.devx.work/',
+          image:
+            'https://assets.devx.work/images/press-room/devx-logo-white.svg',
+        },
+        {
+          url: 'https://www.91springboard.com/',
+          image: require('~/assets/Meetup/Venue/springboard.svg'),
+        },
+        {
+          url: 'https://redbrickoffices.com/',
+          image: require('~/assets/Meetup/Venue/red-brick-logo.svg'),
         },
       ],
     }
@@ -595,7 +500,7 @@ export default {
 <style lang="scss" scoped>
 #meetup {
   margin-top: 4rem;
-  padding-top: 4rem;
+  padding-top: 1rem;
 
   @include respond-below(xs) {
     padding-top: 4rem;

@@ -125,6 +125,11 @@ export default {
           url: 'https://twitter.com/vishwamehta30/',
           image: require('~/assets/team/vishwa.jpeg'),
         },
+        {
+          name: 'Bishwajeet Parhi',
+          image: require('~/assets/team/biswa.jpg'),
+          url: 'https://twitter.com/biswa_20p',
+        },
       ],
     }
   },

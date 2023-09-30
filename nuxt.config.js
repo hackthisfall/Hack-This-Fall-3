@@ -44,7 +44,7 @@ export default {
       },
       {
         property: 'og:image',
-        content: 'https://hackthisfall.tech/meetups-2023.png',
+        content: 'https://hackthisfall.tech/hacktoberfest-2023.png',
       },
       {
         name: 'twitter:card',
@@ -61,7 +61,7 @@ export default {
       },
       {
         name: 'twitter:image',
-        content: 'https://hackthisfall.tech/meetups-2023.png',
+        content: 'https://hackthisfall.tech/hacktoberfest-2023.png',
       },
     ],
     link: [
