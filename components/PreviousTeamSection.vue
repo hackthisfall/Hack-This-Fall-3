@@ -116,11 +116,6 @@ export default {
           image: require('~/assets/team/sahil.jpeg'),
         },
         {
-          name: 'Rohan Kambli',
-          url: 'https://twitter.com/rohannrk',
-          image: require('~/assets/team/rohan.jpg'),
-        },
-        {
           name: 'Priti Priya',
           url: 'https://twitter.com/pritisinghhhh',
           image: require('~/assets/team/priti.jpeg'),
