@@ -4,14 +4,14 @@
       <img class="hero-logo" src="~/assets/hero-logo.png" />
       <h2 class="tagline">Innovate For Good</h2>
       <!-- <h3 class="date">See you in Season 4</h3> -->
-      <h3 class="venue">See you in Season 4</h3>
+      <!-- <h3 class="venue">See you in Season 4</h3> -->
       <CFlex
         justify="center"
         align="center"
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a target="blank" href="https://bit.ly/htf4-pre">
+        <a target="blank" href="https://bit.ly/htf5-pre">
           <CButton class="button animate-ease">
             <img
               src="~/assets/icons/register.svg"
@@ -139,6 +139,7 @@ export default {
       font-weight: 600;
       font-size: 1.25rem;
       color: white;
+      margin-top: 30px;
 
       &:hover {
         background: rgb(244, 109, 36);

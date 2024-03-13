@@ -1,6 +1,6 @@
 <template>
   <ContainerVue id="sponsors" name="sponsors">
-    <HeadingVue front="Previous Sponsors" back="SPONSORS" />
+    <HeadingVue front="Previous Partners" back="PARTNERS" />
     <CFlex
       :mx="{ base: '0.5rem', sm: '50px' }"
       mt="5rem"
@@ -68,141 +68,115 @@ export default {
         {
           sponsors: [
             {
-              url: 'https://www.storyblok.com/',
-              image: require('~/assets/sponsors/storyblok.svg'),
-            },
-            {
-              url: 'https://5ire.org/',
-              image: require('~/assets/sponsors/5ire.svg'),
-            },
-            {
-              url: 'https://mlh.io/',
-              image: require('~/assets/sponsors/mlh.svg'),
-            },
-            {
-              url: 'https://bit.ly/htf3-sdp',
-              image: require('~/assets/sponsors/github.svg'),
-            },
-            {
-              url: 'https://www.quicknode.com/',
-              image: require('~/assets/sponsors/quicknode.png'),
-            },
-            {
-              url: 'https://www.solana.com/',
-              image: require('~/assets/sponsors/solana.svg'),
-            },
-            {
-              url: 'https://hackp.ac/Twilio',
-              image: require('~/assets/sponsors/twilio.png'),
-            },
-            {
-              url: 'https://bit.ly/zeeve-htf3',
-              image: require('~/assets/sponsors/zeeve.svg'),
+              url: 'https://hackp.ac/appwrite',
+              image: require('~/assets/sponsors/appwrite.svg'),
             },
             {
               url: 'https://bit.ly/apyhub-htf3',
               image: require('~/assets/sponsors/apyhub.svg'),
             },
             {
-              url: 'https://nhost.io/',
-              image: require('~/assets/sponsors/nhost.svg'),
-            },
-            {
-              url: 'https://polygon.technology/',
-              image: require('~/assets/sponsors/polygon.svg'),
-            },
-            {
-              url: 'https://www.digitalocean.com/',
-              image: require('~/assets/sponsors/digitalocean.svg'),
-            },
-            {
-              url: 'https://www.postman.com/',
-              image: require('~/assets/sponsors/postman.svg'),
-            },
-            {
-              url: 'https://wazirx.com/',
-              image: require('~/assets/sponsors/wazirx.png'),
-            },
-            {
-              url: 'https://hackp.ac/microsoft',
-              image: require('~/assets/sponsors/azure.png'),
-            },
-            {
-              url: 'https://hackp.ac/appwrite',
-              image: require('~/assets/sponsors/appwrite.svg'),
-            },
-            {
-              url: 'https://agoric.com/',
-              image: require('~/assets/sponsors/agoric.svg'),
-            },
-            {
-              url: 'https://peerlist.io/',
-              image: require('~/assets/sponsors/peerlist.png'),
-            },
-            {
-              url: 'https://symbl.ai/',
-              image: require('~/assets/sponsors/symbl.svg'),
+              url: 'https://balsamiq.com/',
+              image: require('~/assets/sponsors/balsamiq.svg'),
             },
             {
               url: 'https://www.courier.com/',
               image: require('~/assets/sponsors/courier.svg'),
             },
             {
+              url: 'https://dev.to/',
+              image: require('~/assets/sponsors/dev-to.svg'),
+            },
+            {
+              url: 'https://www.digitalocean.com/',
+              image: require('~/assets/sponsors/digitalocean.svg'),
+            },
+            {
+              url: 'https://bit.ly/htf3-sdp',
+              image: require('~/assets/sponsors/github.svg'),
+            },
+            // google dev library
+            {
               url: 'https://www.linode.com/',
               image: require('~/assets/sponsors/linode.svg'),
             },
             {
-              url: 'https://balsamiq.com/',
-              image: require('~/assets/sponsors/balsamiq.svg'),
+              url: 'https://bit.ly/htf4-logitech',
+              image: require('~/assets/sponsors/logitech.png'),
             },
             {
-              url: 'https://tezos.com/',
-              image: require('~/assets/sponsors/tezos.svg'),
+              url: 'https://hackp.ac/microsoft',
+              image: require('~/assets/sponsors/azure.png'),
             },
             {
-              url: 'https://deepfence.io/',
-              image: require('~/assets/sponsors/deepfence.svg'),
+              url: 'https://mlh.io/',
+              image: require('~/assets/sponsors/mlh.svg'),
             },
             {
-              url: 'https://gen.xyz/',
-              image: require('~/assets/sponsors/xyz.svg'),
+              url: 'https://hackp.ac/MongoDB',
+              image: require('~/assets/sponsors/mongodb.svg'),
+            },
+            {
+              url: 'https://bit.ly/htf4-neurelo',
+              image: require('~/assets/sponsors/neurelo.png'),
+            },
+            {
+              url: 'https://nhost.io/',
+              image: require('~/assets/sponsors/nhost.svg'),
+            },
+            {
+              url: 'https://bit.ly/htf4-con-repo',
+              image: require('~/assets/sponsors/orkes.svg'),
+            },
+            {
+              url: 'https://peerlist.io/',
+              image: require('~/assets/sponsors/peerlist.png'),
+            },
+            {
+              url: 'https://polygon.technology/',
+              image: require('~/assets/sponsors/polygon.svg'),
+            },
+            {
+              url: 'https://www.postman.com/',
+              image: require('~/assets/sponsors/postman.svg'),
+            },
+            {
+              url: 'https://www.quicknode.com/',
+              image: require('~/assets/sponsors/quicknode.png'),
             },
             {
               url: 'https://replit.com/',
               image: require('~/assets/sponsors/replit.webp'),
             },
             {
-              url: 'https://filebase.com/',
-              image: require('~/assets/sponsors/filebase.svg'),
+              url: 'https://www.solana.com/',
+              image: require('~/assets/sponsors/solana.svg'),
             },
             {
-              url: 'https://www.echo3d.com/',
-              image: require('~/assets/sponsors/echoar.webp'),
+              url: 'https://www.storyblok.com/',
+              image: require('~/assets/sponsors/storyblok.svg'),
             },
             {
-              url: 'https://www.wolfram.com/',
-              image: require('~/assets/sponsors/wolfram.png'),
+              url: 'https://hackp.ac/Twilio',
+              image: require('~/assets/sponsors/twilio.png'),
             },
             {
-              url: 'https://www.axure.com/',
-              image: require('~/assets/sponsors/axure.svg'),
+              url: 'https://www.getunleash.io/',
+              image: require('~/assets/sponsors/unleash.svg'),
             },
             {
-              url: 'https://www.taskade.com/',
-              image: require('~/assets/sponsors/taskade.png'),
+              url: 'https://bit.ly/htf4-vonage',
+              image: require('~/assets/sponsors/vonage.svg'),
             },
             {
-              url: 'https://hackp.ac/GoDaddyRegistry',
-              image: require('~/assets/sponsors/godaddy.svg'),
+              url: 'https://bit.ly/zeeve-htf3',
+              image: require('~/assets/sponsors/zeeve.svg'),
             },
             {
-              url: 'https://blues.io/',
-              image: require('~/assets/sponsors/blues.svg'),
+              url: 'https://5ire.org/',
+              image: require('~/assets/sponsors/5ire.svg'),
             },
-            {
-              url: 'https://fossunited.org/',
-              image: require('~/assets/sponsors/foss.svg'),
-            },
+
             {
               url: '#',
               image: require('~/assets/sponsors/more.svg'),

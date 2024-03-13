@@ -15,7 +15,7 @@
           <CFlex direction="column" justify="space-between">
             <img src="~/assets/glimpses/1.png" />
             <CBox :pb="{ base: '0.5rem', lg: '0.5rem' }">
-              <div class="number hackers">4500+</div>
+              <div class="number hackers">6000+</div>
               <div class="category hackers" mt="2rem">Hackers</div>
             </CBox>
           </CFlex>
@@ -84,7 +84,7 @@
         >
           <CFlex direction="column" justify="space-between">
             <CBox :pt="{ base: '0rem', lg: '0.5rem' }">
-              <div class="number projects">460+</div>
+              <div class="number projects">590+</div>
               <div class="category projects">Projects</div>
             </CBox>
             <img src="~/assets/glimpses/8.png"
@@ -100,7 +100,7 @@
             :direction="{ base: 'column', lg: 'column-reverse' }"
           >
             <CBox :pb="{ base: '0rem', lg: '0.5rem' }">
-              <div class="number workshops">40+</div>
+              <div class="number workshops">50+</div>
               <div class="category workshops">Workshops</div>
             </CBox>
             <img src="~/assets/glimpses/9.png"

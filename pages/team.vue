@@ -5,31 +5,17 @@
       <div class="main-container">
         <div v-if="isNavbarOpen" class="navbar-mobile">
           <CFlex direction="column" align="center">
-            <NuxtLink id="nav-link-about" class="mobile-nav-item" to="/#about"
-              >About</NuxtLink
+            <NuxtLink id="nav-link-about" class="mobile-nav-item" to="/"
+              >Home</NuxtLink
             >
+
+            <span class="divider"></span>
 
             <span
               id="nav-link-sponsors"
               class="mobile-nav-item"
               @click="goToLocation('https://bit.ly/htf3-sponsor')"
-              >Sponsors Us</span
-            >
-
-            <span class="divider"></span>
-            <!-- <span id="nav-link-schedule" class="mobile-nav-item">Schedule</span> -->
-            <!-- <span id="nav-link-swags" class="mobile-nav-item">Swags</span> -->
-            <NuxtLink
-              id="nav-link-team"
-              to="/hacktoberfest"
-              class="mobile-nav-item"
-              >Hacktoberfest</NuxtLink
-            >
-            <span
-              id="nav-link-team"
-              class="mobile-nav-item"
-              @click="goToLocation('/team')"
-              >Team</span
+              >Sponsor Us</span
             >
           </CFlex>
         </div>

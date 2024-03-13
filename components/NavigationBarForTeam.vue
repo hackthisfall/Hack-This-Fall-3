@@ -12,7 +12,8 @@
       <NuxtLink to="/"><img src="~/assets/logo.png" /></NuxtLink>
     </div>
     <div class="nav-desktop">
-      <NuxtLink id="nav-link-about" to="/#about" class="item">About</NuxtLink>
+      <NuxtLink id="nav-link-about" to="/" class="item">Home</NuxtLink>
+      <span class="divider"></span>
       <a
         id="nav-link-sponsors"
         target="_blank"
@@ -20,29 +21,12 @@
         class="item"
         >Sponsor Us</a
       >
-      <span class="divider"></span>
-      <NuxtLink id="nav-link-team" to="/" class="item">Home</NuxtLink>
-      <NuxtLink id="nav-link-team" to="/hacktoberfest" class="item"
-        >Hacktoberfest</NuxtLink
-      >
-      <NuxtLink id="nav-link-team" to="/swag" class="item">Swag</NuxtLink>
-
       <img
         width="100%"
         src="~/assets/hamburger-menu.png"
         class="hamburger-menu"
         @click="toggleNavbar"
       />
-
-      <a
-        id="mlh-trust-badge"
-        href="https://mlh.io/apac?utm_source=apac-hackathon&utm_medium=TrustBadge&utm_campaign=2024-season&utm_content=white"
-        target="_blank"
-        ><img
-          src="https://s3.amazonaws.com/logged-assets/trust-badge/2024/mlh-trust-badge-2024-white.svg"
-          alt="Major League Hacking 2023 Hackathon Season"
-          style="width: 131px"
-      /></a>
     </div>
   </CFlex>
 </template>
@@ -99,7 +83,7 @@ export default {
   border-radius: 11px;
   column-gap: 49px;
   padding-left: 39px;
-  padding-right: 178px;
+  padding-right: 39px;
 
   .item {
     color: white;
@@ -142,7 +126,7 @@ export default {
 
   @include respond-below(lg) {
     padding-left: 1rem;
-    padding-right: 5rem;
+    padding-right: 1rem;
     .item {
       display: none;
     }

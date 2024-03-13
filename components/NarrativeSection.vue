@@ -47,10 +47,10 @@ export default {
     return {
       narratives: [
         {
-          name: 'Abel Mathew',
-          description: 'Speaker & Judge',
-          image: require('~/assets/narratives/abel.jpg'),
-          url: 'https://www.youtube.com/watch?v=-qTyl6XexM4',
+          name: 'Vishwa Mehta',
+          description: 'Judge',
+          image: require('~/assets/team/vishwa.jpeg'),
+          url: 'https://www.youtube.com/watch?v=hbyQh_3bFus',
         },
         {
           name: 'Ashwin Uppala',

@@ -115,6 +115,56 @@ export default {
           url: 'https://www.linkedin.com/in/sahil-bhatiya-73790719a/',
           image: require('~/assets/team/sahil.jpeg'),
         },
+        {
+          name: 'Rohan Kambli',
+          url: 'https://twitter.com/rohannrk',
+          image: require('~/assets/team/rohan.jpg'),
+        },
+        {
+          name: 'Priti Priya',
+          url: 'https://twitter.com/pritisinghhhh',
+          image: require('~/assets/team/priti.jpeg'),
+        },
+        {
+          name: 'Kriyanshi Shah',
+          url: 'https://twitter.com/ShahKriyanshi',
+          image: require('~/assets/team/kriyanshi.jpg'),
+        },
+        {
+          name: 'Vedant Kakde',
+          url: 'https://twitter.com/vedantstwt',
+          image: require('~/assets/team/vedant.png'),
+        },
+        {
+          name: 'Ali Mustufa Shaikh',
+          url: 'https://twitter.com/ialimustufa',
+          image: require('~/assets/speakers/ali.jpg'),
+        },
+        {
+          name: 'Devanshi Pandya',
+          url: 'https://twitter.com/DevanshiPandy11',
+          image: require('~/assets/team/devanshi.jpeg'),
+        },
+        {
+          name: 'Sakshi Hardwani',
+          url: 'https://www.linkedin.com/in/sakshi-hardwani/',
+          image: require('~/assets/team/sakshi.jpeg'),
+        },
+        {
+          name: 'Toukir Khan',
+          url: 'https://twitter.com/_toukirkhan_',
+          image: require('~/assets/team/toukir.jpeg'),
+        },
+        {
+          name: 'Vishwa Mehta',
+          url: 'https://twitter.com/vishwamehta30/',
+          image: require('~/assets/team/vishwa.jpeg'),
+        },
+        {
+          name: 'Bishwajeet Parhi',
+          image: require('~/assets/team/biswa.jpg'),
+          url: 'https://twitter.com/biswa_20p',
+        },
       ],
     }
   },

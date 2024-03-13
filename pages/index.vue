@@ -6,30 +6,10 @@
         <div v-if="isNavbarOpen" class="navbar-mobile">
           <CFlex direction="column" align="center">
             <span
-              id="nav-link-about"
-              class="mobile-nav-item"
-              @click="goToLocation('/#about')"
-              >About</span
-            >
-
-            <span
               id="nav-link-sponsors"
               class="mobile-nav-item"
               @click="goToLocation('https://bit.ly/htf3-sponsor')"
-              >Sponsors Us</span
-            >
-
-            <span class="divider"></span>
-            <NuxtLink
-              id="nav-link-team"
-              to="/hacktoberfest"
-              class="mobile-nav-item"
-              >Hacktoberfest</NuxtLink
-            >
-            <NuxtLink id="nav-link-team" class="mobile-nav-item" to="/swag"
-              >Swag</NuxtLink
-            ><NuxtLink id="nav-link-team" class="mobile-nav-item" to="/team"
-              >Team</NuxtLink
+              >Sponsor Us</span
             >
           </CFlex>
         </div>
@@ -37,7 +17,6 @@
           <HeroSectionVue />
           <AboutSectionVue />
           <GlimpseSectionVue />
-          <SpeakerSectionVue />
           <SponsorSectionVue :community="false" />
           <NarrativeSectionVue />
           <FooterSectionVue />
@@ -53,7 +32,6 @@ import NavigationBar from '~/components/NavigationBar'
 import HeroSectionVue from '~/components/HeroSection'
 import AboutSectionVue from '~/components/AboutSection'
 import GlimpseSectionVue from '~/components/GlimpseSection'
-import SpeakerSectionVue from '~/components/SpeakerSection'
 import SponsorSectionVue from '~/components/SponsorSection'
 import NarrativeSectionVue from '~/components/NarrativeSection'
 import FooterSectionVue from '~/components/FooterSection'
@@ -65,7 +43,6 @@ export default {
     HeroSectionVue,
     AboutSectionVue,
     GlimpseSectionVue,
-    SpeakerSectionVue,
     SponsorSectionVue,
     NarrativeSectionVue,
     FooterSectionVue,

@@ -36,10 +36,10 @@
           >Season 3.0</a
         >
         <a
-          href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+          href="https://s4.hackthisfall.tech"
           class="content animate-ease"
           target="_blank"
-          >Code of Conduct</a
+          >Season 4.0</a
         >
       </CFlex>
       <CFlex
@@ -50,28 +50,23 @@
       >
         <h2 class="heading">Explore</h2>
         <a
-          href="https://dev.to/hackthisfall"
-          class="content animate-ease"
-          target="_blank"
-          >Dev.to</a
-        >
-        <a
           href="https://blog.hackthisfall.tech"
           class="content animate-ease"
           target="_blank"
           >Blogs</a
         >
-        <a
-          href="https://hackthisfall.tech/swag"
-          class="content animate-ease"
-          target="_blank"
-          >Swags</a
-        >
+        <a href="/team" class="content animate-ease" target="_blank">Team</a>
         <a
           href="https://bit.ly/htf3-sponsor"
           class="content animate-ease"
           target="_blank"
           >Sponsor Us</a
+        >
+        <a
+          href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
+          class="content animate-ease"
+          target="_blank"
+          >Code of Conduct</a
         >
       </CFlex>
       <CFlex>
@@ -124,7 +119,7 @@
       </CFlex>
     </CFlex>
     <CFlex class="attribution"
-      >Copyright © 2023 Hack This Fall. All rights reserved</CFlex
+      >Copyright © 2024 Hack This Fall. All rights reserved</CFlex
     >
   </div>
 </template>
