@@ -3,6 +3,21 @@
     {
       "source": "/prospectus",
       "destination": "/Hack%20This%20Fall%204.0%20Sponsorship%20Prospectus.pdf"
+    },
+    {
+      "source": "/2021/:path",
+      "destination": "https://s2.hackthisfall.tech/:path"
+    },
+    {
+      "source": "/_nuxt/:path",
+      "has": [
+        {
+          "type": "header",
+          "key": "referer",
+          "value": "(.*)2021(.*)"
+        }
+      ],
+      "destination": "https://s2.hackthisfall.tech/_nuxt/:path"
     }
   ]
 }
