@@ -11,14 +11,14 @@
         :gap="{ base: '1.2rem', sm: '30px' }"
         :direction="{ base: 'column', sm: 'row' }"
       >
-        <a target="blank" href="https://bit.ly/htf5-pre">
+        <a target="blank" href="https://hackathon.hackthisfall.tech/virtual">
           <CButton class="button animate-ease">
             <img
               src="~/assets/icons/register.svg"
               alt="register"
               class="icon"
             />
-            <span> Pre-Registration</span>
+            <span>Virtual Hackathon</span>
           </CButton>
         </a>
         <a href="https://discord.hackthisfall.tech" target="blank">
